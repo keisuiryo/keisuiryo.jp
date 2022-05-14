@@ -1,0 +1,71 @@
+[
+    {
+        "@context": "https://schema.org",
+        "@type": "Apartment",
+        "name": "東北大学YMCA渓水寮",
+        "url": "https://keisuiryo.jp/",
+        "publisher": {
+            "@type": "Organization",
+            "name": "東北大学YMCA渓水寮",
+            "url": "https://keisuiryo.jp/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://keisuiryo.jp/assets/ymca-logo.webp",
+                "width": 420,
+                "height": 340
+            },
+            "address": {
+                "@type": "PostalAddress",
+                "postalCode": "982-0027",
+                "addressRegion": "宮城県",
+                "addressLocality": "仙台市太白区",
+                "streetAddress": "大塒町8-1"
+            }
+        },
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://keisuiryo.jp/assets/main.webp",
+            "width": 640,
+            "height": 480
+        },
+        "description": "東北大学YMCA渓水寮は東北大学の学生などが暮らす学生寮です。寮に住み込みの寮母さん手作りの食事、13名のアットホームな寮の雰囲気、安い寮費が魅力の寮です。",
+        "telephone": "+81-022-249-3564",
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday"
+            ],
+            "opens": "00:00",
+            "closes": "23:59"
+        },
+        "founder": "石原謙",
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 38.236063,
+            "longitude": 140.859312
+        },
+        "logo": "https://keisuiryo.jp/assets/ymca-logo.webp",
+        "sameAs": [
+            "https://twitter.com/keisuiryo",
+            "https://ja-jp.facebook.com/keisuiryo/"
+        ]
+    },
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "渓水寮",
+                "item": "https://keisuiryo.jp/"
+            }
+        ]
+    }
+]

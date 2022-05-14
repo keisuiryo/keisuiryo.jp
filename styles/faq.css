@@ -1,0 +1,19 @@
+.faq-container >h3 {
+    font-size: 1.6em;
+    margin-top: 2rem;
+    margin-bottom: .4rem;
+    font-weight: normal;
+    color: #000000ee;
+}
+.faq-container > h4 {
+    font-weight: normal;
+}
+.faq-container > p {
+    color: #00000099;
+}
+.faq-container {
+    margin: 0 auto;
+    width: 90vw;
+    max-width: 40rem;
+
+}
