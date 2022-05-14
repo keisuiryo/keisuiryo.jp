@@ -1,0 +1,122 @@
+.meals-section {
+    margin: 3rem 0;
+}
+.meals-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.meal-box {
+    position: relative;
+}
+.meal-expand-input {
+    display: none;
+}
+.meal-expand-img {
+    position: absolute;
+    bottom: .5rem;
+    right: .5rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    fill: hsl(25deg,76%,40%);
+    border-radius: 50%;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    background:  hsla(25deg, 90%, 95%,50%);
+    padding: 5px;
+}
+.meal-expand-input:checked ~ .meal-expand-img {
+    display: none;
+}
+.meal-close-img {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    width: 2rem;
+    height: 2rem;
+    fill: hsl(25deg,76%,40%);
+}
+.meal-expand-input:not(:checked) ~ .meal-close-img {
+    display: none;
+}
+
+.meal-item-box {
+    margin: 1em 1em;
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+.meal-image {
+    width: 50vw;
+    height: auto;
+    transition: .1s ease-out;
+}
+.meal-expand-input:checked ~ .meal-image {
+    width: 100%;
+    transition: .3s ease-in;
+}
+.meal-expand-input:not(:checked) ~ .meal-item-box {
+    display: none;
+    transition: .5s ease-in;
+}
+.meal-item-box {
+    margin: 1em 1em;
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+@media only screen and (min-width: 768px) {
+    .meals-section {
+        margin: 3rem auto;
+    }
+    .annotation {
+        display: none;
+    }
+    .meals-container {
+        margin: 3rem auto;
+        width: 90%;
+        gap: 3rem 5rem;
+        justify-content: center;
+    }
+    .meal-box {
+        width: 18rem;
+        background: hsl(25deg, 10%, 99%);
+        border-radius: 10px;
+    }
+    .meal-box::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(ellipse at 0% 50%,hsl(25deg,76%,85%) 40%, hsl(25deg,76%,75%) 100%);
+        z-index: -1;
+        transform: translate(1rem, 1rem);
+        border-radius: 10px;
+    }
+    .meal-image {
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+    }
+    .meal-expand-input:not(:checked) ~ .meal-item-box {
+        display: block;
+        transition: .5s ease-in;
+    }
+    .meal-expand-img {
+        display: none;
+    }
+    .meal-close-img {
+        display: none;
+    }
+}
+.person-box {
+    background: linear-gradient(200deg, hsl(100deg, 57%, 88%) 0px, hsl(125deg, 33%, 77%) 100%);
+    color: rgb(29, 29, 31);
+    border-radius: 10px;
+}
+@media only screen and (min-width: 768px) {
+    .meal-desc-text-box {
+        margin: 5rem 0;
+        text-align: center;
+    }
+}
