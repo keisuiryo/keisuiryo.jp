@@ -69,10 +69,7 @@ export default function Home() {
                 </div>
                 <p className="">寮の目の前に、最寄りのバス停があります。</p>
             </section>
-            <div id="map-box">
-                <iframe title="渓水寮の周辺地図" width="400" height="600" loading="lazy" allowFullScreen
-                    src="https://www.google.com/maps/embed/v1/place?q=%E6%9D%B1%E5%8C%97%E5%A4%A7%E5%AD%A6YMCA&key=AIzaSyA8C83iekU00w03u-J8Y-E52oCcyD-10jU"></iframe>
-            </div>
+            <section>
             <h2 className="contents-title">周辺施設</h2>
             <p></p>
             <div className="stack-container">
@@ -94,122 +91,14 @@ export default function Home() {
                     {distance("10分", "5分")}
                 </Stack>
             </div>
-            {/*<section>
-                        <h2 className="contents-title">周辺施設</h2>
-                        <p></p>
-                        <div className="stack-container">
-                            <div className="stack-box">
-                                <img loading="lazy" width="400" height="300" className="image" src="/location/assets/lawson.webp"
-                                    alt="渓水寮の隣にあるローソン">
-                                    <p className="contents-title-small">ローソン</p>
-                                    <div className="distance-box">
-                                        <p className="icon-text"><svg className="svg-icon">
-                                            <use href="#svg-walk" />
-                                        </svg>３０秒</p>
-                                        <p className="icon-text"><svg className="svg-icon">
-                                            <use href="#svg-location" />
-                                        </svg>寮のとなり</p>
-                                    </div>
-                            </div>
-                            <div className="stack-box">
-
-                                <img loading="lazy" width="400" height="300" className="image" src="/location/assets/turuha.webp"
-                                    alt="東北大学YMCA渓水寮の斜め前にあるドラッグストア">
-                                    <p className="contents-title-small">ドラッグストア</p>
-                                    <div className="distance-box">
-                                        <p className="icon-text"><svg className="svg-icon">
-                                            <use href="#svg-walk" />
-                                        </svg>９０秒</p>
-                                        <p className="icon-text"><svg className="svg-icon">
-                                            <use href="#svg-location" />
-                                        </svg>寮のななめまえ</p>
-
-                                    </div>
-                                    <p className="contents-desc">野菜やお肉などの生鮮食品も置いてあります。</p>
-                            </div>
-                            <div className="stack-box">
-
-                                <img loading="lazy" width="400" height="300" className="image" src="/location/assets/post.webp"
-                                    alt="渓水寮の２軒隣にある郵便局">
-                                    <p className="contents-title-small">郵便局</p>
-                                    <div className="distance-box">
-
-                                        <p className="icon-text"><svg className="svg-icon">
-                                            <use href="#svg-walk" />
-                                        </svg>４５秒</p>
-                                        <p className="icon-text"><svg className="svg-icon">
-                                            <use href="#svg-location" />
-                                        </svg>となりのとなり</p>
-                                    </div>
-                                    <!--<p className="contents-desc">ATMは平日は９時から５時半まで、休日は９時から５時まで使えます</p>-->
-                            </div>
-                            <div className="stack-box">
-
-                                <img loading="lazy" width="400" height="300" className="image" src="/location/assets/hospital.webp"
-                                    alt="渓水寮の3けん隣にある病院、内科や消化器内科が専門">
-                                    <p className="contents-title-small">病院</p>
-                                    <div className="distance-box">
-                                        <p className="icon-text"><svg className="svg-icon">
-                                            <use href="#svg-walk" />
-                                        </svg>６０秒</p>
-                                        <p className="icon-text"><svg className="svg-icon">
-                                            <use href="#svg-location" />
-                                        </svg>３軒となり</p>
-                                    </div>
-                                    <p className="contents-desc"></p>
-                                    <!--<div className="person-box" id="person-box-l1">
-                                        <p className="person-name-small">佐藤（４年）
-                                        </p>
-                                        <p className="message-text">
-                                            毎年、花粉症のお薬でお世話になっています。
-                                        </p>
-                                    </div>-->
-                            </div>
-                            <div className="stack-box">
-
-                                <img loading="lazy" width="400" height="300" className="image" src="/location/assets/york.webp"
-                                    alt="渓水寮から徒歩１０分程度で着くヨークベニマル">
-                                    <p className="contents-title-small">スーパー</p>
-                                    <div className="distance-box">
-                                        <p className="icon-text"><svg className="svg-icon">
-                                            <use href="#svg-walk" />
-                                        </svg>１０分</p>
-                                        <p className="icon-text"><svg className="svg-icon">
-                                            <use href="#svg-bike" />
-                                        </svg>５分</p>
-
-                                    </div>
-                                    <!--<p className="contents-desc">食品などが置いてあるスーパーです</p>-->
-                                    <!--<div className="person-box" id="person-box-l1">
-                                        <p className="person-name-small">倉本（1年）
-                                        </p>
-                                        <p className="message-text">
-                                            土日は食事が出ないので買い物に出かけます
-                                        </p>
-                                    </div>-->
-                            </div>
-                            <!--<div className="stack-box">
-
-                                <img loading="lazy" width="400" height="300" className="image" src="/location/assets/coop.webp" alt="東北大学への通学路の近くにある生協">
-                                    <p className="contents-title-small">生協</p>
-                                    <div className="distance-box">
-                                        <p className="icon-text"><svg className="svg-icon">
-                                            <use href="#svg-location" />
-                                        </svg>通学路の近く</p>
-                                    </div>
-                                    <p className="contents-desc">食品から日用品まである程度置いてます</p>
-                                    <div className="person-box" id="person-box-l1">
-                                        <p className="person-name-small">倉本（1年）
-                                        </p>
-                                        <p className="message-text">
-                                            通学路の近くにあるので、帰り際に寄ることが多いです
-                                        </p>
-                                    </div>
-                            </div>-->
-
-                        </div>
-    </section>*/}
-
+            </section>
+            <section>
+            <h2 className="contents-title">地図</h2>
+            <div id="map-box">
+                <iframe title="渓水寮の周辺地図" width="400" height="600" loading="lazy" allowFullScreen
+                    src="https://www.google.com/maps/embed/v1/place?q=%E6%9D%B1%E5%8C%97%E5%A4%A7%E5%AD%A6YMCA&key=AIzaSyA8C83iekU00w03u-J8Y-E52oCcyD-10jU"></iframe>
+            </div>
+            </section>
         </Wrapper>
     )
 }

@@ -16,7 +16,7 @@ export default function Meta(props) {
             {
                 "@context": "https://schema.org",
                 "@type": "Apartment",
-                "name": {"東北大学YMCA渓水寮"},
+                "name": "東北大学YMCA渓水寮",
                 "url": "https://keisuiryo.jp/",
                 "publisher": {
                     "@type": "Organization",
@@ -40,6 +40,7 @@ export default function Meta(props) {
                     "@type": "ImageObject",
                     "url": "https://keisuiryo.jp/assets/main.webp",
                     "width": 640,
+
                     "height": 480
                 },
                 "description": "東北大学YMCA渓水寮は東北大学の学生などが暮らす学生寮です。寮に住み込みの寮母さん手作りの食事、13名のアットホームな寮の雰囲気、安い寮費が魅力の寮です。",
