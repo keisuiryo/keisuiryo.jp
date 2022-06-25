@@ -6,16 +6,15 @@ export const config= {
 }
 export default function Home() {
     return (
-        <Wrapper id="about" title="渓水寮とは" desc="東北大学YMCA渓水寮は東北大学とは独立しており、東北大学の教員などの支援のもと寮生の手で運営されています。キリスト教精神をもとにした学生YMCAに属していますが、勧誘などはありません。寮生の多数はノンクリスチャンで、クリスチャンでなくても入寮できます。" >
+        <Wrapper id="about" title="渓水寮とは" desc="東北大学YMCA渓水寮は東北大学とは独立しており、東北大学の教員などの支援のもと寮生の手で運営されています。キリスト教精神をもとにした学生YMCAに属しています。寮生の多数はノンクリスチャンで、クリスチャンでなくても入寮できます。" >
             <div className="card-container">
                 <Card title="YMCAについて" imageSrc="/about/ymca.webp" imageAlt="東北大学YMCA渓水寮が所属するYMCAのブランド写真です。">
                     <p className="contents-desc">
                         東北大学YMCA渓水寮は日本YMCA同盟の一部門である学生YMCAに属している寮です。YMCAは世界120の国と地域で、およそ6500万人の会員を有するNGOです。
                     </p>
                     <p className="contents-desc">
-                        YMCAはキリスト教精神を基盤としている団体ではありますが、布教を目的とした活動は行っておらず、日本各地で水泳・サッカーなどのスポーツクラブや幼稚園・保育園の運営、国際交流プログラムやボランティア活動の企画といった社会教育事業を展開しています。
+                        YMCAはキリスト教精神を基盤として、日本各地で水泳・サッカーなどのスポーツクラブや幼稚園・保育園の運営、国際交流プログラムやボランティア活動の企画といった社会教育事業を展開しています。
                     </p>
-                    <p className="contents-desc">東北大学YMCA渓水寮でも寮生の多数はノンクリスチャンで、勧誘などはありません。</p>
                     <a className="link summary-more" href="https://www.ymcajapan.org/society/student/">学生YMCA<span className="summary-more-arrow">→</span></a>
                 </Card>
                 <Card title="歴史" imageSrc="/about/news.webp" imageAlt="東北大学YMCA渓水寮を紹介する新聞です。">
@@ -26,6 +25,7 @@ export default function Home() {
                         戦後、寮の建物は米軍に接収され、返還されたのは1952年4月でした。その後建物の老朽化が進んだため、1989年、現在地に新築、移転しました。
                     </p>
                     <p className="contents-desc">1997年からは男子・女子ともに生活することとなりました。</p>
+                    <p className="contents-desc">なお、寮生の多くはノンクリスチャンです。</p>
                 </Card>
                 <Card title="男女混住について">
                     <p className="contents-desc">

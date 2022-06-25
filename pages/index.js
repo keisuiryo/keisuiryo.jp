@@ -43,9 +43,8 @@ export default function Home() {
           <p>東北大学YMCA渓水寮は東北大学の一部の教員・OPからの寄付や設備の共有により、寮費を抑えています。渓水寮では一人暮らしよりも低い費用で生活できます。</p>
         </Card>
         <Card title="渓水寮とは" linkHref="/about/" linkTitle="渓水寮とは →">
-          <p>渓水寮は東北大学YMCA(東北大学基督教青年会)が運営する寮です。<br />
-            寮生の多くはノンクリスチャンで、勧誘などはありません。<br />
-            東北大学の教員やOPなどの支援のもと寮生の手で運営されている寮です。</p>
+          <p>渓水寮は東北大学YMCAが運営する寮です。<br />
+            東北大学の一部の教員やOPなどの支援のもと寮生の手で運営されている寮です。</p>
         </Card>
         <Card title="設備" linkHref="/facilities/" linkTitle="設備・施設 →" imageSrc="facilities/room.webp" imageAlt="東北大学YMCA渓水寮の個室">
           <p>東北大学YMCA渓水寮には1人1部屋の個室があり、プライベートは確保されています。</p>
