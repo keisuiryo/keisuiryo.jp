@@ -1,8 +1,8 @@
 import Card from './modules/card'
 import Wrapper from './modules/wrapper'
 
-export const config= {
-  unstable_runtimeJS: true
+export const config = {
+    unstable_runtimeJS: true
 }
 export default function Home() {
     return (
@@ -28,10 +28,16 @@ export default function Home() {
                     <p className="contents-desc">なお、寮生の多くはノンクリスチャンです。</p>
                 </Card>
                 <Card title="男女混住について">
-                    <p className="contents-desc">
-                        渓水寮は以前は男子寮でしたが、1998 年に女性の入寮希望者が現れ、当時の寮生間で議論が重ねられた結果男女混住寮となりました。<br />
-                        その際に渓水寮の「男女混住についての誓約」が作成されました。
-                    </p>
+                    <p>渓水寮は、京大熊野寮や北大恵迪寮など数多くの学生寮と同じく男女混住となっています。男女混住と聞いて不安になる方もいるかと思いますが、渓水寮ではトラブルが起きたことは今までありません。</p>
+                    <p>また、トラブルを事前に防ぐために以下のような対策がとられています。</p>
+                    <ul>
+                        <li>風呂・脱衣場には鍵がついており、ドアに使用中の札をかけて使用します。</li>
+                        <li>トイレは男女別です。</li>
+                        <li>基本男子は１階、女子は２階の部屋になります。</li>
+                        <li>各部屋にバルコニーがついており、また部屋干しもできます。</li>
+                        <li>男女混住の誓約書が定められています。</li>
+                    </ul>
+                    <p>なお、2022年現在での男女比は9:4です。</p>
                     <div className="quote-box">
                         <h5 className="quote-title">男女混住の誓約</h5>
                         <p className="quote-text">
