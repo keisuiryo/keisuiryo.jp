@@ -68,7 +68,8 @@ export default function Meta(props) {
                 "logo": "https://keisuiryo.jp/assets/ymca-logo.webp",
                 "sameAs": [
                     "https://twitter.com/keisuiryo",
-                    "https://ja-jp.facebook.com/keisuiryo/"
+                    "https://ja-jp.facebook.com/keisuiryo/",
+                    "http://instagram.com/keisuiryo/"
                 ]
             },
             {

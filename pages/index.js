@@ -40,7 +40,8 @@ export default function Home() {
           <p>東北大学YMCA渓水寮では朝夕２食、寮母さんの手作りの食事が提供されています。おいしくて、栄養バランスも考えられた食事です。</p>
         </Card>
         <Card title="寮費">
-          <p>東北大学YMCA渓水寮は東北大学の一部の教員・OPからの寄付や設備の共有により、寮費を抑えています。渓水寮では一人暮らしよりも低い費用で生活できます。</p>
+          <p>東北大学YMCA渓水寮は東北大学の一部の教員や卒寮生からの寄付や設備の共有により、寮費を抑えています。渓水寮では一人暮らしよりも低い費用で生活できます。
+          </p>
         </Card>
         <Card title="渓水寮とは" linkHref="/about/" linkTitle="渓水寮とは →">
           <p>渓水寮は東北大学YMCAが運営する寮です。<br />
@@ -67,7 +68,7 @@ export default function Home() {
         </Card>
         <Card title="よくある質問" linkHref="/faq/" linkTitle="他の質問を見る →">
           <p className="contents-question">東北大学YMCA渓水寮に門限はありますか？</p>
-          <p className="contents-desc">ありません。鍵を持っていれば好きな時間に帰寮できます。</p>
+          <p className="contents-desc">ありません。鍵を持っていれば好きな時間に寮に帰れます。</p>
         </Card>
         <Card title="東北大学YMCA渓水寮の概要">
           <ul>
@@ -78,9 +79,16 @@ export default function Home() {
             </li>
             <li>寮の共同設備:浴室・シャワー室(鍵付き)トイレ(男女別)、洗面台各階3箇所、洗濯機2台、冷蔵庫3台、掃除機2台、テレビ（ホール、客間）、炊事場（自炊可能）、食器類、駐車場、駐輪場
             </li>
+            <li>SNS:</li>
+            <a className="link contents-link"
+            href="https://twitter.com/keisuiryo">Twitter(寮生活の様子)
+            →</a>
+          <a className="link contents-link"
+            href="https://instagram.com/keisuiryo">Instagram(寮の食事)
+            →</a>
           </ul>
         </Card>
-        <Card linkTitle="東北大学との関係">
+        <Card title="東北大学との関係">
           <p className="contents-desc">渓水寮は東北大学の一部の教員やOPの支援を受けていますが、東北大学からは独立した自治寮です。</p>
           <p className="contents-desc">東北大学の運営するユニバーシティハウス（学生寄宿舎）や寮については、東北大学の公式サイトよりご覧ください。</p>
           <a className="link contents-link"
@@ -88,6 +96,12 @@ export default function Home() {
             →</a>
           <a className="link contents-link"
             href="https://www.tohoku.ac.jp/japanese/studentinfo/studentlife/05/studentlife0502/">学寮(東北大学公式サイト)
+            →</a>
+        </Card>
+        <Card title="卒寮生の皆様へ">
+          <p className="contents-desc">卒寮生向けのページはこちらです。東北大学YMCA渓水寮の現状や、いただいた寮の運営のためのご支援の活用実績や、渓水寮の電子版会報の閲覧方法などをまとめています。</p>
+          <a className="link contents-link"
+            href="https://keisuiryoop.studio.site/">卒寮生向けサイト
             →</a>
         </Card>
       </div>
