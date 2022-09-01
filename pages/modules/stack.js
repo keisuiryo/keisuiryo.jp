@@ -1,7 +1,5 @@
 import Link from 'next/link'
-export const config= {
-  unstable_runtimeJS: true
-}
+
 export default function Card(props) {
     let link = null
     if (props.linkHref) {

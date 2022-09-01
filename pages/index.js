@@ -1,31 +1,26 @@
 import Card from './modules/card'
 import Wrapper from './modules/wrapper'
 
-export const config= {
+export const config = {
   unstable_runtimeJS: true
 }
 export default function Home() {
   return (
-    <Wrapper imageSrc="main.webp" imageAlt="東北大学YMCA渓水寮の寮生の集合写真" desc={`東北大学生などが暮らす13人のアットホームな学生寮です。寮母さんの食事、月4万円台の寮費が魅力の寮です。
-    東北大学YMCA渓水寮は東北大学の新入生の入寮を募集しています。`}>
-      <div className="abstract">
-        <ul className="point-box">
-          <li className="icon-text point-item"><svg className="check-svg">
-            <use href="#svg-check" />
-          </svg><span><span className="nowrap">朝晩寮母さん手作りの</span><span className="nowrap"><span
-            className="strong colored">食事付き</span>の寮</span></span>
-          </li>
-          <li className="icon-text point-item"><svg className="check-svg">
-            <use href="#svg-check" />
-          </svg><span><span className="nowrap">定員13名のアットホームな寮</span></span>
-          </li>
-          <li className="icon-text point-item"><svg className="check-svg">
-            <use href="#svg-check" />
-          </svg><span><span className="nowrap"><span className="underline">光熱水費・食事・ネット代</span>込みで</span><span
-            className="nowrap">寮費が月<span className="colored"><span className="strong">4</span>万<span
-              className="strong">7</span>千円</span>の寮</span></span>
-          </li>
-        </ul>
+    <Wrapper noheader>
+      <div className='top-bg-pc'>
+        <img className="top-right" src="/top-right.jpg"></img>
+        <img className="top-left" src="/top-left.jpg"></img>
+        <img className="top-center" src="/top-center.jpg"></img>
+      </div>
+      <img className="top-bg-mobile" src="/top-mobile-top.jpg"></img>
+      <div className="top-idt-box">
+        <img className="top-idt-img" src="/ymca-logo.webp"></img>
+        <h1 className="top-idt"><span className="top-idt-sub">東北大学YMCA</span>渓水寮</h1>
+      </div>
+      <img className="top-bg-mobile top-bg-mobile-bottom" src="/top-mobile-bottom.jpg"></img>
+      <div className="desc-box" >
+        <h2 className='desc-title'>東北大学YMCA渓水寮は、</h2>
+        <p className='desc-text'>一言で表すと、食事つきの学生寮です。朝晩寮母さんが食事を作ってくださります。寮費は月4万7千円です。食費や光熱費などすべて含まれています。定員は13名と寮母さん。少人数な学生寮です。今年度は東北大学など仙台市の大学に通う新入生を2人、募集しています。</p>
       </div>
       {/*<div className="important">
 
@@ -35,6 +30,7 @@ export default function Home() {
         </p>
 
       </div>*/}
+      <div className='top-contents-wrapper'>
       <div className="card-container">
         <Card title="食事" linkHref="/meals/" linkTitle="食事について →" imageSrc="meals/meal_d1.webp" imageAlt="東北大学YMCA渓水寮で提供される食事">
           <p>東北大学YMCA渓水寮では朝夕２食、寮母さんの手作りの食事が提供されています。おいしくて、栄養バランスも考えられた食事です。</p>
@@ -81,11 +77,11 @@ export default function Home() {
             </li>
             <li>SNS:</li>
             <a className="link contents-link"
-            href="https://twitter.com/keisuiryo">Twitter(寮生活の様子)
-            →</a>
-          <a className="link contents-link"
-            href="https://instagram.com/keisuiryo">Instagram(寮の食事)
-            →</a>
+              href="https://twitter.com/keisuiryo">Twitter(寮生活の様子)
+              →</a>
+            <a className="link contents-link"
+              href="https://instagram.com/keisuiryo">Instagram(寮の食事)
+              →</a>
           </ul>
         </Card>
         <Card title="東北大学との関係">
@@ -104,6 +100,7 @@ export default function Home() {
             href="https://keisuiryoop.studio.site/">卒寮生向けサイト
             →</a>
         </Card>
+      </div>
       </div>
     </Wrapper>
   )

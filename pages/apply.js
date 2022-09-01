@@ -1,8 +1,5 @@
 import Wrapper from './modules/wrapper'
 
-export const config= {
-  unstable_runtimeJS: true
-}
 export default function Home() {
     return (
         <Wrapper id="apply" title="募集要項" desc="東北大学YMCA渓水寮は東北大学に通う男子・女子の新入寮生を募集しています。お気軽に寮までご連絡ください。">

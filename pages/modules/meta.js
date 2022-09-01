@@ -1,8 +1,6 @@
 import Head from 'next/head'
 import Script from 'next/script'
-export const config= {
-  unstable_runtimeJS: true
-}
+
 export default function Meta(props) {
     let _title = ""
     if (!props.title) {
@@ -138,9 +136,9 @@ export default function Meta(props) {
         ]`
     const _jsonld = { __html: props.id ? _sub : _top }
     return (
-        <>
-            <Head>
+        <Head>
                 <link rel="icon" href="ymca-logo.webp" />
+                {/*<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />*/}
                 <title>{_title}</title>
                 <meta name="description" content={props.desc} />
                 <meta name="twitter:card" content="summary_large_image" />
@@ -155,7 +153,6 @@ export default function Meta(props) {
                     dangerouslySetInnerHTML={_jsonld}
                     key="product-jsonld"
                 />
-            </Head>
             <Script
                 strategy="afterInteractive"
                 src={`https://www.googletagmanager.com/gtag/js?id=G-VC4C2W5VRY`}
@@ -171,6 +168,6 @@ gtag('config', 'G-VC4C2W5VRY');
   `,
                 }}
             />
-        </>
+        </Head>
     )
 }

@@ -1,26 +1,30 @@
-import Footer from './footer'
-import Navigation from './navigation'
+import Footer from './footer/footer-pc'
+import Navigation from './navigation/navigation'
 import SVG from './svg'
 import Meta from './meta'
-import Header from './header'
+import Header from './header/header'
 import Fab from './fab'
-export const config= {
-  unstable_runtimeJS: true
-}
+
 export default function Wrappr(props) {
+    let h;
+    if(!props.noheader) {
+        h = (<Header title={props.title} imageSrc={props.imageSrc} imageAlt={props.imageAlt}/>)
+    }
     return (
+        <>
+        <Meta title={props.title} desc={props.desc} id={props.id}/>
         <div className='subpage-container'>
-            <Meta title={props.title} desc={props.desc} id={props.id}/>
             <SVG />
             <div className="view-container">
-                <Header title={props.title} imageSrc={props.imageSrc} imageAlt={props.imageAlt}/>
+                {h}
                 <main className="main-container">
                     {props.children}
                     <Fab />
                 </main>
-                <Footer />
+                <div className='pc white'><Footer /></div>
             </div>
             <Navigation id={props.id} />
         </div>
+        </>
     )
 }

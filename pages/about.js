@@ -1,9 +1,6 @@
 import Card from './modules/card'
 import Wrapper from './modules/wrapper'
 
-export const config = {
-    unstable_runtimeJS: true
-}
 export default function Home() {
     return (
         <Wrapper id="about" title="渓水寮とは" desc="東北大学YMCA渓水寮は東北大学とは独立しており、東北大学の教員などの支援のもと寮生の手で運営されています。キリスト教精神をもとにした学生YMCAに属しています。寮生の多数はノンクリスチャンで、クリスチャンでなくても入寮できます。" >

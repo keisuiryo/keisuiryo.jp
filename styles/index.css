@@ -35,3 +35,110 @@
     margin: .2rem 0 .1rem 0;
     font-size: 1.2rem;
 }
+.top-left {
+    position: fixed;
+    top: 0vh;
+    left: 220px;
+    height: 100vh;
+}
+.top-right {
+    position: fixed;
+    top: 0vh;
+    right: 0px;
+    height: 100vh;
+}
+.top-center {
+    position: fixed;
+    top: 0%;
+    left: calc(50% - 110px);
+    height: 25vh;
+}
+body {
+    background: none;
+}
+.top-idt-img {
+    margin: 0 auto;
+    height: 60px;
+    margin-bottom: 15px;
+}
+.top-idt {
+    font-size: 40px;
+}
+.top-idt-sub {
+    display: block;
+    font-size: 24px;
+}
+.top-idt-box {
+    text-align: center;
+    margin-top: -100px;
+}
+.desc-box {
+    width: 90vw;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    background-color: hsl(31deg, 100%, 91%);
+    border: 3px solid hsl(26deg, 96%, 35%);
+    padding: 20px 40px;
+    border-radius: 60px 6px 60px 6px;
+    font-family: serif;
+}
+.desc-title {
+    font-weight: bold;
+    color: hsl(26deg, 96%, 35%);
+    font-size: 24px;
+    line-height: 1.6;
+}
+.desc-text {
+    font-size: 16px;
+    color: hsl(26deg, 96%, 35%);
+    line-height: 1.6;
+}
+.top-bg-pc {
+    display: none;
+}
+.top-bg-mobile {
+    width: 100%;
+}
+.top-bg-mobile-bottom {
+    margin-top: -10px;
+}
+
+.top-contents-wrapper {
+    background-color: #FFF;
+    padding-top: 50px;
+    width: 100%;
+}
+@media only screen and (min-width: 768px) {
+    .top-bg-pc {
+        display: block;
+        position: fixed;
+        z-index: -10;
+    }
+    .top-bg-mobile {
+        display: none;
+    }
+    .desc-box {
+        margin-top: 80vh;
+        margin-bottom: 100px;
+        width: 600px;
+        padding: 50px 80px;
+        border-radius: 120px 12px 120px 12px;
+    }
+    .top-idt-box {
+        position: absolute;
+        top: calc(50vh);
+        left: calc(50vw + 110px);
+        transform: translateX(calc(-50% - 30px)) translateY(-10%);
+    }
+    .top-idt-img {
+        height: 80px;
+        margin-bottom: 30px;
+    }
+    .top-idt {
+        font-size: 70px;
+    }
+    .top-idt-sub {
+        font-size: 32px;
+    }
+}

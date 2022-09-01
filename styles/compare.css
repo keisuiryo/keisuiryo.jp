@@ -1,0 +1,28 @@
+.compare-box {
+    margin-bottom: 100px;
+    padding-top: 40px;
+    padding-left: 100px;
+    background-color: hsl(39deg, 100%, 94%);
+    border-radius: 100px 0 0 0;
+    padding-bottom: 40px;
+}
+
+.compare-title {
+    font-size: 28px;
+    color: hsla(30, 89%, 59%, 1);
+}
+
+.compare-icon {
+    font-size: 28px;
+    transform: translateY(4px);
+}
+
+.compare-name {
+    margin-top: 20px;
+    color: hsla(26, 96%, 35%, 1)
+}
+
+.compare-text {
+    margin-top: 10px;
+    color: hsla(0, 0%, 31%, 1);
+}

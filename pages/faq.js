@@ -1,8 +1,5 @@
 import Wrapper from './modules/wrapper'
 
-export const config = {
-    unstable_runtimeJS: true
-}
 export default function Home() {
     return (
         <Wrapper id="faq" title="よくある質問" desc="東北大学YMCA渓水寮に寄せられるよくある質問です。">

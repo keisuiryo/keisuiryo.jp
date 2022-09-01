@@ -1,0 +1,55 @@
+.footer-box {
+    padding: 20px 12px;
+    background: hsl(26deg, 100%, 91%);
+    margin: 0;
+    margin-left: 10px;
+    padding-left: 30px;
+    color: #333;
+}
+
+.pc {
+    display: none;
+}
+
+.name-logo {
+    width: 40px;
+    height: auto;
+}
+
+.footer-adderss {
+    margin-top: 24px;
+}
+
+.address-content {
+    display: block;
+    margin: 1rem 0;
+    color: #333;
+}
+
+.address-icon {
+    fill: #ffffffdd;
+    width: 2rem;
+    height: 2rem;
+}
+
+.footer-name-name {
+    display: block;
+    font-size: 24px;
+}
+
+.footer-name {
+    gap: 0;
+}
+
+@media only screen and (min-width: 768px) {
+    .pc {
+        display: block;
+    }
+
+    .footer-box {
+        padding-top: 40px;
+        padding-left: 80px;
+        border-radius: 100px 0 0 0;
+        margin-left: 0;
+    }
+}

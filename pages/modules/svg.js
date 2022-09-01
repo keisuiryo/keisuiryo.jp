@@ -1,6 +1,3 @@
-export const config= {
-  unstable_runtimeJS: true
-}
 export default function SVG() {
   function scroll() {
     document.getElementById('nav-container').scrollIntoView({ behavior: 'smooth' })

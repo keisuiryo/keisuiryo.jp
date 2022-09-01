@@ -1,8 +1,5 @@
 import Wrappr from './modules/wrapper'
 
-export const config= {
-  unstable_runtimeJS: true
-}
 export default function Home() {
     function box(id, name, belonging, title, text) {
         return (<article className="person-box msg-person-box" id={id}>

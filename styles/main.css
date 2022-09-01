@@ -86,10 +86,10 @@ img {
 }
 
 body {
-    font-family: Arial, Helvetica, "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+    /*font-family: Arial, Helvetica, "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;*/
+    font-family: Arial, Helvetica, Meiryo,"メイリオ", sans-serif;
     letter-spacing: .05rem !important;
     font-size: 16px;
-    background: hsl(25deg, 100%, 100%);
     color: #111111ee;
 }
 
@@ -124,46 +124,6 @@ h6 {
     flex-shrink: 0;
 }
 
-#nav-container {
-    padding-top: 1em;
-}
-
-.nav {
-    padding: .5rem 1rem;
-    background: linear-gradient(135deg, #FA9938 0%, #FA9F32 23.18%, #FAA42B 46.35%, #FAA923 69.53%, #F9AF18 92.71%, #F9B406 115.88%);
-}
-
-.nav-link,
-.nav-link-fab {
-    display: block;
-    margin: .4em;
-    font-size: 140%;
-    color: #ffffffee;
-    text-decoration: none;
-    margin-left: 2.8rem;
-}
-
-.nav-link-fab {
-    background: linear-gradient(to left, hsl(25deg, 76%, 70%), hsl(25deg, 76%, 65%) 95%);
-    background: linear-gradient(to left, hsl(200deg, 72%, 60%), hsl(200deg, 72%, 55%) 95%);
-    margin: 0 auto;
-    margin-bottom: 1em;
-}
-
-.nav-idt {
-    text-decoration: none;
-    gap: 0.3rem;
-}
-
-.idt-logo {
-    width: 2.5rem;
-}
-
-.idt-text {
-    font-size: 2em;
-    color: #ffffffee;
-}
-
 .person-box {
     display: flex;
     flex-wrap: wrap;
@@ -190,56 +150,11 @@ h6 {
     font-size: 90%;
 }
 
-@media only screen and (min-width: 1150px) {
+@media only screen and (min-width: 768px) {
     .subpage-container {
         display: grid;
         gap: 0;
-        grid-template-columns: 1fr 4.23fr;
-    }
-
-    #nav-container {
-        display: block;
-        grid-column: 1;
-        grid-row: 1;
-    }
-
-    .nav-link {
-        margin: 0;
-        margin-left: 1.8rem;
-        padding: .5rem 1rem;
-        text-decoration: none;
-        color: #333333;
-        border-radius: 1.2em;
-        transition: background ease-in .4s, color ease-in .4s;
-    }
-
-    .nav-link[selected] {
-        background: linear-gradient(90deg, hsl(25deg, 95%, 75%), hsl(28deg, 88%, 77%));
-        color: hsl(25deg, 80%, 20%);
-        text-decoration: none;
-    }
-
-    .nav-link:hover {
-        background: hsl(25deg, 72%, 80%);
-        transition: background ease-out .4s, color ease-in .4s;
-        color: hsl(25deg, 80%, 20%);
-    }
-
-    .nav {
-        background: none;
-        position: sticky;
-        top: 10px;
-    }
-
-    .idt-text {
-        color: #333333;
-    }
-
-    .nav-link-fab {
-        margin: 1em auto;
-        background: linear-gradient(to left, hsl(30deg, 90%, 60%), hsl(20deg, 95%, 55%) 95%);
-        /*background: linear-gradient(to left, hsl(200deg, 72%, 60%) ,hsl(200deg, 72%,55%) 95% );*/
-        color: #ffffffee;
+        grid-template-columns: 220px auto;
     }
 
     .view-container {
@@ -264,24 +179,13 @@ h6 {
     fill: hsla(25deg, 76%, 60%, 95%);
 }
 
-.header-image {
-    width: 100vw;
-    height: auto;
-}
-
-.header-descr {
-    margin: 1em;
-}
-
-.header-box {
-    display: flex;
-    justify-content: center;
-}
-
 .point-box {
     margin: 1em 1.5em;
     list-style-type: none;
     padding-inline-start: 0;
+}
+.white {
+    background-color: #fff;
 }
 
 .point-item {
@@ -306,32 +210,6 @@ h6 {
     display: block;
 }
 
-.title-box {
-    width: 100vw;
-    padding: .2em 1rem;
-    background: linear-gradient(to bottom, #ffffff55, #ffffff44 60%, #ffffff11 100%);
-    color: #000000ee;
-    -webkit-backdrop-filter: blur(7px);
-    backdrop-filter: blur(7px);
-}
-
-.title-up {
-    margin-left: 1rem;
-    font-size: 1rem;
-}
-
-.title-logo {
-    display: inline;
-    width: 1.5rem;
-    height: auto;
-}
-
-.title {
-    margin-bottom: .1em;
-    font-size: 2rem;
-    margin-left: 3rem;
-}
-
 .check-svg {
     fill: hsl(25deg, 76%, 30%);
     /*fill: #ffffff;*/
@@ -339,7 +217,7 @@ h6 {
     height: 2em;
 }
 
-@media only screen and (min-width: 1150px) {
+@media only screen and (min-width: 768px) {
     .dot-box {
         display: none;
     }
@@ -350,53 +228,6 @@ h6 {
 }
 
 @media only screen and (min-width: 768px) {
-    body {
-        background: hsl(25deg, 100%, 98%);
-    }
-
-    .title {
-        margin-bottom: 0;
-        font-size: 1.5em;
-        margin-left: 3.5rem;
-    }
-
-    .title-up {
-        font-size: 1.2rem;
-    }
-
-    .title-logo {
-        width: 2rem;
-    }
-
-    .header-image {
-        margin: auto;
-        width: 90%;
-        height: auto;
-        border-radius: 10px;
-    }
-
-    .header-box {
-        margin-top: 5rem;
-    }
-
-    .header-container {
-        /*background: linear-gradient(130deg, hsl(25deg, 95%, 70%) ,hsl(35deg, 80%,65%));*/
-        display: grid;
-        grid-template-columns: 20em 1fr;
-        padding: 2rem 1rem;
-    }
-
-    .title-box {
-        background: none;
-        -webkit-backdrop-filter: none;
-        backdrop-filter: none;
-        padding: 0;
-        margin: .2em;
-        width: unset;
-        color: #ffffffee;
-        color: #333333;
-    }
-
     .abstract {
         padding: 2rem 5rem;
     }
@@ -494,44 +325,6 @@ h6 {
         flex-direction: row-reverse;
         gap: 1rem;
     }
-}
-
-.footer-box {
-    padding: 3em 5vw;
-    background: linear-gradient(135deg, #FA9938 0%, #FA9F32 23.18%, #FAA42B 46.35%, #FAA923 69.53%, #F9AF18 92.71%, #F9B406 115.88%);
-    margin: 0;
-    margin-top: 3rem;
-    color: #ffffffee;
-}
-
-.footer-name {
-    gap: 1rem;
-}
-
-.name-logo {
-    width: 4rem;
-    height: auto;
-}
-
-.footer-adderss {
-    margin-top: 3em;
-    margin-left: 5vw;
-}
-
-.address-content {
-    margin: 1rem 0;
-    color: #ffffffee;
-}
-
-.address-icon {
-    fill: #ffffffdd;
-    width: 2rem;
-    height: 2rem;
-}
-
-.footer-name-name {
-    display: block;
-    font-size: 2rem;
 }
 
 .article-box {

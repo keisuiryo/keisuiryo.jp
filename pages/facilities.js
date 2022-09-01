@@ -1,9 +1,6 @@
 import Card from './modules/card'
 import Wrapper from './modules/wrapper'
 
-export const config= {
-  unstable_runtimeJS: true
-}
 export default function Home() {
     return (
         <Wrapper id="facilities" title="設備" desc="東北大学YMCA渓水寮では一人一部屋6畳の個室があり、プライベートは守られます。ホールや台所といった共用スペースもあります。トイレと風呂は共同ですが最近新しくなりました。">

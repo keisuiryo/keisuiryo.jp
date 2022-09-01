@@ -1,8 +1,5 @@
 import Wrappr from './modules/wrapper'
 
-export const config= {
-  unstable_runtimeJS: true
-}
 export default function Home() {
     function mealCard(menus, src, imgdesc, isexpanded = false) {
         function menuui(menus) {
@@ -15,7 +12,7 @@ export default function Home() {
         return (
             <div className="meal-box">
                 <label className="meal-label">
-                    <input className="meal-expand-input" type="checkbox" checked={isexpanded} />
+                    <input className="meal-expand-input" type="checkbox" defaultChecked={isexpanded} />
                     <svg className="meal-expand-img">
                         <use href="#svg-expand" />
                     </svg>

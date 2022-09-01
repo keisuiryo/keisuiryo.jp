@@ -1,9 +1,6 @@
 import Stack from './modules/stack'
 import Wrapper from './modules/wrapper'
 
-export const config= {
-  unstable_runtimeJS: true
-}
 export default function Home() {
     return (
         <Wrapper title="行事" id="events" desc="東北大学YMCA渓水寮では寮の行事として各自が好きなことを発表する読書会や寮運営を話し合う寮生総会などがあります。他にも花見や芋煮会など任意参加で様々な行事が行われています。">
