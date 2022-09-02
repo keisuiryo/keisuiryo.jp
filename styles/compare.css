@@ -1,10 +1,9 @@
 .compare-box {
-    margin-bottom: 100px;
-    padding-top: 40px;
-    padding-left: 100px;
+    margin-bottom: 30px;
+    padding: 30px 15px 30px 20px;
     background-color: hsl(39deg, 100%, 94%);
-    border-radius: 100px 0 0 0;
-    padding-bottom: 40px;
+    border-radius: 30px 0 0 0;
+    margin-left: 15px;
 }
 
 .compare-title {
@@ -25,4 +24,22 @@
 .compare-text {
     margin-top: 10px;
     color: hsla(0, 0%, 31%, 1);
+}
+
+.compare-link {
+    display: block;
+    padding-bottom: 8px;
+    color: hsl(200deg, 80%, 45%);
+    word-break: break-all;
+}
+
+@media only screen and (min-width: 768px) {
+    .compare-box {
+        margin-bottom: 100px;
+        padding-top: 40px;
+        padding-left: 100px;
+        background-color: hsl(39deg, 100%, 94%);
+        border-radius: 100px 0 0 0;
+        padding-bottom: 40px;
+    }
 }

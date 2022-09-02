@@ -12,12 +12,12 @@ export default function Home() {
         <img className="top-left" src="/top-left.jpg"></img>
         <img className="top-center" src="/top-center.jpg"></img>
       </div>
-      <img className="top-bg-mobile" src="/top-mobile-top.jpg"></img>
+      <img className="top-bg-mobile" src="/top-mobile-top.webp"></img>
       <div className="top-idt-box">
         <img className="top-idt-img" src="/ymca-logo.webp"></img>
         <h1 className="top-idt"><span className="top-idt-sub">東北大学YMCA</span>渓水寮</h1>
       </div>
-      <img className="top-bg-mobile top-bg-mobile-bottom" src="/top-mobile-bottom.jpg"></img>
+      <img className="top-bg-mobile top-bg-mobile-bottom" src="/top-mobile-bottom.webp"></img>
       <div className="desc-box" >
         <h2 className='desc-title'>東北大学YMCA渓水寮は、</h2>
         <p className='desc-text'>一言で表すと、食事つきの学生寮です。朝晩寮母さんが食事を作ってくださります。寮費は月4万7千円です。食費や光熱費などすべて含まれています。定員は13名と寮母さん。少人数な学生寮です。今年度は東北大学など仙台市の大学に通う新入生を2人、募集しています。</p>
