@@ -1,9 +1,8 @@
 .compare-box {
-    margin-bottom: 30px;
+    margin: 0 0 30px 15px;
     padding: 30px 15px 30px 20px;
     background-color: hsl(39deg, 100%, 94%);
     border-radius: 30px 0 0 0;
-    margin-left: 15px;
 }
 
 .compare-title {
@@ -33,13 +32,32 @@
     word-break: break-all;
 }
 
+.compare-catch-box {
+    margin-left: 35px;
+}
+
+.compare-catch {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    border-bottom: solid 3px hsl(35deg,100%,60%);
+    display: inline-block;
+    color: #555;    
+}
+
 @media only screen and (min-width: 768px) {
+    .compare-catch-box {
+        margin-left: 115px;
+    }
+    .compare-catch {
+        font-size: 28px;
+    }
     .compare-box {
         margin-bottom: 100px;
-        padding-top: 40px;
-        padding-left: 100px;
-        background-color: hsl(39deg, 100%, 94%);
         border-radius: 100px 0 0 0;
-        padding-bottom: 40px;
+        padding: 40px 0 40px 100px;
+    }
+    .index-round-box {
+        margin-top: 150px;
     }
 }

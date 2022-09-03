@@ -5,7 +5,10 @@ import Link from 'next/link'
 export default function Home() {
     return (
         <Wrapper title="UH・学寮などとの比較" id="compare" desc="東北大学YMCA渓水寮と、東北大学が運営するユニバーシティ・ハウス、学生寮などを比較します。">
-            <p className='compare-text'><br /></p>
+            <div className='compare-catch-box'><p className='compare-catch'>大学よりも長く</p><p className='compare-catch'>過ごす場所だから</p><br/>
+            <p className='compare-catch'>ていねいに選びたい</p>
+            <p></p>
+            </div>
             <div className='compare-box'>
                 <h3 className='compare-title'><span className="material-symbols-rounded compare-icon">
                     event_note

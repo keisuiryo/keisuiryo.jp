@@ -63,7 +63,7 @@
     background-color: #fff;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1150px) {
     #nav-container {
         display: block;
         grid-column: 1;

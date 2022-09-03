@@ -7,10 +7,8 @@ export const config = {
   unstable_runtimeJS: true
 }
 export default function Fab(props) {
-  let _subtitle = "東北大学YMCA"
   let _title = "渓水寮"
   if (props.title) {
-    _subtitle += "渓水寮"
     _title = props.title
   }/*
     let pimg = null
@@ -19,14 +17,13 @@ export default function Fab(props) {
     }*/
   return (
     <header className="header-container">
-      <h1 className="title-box">
-        <div className="title-up icon-text"> <svg className="title-logo" width="40" height="32">
+      <svg className="title-logo" width="40" height="32">
           <use href="#ymca-logo" />
-        </svg>{_subtitle}</div>
+        </svg>
+      <h1 className="title-box">
+        <div className="title-up">東北大学YMCA渓水寮</div>
         <div className="title">{_title}</div>
       </h1>
-      {/*pimg*/}
-      <Link href="/apply/"><a className="btn-fab btn mobile">募集要項 →</a></Link>
     </header>
   )
 }

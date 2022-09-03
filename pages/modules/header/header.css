@@ -1,56 +1,39 @@
 .title-box {
-    width: 100vw;
-    padding: .2em 1rem;
-    color: #000000ee;
-}
-
-.title-up {
-    margin-left: 1rem;
-    font-size: 1rem;
+    color: #333;
+    line-height: 1;
 }
 
 .title-logo {
-    display: inline;
-    width: 1.5rem;
-    height: auto;
+    width: auto;
+    height: 40px;
+}
+.title-up {
+    font-size: 16px;
 }
 
 .title {
-    margin-bottom: .1em;
-    font-size: 2rem;
-    margin-left: 3rem;
+    font-size: 24px;
+    margin-top: 5px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    
+    margin: 20px 0 20px 10px;
 }
 
 @media only screen and (min-width: 768px) {
-    .title {
-        margin-bottom: 0;
-        font-size: 1.5em;
-        margin-left: 3.5rem;
-    }
-
-    .title-up {
-        font-size: 1.2rem;
-    }
-
-    .title-logo {
-        width: 2rem;
-    }
-
-    .header-image {
-        margin: auto;
-        width: 90%;
-        height: auto;
-        border-radius: 10px;
-    }
-
     .header-container {
-        padding: 2rem 1rem;
+        margin: 30px 0 40px 115px;
     }
-
-    .title-box {
-        width: unset;
-        padding: 0;
-        margin: .2em;
-        color: #333333;
+    .title-up {
+        font-size: 18px;
+    }
+    
+    .title {
+        font-size: 28px;
+        margin-top: 5px;
     }
 }
