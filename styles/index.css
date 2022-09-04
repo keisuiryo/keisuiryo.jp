@@ -206,6 +206,7 @@ body {
     font-size: 24px;
     font-weight: bold;
     margin-left: 35px;
+    margin-top: 100px;
     color: hsl(26deg, 85%, 45%);
     padding-bottom: 3px;
     border-bottom: solid 3px hsl(45, 100%, 58.4%);
@@ -229,8 +230,22 @@ body {
 }
 
 .index-link-icon {
-    transform: translateY(2.5px);
-    font-size: 16px;
+    /*ordering issues from nextjs*/
+    transform: translateY(2.5px)!important;
+    font-size: 16px!important;
+}
+
+.inround-small-img {
+    width: 70%;
+    display: block;
+    margin: 15px auto 20px auto;
+}
+
+.index-light-title {
+    color: hsla(30, 92%, 48%, 1);
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 3px;
 }
 
 .cr-box {
@@ -251,6 +266,14 @@ body {
     color: hsla(30, 87%, 56%, 1);
     font-weight: bold;
     margin-bottom: 5px;
+}
+
+.cr-desc {
+    margin-top: 10px;
+}
+
+.cr-flex-1 {
+    margin-bottom: 50px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -280,22 +303,40 @@ body {
     }
 
     .cr-box{
-        padding:  40px 115px;
+        padding:  40px 100px;
         margin-right: 30px;
         border-radius: 40px;
         margin-top: 15px;
     }
-    .index-fee-box {
+    .cr-flex {
         display: flex;
         gap: 100px;
         align-items: center;
     }
 
-    .index-fee-desc {
+    .cr-desc {
         width: 400px;
     }
     .index-fee-sub {
         width: 300px;
+    }
+
+    .inround-small-img {
+        width: 300px;
+        margin: 0;
+    }
+
+    .index-round-box {
+        margin-top: 150px;
+    }
+
+    .index-r-1 {
+        margin-top: 110px;
+    }
+
+    .index-header-1 {
+        margin-bottom: 50px;
+        margin-top: 20px;
     }
 }
 

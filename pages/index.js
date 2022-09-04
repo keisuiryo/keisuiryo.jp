@@ -21,7 +21,7 @@ export default function Home() {
       <img className="top-bg-mobile top-bg-mobile-bottom" src="/top-mobile-bottom.webp"></img>
       <div className="desc-box" >
         <h2 className='desc-title'>東北大学YMCA渓水寮は、</h2>
-        <p className='desc-text'>一言で表すと、食事つきの学生寮です。朝晩寮母さんが食事を作ってくださります。寮費は月4万7千円です。食費や光熱費などすべて含まれています。定員は13名と寮母さん。少人数な学生寮です。渓水寮は建物は変われど90年以上の歴史を持ち、卒寮生や東北大学の教員有志のご支援・ご寄付の下、寮生の手により運営されている自治寮です。</p>
+        <p className='desc-text'>一言で表すと、食事つきの学生寮です。朝晩寮母さんが食事を作ってくださります。寮費は月4万7千円です。食費や光熱費などすべて含まれています。定員は13名と寮母さん。少人数な学生寮です。今年度は東北大学など仙台の大学に通う男女新入生を2人、募集しています。</p>
       </div>
       {/*<div className="important">
 
@@ -31,16 +31,34 @@ export default function Home() {
         </p>
 
       </div>*/}
-      
+
       <div className='top-contents-wrapper'>
-      <h3 className='index-header'>渓水寮の特長</h3>
-        <div className='round-box index-round-box'>
+        <h3 className='index-header index-header-1'>渓水寮での生活</h3>
+        <div className='cr-box index-cr-1'>
+          <div className='cr-flex cr-flex-1'>
+          <div>
+            <h3 className='index-light-title'>少人数</h3>
+            <p className='cr-desc'>渓水寮には１３人の個性豊かな寮生が住んでいます。他の学生寮に比べると少人数で、アットホームな雰囲気が魅力です。一人一人の生活を大切にしながら、共同生活を送っています。</p>
+          </div>
+          <img loading="lazy" className="inround-small-img" src="/life-bg1.webp" />
+          </div>
+          <div className='cr-flex'>
+          <div>
+            <h3 className='index-light-title'>自治寮</h3>
+            <p className='cr-desc'>渓水寮は寮生の手で運営されている自治寮です。寮生が寮運営に関して(ほとんど)すべてのことを決められます。少人数ですので、気兼ねなく意見を言ったり議論したりできます。</p>
+          </div>
+          <img loading="lazy" className="inround-small-img" src="/life-bg2.webp" />
+          </div>
+          <div></div>
+        </div>
+        <h3 className='index-header'>渓水寮の特長</h3>
+        <div className='round-box index-round-box index-r-1'>
           <img loading="lazy" className="index-inround-img" src="/meals.webp" />
           <div className='index-inround-box'>
             <h4 className='index-inround-upper'>Meals</h4>
             <h3 className='index-inround-title'>食事</h3>
             <p className='index-inround-contents'>東北大学YMCA渓水寮では、元食堂経営者の寮母さんが授業日の朝晩に食事を作ってくださります。おいしく、栄養バランスも考えられている食事です。量の調節やアレルギーにも対応できます。</p>
-            <Link href='/meals/'><a className='index-inround-link'><span class="material-symbols-rounded index-link-icon">
+            <Link href='/meals/'><a className='index-inround-link'><span className="material-symbols-rounded index-link-icon">
               arrow_forward_ios
             </span>食事について</a></Link>
           </div>
@@ -51,7 +69,7 @@ export default function Home() {
             <h4 className='index-inround-upper'>Facilities</h4>
             <h3 className='index-inround-title'>設備</h3>
             <p className='index-inround-contents'>東北大学YMCA渓水寮では一人一人に個室があります。ほかにも、ホールや客間などの共用施設も充実しています。トイレとお風呂場は最近新しくなりました。</p>
-            <Link href='/facilities/'><a className='index-inround-link'><span class="material-symbols-rounded index-link-icon">
+            <Link href='/facilities/'><a className='index-inround-link'><span className="material-symbols-rounded index-link-icon">
               arrow_forward_ios
             </span>施設について</a></Link>
           </div>
@@ -62,19 +80,19 @@ export default function Home() {
             <h4 className='index-inround-upper'>Locations</h4>
             <h3 className='index-inround-title'>立地・周辺施設</h3>
             <p className='index-inround-contents'>東北大学YMCA渓水寮から東北大学まではバス・地下鉄で20分、原付で10分かかります。寮の近く(5軒以内)には、ドラッグストアやコンビニ・病院など生活に必要な施設がすべてそろっています。</p>
-            <Link href='/location/'><a className='index-inround-link'><span class="material-symbols-rounded index-link-icon">
+            <Link href='/location/'><a className='index-inround-link'><span className="material-symbols-rounded index-link-icon">
               arrow_forward_ios
             </span>立地について</a></Link>
           </div>
         </div>
-        <div className='cr-box index-fee-box'>
-            <div>
-          <h4 className='index-inround-upper'>Monthly Fees</h4>
-          <h3 className='index-inround-title'>寮費</h3>
-          <p className='index-fee-fee'>4,7000円/月</p>
-          <p className='index-fee-sub'>食事代・水道費・光熱費・ネット代などすべて込み</p>
+        <div className='cr-box cr-flex'>
+          <div>
+            <h4 className='index-inround-upper'>Monthly Fees</h4>
+            <h3 className='index-inround-title'>寮費</h3>
+            <p className='index-fee-fee'>4,7000円/月</p>
+            <p className='index-fee-sub'>食事代・水道費・光熱費・ネット代などすべて込み</p>
           </div>
-          <p className='index-fee-desc'>東北大学YMCA渓水寮は卒寮生や東北大学の教員有志などからのご寄付により、寮費を抑えています。寮費の支払いは柔軟に行え、年度末に余った寮費の約半分が返金されます。また、入寮費として3万円かかります（内2万円は卒寮時に返金）。</p>
+          <p className='cr-desc'>東北大学YMCA渓水寮は卒寮生や東北大学の教員有志などからのご寄付により、寮費を抑えています。寮費の支払いは柔軟に行え、年度末に余った寮費の約半分が返金されます。また、入寮費として3万円かかります（内2万円は卒寮時に返金）。</p>
 
         </div>
         <div className="card-container">

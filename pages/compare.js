@@ -61,7 +61,7 @@ export default function Home() {
                 UH青葉山アドバイザーブログ(準公式)(2022),入居検討中の皆様へ<Link href="https://aobayama-uh.hatenablog.com/entry/2021/02/04/180909"><a className='compare-link'>https://aobayama-uh.hatenablog.com/entry/2021/02/04/180909</a></Link>
                 東北大学(2022),よくあるご質問(FAQ)<Link href="https://c.bureau.tohoku.ac.jp/gakusei-shien/kisyukusya/page-26734/"><a className='compare-link'>https://c.bureau.tohoku.ac.jp/gakusei-shien/kisyukusya/page-26734/</a></Link>
                 東北大学理学部(2022),生活に関する相談会FAQ<Link href="https://www.sci.tohoku.ac.jp/oc/faq.php"><a className='compare-link'>https://www.sci.tohoku.ac.jp/oc/faq.php</a></Link></p>
-                <h4 className='compare-name'><span class="material-symbols-rounded">
+                <h4 className='compare-name'><span className="material-symbols-rounded">
 face
 </span>寮生の声</h4>
 <p className='compare-text'>・学寮・UHは良くも悪くも、ユニット・生活班によって雰囲気が全然違うと聞きます<br/>・学生マンションは、学生同士の交流はないとよく聞きます(普通のアパートと一緒)</p>

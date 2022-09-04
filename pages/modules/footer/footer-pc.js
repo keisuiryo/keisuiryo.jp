@@ -10,18 +10,18 @@ export default function Footer(props) {
                 </p>
                 <address className="footer-adderss">
                     <Link href="mailto:ryo@keisuiryo.jp">
-                        <a className="address-content"><span class="material-symbols-rounded nav-icon">
+                        <a className="address-content"><span className="material-symbols-rounded nav-icon">
                             mail
                         </span>ryo@keisuiryo.jp</a>
                     </Link>
                     <Link href="tel:+810202293564">
-                        <a className="address-content"><span class="material-symbols-rounded nav-icon">
+                        <a className="address-content"><span className="material-symbols-rounded nav-icon">
                             call
                         </span>022-249-3564</a>
                     </Link>
                     <Link href="https://goo.gl/maps/oE32XoqM3sEwuCyaA" className="address-content">
                         <a className="address-content">
-                        <span class="material-symbols-rounded nav-icon">
+                        <span className="material-symbols-rounded nav-icon">
                             near_me
                         </span>
                         〒982-0027<br />仙台市太白区大塒町8-1東北大学YMCA渓水寮</a>
