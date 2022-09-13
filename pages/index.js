@@ -7,7 +7,7 @@ export const config = {
 }
 export default function Home() {
   return (
-    <Wrapper noheader>
+    <Wrapper noheader desc="東北大学YMCA渓水寮は13名の少人数な学生寮です。寮の家賃は食費・光熱費込み月4万７千円。東北大学などに通う男女新入寮生を募集しています。">
       <div className='top-bg-pc'>
         <img className="top-right" src="/top-right.jpg"></img>
         <img className="top-left" src="/top-left.jpg"></img>
