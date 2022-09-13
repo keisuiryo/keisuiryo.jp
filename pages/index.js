@@ -33,19 +33,29 @@ export default function Home() {
       </div>*/}
 
       <div className='top-contents-wrapper'>
+      <div className='round-box index-round-box index-r-about'>
+          <div className='index-inround-box'>
+            <h3 className='index-inround-title'>渓水寮とは</h3>
+            <p className='index-inround-contents'>渓水寮は、東北大学YMCA(キリスト教青年会)の寮です。1928年に建立され、建物は変われど90年以上の歴史を持ちます。現在は東北大学などの教員有志や、卒寮生のご厚意の下運営されています。</p>
+            <Link href='/about/'><a className='index-inround-link'><span className="material-symbols-rounded index-link-icon">
+              arrow_forward_ios
+            </span>理事長あいさつ・寮の概要</a></Link>
+          </div>
+          <img loading="lazy" className="inround-small-img index-about-img" src="/illust1.webp" />
+        </div>
         <h3 className='index-header index-header-1'>渓水寮での生活</h3>
         <div className='cr-box index-cr-1'>
           <div className='cr-flex cr-flex-1'>
           <div>
             <h3 className='index-light-title'>少人数</h3>
-            <p className='cr-desc'>渓水寮には１３人の個性豊かな寮生が住んでいます。他の学生寮に比べると少人数で、アットホームな雰囲気が魅力です。一人一人の生活を大切にしながら、共同生活を送っています。</p>
+            <p className='cr-desc'>渓水寮には１３人の個性豊かな寮生が住んでいます。少人数で、アットホームな雰囲気です。一人一人の生活を大切にしながら、共同生活を送っています。</p>
           </div>
           <img loading="lazy" className="inround-small-img" src="/life-bg1.webp" />
           </div>
           <div className='cr-flex'>
           <div>
             <h3 className='index-light-title'>自治寮</h3>
-            <p className='cr-desc'>渓水寮は寮生の手で運営されている自治寮です。寮生が寮運営に関して(ほとんど)すべてのことを決められます。少人数ですので、気兼ねなく意見を言ったり議論したりできます。</p>
+            <p className='cr-desc'>渓水寮は寮生の手で運営されていますので、寮生が寮の運営に関して(ほとんど)すべてのことを決められます。少人数ですので、気兼ねなく意見を言ったり議論したりできます。</p>
           </div>
           <img loading="lazy" className="inround-small-img" src="/life-bg2.webp" />
           </div>
