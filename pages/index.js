@@ -106,10 +106,6 @@ export default function Home() {
 
         </div>
         <div className="card-container">
-          <Card title="渓水寮とは" linkHref="/about/" linkTitle="渓水寮とは →">
-            <p>渓水寮は東北大学YMCAが運営する寮です。<br />
-              東北大学の一部の教員やOPなどの支援のもと寮生の手で運営されている寮です。</p>
-          </Card>
           <Card title="行事" linkHref="/events/" linkTitle="行事 →" imageSrc="events/hanami.webp" imageAlt="東北大学YMCA渓水寮の個室">
             <p>東北大学YMCA渓水寮では読書会や、花見、クリスマス会などいろいろな行事があります。</p>
           </Card>
