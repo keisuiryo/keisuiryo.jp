@@ -136,7 +136,8 @@ export default function Meta(props) {
         ]`
     const _jsonld = { __html: props.id ? _sub : _top }
     return (
-        <Head>
+        <>
+            <Head>
                 <link rel="icon" href="ymca-logo.webp" />
                 {/*<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />*/}
                 <title>{_title}</title>
@@ -148,27 +149,26 @@ export default function Meta(props) {
                 <meta property="og:title" content={_title} />
                 <meta property="og:description" content={props.desc} />
                 <meta property="og:image" content="https://keisuiryo.jp/main.webp" />
-                <meta name="thumbnail" content="https://keisuiryo.jp/keisuiryo.webp"></meta>
+                <meta name="thumbnail" content="https://keisuiryo.jp/main.webp" />
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={_jsonld}
                     key="product-jsonld"
                 />
+
+            </Head>
             <Script
                 strategy="afterInteractive"
                 src={`https://www.googletagmanager.com/gtag/js?id=G-VC4C2W5VRY`}
             />
             <Script id="ga"
-                strategy="afterInteractive"
-                dangerouslySetInnerHTML={{
-                    __html: `
-  window.dataLayer = window.dataLayer || [];
-function gtag() { dataLayer.push(arguments); }
-gtag('js', new Date());
-gtag('config', 'G-VC4C2W5VRY');
-  `,
-                }}
-            />
-        </Head>
+                strategy="afterInteractive">{`
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                  
+                    gtag('config', 'G-VC4C2W5VRY');`}
+            </Script>
+        </>
     )
 }

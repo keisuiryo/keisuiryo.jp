@@ -198,9 +198,10 @@ body {
 
 .index-inround-img {
     width: 95%;
+    max-width: 400px;
     height: auto;
     object-fit: contain;
-    margin-top: -100px;
+    margin: -100px auto 0 auto;
 }
 
 .index-header {
@@ -225,7 +226,7 @@ body {
     margin-top: 16px;
     color: #3e3e3e;
     font-weight: bold;
-    border-radius: 17px;
+    border-radius: 19px;
     text-decoration: none;
     letter-spacing: .15rem !important;
 }
@@ -245,18 +246,66 @@ body {
     aspect-ratio: auto;
 }
 
-.index-light-title {
-    color: hsla(30, 92%, 48%, 1);
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 3px;
-}
-
 .cr-box {
     margin: 30px 15px 0 15px;
     padding: 30px 20px;
     border-radius: 16px;
     background-color: hsl(39deg, 100%, 94%);
+}
+
+.life-title {
+    color: hsla(30, 92%, 48%, 1);
+}
+
+.iapply-title, .iapply-desc {
+    color: #FFF;
+}
+
+.iapply-box {
+    background: linear-gradient(287.96deg, #F4BF00 5.57%, #F7B715 22.91%, #F9AF20 40.26%, #FBA729 57.6%, #FD9F2F 74.95%, #FF9635 92.29%);
+}
+
+.iapply-btn {
+    background: #FFFFFF;
+    border: 1px solid #A55710;
+    color: #FFA22A;
+}
+
+.iop-title {
+    color: hsla(29, 77%, 23%, 1);
+}
+
+.iop-desc {
+    color: hsla(29, 95%, 10%, 0.8);
+}
+
+.iop-btn {
+    background: #96683C;
+    border-radius: 18px;
+    color: #FFF;
+}
+
+.iop-box {
+    background: #F0EAE2;
+    border: 1px solid #7A6552;
+}
+
+.iuniv-box {
+    background: #FFEEE1;
+    border: 1px solid #CD803D;
+}
+
+.iuniv-title {
+    color: #F4780B;
+}
+
+.box-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.box-desc {
+    margin-top: 10px;
 }
 
 .index-fee-fee {
@@ -276,14 +325,44 @@ body {
     background-color: hsl(39deg, 20%, 96%);
 }
 
-.cr-desc {
-    margin-top: 10px;
-}
-
 .cr-flex-1 {
     margin-bottom: 50px;
 }
 
+.voice-up {
+    color: #3e3e3e;
+}
+
+.voice-title {
+    color: #F09813;
+}
+
+.smsg-tbox {
+    margin-left: 20px;
+}
+
+.smsg-box {
+    background: #FFFCF7;
+    border: 1px solid #AF7C1A;
+    border-radius: 10px;
+    padding: 10px 19px;
+    margin-top: 15px;
+}
+
+.smsg-wrapper {
+    margin-top: 50px;
+    padding: 30px 15px;
+    background-color: #FFF0DF;
+}
+
+.smsg-q {
+    font-weight: bold;
+    color: #3e3e3e;
+}
+
+.smsg-a {
+    margin-top: 3px;
+}
 
 @media only screen and (min-width: 768px) {
     .round-box {
@@ -303,7 +382,7 @@ body {
 
     .index-inround-img {
         width: 40%;
-        margin-top: -100px;
+        margin: -100px 0 0 0;
     }
 
     .index-inround-box {
@@ -312,20 +391,27 @@ body {
     }
 
     .cr-box{
-        padding:  40px 100px;
+        padding: 40px 100px;
+        padding-right: 30px;
         margin-right: 30px;
         border-radius: 40px;
         margin-top: 15px;
     }
     .cr-flex {
         display: flex;
-        gap: 100px;
+        gap: 50px;
+        flex-wrap: wrap;
         align-items: center;
     }
 
     .cr-desc {
         width: 400px;
     }
+
+    .box-desc {
+        width: 400px;
+    }
+
     .index-fee-sub {
         width: 300px;
     }
@@ -339,6 +425,23 @@ body {
         margin-top: 150px;
     }
 
+    .smsg-tbox {
+        margin-left: 100px;
+    }
+
+    .smsg-btn {
+        margin-left: 100px;
+    }
+
+    .smsg-box {
+        margin-left: 100px;
+        max-width: 850px;
+    }
+
+    .smsg-wrapper {
+        padding: 50px 15px
+    }
+
     .index-r-1 {
         margin-top: 110px;
     }
@@ -347,10 +450,25 @@ body {
         margin-bottom: 50px;
         margin-top: 20px;
     }
+
+    .ifee-b1 {
+        width: 40%;
+    }
+    .ifee-b2 {
+        width: 300px;
+    }
+
+    .iapply-btn {
+        transform: scaleY(1.4) scaleX(1.4) translateX(10px);
+    }
 }
 
 @media only screen and (min-width: 1150px) {
     .index-inround-img {
-        width: 450px;
+        width: 400px;
+    }
+
+    .ifee-b1 {
+        width: 400px;
     }
 }

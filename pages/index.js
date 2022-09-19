@@ -7,7 +7,7 @@ export const config = {
 }
 export default function Home() {
   return (
-    <Wrapper noheader desc="東北大学YMCA渓水寮は13名の少人数な学生寮です。寮の家賃は食費・光熱費込み月4万７千円。東北大学などに通う男女新入寮生を募集しています。">
+    <Wrapper noheader desc="渓水寮は13名の少人数な食事付きの学生寮です。寮の家賃は食費・光熱費込み月4万７千円。東北大学などに通う男女新入寮生を募集しています。">
       <div className='top-bg-pc'>
         <img className="top-right" src="/top-right.jpg"></img>
         <img className="top-left" src="/top-left.jpg"></img>
@@ -33,7 +33,7 @@ export default function Home() {
       </div>*/}
 
       <div className='top-contents-wrapper'>
-      <div className='round-box index-round-box index-r-about'>
+        <div className='round-box index-round-box index-r-about'>
           <div className='index-inround-box'>
             <h3 className='index-inround-title'>渓水寮とは</h3>
             <p className='index-inround-contents'>渓水寮は、東北大学YMCA(キリスト教青年会)の寮です。1928年に建立され、建物は変われど90年以上の歴史を持ちます。現在は東北大学などの教員有志や、卒寮生のご厚意の下運営されています。</p>
@@ -46,18 +46,18 @@ export default function Home() {
         <h3 className='index-header index-header-1'>渓水寮での生活</h3>
         <div className='cr-box index-cr-1'>
           <div className='cr-flex cr-flex-1'>
-          <div>
-            <h3 className='index-light-title'>少人数</h3>
-            <p className='cr-desc'>渓水寮には１３人の個性豊かな寮生が住んでいます。少人数で、アットホームな雰囲気です。一人一人の生活を大切にしながら、共同生活を送っています。</p>
-          </div>
-          <img loading="lazy" className="inround-small-img" src="/life-bg1.webp" />
+            <div>
+              <h3 className='box-title life-title'>少人数</h3>
+              <p className='box-desc'>渓水寮には１３人の個性豊かな寮生が住んでいます。少人数で、アットホームな雰囲気です。一人一人の生活を大切にしながら、共同生活を送っています。</p>
+            </div>
+            <img loading="lazy" className="inround-small-img" src="/life-bg1.webp" />
           </div>
           <div className='cr-flex'>
-          <div>
-            <h3 className='index-light-title'>自治寮</h3>
-            <p className='cr-desc'>渓水寮は寮生の手で運営されていますので、寮生が寮の運営に関して(ほとんど)すべてのことを決められます。少人数ですので、気兼ねなく意見を言ったり議論したりできます。</p>
-          </div>
-          <img loading="lazy" className="inround-small-img" src="/life-bg2.webp" />
+            <div>
+              <h3 className='box-title life-title'>自治寮</h3>
+              <p className='box-desc'>渓水寮は寮生の手で運営されていますので、寮生が寮の運営に関して(ほとんど)すべてのことを決められます。少人数ですので、気兼ねなく意見を言ったり議論したりできます。</p>
+            </div>
+            <img loading="lazy" className="inround-small-img" src="/life-bg2.webp" />
           </div>
           <div></div>
         </div>
@@ -96,31 +96,83 @@ export default function Home() {
           </div>
         </div>
         <div className='cr-box cr-flex'>
-          <div>
+          <div className='ifee-b1'>
             <h4 className='index-inround-upper'>Monthly Fees</h4>
             <h3 className='index-inround-title'>寮費</h3>
             <p className='index-fee-fee'>4,7000円/月</p>
             <p className='index-fee-sub'>食事代・水道費・光熱費・ネット代などすべて込み</p>
           </div>
-          <p className='cr-desc'>東北大学YMCA渓水寮は卒寮生や東北大学の教員有志などからのご寄付により、寮費を抑えています。寮費の支払いは柔軟に行え、年度末に余った寮費の約半分が返金されます。また、入寮費として3万円かかります（内2万円は卒寮時に返金）。</p>
+          <p className='cr-desc ifee-b2'>東北大学YMCA渓水寮は卒寮生や東北大学の教員有志などからのご寄付により、寮費を抑えています。寮費の支払いは柔軟に行え、年度末に余った寮費の約半分が返金されます。また、入寮費として3万円かかります（内2万円は卒寮時に返金）。</p>
 
+        </div>
+        <div className='smsg-wrapper'>
+          <div className='smsg-tbox'>
+            <h4 className='index-inround-upper voice-up'>Voice</h4>
+            <h3 className='box-title voice-title'>寮生の声</h3>
+          </div>
+          <p className='smsg-box'>寮生活の醍醐味といえば未知との遭遇だと思う。当たり前が（同じ日本人というはずなのに）異なる人間と生活スペースを共有するのだから「えっ！？」となるようなことが多数ある。意外な趣味、意外な調理、意外な習慣等々。・・・・・・</p>
+          <p className='smsg-box'>・・・・・・寮にいる皆は誰もとても個性が強い。個性が強いということは、それぞれ違うバックグラウンドがあり、意見の衝突も生じうるということ。しかし、それを嫌って避けてしまうのか、受け入れることができるのか。・・・・・・</p>
+          <p className='smsg-box'>・・・・・・渓水寮には、自治寮なりの厳しさがある。係仕事をきちんとこなす、寮生総会や公式行事には必ず参加するなど、一人暮らしの学生より、寮のために割くべき時間が増える。つまり、自分が自由に使える時間が減るということでもある。・・・・・・</p>
+          <Link href='/messages/'><a className='index-inround-link smsg-btn'><span className="material-symbols-rounded index-link-icon">
+            arrow_forward_ios
+          </span>寮生の声をもっと読む</a></Link>
+        </div>
+        <div className='smsg-wrapper'>
+          <div className='smsg-tbox'>
+            <h4 className='index-inround-upper voice-up'>FAQ</h4>
+            <h3 className='box-title voice-title'>よくある質問</h3>
+          </div>
+          <div className='smsg-box'>
+            <p className='smsg-q'>東北大学YMCA渓水寮に門限はありますか？</p>
+            <p className='smsg-a'>ありません。ただし、安全のため寮生に合鍵を配布したのち夜間は施錠しています。また、寮生の個室には鍵がついています。
+            </p>
+          </div>
+          <div className='smsg-box'>
+            <p className='smsg-q'>上下関係は厳しいですか？<br/>飲酒の強制はありますか？</p>
+            <p className='smsg-a'>先輩後輩の上下関係はなく、学年に関わらず交流できます。また、飲酒の強制は一切ありません。</p>
+          </div>
+          <div className='smsg-box'>
+            <p className='smsg-q'>大学院からでも寮に入れますか？</p>
+            <p className='smsg-a'>今年度は院生の募集は行っておりません（来年度以降は未定です）。大学新入生が一人だけにならないようにするためです。詳しくは募集要項をご覧ください。
+            </p>
+          </div>
+          <Link href='/faq/'><a className='index-inround-link smsg-btn'><span className="material-symbols-rounded index-link-icon">
+            arrow_forward_ios
+          </span>他の質問を見る</a></Link>
+        </div>
+        <div className='cr-box cr-flex iapply-box'>
+          <div>
+            <h4 className='box-title iapply-title'>入寮方法</h4>
+            <p className='box-desc iapply-desc'>東北大学YMCA渓水寮では、東北大学などに通う男女新入生を募集しております。詳しくは募集要項をご覧ください。また、ご質問などありましたらお気軽にお問合せください。</p>
+          </div>
+          <div>
+            <Link href='/apply/'><a className='index-inround-link iapply-btn'><span className="material-symbols-rounded index-link-icon">
+              arrow_forward_ios
+            </span>募集要項</a></Link>
+          </div>
+        </div>
+        <div className='cr-box iop-box'>
+          <h4 className='box-title iop-title'>卒寮生の方へ</h4>
+          <p className='box-desc iop-desc'>東北大学YMCA渓水寮の近況や、いただいた寮の運営のためのご寄付の活用実績、渓水寮の電子版会報の閲覧方法などをまとめています。</p>
+          <Link href='https://keisuiryoop.studio.site/'><a className='index-inround-link iop-btn'><span className="material-symbols-rounded index-link-icon">
+            arrow_forward_ios
+          </span>卒寮生用サイト</a></Link>
+        </div>
+        <div className='cr-box iuniv-box'>
+          <h4 className='box-title iuniv-title'>東北大学との関係</h4>
+          <p className='box-desc iuniv-desc'>渓水寮は東北大学の一部の教員の支援を受けていますが、東北大学とは関係ありません。
+            東北大学の運営するユニバーシティハウス（学生寄宿舎）や寮については、東北大学の公式サイトよりご覧ください。</p>
+          <Link href='https://www.tohoku.ac.jp/japanese/studentinfo/studentlife/05/studentlife0501/'><a className='index-inround-link'><span className="material-symbols-rounded index-link-icon">
+            arrow_forward_ios
+          </span>ユニバーシティ・ハウス</a></Link><br />
+          <Link href='https://www.tohoku.ac.jp/japanese/studentinfo/studentlife/05/studentlife0502/'><a className='index-inround-link'><span className="material-symbols-rounded index-link-icon">
+            arrow_forward_ios
+          </span>学寮</a></Link>
+          <p className='box-desc iuniv-desc'>※いずれも東北大学公式サイトです。</p>
         </div>
         <div className="card-container">
           <Card title="行事" linkHref="/events/" linkTitle="行事 →" imageSrc="events/hanami.webp" imageAlt="東北大学YMCA渓水寮の個室">
             <p>東北大学YMCA渓水寮では読書会や、花見、クリスマス会などいろいろな行事があります。</p>
-          </Card>
-          <Card title="寮生の声" linkHref="/messages/" linkTitle="もっと読む">
-            <div className="person-box" id="person-box-1">
-              <p className="person-name-small">山口
-              </p>
-              <p className="message-text">
-                寮生活の醍醐味といえば未知との遭遇だと思う。当たり前が（同じ日本人というはずなのに）異なる人間と生活スペースを共有するのだから「えっ！？」となるようなことは多数ある。意外な趣味、意外な調理、意外な習慣等々。・・・・・・
-              </p>
-            </div>
-          </Card>
-          <Card title="よくある質問" linkHref="/faq/" linkTitle="他の質問を見る →">
-            <p className="contents-question">東北大学YMCA渓水寮に門限はありますか？</p>
-            <p className="contents-desc">ありません。鍵を持っていれば好きな時間に寮に帰れます。</p>
           </Card>
           <Card title="東北大学YMCA渓水寮の概要">
             <ul>
@@ -139,20 +191,6 @@ export default function Home() {
                 href="https://instagram.com/keisuiryo">Instagram(寮の食事)
                 →</a>
             </ul>
-          </Card>
-          <Card title="東北大学との関係">
-            <p className="contents-desc">渓水寮は東北大学の一部の教員やOPの支援を受けていますが、東北大学からは独立した自治寮です。</p>
-            <p className="contents-desc">東北大学の運営するユニバーシティハウス（学生寄宿舎）や寮については、東北大学の公式サイトよりご覧ください。</p>
-            <a className="link contents-link"
-              href="https://www.tohoku.ac.jp/japanese/studentinfo/studentlife/05/studentlife0501/">ユニバーシティハウス(東北大学公式サイト)
-              →</a>
-            <a className="link contents-link"
-              href="https://www.tohoku.ac.jp/japanese/studentinfo/studentlife/05/studentlife0502/">学寮(東北大学公式サイト)
-              →</a>
-          </Card>
-          <Card title="卒寮生の皆様へ">
-            <p className="contents-desc">卒寮生向けのページはこちらです。東北大学YMCA渓水寮の現状や、いただいた寮の運営のためのご支援の活用実績や、渓水寮の電子版会報の閲覧方法などをまとめています。</p>
-            <a className="link contents-link" href="https://keisuiryoop.studio.site/">卒寮生向けサイト →</a>
           </Card>
         </div>
       </div>
