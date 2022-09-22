@@ -87,7 +87,11 @@ body {
 }
 
 .top-idt-box {
-    margin-top: -100px;
+    position: absolute;
+    left: 50vw;
+    top: 45vw;
+    width: 100vw;
+    transform: translateX(-50%);
 }
 
 .desc-box {
@@ -95,24 +99,24 @@ body {
     margin: 0 auto;
     margin-top: 30px;
     margin-bottom: 0px;
-    background-color: hsl(31deg, 100%, 91%);
-    border: 3px solid hsl(26deg, 96%, 35%);
+    background-color: hsl(31deg, 100%, 97%);
+    border: 3px solid hsl(26deg, 96%, 40%);
     padding: 30px 15px;
     border-radius: 60px 6px 60px 6px;
     font-family: serif;
 }
 
 .desc-title {
-    font-weight: bold;
-    color: hsl(26deg, 96%, 35%);
-    font-size: 24px;
+    color: hsl(26deg, 96%, 40%);
+    font-size: 25px;
     line-height: 1.6;
+    font-weight: bold;
 }
 
 .desc-text {
-    font-size: 16px;
-    color: hsl(26deg, 96%, 35%);
-    line-height: 1.6;
+    font-size: 18px;
+    color: hsl(26deg, 96%, 40%);
+    line-height: 1.8;
 }
 
 .top-bg-pc {
@@ -136,8 +140,11 @@ body {
 @media only screen and (min-width: 1150px) {
     .top-bg-pc {
         display: block;
-        position: fixed;
+        width: 100%;
+        height: auto;
+        max-height: 95vh;
         z-index: -10;
+        object-fit: contain;
     }
 
     .top-bg-mobile {
@@ -145,7 +152,6 @@ body {
     }
 
     .desc-box {
-        margin-top: 80vh;
         margin-bottom: 100px;
         width: 600px;
         padding: 50px 80px;
@@ -154,7 +160,7 @@ body {
 
     .top-idt-box {
         position: absolute;
-        top: calc(50vh);
+        top: calc(40vh);
         left: calc(50vw + 110px);
         transform: translateX(calc(-50% - 30px)) translateY(-10%);
     }

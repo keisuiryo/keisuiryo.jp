@@ -8,20 +8,16 @@ export const config = {
 export default function Home() {
   return (
     <Wrapper noheader desc="渓水寮は13名の少人数な食事付きの学生寮です。寮の家賃は食費・光熱費込み月4万７千円。東北大学などに通う男女新入寮生を募集しています。">
-      <div className='top-bg-pc'>
+      {/*<div className='top-bg-pc'>
         <img className="top-right" src="/top-right.jpg"></img>
         <img className="top-left" src="/top-left.jpg"></img>
         <img className="top-center" src="/top-center.jpg"></img>
-      </div>
-      <img className="top-bg-mobile" src="/top-mobile-top.webp"></img>
+      </div>*/}
+      <img className="top-bg-mobile" src="/top-mobile.webp"></img>
+      <img className="top-bg-pc" src="/top-bg.webp"></img>
       <div className="top-idt-box">
         <img className="top-idt-img" src="/ymca-logo.webp"></img>
         <h1 className="top-idt"><span className="top-idt-sub">東北大学YMCA</span>渓水寮</h1>
-      </div>
-      <img className="top-bg-mobile top-bg-mobile-bottom" src="/top-mobile-bottom.webp"></img>
-      <div className="desc-box" >
-        <h2 className='desc-title'>東北大学YMCA渓水寮は、</h2>
-        <p className='desc-text'>一言で表すと、食事つきの学生寮です。朝晩寮母さんが食事を作ってくださります。寮費は月4万7千円です。食費や光熱費などすべて含まれています。定員は13名と寮母さん。少人数な学生寮です。今年度は東北大学など仙台の大学に通う男女新入生を2人、募集しています。</p>
       </div>
       {/*<div className="important">
 
@@ -33,6 +29,11 @@ export default function Home() {
       </div>*/}
 
       <div className='top-contents-wrapper'>
+
+      <div className="desc-box" >
+        <h2 className='desc-title'>東北大学YMCA渓水寮は、</h2>
+        <p className='desc-text'>一言で表すと、食事つきの学生寮です。朝晩寮母さんが食事を作ってくださります。寮費は月4万7千円です。食費や光熱費などすべて含まれています。定員は13名と寮母さん。少人数な学生寮です。今年度は東北大学など仙台の大学に通う男女新入生を2人、募集しています。</p>
+      </div>
         <div className='round-box index-round-box index-r-about'>
           <div className='index-inround-box'>
             <h3 className='index-inround-title'>渓水寮とは</h3>
@@ -99,7 +100,7 @@ export default function Home() {
           <div className='ifee-b1'>
             <h4 className='index-inround-upper'>Monthly Fees</h4>
             <h3 className='index-inround-title'>寮費</h3>
-            <p className='index-fee-fee'>4,7000円/月</p>
+            <p className='index-fee-fee'>47,000円/月</p>
             <p className='index-fee-sub'>食事代・水道費・光熱費・ネット代などすべて込み</p>
           </div>
           <p className='cr-desc ifee-b2'>東北大学YMCA渓水寮は卒寮生や東北大学の教員有志などからのご寄付により、寮費を抑えています。寮費の支払いは柔軟に行え、年度末に余った寮費の約半分が返金されます。また、入寮費として3万円かかります（内2万円は卒寮時に返金）。</p>
@@ -173,24 +174,6 @@ export default function Home() {
         <div className="card-container">
           <Card title="行事" linkHref="/events/" linkTitle="行事 →" imageSrc="events/hanami.webp" imageAlt="東北大学YMCA渓水寮の個室">
             <p>東北大学YMCA渓水寮では読書会や、花見、クリスマス会などいろいろな行事があります。</p>
-          </Card>
-          <Card title="東北大学YMCA渓水寮の概要">
-            <ul>
-              <li>寮の定員：１３名</li>
-              <li>寮費：月４万７千円</li>
-              <li>入寮費：３万円（うち敷金２万円、卒寮時払い戻し）</li>
-              <li>寮の設備:鉄筋コンクリート2階建て。1989年渓水寮竣工、築31年。2007年内装改修、2019年外壁塗装、2020年浴室改修。<br />寮生用個室13室、客間、寮母室、ホール、無線LAN5台、全個室有線LAN
-              </li>
-              <li>寮の共同設備:浴室・シャワー室(鍵付き)トイレ(男女別)、洗面台各階3箇所、洗濯機2台、冷蔵庫3台、掃除機2台、テレビ（ホール、客間）、炊事場（自炊可能）、食器類、駐車場、駐輪場
-              </li>
-              <li>SNS:</li>
-              <a className="link contents-link"
-                href="https://twitter.com/keisuiryo">Twitter(寮生活の様子)
-                →</a>
-              <a className="link contents-link"
-                href="https://instagram.com/keisuiryo">Instagram(寮の食事)
-                →</a>
-            </ul>
           </Card>
         </div>
       </div>
