@@ -40,7 +40,6 @@ export default function Home() {
                         他には寮生の飲み会をここで行うこともあります。（飲み会の参加は任意で、お酒の強要は全くありません。）窓の外には仙台市南部の景色が広がり、空気が澄んでいるとき遠く蔵王の山並みを眺めることができます。
                     </p>
                 </Card>
-                <img loading="lazy" className="header-image" src="/facilities/games.webp" alt="渓水寮の寮生がゲームしている写真" />
             </div>
         </Wrapper>
     )

@@ -86,7 +86,7 @@ export default function Home() {
           </div>
         </div>
         <div className='round-box index-round-box'>
-          <img loading="lazy" className="index-inround-img" src="/location.webp" />
+          <img loading="lazy" className="index-inround-img" src="/map.png" />
           <div className='index-inround-box'>
             <h4 className='index-inround-upper'>Locations</h4>
             <h3 className='index-inround-title'>立地・周辺施設</h3>

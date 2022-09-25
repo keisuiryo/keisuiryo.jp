@@ -100,3 +100,11 @@ td:first-child {
     font-size: .8rem;
     margin-top: .2rem;
 }
+
+.link-box {
+    margin-top: 10px;
+}
+
+.link-box > a {
+    margin: 12px 0;
+}

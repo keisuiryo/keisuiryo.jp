@@ -220,8 +220,6 @@ export default function Home() {
                     </p>
                 </div>
             </section>
-            <img loading="lazy" className="header-image" src="/meals/meal_pic.webp" alt="渓水寮の寮生が食事をしている写真" />
-
         </Wrappr>
     )
 }
