@@ -17,7 +17,7 @@ export default function Home() {
                     <p>渓水寮に興味を持っていただきありがとうございます。質問・見学申し込みなどありましたらお気軽にご連絡ください。</p>
                     <p>
                         入寮時期:2023年4月<br />
-                        対象:仙台市の大学に通う学部新入生<br />
+                        対象:仙台市近郊の大学・専門学校に通う学部新入生<br />
                         募集人数:2名<br />
                         選抜方法:面接による<br />
                         日程:ご質問・見学・面接受付中
@@ -64,7 +64,15 @@ export default function Home() {
                 <h2 className="contents-title apply-contents-title">入寮の流れ</h2>
                 <div className="flaw-box">
                     <h4 className="flaw-title"><span className="flaw-num">1</span>見学</h4>
-                    <p className="flaw-text">渓水寮での生活について対面もしくはオンラインでご説明します。お気軽に公式LINEもしくはメールでご連絡ください。受験当日の見学・直前の見学の連絡にも対応できます。</p>
+                    <p className="flaw-text">渓水寮での生活について対面もしくはオンラインでご説明します。お気軽に公式LINEもしくはメールでご連絡ください。受験当日の見学・直前の見学の連絡にも対応できます。<br />見学申し込み際には以下のことをお伝えください。
+                    <br />
+                    <ul><li>名前・学年</li>
+                    <li>ご希望の見学日・時間</li>
+                    <li>見学方法(対面かオンラインか)</li>
+                    <li>見学に来られる人数</li>
+                    <li>現時点での志望大学・専門学校</li>
+                    </ul>
+                    よろしくお願いします。</p>
                     <h4 className="flaw-title"><span className="flaw-num">2</span>入寮申し込み</h4>
                     <p className="flaw-text">申し込み用紙・面接用事前質問シートを公式LINE・メールもしくは郵送で送ってください。見学の際に手渡しでも大丈夫です。</p>
                     <div className="files-box">

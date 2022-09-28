@@ -133,7 +133,7 @@ export default function Home() {
             <p className='smsg-a'>先輩後輩の上下関係はなく、学年に関わらず交流できます。また、飲酒の強制は一切ありません。</p>
           </div>
           <div className='smsg-box'>
-            <p className='smsg-q'>大学院からでも寮に入れますか？</p>
+            <p className='smsg-q'>大学院・中途年度編入からでも寮に入れますか？</p>
             <p className='smsg-a'>今年度は院生の募集は行っておりません（来年度以降は未定です）。大学新入生が一人だけにならないようにするためです。詳しくは募集要項をご覧ください。
             </p>
           </div>
