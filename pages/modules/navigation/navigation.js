@@ -2,13 +2,13 @@ import Link from 'next/link'
 import Footer from '../footer/footer-pc'
 
 export default function Navigation(props) {
-    let model = [{ href: "about", text: "渓水寮とは", icon: "info" },
-    { href: "meals", text: "食事", icon: "set_meal" },
-    { href: "events", text: "行事", icon: "diversity_3" },
-    { href: "facilities", text: "設備", icon: "door_open" },
-    { href: "location", text: "通学・周辺施設", icon: "store" },
-    { href: "messages", text: "寮生の声", icon: "group" },
-    { href: "faq", text: "FAQ", icon: "help" }]
+    let model = [{ href: "/about/", text: "渓水寮とは", icon: "info" },
+    { href: "/meals/", text: "食事", icon: "set_meal" },
+    { href: "/events/", text: "行事", icon: "diversity_3" },
+    { href: "/facilities/", text: "設備", icon: "door_open" },
+    { href: "/location/", text: "通学・周辺施設", icon: "store" },
+    { href: "/messages/", text: "寮生の声", icon: "group" },
+    { href: "https://keisuiryo.studio.site/faq", text: "FAQ", icon: "help" }]
     let selected = model.find(i => i.href == props.id)
     for (let i of model) {
         i.selected = false
@@ -17,7 +17,7 @@ export default function Navigation(props) {
         selected.selected = true
     let links = []
     for (const i of model) {
-        links.push(<Link href={"/" + i.href + "/"}><a className="nav-link" selected={i.selected}><span className="material-symbols-rounded nav-icon">
+        links.push(<Link href={i.href}><a className="nav-link" selected={i.selected}><span className="material-symbols-rounded nav-icon">
             {i.icon}
         </span>{i.text}</a></Link>)
     }
@@ -42,7 +42,7 @@ export default function Navigation(props) {
                         <Link href="https://twitter.com/keisuiryo"><a><img className="nav-sns" src="/twitter.png" alt="Twitter"></img></a></Link>
                         <Link href="https://instagram.com/keisuiryo"><a><img className="nav-sns" src="/instagram.png" alt="Instagram"></img></a></Link>
                     </div>
-                    <Link href="https://keisuiroop.studio.site/"><a className="nav-link nav-op"><span className="material-symbols-rounded nav-icon">
+                    <Link href="https://keisuiro.studio.site/"><a className="nav-link nav-op"><span className="material-symbols-rounded nav-icon">
                         school
                     </span>卒寮生の方へ</a></Link>
                 </div>

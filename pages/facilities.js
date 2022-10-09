@@ -13,13 +13,6 @@ export default function Home() {
                 <Card title="ホール" imageSrc="/facilities/hall.webp" imageAlt="渓水寮のホールはテレビやゲームがあり、行事や食事の時に使います。">
                     <p className="contents-desc">食事や朝拝、寮生総会などで使います。</p>
                     <p className="contents-desc">テレビやゲーム機、ピアノやドラム、たくさんの歴史ある本、プリンターなどがあり、Wifiも繋がっています。</p>
-                    <div className="person-box" id="facility-person-box-f1">
-                        <p className="person-name-small">倉本(1年)
-                        </p>
-                        <p className="message-text">
-                            食事の時じゃなかったらあんまり人はいないので、勉強などするのにもってこいですよ！
-                        </p>
-                    </div>
                 </Card>
                 <Card title="台所" imageSrc="/facilities/kitchen.webp" imageAlt="渓水寮の台所は炊飯器や食器、コンロがあり食事を作れます。">
                     <p className="contents-desc">寮母さんが食事を作るときや寮生が自炊するときに使います。共用の冷蔵庫や多数の食器があり、調理器具も豊富で自由に使うことができます。</p>
@@ -37,7 +30,7 @@ export default function Home() {
                     <p className="contents-desc">寮生の知人や家族ならどなたでも泊まっていただくことができます。簡易ベッドや、テレビ、こたつ、パソコン、過去の寮生が残していった漫画本などがあります。
                     </p>
                     <p className="contents-desc">
-                        他には寮生の飲み会をここで行うこともあります。（飲み会の参加は任意で、お酒の強要は全くありません。）窓の外には仙台市南部の景色が広がり、空気が澄んでいるとき遠く蔵王の山並みを眺めることができます。
+                        他には寮生の飲み会をここで行うこともあります。窓の外には仙台市南部の景色が広がり、空気が澄んでいるとき遠く蔵王の山並みを眺めることができます。
                     </p>
                 </Card>
             </div>
