@@ -42,7 +42,7 @@ export default function Navigation(props) {
                         <Link href="https://twitter.com/keisuiryo"><a><img className="nav-sns" src="/twitter.png" alt="Twitter"></img></a></Link>
                         <Link href="https://instagram.com/keisuiryo"><a><img className="nav-sns" src="/instagram.png" alt="Instagram"></img></a></Link>
                     </div>
-                    <Link href="https://keisuiro.studio.site/"><a className="nav-link nav-op"><span className="material-symbols-rounded nav-icon">
+                    <Link href="https://keisuiryo.studio.site/"><a className="nav-link nav-op"><span className="material-symbols-rounded nav-icon">
                         school
                     </span>卒寮生の方へ</a></Link>
                 </div>
