@@ -93,7 +93,11 @@
         margin-top: 20px;
         padding: 7px 14px;
         border: 2px solid hsl(26deg, 60%, 53%);
+
+        background-color: hsl(30deg, 70%, 60%);
         color: hsl(26deg, 60%, 53%);
+
+        color: #FFF;
     }
     .nav-apply:hover {
         background-color: hsl(30deg, 70%, 60%);
