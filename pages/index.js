@@ -38,7 +38,7 @@ export default function Home() {
           <div className='index-inround-box'>
             <h3 className='index-inround-title'>渓水寮とは</h3>
             <p className='index-inround-contents'>渓水寮は、東北大学YMCA(キリスト教青年会)の寮です。1928年に建立され、建物は変われど90年以上の歴史を持ちます。現在は東北大学などの教員有志や、卒寮生のご厚意の下運営されています。</p>
-            <Link href='/about/'><a className='index-inround-link'><span className="material-symbols-rounded index-link-icon">
+            <Link href='/about/'><a className='index-inround-link index-link-about'><span className="material-symbols-rounded index-link-icon">
               arrow_forward_ios
             </span>理事長あいさつ・寮の概要</a></Link>
           </div>
@@ -61,6 +61,9 @@ export default function Home() {
             <img loading="lazy" className="inround-small-img" src="/life-bg2.webp" />
           </div>
           <div></div>
+          <Link href='https://keisuiryo.studio.site/life'><a className='index-inround-link'><span className="material-symbols-rounded index-link-icon">
+              arrow_forward_ios
+            </span>寮生活について</a></Link>
         </div>
         <h3 className='index-header'>渓水寮の特長</h3>
         <div className='round-box index-round-box index-r-1'>
@@ -112,9 +115,8 @@ export default function Home() {
             <h3 className='box-title voice-title'>寮生の声</h3>
           </div>
           <p className='smsg-box'>寮生活の醍醐味といえば未知との遭遇だと思う。当たり前が（同じ日本人というはずなのに）異なる人間と生活スペースを共有するのだから「えっ！？」となるようなことが多数ある。意外な趣味、意外な調理、意外な習慣等々。・・・・・・</p>
-          <p className='smsg-box'>・・・・・・寮にいる皆は誰もとても個性が強い。個性が強いということは、それぞれ違うバックグラウンドがあり、意見の衝突も生じうるということ。しかし、それを嫌って避けてしまうのか、受け入れることができるのか。・・・・・・</p>
-          <p className='smsg-box'>・・・・・・渓水寮には、自治寮なりの厳しさがある。係仕事をきちんとこなす、寮生総会や公式行事には必ず参加するなど、一人暮らしの学生より、寮のために割くべき時間が増える。つまり、自分が自由に使える時間が減るということでもある。・・・・・・</p>
-          <Link href='/messages/'><a className='index-inround-link smsg-btn'><span className="material-symbols-rounded index-link-icon">
+          <p className='smsg-box'>まず、この寮の悪い面から見ていきましょう。物事はいい面ばかり見てはいけないですからね！それは・・・</p>
+          <Link href='https://keisuiryo.studio.site/voice'><a className='index-inround-link smsg-btn'><span className="material-symbols-rounded index-link-icon">
             arrow_forward_ios
           </span>寮生の声をもっと読む</a></Link>
         </div>
@@ -137,7 +139,7 @@ export default function Home() {
             <p className='smsg-a'>今年度は院生の募集は行っておりません（来年度以降は未定です）。大学新入生が一人だけにならないようにするためです。詳しくは募集要項をご覧ください。
             </p>
           </div>
-          <Link href='/faq/'><a className='index-inround-link smsg-btn'><span className="material-symbols-rounded index-link-icon">
+          <Link href='https://keisuiryo.studio.site/faq'><a className='index-inround-link smsg-btn'><span className="material-symbols-rounded index-link-icon">
             arrow_forward_ios
           </span>他の質問を見る</a></Link>
         </div>
@@ -155,7 +157,7 @@ export default function Home() {
         <div className='cr-box iop-box'>
           <h4 className='box-title iop-title'>卒寮生の方へ</h4>
           <p className='box-desc iop-desc'>東北大学YMCA渓水寮の近況や、いただいた寮の運営のためのご寄付の活用実績、渓水寮の電子版会報の閲覧方法などをまとめています。</p>
-          <Link href='https://keisuiryoop.studio.site/'><a className='index-inround-link iop-btn'><span className="material-symbols-rounded index-link-icon">
+          <Link href='https://keisuiryo.studio.site/'><a className='index-inround-link iop-btn'><span className="material-symbols-rounded index-link-icon">
             arrow_forward_ios
           </span>卒寮生用サイト</a></Link>
         </div>
@@ -170,11 +172,6 @@ export default function Home() {
             arrow_forward_ios
           </span>学寮</a></Link>
           <p className='box-desc iuniv-desc'>※いずれも東北大学公式サイトです。</p>
-        </div>
-        <div className="card-container">
-          <Card title="行事" linkHref="/events/" linkTitle="行事 →" imageSrc="events/hanami.webp" imageAlt="東北大学YMCA渓水寮の個室">
-            <p>東北大学YMCA渓水寮では読書会や、花見、クリスマス会などいろいろな行事があります。</p>
-          </Card>
         </div>
       </div>
     </Wrapper>

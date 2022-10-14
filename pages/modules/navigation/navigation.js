@@ -3,12 +3,11 @@ import Footer from '../footer/footer-pc'
 
 export default function Navigation(props) {
     let model = [{ href: "/about/", text: "渓水寮とは", icon: "info" },
+    { href: "https://keisuiryo.studio.site/life", text: "寮生活", icon: "diversity_3" },
     { href: "/meals/", text: "食事", icon: "set_meal" },
-    { href: "/events/", text: "行事", icon: "diversity_3" },
     { href: "/facilities/", text: "設備", icon: "door_open" },
     { href: "/location/", text: "通学・周辺施設", icon: "store" },
-    { href: "/messages/", text: "寮生の声", icon: "group" },
-    { href: "https://keisuiryo.studio.site/faq", text: "FAQ", icon: "help" }]
+    { href: "https://keisuiryo.studio.site/faq", text: "よくある質問", icon: "help" }]
     let selected = model.find(i => i.href == props.id)
     for (let i of model) {
         i.selected = false
