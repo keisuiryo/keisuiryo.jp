@@ -22,6 +22,9 @@ export default function Navigation(props) {
     }
     return (
         <div className='nav-wrapper'>
+            <Link href="/apply/"><a className="nav-link fab-apply"><span className="material-symbols-rounded nav-icon">
+                        campaign
+                    </span>募集要項</a></Link>
             <nav id="nav-container" className="nav">
                 <Link href="/">
                     <a className="nav-idt icon-text">

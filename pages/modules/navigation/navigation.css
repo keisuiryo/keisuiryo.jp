@@ -62,6 +62,33 @@
 .nav-wrapper {
     background-color: #fff;
 }
+.fab-apply {
+    position: fixed;
+    bottom: 10vh;
+    right: 15vw;
+    border-radius: 24px;
+    margin-top: 20px;
+    padding: 7px 14px;
+    border: 2px solid hsl(26deg, 60%, 53%);
+
+    background-color: hsl(30deg, 70%, 60%);
+    color: hsl(26deg, 60%, 53%);
+
+    color: #FFF;
+}
+
+.nav-apply {
+    display: inline-block;
+    border-radius: 24px;
+    margin-top: 20px;
+    padding: 7px 14px;
+    border: 2px solid hsl(26deg, 60%, 53%);
+
+    background-color: hsl(30deg, 70%, 60%);
+    color: hsl(26deg, 60%, 53%);
+
+    color: #FFF;
+}
 
 @media only screen and (min-width: 1150px) {
     #nav-container {
@@ -87,18 +114,6 @@
         transition: color ease-out .2s;
         color: hsl(26deg, 60%, 53%);
     }
-    .nav-apply {
-        display: inline-block;
-        border-radius: 24px;
-        margin-top: 20px;
-        padding: 7px 14px;
-        border: 2px solid hsl(26deg, 60%, 53%);
-
-        background-color: hsl(30deg, 70%, 60%);
-        color: hsl(26deg, 60%, 53%);
-
-        color: #FFF;
-    }
     .nav-apply:hover {
         background-color: hsl(30deg, 70%, 60%);
         color: #FFF;
@@ -119,4 +134,33 @@
     .idt-text {
         color: #333333;
     }
+}
+
+.nav-apply {
+    display: inline-block;
+    border-radius: 24px;
+    margin-top: 20px;
+    padding: 7px 14px;
+    border: 2px solid hsl(26deg, 60%, 53%);
+
+    background-color: hsl(30deg, 70%, 60%);
+    color: hsl(26deg, 60%, 53%);
+
+    color: #FFF;
+}
+
+.fab-apply {
+    position: fixed;
+    bottom: 5vh;
+    right: 5vw;
+    border-radius: 24px;
+    margin-top: 20px;
+    padding: 7px 14px;
+    border: 2px solid hsl(26deg, 60%, 53%);
+
+    background-color: hsl(30deg, 70%, 60%);
+    color: hsl(26deg, 60%, 53%);
+    box-shadow: 0px 2px 50px -11px rgba(0,0,0,0.5);
+
+    color: #FFF;
 }

@@ -103,7 +103,7 @@ body {
     border: 3px solid hsl(26deg, 96%, 40%);
     padding: 30px 15px;
     border-radius: 60px 6px 60px 6px;
-    font-family: serif;
+    /*font-family: serif;*/
 }
 
 .desc-title {
