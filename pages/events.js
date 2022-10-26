@@ -7,23 +7,6 @@ export default function Home() {
             <section className="events-base">
                 <h2 className="contents-title">定例行事</h2>
                 <div className="stack-container">
-                    <Stack title="読書会" imageSrc="/events/bookclub.webp" imageAlt="東北大学YMCA渓水寮で行われる読書会の様子">
-                        <p className="contents-desc">年に１３回行われ、各回持ち回りで寮生が自由にテーマを設定します。形式は議論やワークショップなど様々です。 </p>
-                        <h6 className="contents-title-tiny">過去のテーマ例</h6>
-                        <ul>
-                            <li>ルービックキューブ６面攻略体験</li>
-                            <li>価値観とあなた、それと私</li>
-                            <li>自動車と環境問題</li>
-                            <li>ハンドクラップ（手拍子）ことはじめ</li>
-                            <li>政軍関係と現代民主主義政治</li>
-                        </ul>
-                    </Stack>
-                    <Stack title="寮生総会" imageSrc="/events/meeting.webp" imageAlt="東北大学YMCA渓水寮で行われる寮生総会の様子">
-                        <p className="contents-desc">毎月１回行われます。東北大学YMCA渓水寮は自治寮なので、寮生活のルールなどについて話し合います。</p>
-                    </Stack>
-                    <Stack title="朝拝" imageSrc="/events/chohai.webp" imageAlt="東北大学YMCA渓水寮で行われる朝拝の写真です。">
-                        <p className="contents-desc">毎朝の食事の前に讃美歌を唄い、聖書の朗読を行います。</p>
-                    </Stack>
                     <Stack title="聖書研究">
                         <p className="contents-desc">年に２〜３回行われます。聖書の理解を深めたり、日常生活と聖書の関わりを考えたりします。</p>
                     </Stack>

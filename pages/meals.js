@@ -185,7 +185,16 @@ export default function Home() {
     }
 
     return (
-        <Wrappr title="食事" id="meals" desc="寮母さん手作りの食事が授業日の朝と晩提供されます。バリエーションと栄養バランスに配慮された手作りの食事です。食事を食べる時間は任意で、食事の量の調節やアレルギー、好き嫌いなどにも対応しています。時々食事だけでなくお菓子も振る舞われます。">
+        <Wrappr title="食事" id="meals" desc="寮母さん手作りの食事が授業日の朝と晩提供されます。バリエーションと栄養バランスに配慮された手作りの食事です。食事を食べる時間は任意で、食事の量の調節やアレルギーにも対応しています。">
+
+<section className="section-box">
+                <div className="desc-plain">
+                    <p>東北大学YMCA渓水寮では授業日の朝と晩に食事があります。</p>
+                    <p>住み込みの寮母さん手作りの食事です。</p>
+                    <p>アレルギーにも対応しており、量の調節も行えます。</p>
+                    {/*<p>時々寮母さん手作りのお菓子が振る舞われることもあります。</p>*/}
+                </div>
+            </section>
             <section className="meals-section">
                 <h2 className="contents-title">夕食例</h2>
                 <div className="meals-container">
@@ -196,15 +205,6 @@ export default function Home() {
                 <h2 className="contents-title">朝食例</h2>
                 <div className="meals-container">
                     {breakfastdom}
-                </div>
-            </section>
-            <section className="section-box">
-                <div className="desc-plain">
-                    <p>東北大学YMCA渓水寮では授業日の朝と晩に食事があります。</p>
-                    <p>住み込みの寮母さん手作りの食事です。</p>
-                    <p>アレルギーや好き嫌いにも対応していて、量の調節も行えます。</p>
-                    {/*<p>時々寮母さん手作りのお菓子が振る舞われることもあります。</p>*/}
-                    <p>ご飯を食べなかった時には食事代の返金があります。</p>
                 </div>
             </section>
             <section className="section-box">
