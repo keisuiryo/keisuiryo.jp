@@ -27,7 +27,7 @@ export default function Home() {
                 </label>
             </div>)
     }
-    const breakfasts = [ {
+    const breakfasts = [{
         "menus": [
             "パン",
             "クリームスープ",
@@ -36,7 +36,7 @@ export default function Home() {
         ],
         "src": "/meals/meal_m1.webp",
         "imgdesc": "晩の食事の写真で、酢豚などあります。",
-    },{
+    }, {
         "menus": [
             "ご飯",
             "お味噌汁",
@@ -87,7 +87,7 @@ export default function Home() {
         ],
         "src": "/meals/meal_m6.webp",
         "imgdesc": "晩の食事の写真で、酢豚などあります。",
-    }, ];
+    },];
     const dinners = [{
         "menus": [
             "ご飯",
@@ -109,7 +109,7 @@ export default function Home() {
         "src": "/meals/meal_d2.webp",
         "imgdesc": "晩の食事の写真で、酢豚などあります。",
 
-    },  {
+    }, {
         "menus": [
             "ご飯",
             "お味噌汁",
@@ -145,7 +145,7 @@ export default function Home() {
         ],
         "src": "/meals/meal_d7.webp",
         "imgdesc": "晩の食事の写真で、鳥の唐揚げなどあります。",
-    },{
+    }, {
         "menus": [
             "ご飯",
             "お味噌汁",
@@ -186,6 +186,15 @@ export default function Home() {
 
     return (
         <Wrappr title="食事" id="meals" desc="寮母さん手作りの食事が授業日の朝と晩提供されます。バリエーションと栄養バランスに配慮された手作りの食事です。食事を食べる時間は任意で、食事の量の調節やアレルギー、好き嫌いなどにも対応しています。時々食事だけでなくお菓子も振る舞われます。">
+            <section className="section-box">
+                <div className="desc-plain">
+                    <p>東北大学YMCA渓水寮では授業日の朝と晩に食事があります。</p>
+                    <p>住み込みの寮母さん手作りの食事です。</p>
+                    <p>アレルギーにも対応していて、量の調節も行えます。</p>
+                    {/*<p>時々寮母さん手作りのお菓子が振る舞われることもあります。</p>*/}
+                    {/*<p>ご飯を食べなかった時には食事代の返金があります。</p>*/}
+                </div>
+            </section>
             <section className="meals-section">
                 <h2 className="contents-title">夕食例</h2>
                 <div className="meals-container">
@@ -199,20 +208,11 @@ export default function Home() {
                 </div>
             </section>
             <section className="section-box">
-                <div className="desc-plain">
-                    <p>東北大学YMCA渓水寮では授業日の朝と晩に食事があります。</p>
-                    <p>住み込みの寮母さん手作りの食事です。</p>
-                    <p>アレルギーや好き嫌いにも対応していて、量の調節も行えます。</p>
-                    {/*<p>時々寮母さん手作りのお菓子が振る舞われることもあります。</p>*/}
-                    <p>ご飯を食べなかった時には食事代の返金があります。</p>
-                </div>
-            </section>
-            <section className="section-box">
                 <div className="meal-person-box person-box">
                     <img loading="lazy" width="400" height="300" className="person-img" src="/meals/ryobo.webp"
                         alt="食事を作ってくださる寮母さんの写真です" />
                     <div className="person-desc">
-                        <p className="person-name">上島明子</p>
+                        <p className="person-name">遠藤博子</p>
                         <p className="person-org">寮母</p>
                     </div>
                     <p className="message-text">
