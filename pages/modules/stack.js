@@ -4,11 +4,11 @@ export default function Card(props) {
     let link = null
     if (props.linkHref) {
         link = (
-        <Link href={props.linkHref}>
-            <a className="link summary-more" >
-                {props.linkTitle}
-            </a>
-        </Link>)
+        (<Link href={props.linkHref} className="link summary-more">
+
+            {props.linkTitle}
+
+        </Link>))
     }
     let image = null
     if (props.imageSrc) {

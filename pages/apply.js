@@ -13,15 +13,39 @@ export default function Home() {
             <p>なお、Twitterにも生活の様子をのせています。よろしければどうぞ。</p>
             <a href="https://twitter.com/keisuiryo" className="btn-fab btn">Twitter →</a>-->
     <!--</div>-->*/}
-                    <h2 className="contents-title">令和5年度募集要項</h2>
-                    <p>渓水寮に興味を持っていただきありがとうございます。質問・見学申し込みなどありましたらお気軽にご連絡ください。</p>
-                    <p>
-                        入寮時期:2023年4月<br />
-                        対象:仙台市近郊の大学・専門学校に通う学部新入生<br />
-                        募集人数:2名<br />
-                        選抜方法:面接による<br />
-                        日程:ご質問・見学・面接受付中
-                    </p>
+                <div className="important">
+                    <h3><span>i</span>AO2期受験生の皆様へ</h3>
+                    <p>渓水寮に興味を持っていただきありがとうございます。渓水寮では皆様のご応募をお待ちしております。</p>
+                    <h4>入寮募集日程について</h4>
+                    <table>
+                    <tr>
+                        <td>連絡締め切り</td>
+                        <td>11/17(木)</td>
+                    </tr>
+                    <tr>
+                        <td>見学・面接日</td>
+                        <td>11/19(土)</td>
+                    </tr>
+                    <tr>
+                        <td>入寮可否通知</td>
+                         <td>11/27(日)</td>
+                     </tr>
+                 </table>
+                 <dl>
+                 <li>ユニバーシティ・ハウスや学寮とも併願できます。ご検討ください。</li>
+                 <li>大阪会場を受験される方・別日での面接を希望される方はご連絡ください。柔軟に対応いたします。</li>
+                 <li>この日程を過ぎても入寮募集は続けております。第一次募集とお考えください。</li>
+                 </dl>
+                </div>
+                <h2 className="contents-title">令和5年度募集要項</h2>
+                <p>渓水寮に興味を持っていただきありがとうございます。質問・見学申し込みなどありましたらお気軽にご連絡ください。</p>
+                <p>
+                    入寮時期:2023年4月<br />
+                    対象:仙台市近郊の大学・専門学校に通う学部新入生<br />
+                    募集人数:2名<br />
+                    選抜方法:面接による<br />
+                    日程:ご質問・見学・面接受付中
+                </p>
                 {/*<div className="important">
 
                     <h3><span>i</span>令和5年度募集要項<br />(9/23更新)</h3>
@@ -65,14 +89,14 @@ export default function Home() {
                 <div className="flaw-box">
                     <h4 className="flaw-title"><span className="flaw-num">1</span>見学</h4>
                     <p className="flaw-text">渓水寮での生活について対面もしくはオンラインでご説明します。お気軽に公式LINEもしくはメールでご連絡ください。受験当日の見学・直前の見学の連絡にも対応できます。<br />見学申し込み際には以下のことをお伝えください。
-                    <br />
-                    <ul><li>名前・学年</li>
-                    <li>ご希望の見学日・時間</li>
-                    <li>見学方法(対面かオンラインか)</li>
-                    <li>見学に来られる人数</li>
-                    <li>現時点での志望大学・専門学校</li>
-                    </ul>
-                    よろしくお願いします。</p>
+                        <br />
+                        <ul><li>名前・学年</li>
+                            <li>ご希望の見学日・時間</li>
+                            <li>見学方法(対面かオンラインか)</li>
+                            <li>見学に来られる人数</li>
+                            <li>現時点での志望大学・専門学校</li>
+                        </ul>
+                        よろしくお願いします。</p>
                     <h4 className="flaw-title"><span className="flaw-num">2</span>入寮申し込み</h4>
                     <p className="flaw-text">申し込み用紙・面接用事前質問シートを公式LINE・メールもしくは郵送で送ってください。見学の際に手渡しでも大丈夫です。</p>
                     <div className="files-box">

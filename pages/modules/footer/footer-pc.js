@@ -9,29 +9,28 @@ export default function Footer(props) {
                     <span className="footer-name-name">東北大学YMCA渓水寮</span>
                 </p>
                 <address className="footer-adderss">
-                    <Link href="mailto:ryo@keisuiryo.jp">
-                        <a className="address-content"><span className="material-symbols-rounded nav-icon">
+                    <Link href="mailto:ryo@keisuiryo.jp" className="address-content">
+                        <span className="material-symbols-rounded nav-icon">
                             mail
-                        </span>ryo@keisuiryo.jp</a>
+                        </span>ryo@keisuiryo.jp
                     </Link>
-                    <Link href="tel:+810202293564">
-                        <a className="address-content"><span className="material-symbols-rounded nav-icon">
+                    <Link href="tel:+810202293564" className="address-content">
+                        <span className="material-symbols-rounded nav-icon">
                             call
-                        </span>022-249-3564</a>
+                        </span>022-249-3564
                     </Link>
                     <Link href="https://goo.gl/maps/oE32XoqM3sEwuCyaA" className="address-content">
-                        <a className="address-content">
+
                         <span className="material-symbols-rounded nav-icon">
                             near_me
-                        </span>
-                        〒982-0027<br />仙台市太白区大塒町8-1東北大学YMCA渓水寮</a>
+                        </span>〒982-0027<br />仙台市太白区大塒町8-1東北大学YMCA渓水寮
                     </Link>
                 </address>
                 <div className="nav-sns-box">
-                        <Link href="https://lin.ee/6XMmw9l"><a><img className="nav-sns" src="/line.png" alt="LINE"></img></a></Link>
-                        <Link href="https://twitter.com/keisuiryo"><a><img className="nav-sns" src="/twitter.png" alt="Twitter"></img></a></Link>
-                        <Link href="https://instagram.com/keisuiryo"><a><img className="nav-sns" src="/instagram.png" alt="Instagram"></img></a></Link>
+                        <Link href="https://lin.ee/6XMmw9l"><img className="nav-sns" src="/line.png" alt="LINE"></img></Link>
+                        <Link href="https://twitter.com/keisuiryo"><img className="nav-sns" src="/twitter.png" alt="Twitter"></img></Link>
+                        <Link href="https://instagram.com/keisuiryo"><img className="nav-sns" src="/instagram.png" alt="Instagram"></img></Link>
                 </div>
         </footer>
-    )
+    );
 }

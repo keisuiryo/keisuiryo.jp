@@ -482,3 +482,9 @@ body {
 .index-link-about {
     background-color: #C6A896;
 }
+.important {
+    margin: 20px auto;
+}
+.index-r-about {
+    margin-top: 50px;
+}
