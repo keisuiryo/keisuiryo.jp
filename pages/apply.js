@@ -14,7 +14,7 @@ export default function Home() {
             <a href="https://twitter.com/keisuiryo" className="btn-fab btn">Twitter →</a>-->
     <!--</div>-->*/}
                 <div className="important">
-                    <h3><span>i</span>AO2期受験生の皆様へ</h3>
+                    <h3><span>i</span>令和5年度受験生の皆様へ</h3>
                     <p>渓水寮に興味を持っていただきありがとうございます。渓水寮では皆様のご応募をお待ちしております。</p>
                     <p>質問・申し込み等ございましたら以下の連絡先よりお気軽にご連絡ください。</p>
                 </div>

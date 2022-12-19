@@ -35,7 +35,7 @@ export default function Home() {
           <p className='desc-text'>一言で表すと、食事つきの学生寮です。朝晩寮母さんが食事を作ってくださります。寮費は月4万7千円です。食費や光熱費などすべて含まれています。定員は13名と寮母さん。少人数な学生寮です。今年度は東北大学など仙台の大学に通う男女新入生を2人、募集しています。</p>
         </div>
         <div className="important">
-          <h3><span>i</span>AO2期受験生の皆様へ</h3>
+          <h3><span>i</span>令和5年度受験生の皆様へ</h3>
           <p>渓水寮に興味を持っていただきありがとうございます。渓水寮は皆様の見学・入寮を受け付けております。日程など詳しくは以下をご覧ください。</p>
           <Link href='/apply/' className='index-inround-link'><span className="material-symbols-rounded index-link-icon">
               arrow_forward_ios
