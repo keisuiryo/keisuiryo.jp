@@ -14,7 +14,7 @@ export default function Footer(props) {
                             mail
                         </span>ryo@keisuiryo.jp
                     </Link>
-                    <Link href="tel:+810202293564" className="address-content">
+                    <Link href="tel:+810222493564" className="address-content">
                         <span className="material-symbols-rounded nav-icon">
                             call
                         </span>022-249-3564

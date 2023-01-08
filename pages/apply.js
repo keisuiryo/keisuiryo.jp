@@ -62,7 +62,7 @@ export default function Home() {
                     <a className="link icon-text" href="mailto:ryo@keisuiryo.jp"><svg className="link-icon">
                         <use href="#svg-email" />
                     </svg>ryo@keisuiryo.jp</a>
-                    <a className="link icon-text" href="tel:+810202293564"><svg className="link-icon">
+                    <a className="link icon-text" href="tel:+810222493564"><svg className="link-icon">
                         <use href="#svg-tel" />
                     </svg>022-249-3564</a>
                 </div>
