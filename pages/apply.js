@@ -23,7 +23,7 @@ export default function Home() {
                 <p>
                     入寮時期:2023年4月<br />
                     対象:仙台市近郊の大学・専門学校に通う学部新入生<br />
-                    募集人数:2名<br />
+                    募集人数:2名(残り枠１名)<br />
                     選抜方法:面接による<br />
                     日程:ご質問・見学・面接受付中
                 </p>
@@ -69,7 +69,7 @@ export default function Home() {
                 <h2 className="contents-title apply-contents-title">入寮の流れ</h2>
                 <div className="flaw-box">
                     <h4 className="flaw-title"><span className="flaw-num">1</span>見学</h4>
-                    <p className="flaw-text">渓水寮での生活について対面もしくはオンラインでご説明します。お気軽に公式LINEもしくはメールでご連絡ください。受験当日の見学・直前の見学の連絡にも対応できます。<br />見学申し込み際には以下のことをお伝えください。
+                    <p className="flaw-text">渓水寮での生活についてご説明します。お気軽に公式LINEもしくはメールでご連絡ください。受験当日の見学・直前の見学の連絡にも対応できます。<br />見学申し込み際には以下のことをお伝えください。
                         <br />
                         <ul><li>名前・学年</li>
                             <li>ご希望の見学日・時間</li>
