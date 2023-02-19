@@ -91,6 +91,7 @@ export default function Home() {
                             <li>現時点での志望大学・専門学校</li>
                         </ul>
                         よろしくお願いします。</p>
+                    <p>また、<a href="https://keisuiryo.studio.site/request">渓水寮を希望される方へ</a>もお読みください。</p>
                     <h4 className="flaw-title"><span className="flaw-num">2</span>入寮申し込み</h4>
                     <p className="flaw-text">申し込み用紙・面接用事前質問シートを公式LINE・メールもしくは郵送で送ってください。見学の際に手渡しでも大丈夫です。</p>
                     <div className="files-box">
