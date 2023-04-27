@@ -14,10 +14,10 @@ export default function Home() {
             <a href="https://twitter.com/keisuiryo" className="btn-fab btn">Twitter →</a>-->
     <!--</div>-->*/}
                 <div className="important">
-                    <h3><span>i</span>令和5年度受験生の皆様へ(2/15日更新)</h3>
-                    <p>渓水寮に興味を持っていただきありがとうございます。渓水寮では皆様のご応募をお待ちしております。</p>
-                    <p>学寮・UHとの併願にも対応していますので、質問・申し込み等ございましたら以下の連絡先よりお気軽にご連絡ください。</p>
-                <p className="important-warning">2月15日現在、ありがたいことに定員を上回る募集をいただいており、早期に募集を締め切る可能性があります。よろしくお願いいたします。</p>
+                    <h3><span>i</span>令和6年度受験生の皆様へ(2023/4/27更新)</h3>
+                    <p>渓水寮は皆様からの見学を受け付けております</p>
+                    <p>質問・申し込み等ございましたら以下の連絡先よりお気軽にご連絡ください。</p>
+                    {/*<p className="important-warning">2月15日現在、ありがたいことに定員を上回る募集をいただいており、早期に募集を締め切る可能性があります。よろしくお願いいたします。</p>
                     <table>
                     <tr>
                         <td>連絡〆切</td>
@@ -30,7 +30,7 @@ export default function Home() {
                     <tr>
                         <td>入寮可否通知</td>
                         <td>3/10(金)</td>
-                    </tr></table>
+                    s</tr></table>*/}
                 </div>
                 <h2 className="contents-title">令和5年度募集要項</h2>
                 <p>渓水寮に興味を持っていただきありがとうございます。質問・見学申し込みなどありましたらお気軽にご連絡ください。</p>

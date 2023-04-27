@@ -3,15 +3,17 @@
 }*/
 .files-box {
     display: flex;
-column-gap: 3rem;
-row-gap: 1rem;
+    column-gap: 3rem;
+    row-gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
     margin: 2rem 0;
 }
+
 .file-link {
-    color: hsl(200deg,72%,50%);
+    color: hsl(200deg, 72%, 50%);
 }
+
 .flaw-title {
     display: flex;
     align-items: center;
@@ -20,12 +22,15 @@ row-gap: 1rem;
     margin: .5rem 0;
     margin-top: 3rem;
 }
+
 .flaw-title:first-child {
     margin-top: .5rem;
 }
+
 .link-icon {
     height: 2rem;
 }
+
 .flaw-num {
     display: flex;
     align-items: center;
@@ -33,34 +38,41 @@ row-gap: 1rem;
     width: 2em;
     height: 2em;
     border-radius: 50%;
-    background: hsl(25deg,22%,60%);
+    background: hsl(25deg, 22%, 60%);
     color: #eeeeeeee;
 }
+
 .flaw-text {
     text-align: justify;
 }
+
 .apply-main-container {
     margin: 1rem auto;
     max-width: 40rem;
     padding: 0 1.5rem;
 }
+
 .flaw-box {
     margin: 0 auto;
     max-width: 45rem;
 }
+
 .apply-contents-title {
     margin-top: 4rem;
 }
+
 .desc-plain {
     margin: 1rem auto;
 }
+
 .important {
-   border-radius: 10px;
-   border: solid 5px rgb(247, 141, 65); 
-   padding: .5rem 1rem;
-   text-align: justify;
+    border-radius: 10px;
+    border: solid 5px rgb(247, 141, 65);
+    padding: .5rem 1rem;
+    text-align: justify;
 }
-.important > h3 > span {
+
+.important>h3>span {
     border-radius: 50%;
     width: 2rem;
     display: flex;
@@ -72,30 +84,37 @@ row-gap: 1rem;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bolder;
 }
-.important > h3 {
+
+.important>h3 {
     display: flex;
     gap: 1rem;
     color: rgb(247, 141, 65);
     align-items: center;
     margin-bottom: .2rem;
 }
-.important > dl >div {
+
+.important>dl>div {
     display: flex;
     flex-wrap: wrap;
 }
+
 table {
     border-spacing: 0;
 }
+
 td {
     padding: 0
 }
+
 td:first-child {
     padding-right: 1rem;
 }
-.important > h4 {
+
+.important>h4 {
     font-size: 1.2rem;
     margin: .7rem 0 .1rem 0;
 }
+
 .small {
     font-size: .8rem;
     margin-top: .2rem;
@@ -105,6 +124,6 @@ td:first-child {
     margin-top: 10px;
 }
 
-.link-box > a {
+.link-box>a {
     margin: 12px 0;
 }
