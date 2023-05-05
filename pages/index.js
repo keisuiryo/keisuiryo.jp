@@ -143,11 +143,11 @@ export default function Home() {
             <p className='smsg-q'>上下関係は厳しいですか？<br />飲酒の強制はありますか？</p>
             <p className='smsg-a'>先輩後輩の上下関係はなく、学年に関わらず交流できます。また、飲酒の強制は一切ありません。</p>
           </div>
-          <div className='smsg-box'>
+          {/*<div className='smsg-box'>
             <p className='smsg-q'>大学院・中途年度編入からでも寮に入れますか？</p>
             <p className='smsg-a'>今年度は院生の募集は行っておりません（来年度以降は未定です）。大学新入生が一人だけにならないようにするためです。詳しくは募集要項をご覧ください。
             </p>
-          </div>
+          </div>*/}
           <Link
             href='https://keisuiryo.studio.site/faq'
             className='index-inround-link smsg-btn'><span className="material-symbols-rounded index-link-icon">

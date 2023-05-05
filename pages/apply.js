@@ -32,7 +32,7 @@ export default function Home() {
                         <td>3/10(金)</td>
                     s</tr></table>*/}
                 </div>
-                <h2 className="contents-title">令和5年度募集要項</h2>
+                {/*<h2 className="contents-title">令和5年度募集要項</h2>
                 <p>渓水寮に興味を持っていただきありがとうございます。質問・見学申し込みなどありましたらお気軽にご連絡ください。</p>
                 <p>
                     入寮時期:2023年4月<br />
@@ -40,7 +40,7 @@ export default function Home() {
                     募集人数:2名(残り枠１名)<br />
                     選抜方法:面接による<br />
                     日程:ご質問・見学・面接受付中
-                </p>
+                </p>*/}
                 {/*<div className="important">
 
                     <h3><span>i</span>令和5年度募集要項<br />(9/23更新)</h3>
