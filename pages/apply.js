@@ -14,9 +14,11 @@ export default function Home() {
             <a href="https://twitter.com/keisuiryo" className="btn-fab btn">Twitter →</a>-->
     <!--</div>-->*/}
                 <div className="important">
-                    <h3><span>i</span>令和6年度受験生の皆様へ(2023/4/27更新)</h3>
-                    <p>渓水寮は皆様からの見学を受け付けております</p>
-                    <p>質問・申し込み等ございましたら以下の連絡先よりお気軽にご連絡ください。</p>
+                    <h3><span>i</span>見学のご案内</h3>
+                    <p>渓水寮は皆様からの見学を受け付けております。</p>
+                    <p>以下の申し込みフォームをご記入の上、公式LINE(推奨)もしくはメールでご一報ください。<a href="https://docs.google.com/forms/d/e/1FAIpQLSdWS2WnwcJzYkVQO4yTDaKNWCgiW9U0WMb_YFLsTHXNzIK7Og/formResponse" className="link contents-link">申し込みフォーム</a></p>
+                    <p>寮生一同お待ちしております。</p>
+                </div>
                     {/*<p className="important-warning">2月15日現在、ありがたいことに定員を上回る募集をいただいており、早期に募集を締め切る可能性があります。よろしくお願いいたします。</p>
                     <table>
                     <tr>
@@ -30,8 +32,8 @@ export default function Home() {
                     <tr>
                         <td>入寮可否通知</td>
                         <td>3/10(金)</td>
-                    s</tr></table>*/}
-                </div>
+                    s</tr></table>
+                </div>*/}
                 {/*<h2 className="contents-title">令和5年度募集要項</h2>
                 <p>渓水寮に興味を持っていただきありがとうございます。質問・見学申し込みなどありましたらお気軽にご連絡ください。</p>
                 <p>
@@ -69,7 +71,7 @@ export default function Home() {
                 </div>*/}
                 <h2 className="contents-title">連絡先</h2>
 
-                <p className="contents-desc">質問や見学申し込みを受け付けています。公式LINE(推奨)もしくはメールでご連絡ください。</p>
+                <p className="contents-desc">質問・見学申し込みなどありましたら公式LINE(推奨)もしくはメールでご連絡ください。<br /><a className='link' href="https://keisuiryo.studio.site/faq">よくある質問</a>もご覧ください。</p>
                 <div className="link-box">
                     <a href="https://lin.ee/6XMmw9l"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png"
                         alt="友だち追加" height="36" border="0" /></a>
@@ -83,15 +85,10 @@ export default function Home() {
                 <h2 className="contents-title apply-contents-title">入寮の流れ</h2>
                 <div className="flaw-box">
                     <h4 className="flaw-title"><span className="flaw-num">1</span>見学</h4>
-                    <p className="flaw-text">渓水寮での生活についてご説明します。お気軽に公式LINEもしくはメールでご連絡ください。受験当日の見学・直前の見学の連絡にも対応できます。<br />見学申し込み際には以下のことをお伝えください。
+                    <p className="flaw-text">渓水寮での生活についてご説明します。受験当日の見学・直前の見学の連絡にも対応できます。以下のフォームをご記入の上、公式LINE(推奨)もしくはメールで申し込みください。
                         <br />
-                        <ul><li>名前・学年</li>
-                            <li>ご希望の見学日・時間</li>
-                            <li>見学に来られる人数</li>
-                            <li>現時点での志望大学・専門学校</li>
-                        </ul>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdWS2WnwcJzYkVQO4yTDaKNWCgiW9U0WMb_YFLsTHXNzIK7Og/formResponse" className="link contents-link">申し込みフォーム</a>
                         よろしくお願いします。</p>
-                    <p>また、<a href="https://keisuiryo.studio.site/request">渓水寮を希望される方へ</a>もお読みください。</p>
                     <h4 className="flaw-title"><span className="flaw-num">2</span>入寮申し込み</h4>
                     <p className="flaw-text">申し込み用紙・面接用事前質問シートを公式LINE・メールもしくは郵送で送ってください。見学の際に手渡しでも大丈夫です。</p>
                     <div className="files-box">
@@ -112,6 +109,7 @@ export default function Home() {
                             <use href="#svg-docx" />
                         </svg>質問シート</a>
                     </div>
+                    <p>また、<a href="https://keisuiryo.studio.site/request">渓水寮を希望される方へ</a>もお読みください。</p>
                     <h4 className="flaw-title"><span className="flaw-num">3</span>面接</h4>
                     <p className="flaw-text">
                         在寮生が面接を行います。オンラインでの面接や見学後その場で面接を行うこともできます。

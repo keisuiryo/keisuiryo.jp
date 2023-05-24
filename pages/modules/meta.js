@@ -150,6 +150,7 @@ export default function Meta(props) {
                 <meta property="og:description" content={props.desc} />
                 <meta property="og:image" content="https://keisuiryo.jp/keisuiryo.webp" />
                 <meta name="thumbnail" content="https://keisuiryo.jp/main.webp" />
+                <meta name="theme-color" content="#9d4215" />
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={_jsonld}
