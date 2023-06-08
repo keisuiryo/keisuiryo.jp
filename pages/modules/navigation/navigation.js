@@ -16,7 +16,7 @@ export default function Navigation(props) {
         selected.selected = true
     let links = []
     for (const i of model) {
-        links.push(<Link href={i.href} className="nav-link" selected={i.selected}><span className="material-symbols-rounded nav-icon">
+        links.push(<Link href={i.href} key={i.text} className="nav-link" selected={i.selected}><span className="material-symbols-rounded nav-icon">
                 {i.icon}
             </span>{i.text}</Link>)
     }

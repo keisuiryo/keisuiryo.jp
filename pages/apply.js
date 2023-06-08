@@ -34,26 +34,19 @@ export default function Home() {
                         <td>3/10(金)</td>
                     s</tr></table>
                 </div>*/}
-                {/*<h2 className="contents-title">令和5年度募集要項</h2>
-                <p>渓水寮に興味を持っていただきありがとうございます。質問・見学申し込みなどありましたらお気軽にご連絡ください。</p>
-                <p>
-                    入寮時期:2023年4月<br />
-                    対象:仙台市近郊の大学・専門学校に通う学部新入生<br />
-                    募集人数:2名(残り枠１名)<br />
-                    選抜方法:面接による<br />
-                    日程:ご質問・見学・面接受付中
-                </p>*/}
+                
                 {/*<div className="important">
 
-                    <h3><span>i</span>令和5年度募集要項<br />(9/23更新)</h3>
-                    <p>渓水寮に興味を持っていただきありがとうございます。質問・見学申し込みなどありましたらお気軽に以下よりご連絡ください。</p>
+                    <h3><span>i</span>令和6年度募集要項<br />(6/8現在)</h3>*/}
+                    <h2 className="contents-title">令和6年度募集要項(6/8現在)</h2>
                     <p>
-                        入寮時期:2023年4月<br />
-                        対象:仙台市の大学に通う学部新入生<br />
-                        募集人数:2名<br />
+                        入寮時期:2024年4月<br />
+                        {/*対象:仙台市近郊の大学・専門学校に通う学部新入生<br />*/}
+                        募集人数:2~4名<br />
                         選抜方法:面接による<br />
-                        日程:ご質問・見学・面接受付中
+                        日程:ご質問・見学受付中
                     </p>
+                    {/*
                     <table>
                     <tr>
                         <td>連絡〆切</td>
@@ -67,8 +60,8 @@ export default function Home() {
                         <td>入寮可否通知</td>
                         <td>3/22(水)</td>
                     </tr>
-</table>
-                </div>*/}
+            </table>*/}
+                {/*</div>*/}
                 <h2 className="contents-title">連絡先</h2>
 
                 <p className="contents-desc">質問・見学申し込みなどありましたら公式LINE(推奨)もしくはメールでご連絡ください。<br /><a className='link' href="https://keisuiryo.studio.site/faq">よくある質問</a>もご覧ください。</p>
@@ -82,6 +75,14 @@ export default function Home() {
                         <use href="#svg-tel" />
                     </svg>022-249-3564</a>*/}
                 </div>
+                <h2 className="contents-title">令和6年度募集要項</h2>
+                <p>
+                    入寮時期:2024年4月<br />
+                    対象:仙台市近郊の大学・専門学校に通う見込みの学生<br />
+                    募集人数:2~4名<br />
+                    選抜方法:面接による<br />
+                    日程:質問・見学受付中
+                </p>
                 <h2 className="contents-title apply-contents-title">入寮の流れ</h2>
                 <div className="flaw-box">
                     <h4 className="flaw-title"><span className="flaw-num">1</span>見学</h4>
