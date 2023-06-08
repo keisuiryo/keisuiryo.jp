@@ -75,14 +75,14 @@ export default function Home() {
                         <use href="#svg-tel" />
                     </svg>022-249-3564</a>*/}
                 </div>
-                <h2 className="contents-title">令和6年度募集要項</h2>
+                {/*<h2 className="contents-title">令和6年度募集要項</h2>
                 <p>
                     入寮時期:2024年4月<br />
                     対象:仙台市近郊の大学・専門学校に通う見込みの学生<br />
                     募集人数:2~4名<br />
                     選抜方法:面接による<br />
                     日程:質問・見学受付中
-                </p>
+                </p>*/}
                 <h2 className="contents-title apply-contents-title">入寮の流れ</h2>
                 <div className="flaw-box">
                     <h4 className="flaw-title"><span className="flaw-num">1</span>見学</h4>
