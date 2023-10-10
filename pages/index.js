@@ -35,8 +35,8 @@ export default function Home() {
           <p className='desc-text'>一言で表すと、食事つきの学生寮です。朝晩寮母さんが食事を作ってくださります。寮費は月4万7千円です。食費や光熱費などすべて含まれています。定員は13名と寮母さん。少人数な学生寮です。</p>
         </div>
         <div className="important">
-          <h3><span>i</span>オープンキャンパス時の見学受付中</h3>
-          <p>渓水寮はオープンキャンパスの際の見学を受け付けております。詳しくは以下をご覧ください。</p>
+          <h3><span>i</span>入寮募集受付中</h3>
+          <p>渓水寮はAO2期を受験される方からの見学・面接を受け付けております。詳しくは以下をご覧ください。</p>
           <Link href='/apply/' className='index-inround-link'><span className="material-symbols-rounded index-link-icon">
               arrow_forward_ios
             </span>募集要項</Link>
