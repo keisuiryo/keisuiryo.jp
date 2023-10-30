@@ -36,7 +36,7 @@ export default function Navigation(props) {
                 </Link>
                 <div>
                     {links}
-                    <Link href="/apply/" className="nav-link nav-apply"><span className="material-symbols-rounded nav-icon">
+                    <Link href="https://keisuiryo.studio.site/apply/" className="nav-link nav-apply"><span className="material-symbols-rounded nav-icon">
                             campaign
                         </span>募集要項</Link>
                     <div className="nav-sns-box">

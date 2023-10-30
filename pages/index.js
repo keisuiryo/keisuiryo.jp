@@ -37,7 +37,7 @@ export default function Home() {
         <div className="important">
           <h3><span>i</span>入寮募集受付中</h3>
           <p>渓水寮はAO2期を受験される方からの見学・面接を受け付けております。詳しくは以下をご覧ください。</p>
-          <Link href='/apply/' className='index-inround-link'><span className="material-symbols-rounded index-link-icon">
+          <Link href='https://keisuiryo.studio.site/apply/' className='index-inround-link'><span className="material-symbols-rounded index-link-icon">
               arrow_forward_ios
             </span>募集要項</Link>
     </div>
