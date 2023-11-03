@@ -22,7 +22,7 @@ export default function Navigation(props) {
     }
     return (
         <div className='nav-wrapper'>
-            <Link href="/apply/" className="nav-link fab-apply"><span className="material-symbols-rounded nav-icon">
+            <Link href="https://keisuiryo.studio.site/apply" className="nav-link fab-apply"><span className="material-symbols-rounded nav-icon">
                             campaign
                         </span>募集要項</Link>
             <nav id="nav-container" className="nav">
