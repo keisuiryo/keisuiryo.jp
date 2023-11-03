@@ -160,7 +160,7 @@ export default function Home() {
             <p className='box-desc iapply-desc'>東北大学YMCA渓水寮では、東北大学などに通う男女新入生を募集しております。詳しくは募集要項をご覧ください。また、ご質問などありましたらお気軽にお問合せください。</p>
           </div>
           <div>
-            <Link href='/apply/' className='index-inround-link iapply-btn'><span className="material-symbols-rounded index-link-icon">
+            <Link href='https://keisuiryo.studio.site/apply' className='index-inround-link iapply-btn'><span className="material-symbols-rounded index-link-icon">
               arrow_forward_ios
             </span>募集要項</Link>
           </div>
