@@ -32,7 +32,7 @@ export default function Home() {
 
         <div className="desc-box" >
           <h2 className='desc-title'>東北大学YMCA渓水寮は、</h2>
-          <p className='desc-text'>一言で表すと、食事つきの学生寮です。朝晩寮母さんが食事を作ってくださります。寮費は月4万7千円です。食費や光熱費などすべて含まれています。定員は13名と寮母さん。少人数な学生寮です。</p>
+          <p className='desc-text'>朝晩寮母さんが食事を作ってくださる食事つきの学生寮です。寮費は月4万7千円で、食費や光熱費などすべて含まれています。定員は13名と寮母さんと少人数な学生寮で、キリスト教精神を基盤にした団体、東北大学YMCAにより運営されています。</p>
         </div>
         <div className="important">
           <h3><span>i</span>入寮募集受付中</h3>
@@ -63,7 +63,7 @@ export default function Home() {
           <div className='cr-flex'>
             <div>
               <h3 className='box-title life-title'>自治寮</h3>
-              <p className='box-desc'>渓水寮は寮生の手で運営されていますので、寮生が寮の運営に関して(ほとんど)すべてのことを決められます。少人数ですので、気兼ねなく意見を言ったり議論したりできます。</p>
+              <p className='box-desc'>渓水寮は寮生の手で運営されていますので、寮生の自治により運営されます。少人数ですので、気兼ねなく意見を言ったり議論したりできます。</p>
             </div>
             <img loading="lazy" className="inround-small-img" src="/life-bg2.webp" />
           </div>
@@ -78,7 +78,7 @@ export default function Home() {
           <div className='index-inround-box'>
             <h4 className='index-inround-upper'>Meals</h4>
             <h3 className='index-inround-title'>食事</h3>
-            <p className='index-inround-contents'>東北大学YMCA渓水寮では、元食堂経営者の寮母さんが授業日の朝晩に食事を作ってくださります。おいしく、栄養バランスも考えられている食事です。量の調節やアレルギーにも対応できます。</p>
+            <p className='index-inround-contents'>東北大学YMCA渓水寮では、寮母さんが授業日の朝晩に食事を作ってくださります。おいしく、栄養バランスも考えられている食事です。</p>
             <Link href='/meals/' className='index-inround-link'><span className="material-symbols-rounded index-link-icon">
               arrow_forward_ios
             </span>食事について</Link>
