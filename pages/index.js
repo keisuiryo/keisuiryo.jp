@@ -32,7 +32,7 @@ export default function Home() {
 
         <div className="desc-box" >
           <h2 className='desc-title'>東北大学YMCA渓水寮は、</h2>
-          <p className='desc-text'>朝晩寮母さんが食事を作ってくださる食事つきの学生寮です。寮費は月4万7千円で、食費や光熱費などすべて含まれています。定員は13名と寮母さんと少人数な学生寮で、キリスト教精神を基盤にした団体、東北大学YMCAにより運営されています。</p>
+          <p className='desc-text'>朝晩寮母さんが食事を作ってくださる食事つきの学生寮です。寮費は月4万7千円で、食費や光熱費などすべて含まれています。定員は13名と少人数な学生寮です。</p>
         </div>
         <div className="important">
           <h3><span>i</span>入寮募集受付中(1/11更新)</h3>
