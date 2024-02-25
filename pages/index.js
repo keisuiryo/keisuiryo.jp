@@ -35,8 +35,8 @@ export default function Home() {
           <p className='desc-text'>朝晩寮母さんが食事を作ってくださる食事つきの学生寮です。寮費は月4万7千円で、食費や光熱費などすべて含まれています。定員は13名と少人数な学生寮です。</p>
         </div>
         <div className="important">
-          <h3><span>i</span>入寮募集受付中(1/11更新)</h3>
-          <p>渓水寮はAO3・前期を受験される方からの見学・面接を受け付けております。詳しくは以下をご覧ください。</p>
+          <h3><span>i</span>入寮募集受付中(2/25更新)</h3>
+          <p>渓水寮はお問い合わせ・見学・面接を受け付けております。詳しくは以下をご覧ください。</p>
           <Link href='https://keisuiryo.jp/apply/' className='index-inround-link'><span className="material-symbols-rounded index-link-icon">
               arrow_forward_ios
             </span>募集要項</Link>
