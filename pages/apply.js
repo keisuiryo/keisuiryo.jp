@@ -13,12 +13,12 @@ export default function Home() {
             <p>なお、Twitterにも生活の様子をのせています。よろしければどうぞ。</p>
             <a href="https://twitter.com/keisuiryo" className="btn-fab btn">Twitter →</a>-->
     <!--</div>-->*/}
-                <div className="important">
-                    <h3><span>i</span>見学のご案内</h3>
+                {/*<div className="important">
+                    <h3><span>i</span>申込のご案内</h3>
                     <p>渓水寮は皆様からの見学を受け付けております。</p>
                     <p>以下の申し込みフォームをご記入の上、公式LINE(推奨)もしくはメールでご一報ください。<a href="https://docs.google.com/forms/d/e/1FAIpQLSdWS2WnwcJzYkVQO4yTDaKNWCgiW9U0WMb_YFLsTHXNzIK7Og/formResponse" className="link contents-link">申し込みフォーム</a></p>
                     <p>寮生一同お待ちしております。</p>
-                </div>
+                </div>*/}
                     {/*<p className="important-warning">2月15日現在、ありがたいことに定員を上回る募集をいただいており、早期に募集を締め切る可能性があります。よろしくお願いいたします。</p>
                     <table>
                     <tr>
@@ -38,13 +38,14 @@ export default function Home() {
                 {/*<div className="important">
 
                     <h3><span>i</span>令和6年度募集要項<br />(6/8現在)</h3>*/}
-                    <h2 className="contents-title">令和6年度募集要項(6/8現在)</h2>
+                    <h2 className="contents-title">令和6年度募集要項(2/25現在)</h2>
                     <p>
                         入寮時期:2024年4月<br />
                         {/*対象:仙台市近郊の大学・専門学校に通う学部新入生<br />*/}
-                        募集人数:2~4名<br />
+                        募集人数:3名<br />
                         選抜方法:面接による<br />
-                        日程:ご質問・見学受付中
+                        日程:連絡により調整<br />
+                        円滑な入寮選考のため、早めにお問い合わせいただけると助かります。
                     </p>
                     {/*
                     <table>
@@ -110,7 +111,6 @@ export default function Home() {
                             <use href="#svg-docx" />
                         </svg>質問シート</a>
                     </div>
-                    <p>また、<a href="https://keisuiryo.studio.site/request">渓水寮を希望される方へ</a>もお読みください。</p>
                     <h4 className="flaw-title"><span className="flaw-num">3</span>面接</h4>
                     <p className="flaw-text">
                         在寮生が面接を行います。オンラインでの面接や見学後その場で面接を行うこともできます。

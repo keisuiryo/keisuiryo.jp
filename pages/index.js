@@ -37,7 +37,7 @@ export default function Home() {
         <div className="important">
           <h3><span>i</span>入寮募集受付中(1/11更新)</h3>
           <p>渓水寮はAO3・前期を受験される方からの見学・面接を受け付けております。詳しくは以下をご覧ください。</p>
-          <Link href='https://keisuiryo.studio.site/apply/' className='index-inround-link'><span className="material-symbols-rounded index-link-icon">
+          <Link href='https://keisuiryo.jp/apply/' className='index-inround-link'><span className="material-symbols-rounded index-link-icon">
               arrow_forward_ios
             </span>募集要項</Link>
     </div>
@@ -160,7 +160,7 @@ export default function Home() {
             <p className='box-desc iapply-desc'>東北大学YMCA渓水寮では、東北大学などに通う男女新入生を募集しております。詳しくは募集要項をご覧ください。また、ご質問などありましたらお気軽にお問合せください。</p>
           </div>
           <div>
-            <Link href='https://keisuiryo.studio.site/apply/' className='index-inround-link iapply-btn'><span className="material-symbols-rounded index-link-icon">
+            <Link href='https://keisuiryo.jp/apply/' className='index-inround-link iapply-btn'><span className="material-symbols-rounded index-link-icon">
               arrow_forward_ios
             </span>募集要項</Link>
           </div>
