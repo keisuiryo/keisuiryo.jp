@@ -79,9 +79,9 @@ export default function Meta(props) {
                         "position": 1,
                         "name": "渓水寮",
                         "item": "https://keisuiryo.jp/"
-                    }
+                    },
                 ]
-            }
+            },
         ]`
     const _sub = `
         [{
@@ -105,7 +105,7 @@ export default function Meta(props) {
                     "addressRegion": "宮城県",
                     "addressLocality": "仙台市太白区",
                     "streetAddress": "大塒町8-1"
-                }
+                },
             },
             "image": {
                 "@type": "ImageObject",
@@ -130,9 +130,9 @@ export default function Meta(props) {
                 "position": 2,
                 "name": "${props.title}",
                 "item": "${_url}"
-              }
+              },
             ]
-        }
+        },
         ]`
     const _jsonld = { __html: props.id ? _sub : _top }
     return (
