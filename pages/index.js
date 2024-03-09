@@ -32,10 +32,10 @@ export default function Home() {
 
         <div className="desc-box" >
           <h2 className='desc-title'>東北大学YMCA渓水寮は、</h2>
-          <p className='desc-text'>朝晩寮母さんが食事を作ってくださる食事つきの学生寮です。寮費は月4万7千円で、食費や光熱費などすべて含まれています。定員は13名と少人数な学生寮です。</p>
+          <p className='desc-text'>朝晩寮母さんが食事を作ってくださる食事つきの学生寮です。寮費は月4万7千円で、食費や光熱費などすべて含まれています。定員は13名と少人数です。</p>
         </div>
         <div className="important">
-          <h3><span>i</span>入寮募集受付中(2/25更新)</h3>
+          <h3><span>i</span>入寮募集受付中(3/15更新)</h3>
           <p>渓水寮はお問い合わせ・見学・面接を受け付けております。詳しくは以下をご覧ください。</p>
           <Link href='https://keisuiryo.jp/apply/' className='index-inround-link'><span className="material-symbols-rounded index-link-icon">
               arrow_forward_ios
@@ -63,7 +63,7 @@ export default function Home() {
           <div className='cr-flex'>
             <div>
               <h3 className='box-title life-title'>自治寮</h3>
-              <p className='box-desc'>渓水寮は寮生の手で運営されていますので、寮生の自治により運営されます。少人数ですので、気兼ねなく意見を言ったり議論したりできます。</p>
+              <p className='box-desc'>渓水寮は理事の先生方の支援のもと寮生の手で運営されている、日本でも数少ない自治寮です。少人数ですので、気兼ねなく意見を言ったり議論したりできます。</p>
             </div>
             <img loading="lazy" className="inround-small-img" src="/life-bg2.webp" />
           </div>
