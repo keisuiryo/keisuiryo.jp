@@ -37,6 +37,7 @@ export default function Home() {
         <div className="important">
           <h3><span>i</span>入寮募集受付中(3/10更新)</h3>
           <p>渓水寮は今年度、新入生の男女3名(残り1名)を募集しております。詳しくは以下をご覧ください。</p>
+          <p>3/12更新:現在、定員を上回る募集をいただいております。入寮を希望される方は、渓水寮以外もご検討の上ご連絡ください。</p>
           <Link href='https://keisuiryo.jp/apply/' className='index-inround-link'><span className="material-symbols-rounded index-link-icon">
               arrow_forward_ios
             </span>募集要項</Link>
