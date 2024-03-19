@@ -38,7 +38,7 @@ export default function Home() {
                 {/*<div className="important">
 
                     <h3><span>i</span>令和6年度募集要項<br />(3/10現在)</h3>*/}
-                    <h2 className="contents-title">令和6年度募集要項(3/10現在)</h2>
+                    <h2 className="contents-title">令和6年度募集要項(3/20現在)</h2>
                     <p>
                         入寮時期:2024年4月<br />
                         {/*対象:仙台市近郊の大学・専門学校に通う学部新入生<br />*/}
