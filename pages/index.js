@@ -35,11 +35,11 @@ export default function Home() {
           <p className='desc-text'>朝晩寮母さんが食事を作ってくださる食事つきの学生寮です。寮費は月4万7千円で、食費や光熱費などすべて含まれています。定員は13名と少人数です。</p>
         </div>
         <div className="important">
-          <h3><span>i</span>入寮募集受付中(3/20更新)</h3>
-          <p>渓水寮は今年度、新入生の男女3名(残り1名)を募集しております。詳しくは以下をご覧ください。</p>
-          <Link href='https://keisuiryo.jp/apply/' className='index-inround-link'><span className="material-symbols-rounded index-link-icon">
+          <h3><span>i</span>入寮募集受付中(4/5更新)</h3>
+          <p>今年度の募集は終了いたしました。たくさんのご応募ありがとうございました</p>
+          {/*<Link href='https://keisuiryo.jp/apply/' className='index-inround-link'><span className="material-symbols-rounded index-link-icon">
               arrow_forward_ios
-            </span>募集要項</Link>
+    </span>募集要項</Link>*/}
     </div>
         <div className='round-box index-round-box index-r-about'>
           <div className='index-inround-box'>

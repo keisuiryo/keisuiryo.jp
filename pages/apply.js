@@ -13,12 +13,13 @@ export default function Home() {
             <p>なお、Twitterにも生活の様子をのせています。よろしければどうぞ。</p>
             <a href="https://twitter.com/keisuiryo" className="btn-fab btn">Twitter →</a>-->
     <!--</div>-->*/}
-                {/*<div className="important">
+                <div className="important">
                     <h3><span>i</span>申込のご案内</h3>
-                    <p>渓水寮は皆様からの見学を受け付けております。</p>
+                    {/*<p>渓水寮は皆様からの見学を受け付けております。</p>
                     <p>以下の申し込みフォームをご記入の上、公式LINE(推奨)もしくはメールでご一報ください。<a href="https://docs.google.com/forms/d/e/1FAIpQLSdWS2WnwcJzYkVQO4yTDaKNWCgiW9U0WMb_YFLsTHXNzIK7Og/formResponse" className="link contents-link">申し込みフォーム</a></p>
-                    <p>寮生一同お待ちしております。</p>
-                </div>*/}
+                    <p>寮生一同お待ちしております。</p>*/}
+                    <p>2024年度の入寮申込は終了いたしました。たくさんのご応募、本当にありがとうございました。</p>
+                </div>
                     {/*<p className="important-warning">2月15日現在、ありがたいことに定員を上回る募集をいただいており、早期に募集を締め切る可能性があります。よろしくお願いいたします。</p>
                     <table>
                     <tr>
@@ -38,16 +39,16 @@ export default function Home() {
                 {/*<div className="important">
 
                     <h3><span>i</span>令和6年度募集要項<br />(3/10現在)</h3>*/}
-                    <h2 className="contents-title">令和6年度募集要項(3/20現在)</h2>
+                    {/*<h2 className="contents-title">令和6年度募集要項(3/20現在)</h2>
                     <p>
                         入寮時期:2024年4月<br />
-                        {/*対象:仙台市近郊の大学・専門学校に通う学部新入生<br />*/}
+                        {/*対象:仙台市近郊の大学・専門学校に通う学部新入生<br />
                         募集人数:3名(残り1名)<br />
                         選抜方法:面接による<br />
                         入寮期間:最長3年(2024/4~2027/3)<br />
                         見学・面接日程:連絡により調整<br />
                         定員が充足し次第募集を締め切らせていただきます。よろしくお願いします。
-                    </p>
+                </p>*/}
                     {/*
                     <table>
                     <tr>
