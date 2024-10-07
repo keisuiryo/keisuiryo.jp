@@ -208,7 +208,7 @@ export default function Home() {
             </section>
             <section className="section-box">
                 <div className="meal-person-box person-box">
-                    <img loading="lazy" width="400" height="300" className="person-img" src="/meals/ryobo.avif"
+                    <img loading="lazy" width="400" height="300" className="person-img" src="/meals/ryobo.webp"
                         alt="食事を作ってくださる寮母さんの写真です" />
                     <div className="person-desc">
                         <p className="person-name">遠藤博子</p>

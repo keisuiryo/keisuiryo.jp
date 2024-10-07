@@ -15,10 +15,10 @@ export default function Home() {
     <!--</div>-->*/}
                 <div className="important">
                     <h3><span>i</span>申込のご案内</h3>
-                    {/*<p>渓水寮は皆様からの見学を受け付けております。</p>
+                    <p>渓水寮は皆様からの見学を受け付けております。</p>
                     <p>以下の申し込みフォームをご記入の上、公式LINE(推奨)もしくはメールでご一報ください。<a href="https://docs.google.com/forms/d/e/1FAIpQLSdWS2WnwcJzYkVQO4yTDaKNWCgiW9U0WMb_YFLsTHXNzIK7Og/formResponse" className="link contents-link">申し込みフォーム</a></p>
-                    <p>寮生一同お待ちしております。</p>*/}
-                    <p>2024年度の入寮申込は終了いたしました。たくさんのご応募、本当にありがとうございました。</p>
+                    <p>寮生一同お待ちしております。</p>
+                    {/*<p>2024年度の入寮申込は終了いたしました。たくさんのご応募、本当にありがとうございました。</p>*/}
                 </div>
                     {/*<p className="important-warning">2月15日現在、ありがたいことに定員を上回る募集をいただいており、早期に募集を締め切る可能性があります。よろしくお願いいたします。</p>
                     <table>
