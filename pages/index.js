@@ -32,7 +32,7 @@ export default function Home() {
 
         <div className="desc-box" >
           <h2 className='desc-title'>東北大学YMCA渓水寮は、</h2>
-          <p className='desc-text'>朝晩寮母さんが食事を作ってくださる食事つきの学生寮です。寮費は月4万7千円で、食費や光熱費などすべて含まれています。定員は13名と少人数です。</p>
+          <p className='desc-text'>朝晩寮母さんが食事を作ってくださる食事つきの学生寮です。寮費は月4万6千円で、食費や光熱費などすべて含まれています。定員は13名と少人数です。</p>
         </div>
         <div className="important">
           <h3><span>i</span>入寮募集受付中(10/7更新)</h3>
@@ -111,10 +111,10 @@ export default function Home() {
           <div className='ifee-b1'>
             <h4 className='index-inround-upper'>Monthly Fees</h4>
             <h3 className='index-inround-title'>寮費</h3>
-            <p className='index-fee-fee'>47,000円/月</p>
-            <p className='index-fee-sub'>食事代・水道費・光熱費・ネット代などすべて込み</p>
+            <p className='index-fee-fee'>46,000円/月</p>
+            <p className='index-fee-sub'>食事代・水道費・光熱費込み</p>
           </div>
-          <p className='cr-desc ifee-b2'>東北大学YMCA渓水寮は卒寮生や東北大学の教員有志などからのご寄付により、寮費を抑えています。寮費の支払いは柔軟に行え、年度末に余った寮費の約半分が返金されます。また、入寮費として3万円かかります（内2万円は卒寮時に返金）。</p>
+          <p className='cr-desc ifee-b2'>東北大学YMCA渓水寮は卒寮生や東北大学の教員有志などからのご寄付により、寮費を抑えています。寮費の支払いは柔軟に行え、年度末に余った寮費の約半分が返金されます。月々の寮費とは別にネット代として4,000円/年をいただきます。また、入寮費として3万円かかります（内2万円は卒寮時に返金）。</p>
 
         </div>
         <div className='smsg-wrapper'>
@@ -122,7 +122,6 @@ export default function Home() {
             <h4 className='index-inround-upper voice-up'>Voice</h4>
             <h3 className='box-title voice-title'>寮生の声</h3>
           </div>
-          <p className='smsg-box'>寮生活の醍醐味といえば未知との遭遇だと思う。当たり前が（同じ日本人というはずなのに）異なる人間と生活スペースを共有するのだから「えっ！？」となるようなことが多数ある。意外な趣味、意外な調理、意外な習慣等々。・・・・・・</p>
           <p className='smsg-box'>まず、この寮の悪い面から見ていきましょう。物事はいい面ばかり見てはいけないですからね！それは・・・</p>
           <Link
             href='https://keisuiryo.studio.site/voice'
