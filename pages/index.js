@@ -7,7 +7,7 @@ export const config = {
 }
 export default function Home() {
   return (
-    <Wrapper noheader desc="渓水寮は13名の少人数な食事付きの学生寮です。寮の家賃は食費・光熱費込み月4万７千円。東北大学などに通う男女新入寮生を募集しています。">
+    <Wrapper noheader desc="渓水寮は13名の少人数な食事付きの学生寮です。寮の家賃は食費・光熱費込み月4万７千円。東北大学などに通う男女新入寮生を募集しています。2027年度で廃寮になることが決定しました。">
       {/*<div className='top-bg-pc'>
         <img className="top-right" src="/top-right.jpg"></img>
         <img className="top-left" src="/top-left.jpg"></img>
@@ -32,11 +32,11 @@ export default function Home() {
 
         <div className="desc-box" >
           <h2 className='desc-title'>東北大学YMCA渓水寮は、</h2>
-          <p className='desc-text'>朝晩寮母さんが食事を作ってくださる食事つきの学生寮です。寮費は月4万6千円で、食費や光熱費などすべて含まれています。定員は13名と少人数です。</p>
+          <p className='desc-text'>朝晩寮母さんが食事を作ってくださる食事つきの学生寮です。寮費は月4万6千円で、食費や光熱費などすべて含まれています。定員は13名と少人数です。2027年度で廃寮になることが決定しました。</p>
         </div>
         <div className="important">
           <h3><span>i</span>入寮募集受付中(10/7更新)</h3>
-          <p>今年度は新入生を2名程度募集しております。詳しくは以下をご覧ください。</p>
+          <p>今年度は新入生を2名程度募集しております。2027年度で廃寮になることが決定しましたので、最長2年住むことができます。詳しくは以下をご覧ください。</p>
           {/*<p>今年度の募集は終了いたしました。たくさんのご応募ありがとうございました</p>*/}
           <Link href='/apply/' className='index-inround-link'><span className="material-symbols-rounded index-link-icon">
               arrow_forward_ios
