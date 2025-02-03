@@ -15,6 +15,8 @@ export default function Home() {
     <!--</div>-->*/}
                 <div className="important">
                     <h3><span>i</span>申込のご案内</h3>
+                    <p>渓水寮は2027年度で廃寮することが決定しましたので、2025年度入寮の方は最長で2年住むことができます。</p>
+                    <p>そのことをご了承いただけると幸いです。(2025/2/4追記)</p>
                     <p>渓水寮は皆様からの見学を受け付けております。</p>
                     <p>以下の申し込みフォームをご記入の上、公式LINE(推奨)もしくはメールでご一報ください。<a href="https://docs.google.com/forms/d/e/1FAIpQLSdWS2WnwcJzYkVQO4yTDaKNWCgiW9U0WMb_YFLsTHXNzIK7Og/formResponse" className="link contents-link">申し込みフォーム</a></p>
                     <p>寮生一同お待ちしております。</p>
