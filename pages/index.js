@@ -35,9 +35,9 @@ export default function Home() {
           <p className='desc-text'>朝晩寮母さんが食事を作ってくださる食事つきの学生寮です。寮費は月4万6千円で、食費や光熱費などすべて含まれています。定員は13名と少人数です。2027年度で廃寮になることが決定しました。</p>
         </div>
         <div className="important">
-          <h3><span>i</span>入寮募集受付中(10/7更新)</h3>
-          <p>今年度は新入生を2名程度募集しております。2027年度で廃寮になることが決定しましたので、最長2年住むことができます。詳しくは以下をご覧ください。</p>
-          {/*<p>今年度の募集は終了いたしました。たくさんのご応募ありがとうございました</p>*/}
+          {/* <h3><span>i</span>入寮募集受付中(10/7更新)</h3>
+          <p>今年度は新入生を2名程度募集しております。2027年度で廃寮になることが決定しましたので、最長2年住むことができます。詳しくは以下をご覧ください。</p> */}
+          <p>2025年度の募集は終了いたしました。たくさんのご応募ありがとうございました</p>
           <Link href='/apply/' className='index-inround-link'><span className="material-symbols-rounded index-link-icon">
               arrow_forward_ios
     </span>募集要項</Link>
