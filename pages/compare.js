@@ -41,7 +41,7 @@ export default function Home() {
                     水光熱費込みで30000~45000円程度<br />
                     ほかに水光熱費・食費・交通費がかかります</p>
                 <h4 className='compare-name'>渓水寮</h4>
-                <p className='compare-text'>寮費　47000円/月(授業日朝晩の食費・共益費・水光熱費込み)<br />他に土日・昼食の食費・交通費がかかります</p>
+                <p className='compare-text'>寮費　48000円/月(授業日朝晩の食費・共益費・水光熱費込み)<br />他に土日・昼食の食費・交通費がかかります</p>
                 <h4 className='compare-name'>出典</h4>
                 <p className='compare-text'>東北大学(2022),R4年度_進学説明会スライド資料,<br /><Link
                     href="https://c.bureau.tohoku.ac.jp/wp-content/uploads/2022/07/R4%E5%B9%B4%E5%BA%A6_%E9%80%B2%E5%AD%A6%E8%AA%AC%E6%98%8E%E4%BC%9A%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89%E8%B3%87%E6%96%99%EF%BC%88HP%E6%8E%B2%E8%BC%89%E7%94%A8%EF%BC%89.pdf"
