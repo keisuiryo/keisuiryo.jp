@@ -1,5 +1,6 @@
 import Card from './modules/card'
 import Wrapper from './modules/wrapper'
+import AnnounceModal from './modules/announce-modal'
 import Link from 'next/link'
 
 export const config = {
@@ -8,6 +9,7 @@ export const config = {
 export default function Home() {
   return (
     <Wrapper noheader desc="渓水寮は13名の少人数な食事付きの学生寮です。寮の家賃は食費・光熱費込み月4万8千円。東北大学などに通う男女新入寮生を募集しています。2026年度で廃寮になることが決定しました。">
+      <AnnounceModal />
       {/*<div className='top-bg-pc'>
         <img className="top-right" src="/top-right.jpg"></img>
         <img className="top-left" src="/top-left.jpg"></img>
@@ -29,6 +31,24 @@ export default function Home() {
       </div>*/}
 
       <div className='top-contents-wrapper'>
+
+        <div className='top-announce'>
+          <h3 className='top-announce-title'>
+            <span className="material-symbols-rounded top-announce-icon">book_2</span>
+            解散の集いのお知らせ
+          </h3>
+          <p className='top-announce-text'>東北大学基督教青年会理事会による、渓水寮の管理運営は2027年3月末をもって終了します。これに際して、解散の集いが行われます。詳細や出欠は、以下のリンクをご参照ください。</p>
+          <Link
+            href='https://docs.google.com/forms/d/e/1FAIpQLSdjjRT8IgpfHhZ5nfLMfqa92jaZT2Rr2WwSvVX-iWzgOnXe6A/viewform'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='index-inround-link top-announce-link'>
+            解散の集いのご説明、ご案内はこちらから
+            <span className="material-symbols-rounded index-link-icon">
+              arrow_forward_ios
+            </span>
+          </Link>
+        </div>
 
         <div className="desc-box" >
           <h2 className='desc-title'>東北大学YMCA渓水寮は、</h2>
