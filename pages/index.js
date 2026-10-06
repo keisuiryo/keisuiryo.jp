@@ -163,7 +163,7 @@ export default function Home() {
             <p className='smsg-a'>今年度は院生の募集は行っておりません（来年度以降は未定です）。大学新入生が一人だけにならないようにするためです。詳しくは募集要項をご覧ください。
             </p>
           </div>*/}
-          <span className='index-inround-link index-link-disabled smsg-btn' aria-disabled="true">よくある質問（一時閉鎖中）</span>
+          <Link href='/faq/' className='index-inround-link smsg-btn'>よくある質問を見る</Link>
         </div>
         <div className='cr-box cr-flex iapply-box'>
           <div>

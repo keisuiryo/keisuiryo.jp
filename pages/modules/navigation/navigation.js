@@ -7,7 +7,7 @@ export default function Navigation(props) {
     { href: "/meals/", text: "食事", icon: "set_meal" },
     { href: "/facilities/", text: "設備", icon: "door_open" },
     { href: "/location/", text: "通学・周辺施設", icon: "store" },
-    { text: "よくある質問（一時閉鎖中）", icon: "help", disabled: true }]
+    { href: "/faq/", text: "よくある質問", icon: "help" }]
     let selected = model.find(i => i.href && i.href.replace(/^\/+|\/+$/g, '') == props.id)
     for (let i of model) {
         i.selected = false
