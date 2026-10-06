@@ -67,6 +67,7 @@
 .nav-wrapper {
     background-color: #fff;
 }
+
 .fab-apply {
     position: fixed;
     bottom: 10vh;
@@ -75,11 +76,8 @@
     margin-top: 20px;
     padding: 7px 14px;
     border: 2px solid hsl(26deg, 60%, 53%);
-
     background-color: hsl(30deg, 70%, 60%);
-    color: hsl(26deg, 60%, 53%);
-
-    color: #FFF;
+    color: #fff;
 }
 
 .nav-apply {
@@ -88,18 +86,19 @@
     margin-top: 20px;
     padding: 7px 14px;
     border: 2px solid hsl(26deg, 60%, 53%);
-
     background-color: hsl(30deg, 70%, 60%);
-    color: hsl(26deg, 60%, 53%);
-
-    color: #FFF;
+    color: #fff;
 }
 
 @media only screen and (min-width: 1150px) {
-    #nav-container {
-        display: block;
+    .nav-wrapper {
         grid-column: 1;
         grid-row: 1;
+        min-width: 0;
+    }
+
+    #nav-container {
+        display: block;
         background: #Fff;
         padding: 0;
     }
@@ -123,6 +122,7 @@
     .nav-link-disabled:hover {
         color: #777;
     }
+
     .nav-apply:hover {
         background-color: hsl(30deg, 70%, 60%);
         color: #FFF;
@@ -130,9 +130,11 @@
 
     .nav {
         background: none;
-        position: fixed;
+        position: sticky;
         top: 40px;
-        padding: 0;
+        width: 250px;
+        max-width: calc(100% - 20px);
+        padding: 0 0 1rem;
         margin-left: 20px;
     }
 
@@ -151,11 +153,8 @@
     margin-top: 20px;
     padding: 7px 14px;
     border: 2px solid hsl(26deg, 60%, 53%);
-
     background-color: hsl(30deg, 70%, 60%);
-    color: hsl(26deg, 60%, 53%);
-
-    color: #FFF;
+    color: #fff;
 }
 
 .fab-apply {
@@ -166,10 +165,7 @@
     margin-top: 20px;
     padding: 7px 14px;
     border: 2px solid hsl(26deg, 60%, 53%);
-
     background-color: hsl(30deg, 70%, 60%);
-    color: hsl(26deg, 60%, 53%);
-    box-shadow: 0px 2px 50px -11px rgba(0,0,0,0.5);
-
-    color: #FFF;
+    box-shadow: 0 2px 50px -11px rgb(0 0 0 / 50%);
+    color: #fff;
 }
