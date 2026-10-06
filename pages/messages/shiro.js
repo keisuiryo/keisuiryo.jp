@@ -1,4 +1,4 @@
-import ArchiveMessage from '../modules/archive-message'
+import ArchiveMessage from '../../components/archive-message'
 import voices from '../../content/legacy-voices.json'
 
 export default function ShiroMessage() {
