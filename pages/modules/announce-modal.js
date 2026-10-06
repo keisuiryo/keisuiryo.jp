@@ -8,7 +8,7 @@ export default function AnnounceModal() {
         if (typeof window === 'undefined') return
         let seen = null
         try {
-            seen = sessionStorage.getItem('keisui-dissolution-modal')
+            seen = sessionStorage.getItem('keisui-christmas-2026-modal')
         } catch (e) { }
         if (!seen && dialogRef.current) {
             dialogRef.current.showModal()
@@ -17,7 +17,7 @@ export default function AnnounceModal() {
 
     const close = () => {
         try {
-            sessionStorage.setItem('keisui-dissolution-modal', '1')
+            sessionStorage.setItem('keisui-christmas-2026-modal', '1')
         } catch (e) { }
         if (dialogRef.current) dialogRef.current.close()
     }
@@ -39,21 +39,15 @@ export default function AnnounceModal() {
                     <span className="material-symbols-rounded announce-modal-close-icon">close</span>
                 </button>
                 <h2 className='announce-modal-title'>
-                    <span className="material-symbols-rounded announce-modal-icon">book_2</span>
-                    解散の集いのお知らせ
+                    <span className="material-symbols-rounded announce-modal-icon">celebration</span>
+                    クリスマス会のご案内
                 </h2>
-                <p className='announce-modal-text'>東北大学基督教青年会理事会による、渓水寮の管理運営は2027年3月末をもって終了します。これに際して、解散の集いが行われます。詳細や出欠は、以下のリンクをご参照ください。</p>
-                <Link
-                    href='https://docs.google.com/forms/d/e/1FAIpQLSdjjRT8IgpfHhZ5nfLMfqa92jaZT2Rr2WwSvVX-iWzgOnXe6A/viewform'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    className='index-inround-link announce-modal-link'
-                    onClick={close}>
-                    解散の集いのご説明、ご案内はこちらから
-                    <span className="material-symbols-rounded index-link-icon">
-                        arrow_forward_ios
-                    </span>
-                </Link>
+                <div className='announce-modal-text'>
+                    <p>2026年12月12日（土）16時30分から、渓水寮でクリスマス会を開催します。齋藤 篤先生（日本キリスト教団仙台宮城野教会牧師）を講師にお迎えします。</p>
+                    <p><strong>会費：</strong>お一人1,000円程度（当日払い）</p>
+                    <p><strong>回答期限：</strong>検討中</p>
+                    <p>参加を希望される方は <a href='mailto:keisuiryo@gmail.com' onClick={close}>keisuiryo@gmail.com</a> までお申し込みください。会員以外の方は直接お申し込みいただけません。</p>
+                </div>
             </div>
         </dialog>
     )

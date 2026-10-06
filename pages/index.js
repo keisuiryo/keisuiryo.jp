@@ -9,6 +9,7 @@ export const config = {
 export default function Home() {
   return (
     <Wrapper noheader desc="渓水寮は13名の少人数な食事付きの学生寮です。寮の家賃は食費・光熱費込み月4万8千円。東北大学などに通う男女新入寮生を募集しています。2026年度で廃寮になることが決定しました。">
+      <AnnounceModal />
       {/*<div className='top-bg-pc'>
         <img className="top-right" src="/top-right.jpg"></img>
         <img className="top-left" src="/top-left.jpg"></img>
@@ -34,19 +35,27 @@ export default function Home() {
         <div className='top-announce'>
           <h3 className='top-announce-title'>
             <span className="material-symbols-rounded top-announce-icon">book_2</span>
-            解散の集いのお知らせ
+            会報原稿・クリスマス会2026のご案内
           </h3>
-          <p className='top-announce-text'>東北大学基督教青年会理事会による、渓水寮の管理運営は2027年3月末をもって終了します。これに際して、解散の集いが行われます。詳細や出欠は、以下のリンクをご参照ください。</p>
-          <Link
-            href='https://docs.google.com/forms/d/e/1FAIpQLSdjjRT8IgpfHhZ5nfLMfqa92jaZT2Rr2WwSvVX-iWzgOnXe6A/viewform'
-            target='_blank'
-            rel='noopener noreferrer'
-            className='index-inround-link top-announce-link'>
-            解散の集いのご説明、ご案内はこちらから
-            <span className="material-symbols-rounded index-link-icon">
-              arrow_forward_ios
-            </span>
-          </Link>
+          <div className='top-announce-text'>
+            <h4>解散の集いへのご出席ありがとうございました</h4>
+            <p>東北大学基督教青年会「解散の集い」は、9月25日に感謝のうちに終えることができました。ご参加くださった皆さま、ありがとうございました。会場41名（寮生10名）、オンライン6名の方にご参加いただきました。詳細は会報62号に掲載します。当日スピーチをいただいた方には、会報掲載にあたりお問い合わせする場合があります。</p>
+
+            <h4>会報原稿を募集しています</h4>
+            <p>原稿は編集子である理事長宛にメールでお送りください。解散の集いに参加した感想や、寮を出てからの歩みなど、内容は自由です。仲間内で編集していただく形も歓迎します。集まりの写真を添える場合は、掲載されている方のお名前もお知らせください。</p>
+            <p><strong>締切：11月8日（日）</strong><br />理事長・畠山祥正：<a href='mailto:hatakey@nifty.com'>hatakey@nifty.com</a></p>
+
+            <h4>クリスマス会のご案内</h4>
+            <p><strong>日時：</strong>2026年12月12日（土）16時30分～<br />
+              <strong>会場：</strong>渓水寮<br />
+              <strong>講師：</strong>齋藤 篤先生（日本キリスト教団仙台宮城野教会牧師）<br />
+              <strong>会費：</strong>お一人1,000円程度（当日払い）<br />
+              <strong>回答期限：</strong>検討中</p>
+            <p>参加を希望される方は <a href='mailto:keisuiryo@gmail.com'>keisuiryo@gmail.com</a> までお申し込みください。会員以外の方は直接お申し込みいただけません。</p>
+
+            <h4>2027年4月以降について</h4>
+            <p>東北大学基督教青年会寮史編集委員会を立ち上げ、毎年度成果を発表しながら『青年会寮史』の刊行を目指します。同窓会機能は当面引き継ぎます。<br />（理事長・畠山祥正）</p>
+          </div>
         </div>
 
         <div className="desc-box" >
