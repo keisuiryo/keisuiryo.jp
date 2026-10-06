@@ -3,11 +3,11 @@ import Footer from '../footer/footer-pc'
 
 export default function Navigation(props) {
     let model = [{ href: "/about/", text: "渓水寮とは", icon: "info" },
-    { href: "https://keisuiryo.studio.site/life", text: "寮生活", icon: "diversity_3" },
+    { text: "寮生活（一時閉鎖中）", icon: "diversity_3", disabled: true },
     { href: "/meals/", text: "食事", icon: "set_meal" },
     { href: "/facilities/", text: "設備", icon: "door_open" },
     { href: "/location/", text: "通学・周辺施設", icon: "store" },
-    { href: "https://keisuiryo.studio.site/faq", text: "よくある質問", icon: "help" }]
+    { text: "よくある質問（一時閉鎖中）", icon: "help", disabled: true }]
     let selected = model.find(i => i.href == props.id)
     for (let i of model) {
         i.selected = false
@@ -16,9 +16,12 @@ export default function Navigation(props) {
         selected.selected = true
     let links = []
     for (const i of model) {
-        links.push(<Link href={i.href} key={i.text} className="nav-link" selected={i.selected}><span className="material-symbols-rounded nav-icon">
+        const content = <><span className="material-symbols-rounded nav-icon">
                 {i.icon}
-            </span>{i.text}</Link>)
+            </span>{i.text}</>
+        links.push(i.disabled
+            ? <span key={i.text} className="nav-link nav-link-disabled" aria-disabled="true">{content}</span>
+            : <Link href={i.href} key={i.text} className="nav-link" selected={i.selected}>{content}</Link>)
     }
     return (
         <div className='nav-wrapper'>
@@ -44,9 +47,9 @@ export default function Navigation(props) {
                         <Link href="https://twitter.com/keisuiryo"><img className="nav-sns" src="/twitter.png" alt="Twitter"></img></Link>
                         <Link href="https://instagram.com/keisuiryo"><img className="nav-sns" src="/instagram.png" alt="Instagram"></img></Link>
                     </div>
-                    <Link href="https://keisuiryo.studio.site/" className="nav-link nav-op"><span className="material-symbols-rounded nav-icon">
+                    <span className="nav-link nav-op nav-link-disabled" aria-disabled="true"><span className="material-symbols-rounded nav-icon">
                             school
-                        </span>卒寮生の方へ</Link>
+                        </span>卒寮生用サイト（一時閉鎖中）</span>
                 </div>
             </nav>
             <div className='mobile'><Footer /></div>

@@ -88,9 +88,7 @@ export default function Home() {
             <img loading="lazy" className="inround-small-img" src="/life-bg2.webp" />
           </div>
           <div></div>
-          <Link href='https://keisuiryo.studio.site/life' className='index-inround-link'><span className="material-symbols-rounded index-link-icon">
-            arrow_forward_ios
-          </span>寮生活について</Link>
+          <span className='index-inround-link index-link-disabled' aria-disabled="true">寮生活について（一時閉鎖中）</span>
         </div>
         <h3 className='index-header'>渓水寮の特長</h3>
         <div className='round-box index-round-box index-r-1'>
@@ -142,11 +140,7 @@ export default function Home() {
             <h3 className='box-title voice-title'>寮生の声</h3>
           </div>
           <p className='smsg-box'>まず、この寮の悪い面から見ていきましょう。物事はいい面ばかり見てはいけないですからね！それは・・・</p>
-          <Link
-            href='https://keisuiryo.studio.site/voice'
-            className='index-inround-link smsg-btn'><span className="material-symbols-rounded index-link-icon">
-              arrow_forward_ios
-            </span>寮生の声をもっと読む</Link>
+          <span className='index-inround-link index-link-disabled smsg-btn' aria-disabled="true">寮生の声（一時閉鎖中）</span>
         </div>
         <div className='smsg-wrapper'>
           <div className='smsg-tbox'>
@@ -167,11 +161,7 @@ export default function Home() {
             <p className='smsg-a'>今年度は院生の募集は行っておりません（来年度以降は未定です）。大学新入生が一人だけにならないようにするためです。詳しくは募集要項をご覧ください。
             </p>
           </div>*/}
-          <Link
-            href='https://keisuiryo.studio.site/faq'
-            className='index-inround-link smsg-btn'><span className="material-symbols-rounded index-link-icon">
-              arrow_forward_ios
-            </span>他の質問を見る</Link>
+          <span className='index-inround-link index-link-disabled smsg-btn' aria-disabled="true">よくある質問（一時閉鎖中）</span>
         </div>
         <div className='cr-box cr-flex iapply-box'>
           <div>
@@ -186,12 +176,7 @@ export default function Home() {
         </div>
         <div className='cr-box iop-box'>
           <h4 className='box-title iop-title'>卒寮生の方へ</h4>
-          <p className='box-desc iop-desc'>東北大学YMCA渓水寮の近況や、いただいた寮の運営のためのご寄付の活用実績、渓水寮の電子版会報の閲覧方法などをまとめています。</p>
-          <Link
-            href='https://keisuiryo.studio.site/'
-            className='index-inround-link iop-btn'><span className="material-symbols-rounded index-link-icon">
-              arrow_forward_ios
-            </span>卒寮生用サイト</Link>
+          <p className='box-desc iop-desc'>卒寮生向けページは現在一時閉鎖中です。</p>
         </div>
         <div className='cr-box iuniv-box'>
           <h4 className='box-title iuniv-title'>東北大学との関係</h4>

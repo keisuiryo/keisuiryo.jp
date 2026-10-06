@@ -71,7 +71,7 @@ export default function Home() {
                 {/*</div>*/}
                 <h2 className="contents-title">連絡先</h2>
 
-                <p className="contents-desc">質問・見学申し込みなどありましたら公式LINE(推奨)もしくはメールでご連絡ください。<br /><a className='link' href="https://keisuiryo.studio.site/faq">よくある質問</a>もご覧ください。</p>
+                <p className="contents-desc">質問・見学申し込みなどありましたら公式LINE(推奨)もしくはメールでご連絡ください。<br /><span className="link-disabled" aria-disabled="true">よくある質問（一時閉鎖中）</span></p>
                 <div className="link-box">
                     <a href="https://lin.ee/6XMmw9l"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png"
                         alt="友だち追加" height="36" border="0" /></a>

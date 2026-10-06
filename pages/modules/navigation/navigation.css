@@ -59,6 +59,11 @@
     margin-top: 30px;
 }
 
+.nav-link-disabled {
+    color: #777;
+    cursor: default;
+}
+
 .nav-wrapper {
     background-color: #fff;
 }
@@ -113,6 +118,10 @@
     .nav-link:hover {
         transition: color ease-out .2s;
         color: hsl(26deg, 60%, 53%);
+    }
+
+    .nav-link-disabled:hover {
+        color: #777;
     }
     .nav-apply:hover {
         background-color: hsl(30deg, 70%, 60%);
