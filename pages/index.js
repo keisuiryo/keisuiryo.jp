@@ -88,7 +88,9 @@ export default function Home() {
             <img loading="lazy" className="inround-small-img" src="/life-bg2.webp" />
           </div>
           <div></div>
-          <span className='index-inround-link index-link-disabled' aria-disabled="true">寮生活について（一時閉鎖中）</span>
+          <Link href='/life/' className='index-inround-link'><span className="material-symbols-rounded index-link-icon">
+            arrow_forward_ios
+          </span>寮生活について</Link>
         </div>
         <h3 className='index-header'>渓水寮の特長</h3>
         <div className='round-box index-round-box index-r-1'>

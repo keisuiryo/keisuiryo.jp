@@ -143,6 +143,10 @@
 	</image:image>
 </url>
 <url>
+	<loc>https://keisuiryo.jp/life/</loc>
+	<priority>0.8</priority>
+</url>
+<url>
 	<loc>https://keisuiryo.jp/messages/</loc>
 	<priority>0.8</priority>
 	<image:image>
@@ -151,6 +155,30 @@
 	<image:image>
 			<image:loc>https://keisuiryo.jp/messages/face.webp</image:loc>
 	</image:image>
+</url>
+<url>
+	<loc>https://keisuiryo.jp/messages/yamaguchi/</loc>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://keisuiryo.jp/messages/wakayama/</loc>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://keisuiryo.jp/messages/shiro/</loc>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://keisuiryo.jp/messages/nuts/</loc>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://keisuiryo.jp/messages/denzo/</loc>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://keisuiryo.jp/messages/supika/</loc>
+	<priority>0.7</priority>
 </url>
 <url>
 	<loc>https://keisuiryo.jp/apply/assets/%E6%B8%93%E6%B0%B4%E5%AF%AE%E5%BF%9C%E5%8B%9F%E7%94%A8%E7%B4%99.pdf</loc>
