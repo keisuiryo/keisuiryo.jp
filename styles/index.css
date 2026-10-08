@@ -617,7 +617,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: hsl(26deg, 96%, 40%);
+    color: #bd3027;
     font-size: 26px;
     font-weight: bold;
     line-height: 1.4;
@@ -646,6 +646,33 @@ body {
     font-weight: 700;
     text-decoration: underline;
     text-underline-offset: .15em;
+}
+
+.announce-modal-deadline {
+    color: #bd3027;
+}
+
+.announce-modal-note {
+    padding-left: 1.5rem;
+}
+
+.announce-modal-apply {
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 12px 24px;
+    border: 0;
+    border-radius: 19px;
+    background: hsl(45deg, 88%, 56%);
+    color: #3e3e3e;
+    font: inherit;
+    font-weight: 700;
+    letter-spacing: .15rem;
+}
+
+.announce-modal-apply:disabled {
+    opacity: .6;
+    cursor: not-allowed;
 }
 
 @keyframes announce-fade {

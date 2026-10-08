@@ -184,6 +184,22 @@
     text-align: left;
 }
 
+.board-christmas-callout {
+    margin: 1.5rem 0 .8rem !important;
+    color: #bd3027;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.board-notice-details .board-deadline,
+.board-notice-details .board-deadline dt {
+    color: #bd3027;
+}
+
+.board-christmas-note {
+    margin-left: 6.7rem !important;
+}
+
 .board-notice-details {
     margin: .7rem 0 1rem;
 }

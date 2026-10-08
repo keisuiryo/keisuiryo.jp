@@ -17,16 +17,16 @@ const notices = [
             <p><strong>締切：11月8日（日）</strong><br />理事長・畠山祥正：<a href="mailto:hatakey@nifty.com">hatakey@nifty.com</a></p>
             <a className="board-action" href="mailto:hatakey@nifty.com?subject=%E4%BC%9A%E5%A0%B1%E5%8E%9F%E7%A8%BF">原稿を送る</a>
 
-            <h4>クリスマス会のご案内</h4>
+            <p className="board-christmas-callout">クリスマス会に参加したい方は以下に申し込みください。</p>
             <dl className="board-notice-details">
-                <div><dt>日時</dt><dd>2026年12月12日（土）16時30分～</dd></div>
-                <div><dt>会場</dt><dd>渓水寮</dd></div>
-                <div><dt>講師</dt><dd>齋藤 篤 先生（日本キリスト教団仙台宮城野教会牧師）</dd></div>
-                <div><dt>会費</dt><dd>お一人 1,000円程度（当日お支払い）</dd></div>
-                <div><dt>回答期限</dt><dd>検討中</dd></div>
+                <div><dt>【日時】</dt><dd>2026年12月12日（土）16時30分～</dd></div>
+                <div><dt>【会場】</dt><dd>渓水寮</dd></div>
+                <div><dt>【内容】</dt><dd>講師　齋藤 篤先生（日本キリスト教団仙台宮城野教会牧師）</dd></div>
+                <div><dt>【会費】</dt><dd>お一人 1000円程度（当日お支払い）</dd></div>
+                <div className="board-deadline"><dt>【回答期限】</dt><dd>11月12日</dd></div>
             </dl>
-            <p>※会員以外からの直接申込はできません。</p>
-            <p>連絡先：<a href="mailto:keisuiryo@gmail.com">keisuiryo@gmail.com</a></p>
+            <p className="board-christmas-note">※会員以外からの直接申込はできません。</p>
+            <p>【連絡先】<a href="mailto:keisuiryo@gmail.com">keisuiryo@gmail.com</a></p>
             <button className="board-action" type="button" disabled aria-disabled="true">詳細はこちら</button>
         </>
     },
