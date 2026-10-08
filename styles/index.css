@@ -637,13 +637,15 @@ body {
     margin-bottom: 24px;
 }
 
-.announce-modal-link.index-inround-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    margin-top: 0;
-    padding: 12px 24px;
-    font-size: 19px;
+.announce-modal-text p {
+    margin: 0 0 .55rem;
+}
+
+.announce-modal-text a {
+    color: hsl(26deg, 76%, 35%);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: .15em;
 }
 
 @keyframes announce-fade {
