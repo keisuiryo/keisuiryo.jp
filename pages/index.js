@@ -142,7 +142,7 @@ export default function Home() {
             <h3 className='box-title voice-title'>寮生の声</h3>
           </div>
           <p className='smsg-box'>まず、この寮の悪い面から見ていきましょう。物事はいい面ばかり見てはいけないですからね！それは・・・</p>
-          <span className='index-inround-link index-link-disabled smsg-btn' aria-disabled="true">寮生の声（一時閉鎖中）</span>
+          <Link href='/messages/' className='index-inround-link smsg-btn'>寮生の声を読む</Link>
         </div>
         <div className='smsg-wrapper'>
           <div className='smsg-tbox'>
