@@ -42,16 +42,22 @@ export default function Home() {
             <p>東北大学基督教青年会「解散の集い」は、9月25日に感謝のうちに終えることができました。ご参加くださった皆さま、ありがとうございました。会場41名（寮生10名）、オンライン6名の方にご参加いただきました。詳細は会報62号に掲載します。当日スピーチをいただいた方には、会報掲載にあたりお問い合わせする場合があります。</p>
 
             <h4>会報原稿を募集しています</h4>
-            <p>原稿は編集子である理事長宛にメールでお送りください。解散の集いに参加した感想や、寮を出てからの歩みなど、内容は自由です。仲間内で編集していただく形も歓迎します。集まりの写真を添える場合は、掲載されている方のお名前もお知らせください。</p>
+            <p>原稿は編集子である理事長宛にメールでお送りください。</p>
+            <p>解散の集いに参加した感想や、寮を出てからの歩みなど、内容は自由です。仲間内で編集していただく形も歓迎します。集まりの写真を添える場合は、掲載されている方のお名前もお知らせください。</p>
             <p><strong>締切：11月8日（日）</strong><br />理事長・畠山祥正：<a href='mailto:hatakey@nifty.com'>hatakey@nifty.com</a></p>
+            <a className='top-announce-action' href='mailto:hatakey@nifty.com?subject=%E4%BC%9A%E5%A0%B1%E5%8E%9F%E7%A8%BF'>原稿を送る</a>
 
-            <h4>クリスマス会のご案内</h4>
-            <p><strong>日時：</strong>2026年12月12日（土）16時30分～<br />
-              <strong>会場：</strong>渓水寮<br />
-              <strong>講師：</strong>齋藤 篤先生（日本キリスト教団仙台宮城野教会牧師）<br />
-              <strong>会費：</strong>お一人1,000円程度（当日払い）<br />
-              <strong>回答期限：</strong>検討中</p>
-            <p>参加を希望される方は <a href='mailto:keisuiryo@gmail.com'>keisuiryo@gmail.com</a> までお申し込みください。会員以外の方は直接お申し込みいただけません。</p>
+            <p className='top-announce-christmas-callout'>クリスマス会に参加したい方は以下に申し込みください。</p>
+            <dl className='top-announce-details'>
+              <div><dt>【日時】</dt><dd>2026年12月12日（土）16時30分～</dd></div>
+              <div><dt>【会場】</dt><dd>渓水寮</dd></div>
+              <div><dt>【内容】</dt><dd>講師　齋藤 篤先生（日本キリスト教団仙台宮城野教会牧師）</dd></div>
+              <div><dt>【会費】</dt><dd>お一人 1000円程度（当日お支払い）</dd></div>
+              <div className='top-announce-deadline'><dt>【回答期限】</dt><dd>11月12日</dd></div>
+            </dl>
+            <p className='top-announce-note'>※会員以外からの直接申込はできません。</p>
+            <p>【連絡先】<a href='mailto:keisuiryo@gmail.com'>keisuiryo@gmail.com</a></p>
+            <a className='top-announce-action' href='https://docs.google.com/forms/d/e/1FAIpQLScupUnRrdvv2F3LEgeCl4m9DYEd9an8-ys9zP8YzGf2mWr-Ng/viewform?usp=dialog' target='_blank' rel='noopener noreferrer'>申し込む</a>
 
             <h4>2027年4月以降について</h4>
             <p>東北大学基督教青年会寮史編集委員会を立ち上げ、毎年度成果を発表しながら『青年会寮史』の刊行を目指します。同窓会機能は当面引き継ぎます。<br />（理事長・畠山祥正）</p>
@@ -151,7 +157,7 @@ export default function Home() {
             <h3 className='box-title voice-title'>寮生の声</h3>
           </div>
           <p className='smsg-box'>まず、この寮の悪い面から見ていきましょう。物事はいい面ばかり見てはいけないですからね！それは・・・</p>
-          <span className='index-inround-link index-link-disabled smsg-btn' aria-disabled="true">寮生の声（一時閉鎖中）</span>
+          <Link href='/messages/' className='index-inround-link smsg-btn'>寮生の声を読む</Link>
         </div>
         <div className='smsg-wrapper'>
           <div className='smsg-tbox'>

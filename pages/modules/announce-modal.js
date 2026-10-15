@@ -1,5 +1,4 @@
 import { useRef, useEffect } from 'react'
-import Link from 'next/link'
 
 export default function AnnounceModal() {
     const dialogRef = useRef(null)
@@ -40,14 +39,25 @@ export default function AnnounceModal() {
                 </button>
                 <h2 className='announce-modal-title'>
                     <span className="material-symbols-rounded announce-modal-icon">celebration</span>
-                    クリスマス会のご案内
+                    クリスマスのご案内
                 </h2>
                 <div className='announce-modal-text'>
-                    <p>2026年12月12日（土）16時30分から、渓水寮でクリスマス会を開催します。齋藤 篤先生（日本キリスト教団仙台宮城野教会牧師）を講師にお迎えします。</p>
-                    <p><strong>会費：</strong>お一人1,000円程度（当日払い）</p>
-                    <p><strong>回答期限：</strong>検討中</p>
-                    <p>参加を希望される方は <a href='mailto:keisuiryo@gmail.com' onClick={close}>keisuiryo@gmail.com</a> までお申し込みください。会員以外の方は直接お申し込みいただけません。</p>
+                    <p><strong>【日時】</strong>2026年12月12日（土）16時30分～</p>
+                    <p><strong>【会場】</strong>渓水寮</p>
+                    <p><strong>【内容】</strong>講師　齋藤 篤先生（日本キリスト教団仙台宮城野教会牧師）</p>
+                    <p><strong>【会費】</strong>お一人 1000円程度（当日お支払い）</p>
+                    <p className="announce-modal-deadline"><strong>【回答期限】</strong>11月12日</p>
+                    <p className="announce-modal-note">※会員以外からの直接申込はできません。</p>
+                    <p><strong>【連絡先】</strong><a href='mailto:keisuiryo@gmail.com' onClick={close}>keisuiryo@gmail.com</a></p>
                 </div>
+                <a
+                    className="announce-modal-apply"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLScupUnRrdvv2F3LEgeCl4m9DYEd9an8-ys9zP8YzGf2mWr-Ng/viewform?usp=dialog"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={close}>
+                    申し込む
+                </a>
             </div>
         </dialog>
     )

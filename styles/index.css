@@ -546,6 +546,51 @@ body {
     margin: 0 0 12px;
 }
 
+.top-announce-christmas-callout {
+    color: #bd3027;
+    font-weight: 700;
+}
+
+.top-announce-details {
+    margin: 0 0 8px;
+}
+
+.top-announce-details > div {
+    display: flex;
+    gap: 0.35em;
+}
+
+.top-announce-details dt {
+    flex: 0 0 auto;
+    font-weight: 700;
+}
+
+.top-announce-details dd {
+    margin: 0;
+}
+
+.top-announce-deadline {
+    color: #bd3027;
+    font-weight: 700;
+}
+
+.top-announce-note {
+    padding-left: 1.5rem;
+}
+
+.top-announce-action,
+.announce-modal-apply {
+    display: inline-block;
+    margin: 4px 0 14px;
+    padding: 10px 22px;
+    border-radius: 19px;
+    background: hsl(45deg, 88%, 56%);
+    color: #3e3e3e !important;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none !important;
+}
+
 .top-announce-text a,
 .announce-modal-text a {
     color: #8a4b08;
@@ -660,6 +705,22 @@ body {
 
 .announce-modal-text p {
     margin: 0 0 14px;
+}
+
+.announce-modal-deadline {
+    color: #bd3027;
+}
+
+.announce-modal-note {
+    padding-left: 1.5rem;
+}
+
+.announce-modal-apply {
+    display: block;
+    width: 100%;
+    margin: 1rem 0 0;
+    padding: 12px 24px;
+    letter-spacing: 0.15rem;
 }
 
 .announce-modal-link.index-inround-link {
