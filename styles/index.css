@@ -668,11 +668,8 @@ body {
     font: inherit;
     font-weight: 700;
     letter-spacing: .15rem;
-}
-
-.announce-modal-apply:disabled {
-    opacity: .6;
-    cursor: not-allowed;
+    text-align: center;
+    text-decoration: none;
 }
 
 @keyframes announce-fade {

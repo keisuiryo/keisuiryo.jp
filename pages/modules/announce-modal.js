@@ -50,9 +50,14 @@ export default function AnnounceModal() {
                     <p className="announce-modal-note">※会員以外からの直接申込はできません。</p>
                     <p><strong>【連絡先】</strong><a href='mailto:keisuiryo@gmail.com'>keisuiryo@gmail.com</a></p>
                 </div>
-                <button type="button" className="announce-modal-apply" disabled aria-disabled="true">
+                <a
+                    className="announce-modal-apply"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLScupUnRrdvv2F3LEgeCl4m9DYEd9an8-ys9zP8YzGf2mWr-Ng/viewform?usp=dialog"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={close}>
                     申し込む
-                </button>
+                </a>
             </div>
         </dialog>
     )

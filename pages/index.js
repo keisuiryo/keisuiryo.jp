@@ -27,7 +27,7 @@ const notices = [
             </dl>
             <p className="board-christmas-note">※会員以外からの直接申込はできません。</p>
             <p>【連絡先】<a href="mailto:keisuiryo@gmail.com">keisuiryo@gmail.com</a></p>
-            <button className="board-action" type="button" disabled aria-disabled="true">詳細はこちら</button>
+            <a className="board-action" href="https://docs.google.com/forms/d/e/1FAIpQLScupUnRrdvv2F3LEgeCl4m9DYEd9an8-ys9zP8YzGf2mWr-Ng/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">申し込む</a>
         </>
     },
     {
