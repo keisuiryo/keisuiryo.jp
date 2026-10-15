@@ -237,6 +237,18 @@ body {
     letter-spacing: .15rem !important;
 }
 
+.index-link-disabled {
+    background-color: #e5e5e5;
+    color: #666;
+    cursor: default;
+}
+
+.link-disabled {
+    color: #666;
+    text-decoration: line-through;
+    cursor: default;
+}
+
 .index-link-icon {
     /*ordering issues from nextjs*/
     transform: translateY(2.5px)!important;

@@ -12,6 +12,7 @@ import './modules/navigation/navigation.css'
 import './modules/footer/footer.css'
 import './modules/header/header.css'
 import '../styles/apply.css'
+import '../styles/life.css'
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />

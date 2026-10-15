@@ -1,0 +1,121 @@
+.life-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem 4rem;
+    line-height: 1.9;
+}
+
+.life-lead {
+    margin: 0 auto 2rem;
+    max-width: 42rem;
+    font-size: clamp(1.25rem, 2.5vw, 1.8rem);
+    font-weight: 700;
+    text-align: center;
+}
+
+.life-index {
+    margin: 0 auto 4rem;
+    max-width: 42rem;
+    padding: 1.25rem 1.5rem;
+    border: 1px solid hsl(26deg, 45%, 72%);
+    border-radius: 18px;
+    background: hsl(31deg, 100%, 98%);
+}
+
+.life-index ol {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .45rem 1rem;
+    padding-left: 1.5rem;
+}
+
+.life-index a {
+    color: hsl(26deg, 60%, 38%);
+}
+
+.life-section {
+    scroll-margin-top: 2rem;
+    margin: 0 0 4rem;
+}
+
+.life-section-title {
+    margin: 0 0 1rem;
+    padding-bottom: .35rem;
+    border-bottom: 2px solid hsl(45deg, 88%, 56%);
+    color: hsl(26deg, 60%, 43%);
+    font-size: 1.6rem;
+}
+
+.life-subsection-title {
+    margin: 2rem 0 1rem;
+    font-size: 1.3rem;
+}
+
+.life-feature-image {
+    display: block;
+    width: min(100%, 680px);
+    max-height: 420px;
+    margin: 1.5rem auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.life-activity-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
+.life-activity {
+    overflow: hidden;
+    border: 1px solid #e6d8ca;
+    border-radius: 14px;
+    background: #fffaf4;
+}
+
+.life-activity img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+
+.life-activity > div {
+    padding: .25rem 1rem 1rem;
+}
+
+.life-activity h4 {
+    margin: .5rem 0;
+    font-size: 1.1rem;
+}
+
+.life-activity p {
+    margin: .5rem 0;
+}
+
+.life-voices-link {
+    display: inline-block;
+    margin-top: .5rem;
+    padding: .55rem 1rem;
+    border-radius: 999px;
+    background: hsl(45deg, 88%, 56%);
+    color: #3e3e3e;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+@media (max-width: 700px) {
+    .life-page {
+        padding-right: 1.1rem;
+        padding-left: 1.1rem;
+    }
+
+    .life-index ol,
+    .life-activity-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .life-section {
+        margin-bottom: 3rem;
+    }
+}

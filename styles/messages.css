@@ -1,31 +1,118 @@
 .msg-person-box {
-    width: 100vw;
-    border-radius: 0;
-    margin: 0
+    display: block;
+    width: calc(100% - 2rem);
+    max-width: 1000px;
+    border: 1px solid #e6d8ca;
+    border-radius: 14px;
+    margin: 1.25rem auto;
+    padding: 1.5rem;
+    background: #fffaf4;
+    box-shadow: 0 4px 18px rgb(70 40 15 / 6%);
 }
 .msg-main-container {
     margin-top: 3rem;
 }
 @media only screen and (min-width: 768px) {
     .msg-person-box {
-        margin: 3rem auto;
-        width: unset;
-        border-radius: 10px;
+        margin: 1.5rem auto;
     }
 }
 .msg-contents-title-small {
     color: #000000cc;
     font-weight: bolder;
 }
-#person-box-1 {
-    background: linear-gradient(70deg, hsl(190deg, 70%, 90%) 0%, hsl(270deg,80% ,90%));
+
+.messages-archive {
+    max-width: 1000px;
+    margin: 4rem auto;
+    padding: 1.5rem;
 }
-#person-box-2 {
-    background: linear-gradient(70deg, hsl(40deg, 70%, 85%) 0%, hsl(100deg,80% ,90%));
+
+.messages-archive-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
 }
-#person-box-3 {
-    background: linear-gradient(70deg, hsl(340deg, 90%, 90%) 0%, hsl(30deg,100% ,85%) 80%);
+
+.messages-archive-card {
+    display: flex;
+    min-height: 175px;
+    flex-direction: column;
+    padding: 1.25rem;
+    border: 1px solid #e6d8ca;
+    border-radius: 14px;
+    background: #fffaf4;
+    color: #333;
+    text-decoration: none;
+    box-shadow: 0 4px 18px rgb(70 40 15 / 6%);
+    transition: transform .15s ease, box-shadow .15s ease;
 }
-#person-box-4 {
-    background: linear-gradient(70deg, hsl(140deg, 70%, 85%) 0%, hsl(200deg,80% ,90%));
+
+.messages-archive-card:hover,
+.messages-archive-card:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgb(70 40 15 / 12%);
+}
+
+.messages-archive-card h3 {
+    margin: 0;
+    font-size: 1.15rem;
+}
+
+.messages-archive-card p {
+    margin: .5rem 0;
+    color: #666;
+}
+
+.messages-archive-card .messages-archive-excerpt {
+    color: #444;
+}
+
+.messages-archive-card span {
+    margin-top: auto;
+    color: hsl(26deg, 60%, 38%);
+    font-weight: 700;
+}
+
+.message-archive-article {
+    max-width: 850px;
+    margin: 0 auto 4rem;
+    padding: 1.5rem;
+    border: 1px solid #e6d8ca;
+    border-radius: 14px;
+    background: #fffaf4;
+    box-shadow: 0 4px 18px rgb(70 40 15 / 6%);
+    line-height: 2;
+}
+
+.message-archive-article > .contents-title {
+    margin-top: 2rem;
+}
+
+.message-archive-author {
+    color: #666;
+    font-weight: 700;
+}
+
+.message-archive-note {
+    padding: .75rem 1rem;
+    border-left: 4px solid hsl(26deg, 60%, 53%);
+    background: #fff5e9;
+    color: #555;
+}
+
+.message-archive-article > p:not(.message-archive-author, .message-archive-note) {
+    margin: 1.4rem 0;
+    white-space: pre-line;
+}
+
+@media only screen and (max-width: 767px) {
+    .messages-archive {
+        padding: 1rem;
+    }
+
+    .messages-archive-grid {
+        grid-template-columns: 1fr;
+    }
 }
