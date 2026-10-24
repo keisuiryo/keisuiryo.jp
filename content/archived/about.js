@@ -1,5 +1,5 @@
-import Card from './modules/card'
-import Wrapper from './modules/wrapper'
+import Card from '../../pages/modules/card'
+import Wrapper from '../../pages/modules/wrapper'
 
 export default function Home() {
     return (
