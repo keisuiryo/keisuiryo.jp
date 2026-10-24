@@ -1,24 +1,10 @@
-import Card from '../../pages/modules/card'
-import Wrapper from '../../pages/modules/wrapper'
+import Card from './modules/card'
+import Wrapper from './modules/wrapper'
 
 export default function Home() {
     return (
         <Wrapper id="about" title="渓水寮とは" desc="東北大学YMCA渓水寮は東北大学とは独立しており、東北大学の教員などの支援のもと寮生の手で運営されています。キリスト教精神をもとにした学生YMCAに属しています。寮生の多数はノンクリスチャンで、クリスチャンでなくても入寮できます。" >
             <div className="card-container">
-                <Card title="理事あいさつ">
-                    <div className="person-box about-person-box compact">
-                        <img loading="lazy" width="400" height="300" className="person-img about-person-img" src="/about/drkainuma.webp" alt="東北大学の貝沼亮介教授の写真です。渓水寮の理事長です。" />
-                        <div className="person-desc">
-                            <p className="person-name">貝沼亮介</p>
-                            <p className="person-org">東北大学教授</p>
-                        </div>
-                    </div>
-                    <p className="message-text">渓水寮は、東北大学基督教青年会(東北大学YMCA)の寮です。当寮は寮の趣旨に賛同する東北大学などの教官や寮のOPなど多くの
-                        方々の厚意で運営されていますが、寮生活そのものは、寮に住んでいる学生の自治に委ねられています。渓水寮は1997年から男子・女子共に生活する男女混住寮になりました。現在寮では
-                        13名(男子 9名,女子 4名)の学生が共同生活を行っています。個人の生活を尊重しながら
-                        寮の運営を学生たちが自治で行い、聖書研究や他大学の同じ志の寮との交流、講演会など、共同生活の良さを体験します。仙台での大学生活を渓水寮で一緒に過ごしませんか?
-                    </p>
-                </Card>
                 <Card title="YMCAについて" imageSrc="/about/ymca.webp" imageAlt="東北大学YMCA渓水寮が所属するYMCAのブランド写真です。">
                     <p className="contents-desc">
                         東北大学YMCA渓水寮は日本YMCA同盟の一部門である学生YMCAに属している寮です。YMCAは世界120の国と地域で、およそ6500万人の会員を有するNGOです。

@@ -80,7 +80,9 @@ export default function Home() {
           <div className='index-inround-box'>
             <h3 className='index-inround-title'>渓水寮とは</h3>
             <p className='index-inround-contents'>渓水寮は、東北大学YMCA(キリスト教青年会)の寮です。1928年に建立され、建物は変われど90年以上の歴史を持ちます。現在は東北大学などの教員有志や、卒寮生のご厚意の下運営されています。</p>
-
+            <Link href='/about/' className='index-inround-link index-link-about'><span className="material-symbols-rounded index-link-icon">
+              arrow_forward_ios
+            </span>寮の概要</Link>
           </div>
           <img loading="lazy" className="inround-small-img index-about-img" src="/illust1.webp" />
         </div>
