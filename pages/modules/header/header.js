@@ -21,7 +21,7 @@ export default function Fab(props) {
           <use href="#ymca-logo" />
         </svg>
       <h1 className="title-box">
-        <div className="title-up">東北大学YMCA渓水寮</div>
+        <div className="title-up">東北地区YMCA（仮称）渓水寮</div>
         <div className="title">{_title}</div>
       </h1>
     </header>

@@ -47,9 +47,6 @@ export default function Navigation(props) {
                         <Link href="https://twitter.com/keisuiryo"><img className="nav-sns" src="/twitter.png" alt="Twitter"></img></Link>
                         <Link href="https://instagram.com/keisuiryo"><img className="nav-sns" src="/instagram.png" alt="Instagram"></img></Link>
                     </div>
-                    <span className="nav-link nav-op nav-link-disabled" aria-disabled="true"><span className="material-symbols-rounded nav-icon">
-                            school
-                        </span>卒寮生用サイト（一時閉鎖中）</span>
                 </div>
             </nav>
             <div className='mobile'><Footer /></div>

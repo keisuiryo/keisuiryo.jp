@@ -289,25 +289,6 @@ body {
     color: #FFA22A;
 }
 
-.iop-title {
-    color: hsla(29, 77%, 23%, 1);
-}
-
-.iop-desc {
-    color: hsla(29, 95%, 10%, 0.8);
-}
-
-.iop-btn {
-    background: #96683C;
-    border-radius: 18px;
-    color: #FFF;
-}
-
-.iop-box {
-    background: #F0EAE2;
-    border: 1px solid #7A6552;
-}
-
 .iuniv-box {
     background: #FFEEE1;
     border: 1px solid #CD803D;
@@ -521,6 +502,41 @@ body {
     font-weight: bold;
     line-height: 1.4;
     margin-bottom: 12px;
+}
+
+.top-announce > summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+.top-announce > summary::-webkit-details-marker {
+    display: none;
+}
+
+.top-announce:not([open]) > .top-announce-title {
+    margin-bottom: 0;
+}
+
+.top-announce-heading {
+    flex: 1;
+}
+
+.top-announce-subtitle {
+    display: block;
+    margin-top: 3px;
+    color: #6a5741;
+    font-size: 0.72em;
+    font-weight: 500;
+}
+
+.top-announce-chevron {
+    flex: 0 0 auto;
+    margin-left: auto;
+    transition: transform 160ms ease;
+}
+
+.top-announce[open] .top-announce-chevron {
+    transform: rotate(180deg);
 }
 
 .top-announce-icon {

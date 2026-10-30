@@ -8,7 +8,7 @@ export const config = {
 }
 export default function Home() {
   return (
-    <Wrapper noheader desc="渓水寮は13名の少人数な食事付きの学生寮です。寮の家賃は食費・光熱費込み月4万8千円。東北大学などに通う男女新入寮生を募集しています。2026年度で廃寮になることが決定しました。">
+    <Wrapper noheader desc="東北地区YMCA（仮称）渓水寮は、東北大学の学生寮をお探しの方にもご案内する、定員13名の食事付き学生寮です。月額53,000円で、理事会費（管理費・維持費相当）25,000円、雑費（光熱費・食費など相当）28,000円。YMCAの支援により、家賃はかかりません。2027年4月入寮生を募集します。">
       <AnnounceModal />
       {/*<div className='top-bg-pc'>
         <img className="top-right" src="/top-right.jpg"></img>
@@ -19,7 +19,7 @@ export default function Home() {
       <img className="top-bg-pc" src="/top-bg.webp"></img>
       <div className="top-idt-box">
         <img className="top-idt-img" src="/ymca-logo.webp"></img>
-        <h1 className="top-idt"><span className="top-idt-sub">東北大学YMCA</span>渓水寮</h1>
+        <h1 className="top-idt"><span className="top-idt-sub">東北地区YMCA（仮称）</span>渓水寮</h1>
       </div>
       {/*<div className="important">
 
@@ -32,11 +32,15 @@ export default function Home() {
 
       <div className='top-contents-wrapper'>
 
-        <div className='top-announce'>
-          <h3 className='top-announce-title'>
+        <details className='top-announce'>
+          <summary className='top-announce-title'>
             <span className="material-symbols-rounded top-announce-icon">book_2</span>
-            会報原稿・クリスマス会2026のご案内
-          </h3>
+            <span className="top-announce-heading">
+              <span>旧・東北大学基督教青年会からのお知らせ</span>
+              <span className="top-announce-subtitle">会報原稿・クリスマス会2026など</span>
+            </span>
+            <span className="material-symbols-rounded top-announce-chevron" aria-hidden="true">expand_more</span>
+          </summary>
           <div className='top-announce-text'>
             <h4>解散の集いへのご出席ありがとうございました</h4>
             <p>東北大学基督教青年会「解散の集い」は、9月25日に感謝のうちに終えることができました。ご参加くださった皆さま、ありがとうございました。会場41名（寮生10名）、オンライン6名の方にご参加いただきました。詳細は会報62号に掲載します。当日スピーチをいただいた方には、会報掲載にあたりお問い合わせする場合があります。</p>
@@ -62,24 +66,26 @@ export default function Home() {
             <h4>2027年4月以降について</h4>
             <p>東北大学基督教青年会寮史編集委員会を立ち上げ、毎年度成果を発表しながら『青年会寮史』の刊行を目指します。同窓会機能は当面引き継ぎます。<br />（理事長・畠山祥正）</p>
           </div>
-        </div>
+        </details>
 
-        <div className="desc-box" >
-          <h2 className='desc-title'>東北大学YMCA渓水寮は、</h2>
-          <p className='desc-text'>朝晩寮母さんが食事を作ってくださる食事つきの学生寮です。寮費は月4万8千円で、食費や光熱費などすべて含まれています。定員は13名と少人数です。2027年度で廃寮になることが決定しました。</p>
+        <div className="desc-box recruitment-update-preview">
+          <p className="recruitment-update-preview-label">2027年度募集・更新プレビュー</p>
+          <h2 className='desc-title'>東北地区YMCA（仮称）渓水寮は、</h2>
+          <p className='desc-text'>朝晩、寮母さんが食事を作る食事付き学生寮です。月額53,000円の内訳は、理事会費（管理費・維持費相当）25,000円、雑費（光熱費・食費など相当）28,000円です。YMCAの支援により、家賃はかかりません。定員13名です。東北大学YMCAは2026年度をもって解散し、寮の運営母体が変更します。2027年4月から新しい運営体制で始まり、入寮生を募集します。現在は東北大学の学生が多く暮らしています。</p>
         </div>
-        <div className="important">
-          {/* <h3><span>i</span>入寮募集受付中(10/7更新)</h3>
-          <p>今年度は新入生を2名程度募集しております。2027年度で廃寮になることが決定しましたので、最長2年住むことができます。詳しくは以下をご覧ください。</p> */}
-          <p>2025年度の募集は終了いたしました。たくさんのご応募ありがとうございました</p>
+        <div className="important recruitment-update-preview">
+          <p className="recruitment-update-preview-label">募集情報・更新プレビュー</p>
+          <h3><span>i</span>2027年4月入寮生を募集します</h3>
+          <p>対象は、寮での共同生活を共に送れる大学生・大学院生・研究生・通信制の学校に在籍する学生などです。現在は東北大学の学生が多く暮らしていますが、東北大学の学生に限った募集ではありません。</p>
           <Link href='/apply/' className='index-inround-link'><span className="material-symbols-rounded index-link-icon">
               arrow_forward_ios
     </span>募集要項</Link>
     </div>
         <div className='round-box index-round-box index-r-about'>
-          <div className='index-inround-box'>
+          <div className='index-inround-box recruitment-update-preview'>
+            <p className="recruitment-update-preview-label">名称・運営情報の更新プレビュー</p>
             <h3 className='index-inround-title'>渓水寮とは</h3>
-            <p className='index-inround-contents'>渓水寮は、東北大学YMCA(キリスト教青年会)の寮です。1928年に建立され、建物は変われど90年以上の歴史を持ちます。現在は東北大学などの教員有志や、卒寮生のご厚意の下運営されています。</p>
+            <p className='index-inround-contents'>渓水寮は、東北大学YMCAのもとで運営されてきた学生寮です。東北大学YMCAは2026年度をもって解散し、寮の運営母体が変更します。2027年4月から「東北地区YMCA（仮称）渓水寮」として新しい運営体制で始まります。</p>
             <Link href='/about/' className='index-inround-link index-link-about'><span className="material-symbols-rounded index-link-icon">
               arrow_forward_ios
             </span>寮の概要</Link>
@@ -141,14 +147,15 @@ export default function Home() {
             </span>立地について</Link>
           </div>
         </div>
-        <div className='cr-box cr-flex'>
+        <div className='cr-box cr-flex recruitment-update-preview'>
           <div className='ifee-b1'>
+            <p className="recruitment-update-preview-label">料金情報更新プレビュー</p>
             <h4 className='index-inround-upper'>Monthly Fees</h4>
             <h3 className='index-inround-title'>寮費</h3>
-            <p className='index-fee-fee'>46,000円/月</p>
-            <p className='index-fee-sub'>食事代・水道費・光熱費込み</p>
+            <p className='index-fee-fee'>53,000円/月</p>
+            <p className='index-fee-sub'>理事会費（管理費・維持費相当）25,000円<br />雑費（光熱費・食費など相当）28,000円<br />YMCAの支援により、家賃はかかりません</p>
           </div>
-          <p className='cr-desc ifee-b2'>東北大学YMCA渓水寮は卒寮生や東北大学の教員有志などからのご寄付により、寮費を抑えています。寮費の支払いは柔軟に行え、年度末に余った寮費の約半分が返金されます。月々の寮費とは別にネット代として4,000円/年をいただきます。また、入寮費として3万円かかります（内2万円は卒寮時に返金）。</p>
+          <p className='cr-desc ifee-b2'>月額53,000円です。内訳は理事会費（管理費・維持費相当）25,000円、雑費（光熱費・食費など相当）28,000円です。YMCAの支援により、家賃はかかりません。</p>
 
         </div>
         <div className='smsg-wrapper'>
@@ -156,7 +163,8 @@ export default function Home() {
             <h4 className='index-inround-upper voice-up'>Voice</h4>
             <h3 className='box-title voice-title'>寮生の声</h3>
           </div>
-          <p className='smsg-box'>まず、この寮の悪い面から見ていきましょう。物事はいい面ばかり見てはいけないですからね！それは・・・</p>
+          <p className="recruitment-update-preview-label">紹介文更新プレビュー</p>
+          <p className='smsg-box recruitment-update-preview'>寮での暮らしを、寮生の言葉で紹介します。食事や人間関係、生活の中で感じたことなど、よいところも気になるところも率直に綴っています。</p>
           <Link href='/messages/' className='index-inround-link smsg-btn'>寮生の声を読む</Link>
         </div>
         <div className='smsg-wrapper'>
@@ -180,20 +188,17 @@ export default function Home() {
           </div>*/}
           <Link href='/faq/' className='index-inround-link smsg-btn'>よくある質問を見る</Link>
         </div>
-        <div className='cr-box cr-flex iapply-box'>
+        <div className='cr-box cr-flex iapply-box recruitment-update-preview'>
           <div>
+            <p className="recruitment-update-preview-label">募集情報・更新プレビュー</p>
             <h4 className='box-title iapply-title'>入寮方法</h4>
-            <p className='box-desc iapply-desc'>東北大学YMCA渓水寮では、東北大学などに通う男女新入生を募集しております。詳しくは募集要項をご覧ください。また、ご質問などありましたらお気軽にお問合せください。</p>
+            <p className='box-desc iapply-desc'>2027年4月入寮生を募集します。大学生・大学院生・研究生・通信制の学校に在籍する学生などが対象です。現在は東北大学の学生が多く暮らしています。詳しくは募集要項をご覧ください。</p>
           </div>
           <div>
             <Link href='/apply/' className='index-inround-link iapply-btn'><span className="material-symbols-rounded index-link-icon">
               arrow_forward_ios
             </span>募集要項</Link>
           </div>
-        </div>
-        <div className='cr-box iop-box'>
-          <h4 className='box-title iop-title'>卒寮生の方へ</h4>
-          <p className='box-desc iop-desc'>卒寮生向けページは現在一時閉鎖中です。</p>
         </div>
         <div className='cr-box iuniv-box'>
           <h4 className='box-title iuniv-title'>東北大学との関係</h4>

@@ -6,7 +6,7 @@ export default function Footer(props) {
                 <p className="footer-name icon-text">
                     <img loading="lazy" width="42" height="34" className="name-logo" alt="東北大学YMCA渓水寮のロゴ(ポジティブY)"
                         src="/ymca-logo.webp" />
-                    <span className="footer-name-name">東北大学YMCA渓水寮</span>
+                    <span className="footer-name-name">東北地区YMCA（仮称）渓水寮</span>
                 </p>
                 <address className="footer-adderss">
                     <Link href="mailto:ryo@keisuiryo.jp" className="address-content">
@@ -23,7 +23,7 @@ export default function Footer(props) {
 
                         <span className="material-symbols-rounded nav-icon">
                             near_me
-                        </span>〒982-0027<br />仙台市太白区大塒町8-1東北大学YMCA渓水寮
+                        </span>〒982-0027<br />仙台市太白区大塒町8-1渓水寮
                     </Link>
                 </address>
                 <div className="nav-sns-box">

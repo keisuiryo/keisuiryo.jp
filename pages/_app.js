@@ -13,6 +13,7 @@ import './modules/footer/footer.css'
 import './modules/header/header.css'
 import '../styles/apply.css'
 import '../styles/life.css'
+import '../styles/recruitment-preview.css'
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />

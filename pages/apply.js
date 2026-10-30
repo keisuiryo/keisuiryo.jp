@@ -3,7 +3,7 @@ import Wrapper from './modules/wrapper'
 
 export default function Home() {
     return (
-        <Wrapper id="apply" title="募集要項" desc="東北大学YMCA渓水寮は東北大学に通う男子・女子の新入寮生を募集しています。お気軽に寮までご連絡ください。">
+        <Wrapper id="apply" title="募集要項" desc="東北地区YMCA（仮称）渓水寮は2027年4月入寮生を募集します。大学生・大学院生・研究生・通信制の学校に在籍する学生などが対象です。月額費用は53,000円です。">
             <div className="apply-main-container">
                 {/*<!--<h2 className="contents-title">はじめに</h2>
                 <div className="desc-plain">
@@ -14,15 +14,15 @@ export default function Home() {
             <p>なお、Twitterにも生活の様子をのせています。よろしければどうぞ。</p>
             <a href="https://twitter.com/keisuiryo" className="btn-fab btn">Twitter →</a>-->
     <!--</div>-->*/}
-                <div className="important">
+                <div className="important recruitment-update-preview">
+                    <p className="recruitment-update-preview-label">2027年度募集・更新プレビュー</p>
                     <h3><span>i</span>申込のご案内</h3>
-                    <p>渓水寮は2026年度で廃寮することが決定しましたので、2026年度入寮の方は最長で1年のみ住むことができます。</p>
-                    <p>そのことをご了承いただけると幸いです。(2025/2/4追記)</p>
-                    <p></p>
-                    <p> <b>2025年度の募集は終了しました。ご了承いただければ幸いです。</b> (2025/3/9追記)</p>
-                    <p>渓水寮は皆様からの見学を受け付けております。</p>
+                    <p>2027年4月入寮生を募集します。東北大学YMCAは2026年度をもって解散し、寮の運営母体が変更します。新しい名称は「東北地区YMCA（仮称）渓水寮」です。</p>
+                    <p>対象は、寮での共同生活を共に送れる大学生・大学院生・研究生・通信制の学校に在籍する学生などです。現在は東北大学の学生が多く暮らしていますが、東北大学の学生に限った募集ではありません。</p>
+                    <p>月額費用は53,000円です。内訳は理事会費（管理費・維持費相当）25,000円、雑費（光熱費・食費など相当）28,000円です。YMCAの支援により、家賃はかかりません。</p>
+                    <p>見学については、公式LINEまたはメールからお問い合わせください。</p>
                     <p>以下の申し込みフォームをご記入の上、公式LINE(推奨)もしくはメールでご一報ください。<a href="https://docs.google.com/forms/d/e/1FAIpQLSdWS2WnwcJzYkVQO4yTDaKNWCgiW9U0WMb_YFLsTHXNzIK7Og/formResponse" className="link contents-link">申し込みフォーム</a></p>
-                    <p>寮生一同お待ちしております。</p>
+                    <p>募集人数・申込日程などは、決まり次第このページでご案内します。</p>
                     {/*<p>2024年度の入寮申込は終了いたしました。たくさんのご応募、本当にありがとうございました。</p>*/}
                 </div>
                     {/*<p className="important-warning">2月15日現在、ありがたいことに定員を上回る募集をいただいており、早期に募集を締め切る可能性があります。よろしくお願いいたします。</p>

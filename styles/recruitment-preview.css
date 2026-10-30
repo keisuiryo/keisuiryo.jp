@@ -1,0 +1,20 @@
+/* Temporary visual marker for the 2027 recruitment content preview.
+   Remove the preview classes, this import, and this file for normal styling. */
+.recruitment-update-preview {
+    outline: 2px dashed #9b5b13;
+    outline-offset: 3px;
+}
+
+.recruitment-update-preview-label {
+    display: inline-block;
+    margin: 0 0 0.8rem;
+    padding: 0.3rem 0.65rem;
+    border: 1px solid #9b5b13;
+    border-radius: 0.25rem;
+    background: #fff1d8;
+    color: #603600;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
