@@ -3,7 +3,7 @@ import Wrapper from './modules/wrapper'
 
 export default function Home() {
     return (
-        <Wrapper id="apply" title="募集要項" desc="東北地区YMCA（仮称）渓水寮は2027年4月入寮生を募集します。大学生・大学院生・研究生・通信制の学校に在籍する学生などが対象です。月額費用は53,000円です。">
+        <Wrapper id="apply" title="募集要項" desc="東北地区学生YMCA（仮称）渓水寮は2027年4月入寮生を募集します。大学生・大学院生・研究生・通信制の学校に在籍する学生などが対象です。月額費用は53,000円です。">
             <div className="apply-main-container">
                 {/*<!--<h2 className="contents-title">はじめに</h2>
                 <div className="desc-plain">
@@ -17,7 +17,7 @@ export default function Home() {
                 <div className="important recruitment-update-preview">
                     <p className="recruitment-update-preview-label">2027年度募集・更新プレビュー</p>
                     <h3><span>i</span>申込のご案内</h3>
-                    <p>2027年4月入寮生を募集します。東北大学YMCAは2026年度をもって解散し、寮の運営母体が変更します。新しい名称は「東北地区YMCA（仮称）渓水寮」です。</p>
+                    <p>2027年4月入寮生を募集します。東北大学YMCAは2026年度をもって解散し、寮の運営母体が変更します。新しい名称は「東北地区学生YMCA（仮称）渓水寮」です。</p>
                     <p>対象は、寮での共同生活を共に送れる大学生・大学院生・研究生・通信制の学校に在籍する学生などです。現在は東北大学の学生が多く暮らしていますが、東北大学の学生に限った募集ではありません。</p>
                     <p>月額費用は53,000円です。内訳は理事会費（管理費・維持費相当）25,000円、雑費（光熱費・食費など相当）28,000円です。YMCAの支援により、家賃はかかりません。</p>
                     <p>見学については、公式LINEまたはメールからお問い合わせください。</p>

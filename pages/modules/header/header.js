@@ -17,13 +17,15 @@ export default function Fab(props) {
     }*/
   return (
     <header className="header-container">
-      <svg className="title-logo" width="40" height="32">
-          <use href="#ymca-logo" />
-        </svg>
-      <h1 className="title-box">
-        <div className="title-up">東北地区YMCA（仮称）渓水寮</div>
-        <div className="title">{_title}</div>
-      </h1>
+      <Link href="/" className="header-home-link" aria-label="渓水寮トップページへ">
+        <svg className="title-logo" width="40" height="32">
+            <use href="#ymca-logo" />
+          </svg>
+        <h1 className="title-box">
+          <div className="title-up">東北地区学生YMCA（仮称）渓水寮</div>
+          <div className="title">{_title}</div>
+        </h1>
+      </Link>
     </header>
   )
 }

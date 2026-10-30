@@ -8,19 +8,19 @@ export const config = {
 }
 export default function Home() {
   return (
-    <Wrapper noheader desc="東北地区YMCA（仮称）渓水寮は、東北大学の学生寮をお探しの方にもご案内する、定員13名の食事付き学生寮です。月額53,000円に食費・管理費・維持費・光熱費・水道代がすべて含まれます。家賃はYMCAの支援によりかかりません。2027年4月入寮生を募集します。">
+    <Wrapper noheader desc="東北地区学生YMCA（仮称）渓水寮は、東北大学の学生寮をお探しの方にもご案内する、定員13名の食事付き学生寮です。月額53,000円に食費・管理費・維持費・光熱費・水道代がすべて含まれます。家賃はYMCAの支援によりかかりません。2027年4月入寮生を募集します。">
       <AnnounceModal />
       {/*<div className='top-bg-pc'>
         <img className="top-right" src="/top-right.jpg"></img>
         <img className="top-left" src="/top-left.jpg"></img>
         <img className="top-center" src="/top-center.jpg"></img>
       </div>*/}
-      <section className="top-hero" aria-label="東北地区YMCA（仮称）渓水寮">
+      <section className="top-hero" aria-label="東北地区学生YMCA（仮称）渓水寮">
         <img className="top-bg-mobile" src="/top-mobile.webp" alt="" aria-hidden="true" />
         <img className="top-bg-pc" src="/top-bg.webp" alt="" aria-hidden="true" />
         <div className="top-idt-box">
           <img className="top-idt-img" src="/ymca-logo.webp" alt="" />
-          <h1 className="top-idt"><span className="top-idt-sub">東北地区YMCA（仮称）</span>渓水寮</h1>
+          <h1 className="top-idt"><span className="top-idt-sub">東北地区学生YMCA（仮称）</span>渓水寮</h1>
         </div>
         <h2 className="top-catch">
           <img src="/catchphrase-handwriting.png" alt="共につくり、共に造られる" />
@@ -75,7 +75,7 @@ export default function Home() {
 
         <div className="desc-box recruitment-update-preview">
           <p className="recruitment-update-preview-label">2027年度募集・更新プレビュー</p>
-          <h2 className='desc-title'>東北地区YMCA（仮称）渓水寮は、</h2>
+          <h2 className='desc-title'>東北地区学生YMCA（仮称）渓水寮は、</h2>
           <p className='desc-text'>朝晩、寮母さんが食事を作る食事付き学生寮です。月額53,000円の内訳は、理事会費（管理費・維持費相当）25,000円、雑費（光熱費・食費など相当）28,000円です。YMCAの支援により、家賃はかかりません。定員13名です。東北大学YMCAは2026年度をもって解散し、寮の運営母体が変更します。2027年4月から新しい運営体制で始まり、入寮生を募集します。現在は東北大学の学生が多く暮らしています。</p>
         </div>
         <div className="important recruitment-update-preview">
@@ -90,7 +90,7 @@ export default function Home() {
           <div className='index-inround-box recruitment-update-preview'>
             <p className="recruitment-update-preview-label">名称・運営情報の更新プレビュー</p>
             <h3 className='index-inround-title'>渓水寮とは</h3>
-            <p className='index-inround-contents'>渓水寮は、東北大学YMCAのもとで運営されてきた学生寮です。東北大学YMCAは2026年度をもって解散し、寮の運営母体が変更します。2027年4月から「東北地区YMCA（仮称）渓水寮」として新しい運営体制で始まります。</p>
+            <p className='index-inround-contents'>渓水寮は、東北大学YMCAのもとで運営されてきた学生寮です。東北大学YMCAは2026年度をもって解散し、寮の運営母体が変更します。2027年4月から「東北地区学生YMCA（仮称）渓水寮」として新しい運営体制で始まります。</p>
             <Link href='/about/' className='index-inround-link index-link-about'><span className="material-symbols-rounded index-link-icon">
               arrow_forward_ios
             </span>寮の概要</Link>

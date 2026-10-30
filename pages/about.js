@@ -3,7 +3,7 @@ import Wrapper from './modules/wrapper'
 
 export default function Home() {
     return (
-        <Wrapper id="about" title="渓水寮とは" desc="東北大学YMCA渓水寮は東北大学とは独立した学生寮です。東北大学YMCAは2026年度をもって解散し、2027年4月から「東北地区YMCA（仮称）渓水寮」として新しい運営体制で始まります。月額費用は53,000円です。" >
+        <Wrapper id="about" title="渓水寮とは" desc="東北大学YMCA渓水寮は東北大学とは独立した学生寮です。東北大学YMCAは2026年度をもって解散し、2027年4月から「東北地区学生YMCA（仮称）渓水寮」として新しい運営体制で始まります。月額費用は53,000円です。" >
             <div className="card-container">
                 <Card title="『共につくり、共につくられる』">
                     <p className="contents-desc">
@@ -17,7 +17,7 @@ export default function Home() {
                     <div className="recruitment-update-preview">
                         <p className="recruitment-update-preview-label">運営情報・更新プレビュー</p>
                         <p className="contents-desc">
-                            東北大学YMCA渓水寮は、これまで日本YMCA同盟の学生YMCAに属していました。YMCAは世界120の国と地域で、およそ6500万人の会員を有するNGOです。東北大学YMCAは2026年度をもって解散し、寮の運営母体が変更します。2027年4月から「東北地区YMCA（仮称）渓水寮」として新しい運営体制で始まります。
+                            東北大学YMCA渓水寮は、これまで日本YMCA同盟の学生YMCAに属していました。YMCAは世界120の国と地域で、およそ6500万人の会員を有するNGOです。東北大学YMCAは2026年度をもって解散し、寮の運営母体が変更します。2027年4月から「東北地区学生YMCA（仮称）渓水寮」として新しい運営体制で始まります。
                         </p>
                     </div>
                     <p className="contents-desc">
