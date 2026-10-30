@@ -15,12 +15,17 @@ export default function Home() {
         <img className="top-left" src="/top-left.jpg"></img>
         <img className="top-center" src="/top-center.jpg"></img>
       </div>*/}
-      <img className="top-bg-mobile" src="/top-mobile.webp"></img>
-      <img className="top-bg-pc" src="/top-bg.webp"></img>
-      <div className="top-idt-box">
-        <img className="top-idt-img" src="/ymca-logo.webp"></img>
-        <h1 className="top-idt"><span className="top-idt-sub">東北地区YMCA（仮称）</span>渓水寮</h1>
-      </div>
+      <section className="top-hero" aria-label="東北地区YMCA（仮称）渓水寮">
+        <img className="top-bg-mobile" src="/top-mobile.webp" alt="" aria-hidden="true" />
+        <img className="top-bg-pc" src="/top-bg.webp" alt="" aria-hidden="true" />
+        <div className="top-idt-box">
+          <img className="top-idt-img" src="/ymca-logo.webp" alt="" />
+          <h1 className="top-idt"><span className="top-idt-sub">東北地区YMCA（仮称）</span>渓水寮</h1>
+        </div>
+        <h2 className="top-catch">
+          <img src="/catchphrase-handwriting.png" alt="共につくり、共に造られる" />
+        </h2>
+      </section>
       {/*<div className="important">
 
         <h3><span>i</span>入寮募集日程について<br />(2/27更新)</h3>

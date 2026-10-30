@@ -69,29 +69,66 @@ body {
     background: none;
 }
 
-.top-idt-img {
-    margin: 0 auto;
-    height: 60px;
-    margin-bottom: 15px;
-}
-
-.top-idt {
-    font-size: 40px;
-    text-align: center;
-}
-
-.top-idt-sub {
-    display: block;
-    text-align: center;
-    font-size: 24px;
+.top-hero {
+    position: relative;
+    width: 100%;
+    line-height: 0;
 }
 
 .top-idt-box {
     position: absolute;
-    left: 50vw;
-    top: 45vw;
-    width: 100vw;
-    transform: translateX(-50%);
+    z-index: 2;
+    top: 14px;
+    left: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: max-content;
+    max-width: calc(100% - 28px);
+    padding: 7px 10px;
+    border-radius: 9px;
+    background: rgb(255 255 255 / 94%);
+    line-height: 1.15;
+}
+
+.top-idt-img {
+    display: block;
+    flex: none;
+    height: 34px;
+    width: auto;
+    margin: 0;
+}
+
+.top-idt {
+    margin: 0;
+    font-size: clamp(17px, 3.6vw, 26px);
+    line-height: 1.15;
+    text-align: left;
+}
+
+.top-idt-sub {
+    display: block;
+    font-size: clamp(10px, 2vw, 14px);
+    line-height: 1.2;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.top-catch {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 86%;
+    max-width: 760px;
+    margin: 0;
+    transform: translate(-50%, -50%);
+}
+
+.top-catch img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .desc-box {
@@ -124,7 +161,9 @@ body {
 }
 
 .top-bg-mobile {
+    display: block;
     width: 100%;
+    height: auto;
 }
 
 .top-bg-mobile-bottom {
@@ -143,7 +182,6 @@ body {
         width: 100%;
         height: auto;
         max-height: 95vh;
-        z-index: -10;
         object-fit: contain;
     }
 
@@ -159,23 +197,25 @@ body {
     }
 
     .top-idt-box {
-        position: absolute;
-        top: calc(40vh);
-        left: calc(50vw + 110px);
-        transform: translateX(calc(-50% - 30px)) translateY(-10%);
+        top: 3%;
+        left: 3%;
     }
 
     .top-idt-img {
-        height: 80px;
-        margin-bottom: 30px;
+        height: 46px;
     }
 
     .top-idt {
-        font-size: 70px;
+        font-size: clamp(22px, 2.2vw, 34px);
     }
 
     .top-idt-sub {
-        font-size: 32px;
+        font-size: clamp(13px, 1.2vw, 17px);
+    }
+
+    .top-catch {
+        width: 56%;
+        max-width: 800px;
     }
 }
 
