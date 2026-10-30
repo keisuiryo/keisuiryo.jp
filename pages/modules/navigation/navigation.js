@@ -4,6 +4,7 @@ import Footer from '../footer/footer-pc'
 export default function Navigation(props) {
     let model = [{ href: "/about/", text: "渓水寮とは", icon: "info" },
     { href: "/life/", text: "寮生活", icon: "diversity_3" },
+    { href: "/events/", text: "行事", icon: "event" },
     { href: "/meals/", text: "食事", icon: "set_meal" },
     { href: "/facilities/", text: "設備", icon: "door_open" },
     { href: "/location/", text: "通学・周辺施設", icon: "store" },
