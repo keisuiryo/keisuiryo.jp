@@ -5,6 +5,14 @@ export default function Home() {
     return (
         <Wrapper id="about" title="渓水寮とは" desc="東北大学YMCA渓水寮は東北大学とは独立した学生寮です。東北大学YMCAは2026年度をもって解散し、2027年4月から「東北地区YMCA（仮称）渓水寮」として新しい運営体制で始まります。月額費用は53,000円です。" >
             <div className="card-container">
+                <Card title="『共につくり、共につくられる』">
+                    <p className="contents-desc">
+                        渓水寮は、決められた仕組みに沿って暮らすだけの場所ではありません。寮生が話し合い、日々の暮らしや行事を一緒につくっていきます。そして、そこで出会う人や重ねる経験を通じて、一人ひとりもまた形づくられていきます。
+                    </p>
+                    <p className="contents-desc">
+                        このキャッチコピーには、寮生が共同生活を共につくり、その営みの中で互いを知り、影響を受けながら暮らすコミュニティを目指す思いを込めています。
+                    </p>
+                </Card>
                 <Card title="YMCAについて" imageSrc="/about/ymca.webp" imageAlt="東北大学YMCA渓水寮が所属するYMCAのブランド写真です。">
                     <div className="recruitment-update-preview">
                         <p className="recruitment-update-preview-label">運営情報・更新プレビュー</p>

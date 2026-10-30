@@ -8,7 +8,7 @@ export const config = {
 }
 export default function Home() {
   return (
-    <Wrapper noheader desc="東北地区YMCA（仮称）渓水寮は、東北大学の学生寮をお探しの方にもご案内する、定員13名の食事付き学生寮です。月額53,000円で、理事会費（管理費・維持費相当）25,000円、雑費（光熱費・食費など相当）28,000円。YMCAの支援により、家賃はかかりません。2027年4月入寮生を募集します。">
+    <Wrapper noheader desc="東北地区YMCA（仮称）渓水寮は、東北大学の学生寮をお探しの方にもご案内する、定員13名の食事付き学生寮です。月額53,000円に食費・管理費・維持費・光熱費・水道代がすべて含まれます。家賃はYMCAの支援によりかかりません。2027年4月入寮生を募集します。">
       <AnnounceModal />
       {/*<div className='top-bg-pc'>
         <img className="top-right" src="/top-right.jpg"></img>
@@ -158,9 +158,11 @@ export default function Home() {
             <h4 className='index-inround-upper'>Monthly Fees</h4>
             <h3 className='index-inround-title'>寮費</h3>
             <p className='index-fee-fee'>53,000円/月</p>
-            <p className='index-fee-sub'>理事会費（管理費・維持費相当）25,000円<br />雑費（光熱費・食費など相当）28,000円<br />YMCAの支援により、家賃はかかりません</p>
+            <p className='index-fee-included'>食費・管理費・維持費・光熱費・水道代、すべて込み！</p>
+            <p className='index-fee-breakdown-label'>内訳：</p>
+            <p className='index-fee-sub'>理事会費（管理費・維持費相当）25,000円<br />雑費（光熱費・水道代・食費など相当）28,000円<br />家賃はYMCAの支援によりかかりません</p>
           </div>
-          <p className='cr-desc ifee-b2'>月額53,000円です。内訳は理事会費（管理費・維持費相当）25,000円、雑費（光熱費・食費など相当）28,000円です。YMCAの支援により、家賃はかかりません。</p>
+          <p className='cr-desc ifee-b2'>月額53,000円に食費・管理費・維持費・光熱費・水道代がすべて含まれます。内訳は理事会費（管理費・維持費相当）25,000円、雑費（光熱費・水道代・食費など相当）28,000円です。家賃はYMCAの支援によりかかりません。</p>
 
         </div>
         <div className='smsg-wrapper'>
