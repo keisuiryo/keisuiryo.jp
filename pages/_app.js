@@ -14,6 +14,7 @@ import './modules/header/header.css'
 import '../styles/apply.css'
 import '../styles/life.css'
 import '../styles/recruitment-preview.css'
+import '../styles/design-migration.css'
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
