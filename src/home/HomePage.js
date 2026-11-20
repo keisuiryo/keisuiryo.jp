@@ -72,8 +72,8 @@ export default function Home({ wikiCategories = [] }) {
               <p>共同生活や日々の活動を、<br />寮生それぞれの言葉で紹介します。</p>
             </div>
             <figure className="ks-feature-photo ks-people-photo">
-              <img src="/meals/meal_pic.webp" alt="食堂で一緒に食事をする寮生" loading="lazy" />
-              <figcaption>食卓を囲む、いつもの時間。</figcaption>
+              <img src="/events/main.webp" alt="花見で集まる寮生" loading="lazy" />
+              <figcaption>行事で一緒に過ごすひととき。</figcaption>
             </figure>
             <div className="ks-photo-links">
               <Link className="ks-text-link" href="/messages/">寮生の声を読む <span aria-hidden="true">↗</span></Link>
@@ -83,17 +83,64 @@ export default function Home({ wikiCategories = [] }) {
         </section>
 
         <section className="ks-section ks-life" id="life" aria-labelledby="ks-life-title">
-          <div className="ks-section-inner ks-split ks-life-grid">
-            <div className="ks-life-copy">
-              <p className="ks-kicker">03 ／ 寮の一日</p>
-              <h2 id="ks-life-title">食卓に集まり、<br />日々を重ねる。</h2>
-              <p>授業日の朝と晩には、寮母さんの手作りの食事があります。食卓を囲む時間も、寮での暮らしのひとつです。</p>
-              <Link className="ks-text-link" href="/meals/">食事と献立を見る <span aria-hidden="true">↗</span></Link>
+          <div className="ks-section-inner">
+            <p className="ks-kicker">03 ／ 寮の一日</p>
+            <div className="ks-section-heading ks-life-heading">
+              <h2 id="ks-life-title">集う時間と、<br />それぞれの時間。</h2>
+              <p>食卓やホールで誰かと過ごす時間。<br />自分の部屋で過ごす時間。<br />四つの場面から、寮の日常を紹介します。</p>
             </div>
-            <figure className="ks-feature-photo ks-meal-photo">
-              <img src="/meals/meals.webp" alt="渓水寮で提供される食事の一例" loading="lazy" />
-              <figcaption>授業日の朝夕に用意される食事。</figcaption>
-            </figure>
+
+            <article className="ks-life-story ks-life-meal">
+              <figure className="ks-feature-photo">
+                <img src="/meals/meal_pic.webp" alt="食堂で一緒に食事をする寮生" loading="lazy" />
+                <figcaption>食卓を囲む、いつもの時間。</figcaption>
+              </figure>
+              <div className="ks-life-story-copy">
+                <p className="ks-kicker">TABLE ／ 食卓</p>
+                <h3>食卓に集まる。</h3>
+                <p>授業日の朝と晩には、寮母さんの手作りの食事があります。食卓を囲む時間も、寮での暮らしのひとつです。</p>
+                <Link className="ks-text-link" href="/meals/">食事と献立を見る <span aria-hidden="true">↗</span></Link>
+              </div>
+            </article>
+
+            <article className="ks-life-story ks-life-room">
+              <figure className="ks-feature-photo">
+                <img src="/facilities/room.webp" alt="渓水寮にある寮生の個室" loading="lazy" />
+                <figcaption>一人ひとりに個室があります。</figcaption>
+              </figure>
+              <div className="ks-life-story-copy">
+                <p className="ks-kicker">MY ROOM ／ 自分の部屋</p>
+                <h3>自分の時間を過ごす。</h3>
+                <p>6畳の個室には、ベッド・机・椅子・エアコンがあります。共同生活の中にも、自分の時間を過ごす場所があります。</p>
+                <Link className="ks-text-link" href="/facilities/">個室・設備について <span aria-hidden="true">↗</span></Link>
+              </div>
+            </article>
+
+            <article className="ks-life-story ks-life-hall">
+              <figure className="ks-feature-photo">
+                <img src="/facilities/hall.webp" alt="食事や行事などに使う渓水寮のホール" loading="lazy" />
+                <figcaption>食事や行事で使うホール。</figcaption>
+              </figure>
+              <div className="ks-life-story-copy">
+                <p className="ks-kicker">COMMON SPACE ／ ホール</p>
+                <h3>みんなの場所に集まる。</h3>
+                <p>ホールは食事や朝拝、寮生総会などに使います。テレビやゲーム機、ピアノ、ドラム、本などもある共有の場所です。</p>
+                <Link className="ks-text-link" href="/facilities/">ホール・共用設備について <span aria-hidden="true">↗</span></Link>
+              </div>
+            </article>
+
+            <article className="ks-life-story ks-life-meeting">
+              <figure className="ks-feature-photo">
+                <img src="/events/meeting.webp" alt="寮生総会で話し合う寮生" loading="lazy" />
+                <figcaption>月に一度の寮生総会。</figcaption>
+              </figure>
+              <div className="ks-life-story-copy">
+                <p className="ks-kicker">MEETING ／ 話し合い</p>
+                <h3>暮らしのことを話し合う。</h3>
+                <p>月に一度の寮生総会では、行事の企画や建物、寮費など、寮生活に関わることを話し合います。寮生の意見を運営に反映する場です。</p>
+                <Link className="ks-text-link" href="/life/#gov">寮生活と自治について <span aria-hidden="true">↗</span></Link>
+              </div>
+            </article>
           </div>
         </section>
 
