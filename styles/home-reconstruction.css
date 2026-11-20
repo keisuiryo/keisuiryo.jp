@@ -80,18 +80,20 @@
 }
 
 .ks-subtitle {
+  align-items: stretch;
+  display: flex;
   font-size: clamp(1.2rem, 2vw, 1.55rem);
+  gap: .65rem;
   line-height: 1.55;
-  padding-top: .6rem;
+  padding: 0;
 }
 
 .ks-subtitle::before {
   background: var(--ks-vermilion);
   content: "";
   display: block;
-  height: 1px;
-  margin: 0 0 .7rem;
-  width: 2rem;
+  flex: 0 0 1px;
+  margin: .2em 0;
 }
 
 .ks-home .ks-text-link {
@@ -115,7 +117,22 @@
   aspect-ratio: 4 / 3;
   background: transparent;
   border: 1px solid var(--ks-line);
+  margin: 0;
+  overflow: hidden;
+  position: relative;
   width: 100%;
+}
+
+.ks-photo-frame-image {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.ks-map-frame .ks-photo-frame-image {
+  background: var(--ks-paper);
+  object-fit: contain;
 }
 
 .ks-about {
@@ -200,14 +217,8 @@
 }
 
 .ks-voices-link .ks-subtitle {
-  display: inline-block;
+  display: inline-flex;
   margin: 0 .8rem 0 0;
-  vertical-align: middle;
-}
-
-.ks-voices-link .ks-subtitle::before {
-  display: inline-block;
-  margin: 0 .65rem .25rem 0;
   vertical-align: middle;
 }
 
@@ -485,13 +496,8 @@
   }
 
   .ks-voices-link .ks-subtitle {
-    display: block;
+    display: flex;
     margin-bottom: .4rem;
-  }
-
-  .ks-voices-link .ks-subtitle::before {
-    display: block;
-    margin: 0 0 .7rem;
   }
 
   .ks-condition-item + .ks-condition-item {

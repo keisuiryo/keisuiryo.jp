@@ -51,7 +51,9 @@ export default function Home({ wikiCategories = [] }) {
                 <p>13人の寮生が、理事の支援を受けながら、自分たちの暮らしを一緒に運営しています。寮生には東北大学の学生が多くいますが、寮は大学とは別の運営です。</p>
                 <Link className="ks-text-link" href="/about/">運営体制・寮の概要を読む <span aria-hidden="true">↗</span></Link>
               </div>
-              <div className="ks-photo-frame ks-about-frame" aria-hidden="true" />
+              <figure className="ks-photo-frame ks-about-frame">
+                <img className="ks-photo-frame-image" src="/about/main.webp" alt="渓水寮の前に集まる寮生" loading="lazy" />
+              </figure>
             </div>
           </div>
         </section>
@@ -68,7 +70,9 @@ export default function Home({ wikiCategories = [] }) {
 
             <div className="ks-daily-grid">
               <article className="ks-daily-item">
-                <div className="ks-photo-frame ks-daily-photo" aria-hidden="true" />
+                <figure className="ks-photo-frame ks-daily-photo">
+                  <img className="ks-photo-frame-image" src="/facilities/room.webp" alt="ベッドと机がある渓水寮の個室" loading="lazy" />
+                </figure>
                 <div className="ks-daily-copy">
                   <h3 className="ks-subtitle">個室</h3>
                   <p>6畳の個室に、ベッド・机・椅子・エアコンがあります。共同生活の中にも、自分の時間を過ごす場所があります。</p>
@@ -76,7 +80,9 @@ export default function Home({ wikiCategories = [] }) {
                 </div>
               </article>
               <article className="ks-daily-item">
-                <div className="ks-photo-frame ks-daily-photo" aria-hidden="true" />
+                <figure className="ks-photo-frame ks-daily-photo">
+                  <img className="ks-photo-frame-image" src="/meals/meal_pic.webp" alt="寮生が食卓を囲む様子" loading="lazy" />
+                </figure>
                 <div className="ks-daily-copy">
                   <h3 className="ks-subtitle">食卓</h3>
                   <p>授業日の朝と晩には、寮母さんの手作りの食事があります。食卓を囲む時間も、寮での暮らしのひとつです。</p>
@@ -84,7 +90,9 @@ export default function Home({ wikiCategories = [] }) {
                 </div>
               </article>
               <article className="ks-daily-item">
-                <div className="ks-photo-frame ks-daily-photo" aria-hidden="true" />
+                <figure className="ks-photo-frame ks-daily-photo">
+                  <img className="ks-photo-frame-image" src="/events/meeting.webp" alt="ホールで話し合う寮生" loading="lazy" />
+                </figure>
                 <div className="ks-daily-copy">
                   <h3 className="ks-subtitle">ホール</h3>
                   <p>食事や朝拝、寮生総会などに使う共有の場所です。月に一度の総会では、行事や建物など暮らしのことを話し合います。</p>
@@ -116,7 +124,9 @@ export default function Home({ wikiCategories = [] }) {
             <div className="ks-conditions-grid">
               <article className="ks-condition-item">
                 <h3 className="ks-subtitle">施設</h3>
-                <div className="ks-photo-frame ks-condition-photo" aria-hidden="true" />
+                <figure className="ks-photo-frame ks-condition-photo">
+                  <img className="ks-photo-frame-image" src="/facilities/D7K9711.webp" alt="本棚やテーブルがある渓水寮の共有室" loading="lazy" />
+                </figure>
                 <p>個室のほか、ホールや台所、客間などの共用設備があります。</p>
                 <Link className="ks-text-link" href="/facilities/">設備について <span aria-hidden="true">↗</span></Link>
               </article>
@@ -132,7 +142,9 @@ export default function Home({ wikiCategories = [] }) {
               </article>
               <article className="ks-condition-item">
                 <h3 className="ks-subtitle">アクセス</h3>
-                <div className="ks-photo-frame ks-condition-photo" aria-hidden="true" />
+                <figure className="ks-photo-frame ks-condition-photo ks-map-frame">
+                  <img className="ks-photo-frame-image" src="/map.webp" alt="渓水寮と東北大学、仙台駅方面の位置関係を示す地図" loading="lazy" />
+                </figure>
                 <p>東北大学まではバス・地下鉄で約20分、原付で約10分です。近くにはコンビニや病院などがあります。</p>
                 <Link className="ks-text-link" href="/location/">通学・周辺施設を見る <span aria-hidden="true">↗</span></Link>
               </article>
