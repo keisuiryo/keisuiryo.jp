@@ -3,7 +3,6 @@ import Navigation from './navigation/navigation'
 import SVG from './svg'
 import Meta from './meta'
 import Header from './header/header'
-import Fab from './fab'
 
 export default function Wrappr(props) {
     let h;
@@ -19,7 +18,6 @@ export default function Wrappr(props) {
                 {h}
                 <main className="main-container">
                     {props.children}
-                    <Fab />
                 </main>
                 <div className='pc white'><Footer /></div>
             </div>

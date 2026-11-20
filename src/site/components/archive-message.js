@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Wrapper from '../pages/modules/wrapper'
+import Wrapper from './wrapper'
 
 export default function ArchiveMessage({ voice }) {
     return (
