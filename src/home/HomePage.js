@@ -1,236 +1,224 @@
-import Card from '../site/components/card'
-import Wrapper from '../site/components/wrapper'
-import AnnounceModal from '../site/components/announce-modal'
 import Link from 'next/link'
+import Wrapper from '../site/components/wrapper'
 
 export const config = {
   unstable_runtimeJS: true
 }
-export default function Home() {
+
+export default function Home({ wikiCategories = [] }) {
   return (
-    <Wrapper noheader desc="東北地区YMCA（仮称）渓水寮は、東北大学の学生寮をお探しの方にもご案内する、定員13名の食事付き学生寮です。月額53,000円で、理事会費（管理費・維持費相当）25,000円、経常費（光熱費・食費など相当）28,000円。YMCAの支援により、家賃はかかりません。2027年4月入寮生を募集します。">
-      <AnnounceModal />
-      {/*<div className='top-bg-pc'>
-        <img className="top-right" src="/top-right.jpg"></img>
-        <img className="top-left" src="/top-left.jpg"></img>
-        <img className="top-center" src="/top-center.jpg"></img>
-      </div>*/}
+    <Wrapper noheader desc="東北地区YMCA（仮称）渓水寮は、大学生などが共同生活を送る定員13名の学生寮です。食事や個室、月額53,000円の費用、2027年4月入寮生の募集についてご案内します。">
       <section className="home-hero" id="home-top" aria-label="渓水寮">
-        <img className="top-bg-mobile" src="/design/keisui-watercolor.jpg" alt="" />
-        <img className="top-bg-pc" src="/design/keisui-watercolor.jpg" alt="" />
+        <img className="top-bg-mobile" src="/design/keisui-watercolor.jpg" alt="木々に囲まれた渓水寮を描いた水彩画" fetchPriority="high" />
+        <img className="top-bg-pc" src="/design/keisui-watercolor.jpg" alt="" fetchPriority="high" />
         <header className="home-hero-header">
-          <div className="home-hero-brand">
-            <img className="home-hero-logo" src="/ymca-logo.svg" alt="YMCA" />
-            <div className="home-hero-brand-text">
-              <h1 className="home-hero-org">
+          <Link href="/" className="home-hero-brand" aria-label="渓水寮トップページ">
+            <img className="home-hero-logo" src="/ymca-logo.svg" alt="" />
+            <span className="home-hero-brand-text">
+              <span className="home-hero-org">
                 <span>東北地区学生YMCA</span>
                 <span className="home-hero-dorm">渓水寮</span>
-              </h1>
-            </div>
-          </div>
-          <nav className="home-hero-nav" aria-label="メインナビゲーション">
-            <Link href="/about/">東北地区YMCA寮とは</Link>
-            <Link href="/life/">寮生活</Link>
-            <Link href="/meals/">食事</Link>
-            <Link href="/facilities/">設備</Link>
-            <Link href="/location/">通学・周辺施設</Link>
-            <Link href="/events/">行事</Link>
-            <Link href="/faq/">よくある質問</Link>
-            <Link href="/wiki/">Wiki記事</Link>
+              </span>
+            </span>
+          </Link>
+          <nav className="home-hero-nav" aria-label="トップページ内の案内">
+            <a href="#about">渓水寮について</a>
+            <a href="#people">暮らす人たち</a>
+            <a href="#life">寮の一日</a>
+            <a href="#information">施設・寮費</a>
+            <Link href="/wiki/">渓水寮Wiki</Link>
+            <a href="#visit">見学・お問い合わせ</a>
             <Link href="/apply/" className="home-hero-nav-apply">募集要項 <span aria-hidden="true">↗</span></Link>
           </nav>
         </header>
-        <img className="home-hero-handwriting" src="/design/title-handwriting-fourth-v2.png" alt="共につくり、共に造られる。" />
+        <h1 className="ks-sr-only">共につくり、共に造られる。渓水寮。</h1>
+        <img className="home-hero-handwriting" src="/design/title-handwriting-fourth-v2.png" alt="" />
         <a className="home-hero-scroll" href="#home-content" aria-label="ページ本文へ">
           <span aria-hidden="true">↓</span>
         </a>
       </section>
-      {/*<div className="important">
 
-        <h3><span>i</span>入寮募集日程について<br />(2/27更新)</h3>
-        <p>前期試験を受験された方の入寮受付の締切は3/6(日),入寮可否の通知は3/9(水)となっております。入寮をご検討の方は早めにご連絡ください。後期入試の方の募集など、詳しくは<Link href="/apply/"><a className="link"
-        >募集要項</a></Link>をご覧ください。
-        </p>
-
-      </div>*/}
-
-      <div className='top-contents-wrapper' id="home-content">
-
-        <details className='top-announce'>
-          <summary className='top-announce-title'>
-            <span className="material-symbols-rounded top-announce-icon">book_2</span>
-            <span className="top-announce-heading">
-              <span>旧・東北大学基督教青年会からのお知らせ</span>
-              <span className="top-announce-subtitle">会報原稿・クリスマス会2026など</span>
-            </span>
-            <span className="material-symbols-rounded top-announce-chevron" aria-hidden="true">expand_more</span>
-          </summary>
-          <div className='top-announce-text'>
-            <h4>解散の集いへのご出席ありがとうございました</h4>
-            <p>東北大学基督教青年会「解散の集い」は、9月25日に感謝のうちに終えることができました。ご参加くださった皆さま、ありがとうございました。会場41名（寮生10名）、オンライン6名の方にご参加いただきました。詳細は会報62号に掲載します。当日スピーチをいただいた方には、会報掲載にあたりお問い合わせする場合があります。</p>
-
-            <h4>会報原稿を募集しています</h4>
-            <p>原稿は編集子である理事長宛にメールでお送りください。</p>
-            <p>解散の集いに参加した感想や、寮を出てからの歩みなど、内容は自由です。仲間内で編集していただく形も歓迎します。集まりの写真を添える場合は、掲載されている方のお名前もお知らせください。</p>
-            <p><strong>締切：11月8日（日）</strong><br />理事長・畠山祥正：<a href='mailto:hatakey@nifty.com'>hatakey@nifty.com</a></p>
-            <a className='top-announce-action' href='mailto:hatakey@nifty.com?subject=%E4%BC%9A%E5%A0%B1%E5%8E%9F%E7%A8%BF'>原稿を送る</a>
-
-            <p className='top-announce-christmas-callout'>クリスマス会に参加したい方は以下に申し込みください。</p>
-            <dl className='top-announce-details'>
-              <div><dt>【日時】</dt><dd>2026年12月12日（土）16時30分～</dd></div>
-              <div><dt>【会場】</dt><dd>渓水寮</dd></div>
-              <div><dt>【内容】</dt><dd>講師　齋藤 篤先生（日本キリスト教団仙台宮城野教会牧師）</dd></div>
-              <div><dt>【会費】</dt><dd>お一人 1000円程度（当日お支払い）</dd></div>
-              <div className='top-announce-deadline'><dt>【回答期限】</dt><dd>11月12日</dd></div>
-            </dl>
-            <p className='top-announce-note'>※会員以外からの直接申込はできません。</p>
-            <p>【連絡先】<a href='mailto:keisuiryo@gmail.com'>keisuiryo@gmail.com</a></p>
-            <a className='top-announce-action' href='https://docs.google.com/forms/d/e/1FAIpQLScupUnRrdvv2F3LEgeCl4m9DYEd9an8-ys9zP8YzGf2mWr-Ng/viewform?usp=dialog' target='_blank' rel='noopener noreferrer'>申し込む</a>
-
-            <h4>2027年4月以降について</h4>
-            <p>東北大学基督教青年会寮史編集委員会を立ち上げ、毎年度成果を発表しながら『青年会寮史』の刊行を目指します。同窓会機能は当面引き継ぎます。<br />（理事長・畠山祥正）</p>
-          </div>
-        </details>
-
-        <div className="important">
-          <h3><span>i</span>2027年4月入寮生を募集します</h3>
-          <p>対象は、寮での共同生活を共に送れる大学生・大学院生・研究生・通信制の学校に在籍する学生などです。現在は東北大学の学生が多く暮らしていますが、東北大学の学生に限った募集ではありません。</p>
-          <Link href='/apply/' className='index-inround-link'><span className="material-symbols-rounded index-link-icon">
-              arrow_forward_ios
-    </span>募集要項</Link>
-    </div>
-        <div className='round-box index-round-box index-r-about'>
-          <div className='index-inround-box'>
-            <h3 className='index-inround-title'>東北地区YMCA寮とは</h3>
-            <p className='index-inround-contents'>渓水寮は、東北大学YMCAのもとで運営されてきた学生寮です。東北大学YMCAは2026年度をもって解散し、寮の運営母体が変更します。2027年4月から「東北地区YMCA（仮称）渓水寮」として新しい運営体制で始まります。</p>
-            <Link href='/about/' className='index-inround-link index-link-about'><span className="material-symbols-rounded index-link-icon">
-              arrow_forward_ios
-            </span>寮の概要</Link>
-          </div>
-          <img loading="lazy" className="inround-small-img index-about-img" src="/illust1.webp" />
-        </div>
-        <h3 className='index-header index-header-1'>渓水寮での生活</h3>
-        <div className='cr-box index-cr-1'>
-          <div className='cr-flex cr-flex-1'>
+      <div className="top-contents-wrapper ks-home" id="home-content">
+        <section className="ks-recruitment" aria-labelledby="ks-recruitment-title">
+          <div className="ks-recruitment-inner">
             <div>
-              <h3 className='box-title life-title'>少人数</h3>
-              <p className='box-desc'>渓水寮には１３人の個性豊かな寮生が住んでいます。少人数で、アットホームな雰囲気です。一人一人の生活を大切にしながら、共同生活を送っています。</p>
+              <p className="ks-kicker">2027 RECRUITMENT</p>
+              <h2 id="ks-recruitment-title">2027年4月入寮生を募集します</h2>
+              <p>対象は、寮での共同生活を共に送れる大学生・大学院生・研究生・通信制の学校に在籍する学生などです。東北大学の学生に限った募集ではありません。</p>
             </div>
-            <img loading="lazy" className="inround-small-img" src="/life-bg1.webp" />
+            <Link className="ks-action" href="/apply/">募集要項を見る <span aria-hidden="true">↗</span></Link>
           </div>
-          <div className='cr-flex'>
-            <div>
-              <h3 className='box-title life-title'>自治寮</h3>
-              <p className='box-desc'>渓水寮は理事の先生方の支援のもと寮生の手で運営されている、日本でも数少ない自治寮です。少人数ですので、気兼ねなく意見を言ったり議論したりできます。</p>
-            </div>
-            <img loading="lazy" className="inround-small-img" src="/life-bg2.webp" />
-          </div>
-          <div></div>
-          <Link href='/life/' className='index-inround-link'><span className="material-symbols-rounded index-link-icon">
-            arrow_forward_ios
-          </span>寮生活について</Link>
-        </div>
-        <h3 className='index-header'>渓水寮の特長</h3>
-        <div className='round-box index-round-box index-r-1'>
-          <div className="index-inround-img index-image-frame" aria-hidden="true" />
-          <div className='index-inround-box'>
-            <h4 className='index-inround-upper'>Meals</h4>
-            <h3 className='index-inround-title'>食事</h3>
-            <p className='index-inround-contents'>東北大学YMCA渓水寮では、寮母さんが授業日の朝晩に食事を作ってくださります。おいしく、栄養バランスも考えられている食事です。</p>
-            <Link href='/meals/' className='index-inround-link'><span className="material-symbols-rounded index-link-icon">
-              arrow_forward_ios
-            </span>食事について</Link>
-          </div>
-        </div>
-        <div className='round-box index-round-box index-r-facilities'>
-          <div className="index-inround-img index-image-frame" aria-hidden="true" />
-          <div className='index-inround-box'>
-            <h4 className='index-inround-upper'>Facilities</h4>
-            <h3 className='index-inround-title'>設備</h3>
-            <p className='index-inround-contents'>東北大学YMCA渓水寮では一人一人に個室があります。ほかにも、ホールや客間などの共用施設も充実しています。トイレとお風呂場は最近新しくなりました。</p>
-            <Link href='/facilities/' className='index-inround-link'><span className="material-symbols-rounded index-link-icon">
-              arrow_forward_ios
-            </span>施設について</Link>
-          </div>
-        </div>
-        <div className='round-box index-round-box index-r-location'>
-          <img loading="lazy" className="index-inround-img" src="/map.png" />
-          <div className='index-inround-box'>
-            <h4 className='index-inround-upper'>Locations</h4>
-            <h3 className='index-inround-title'>立地・周辺施設</h3>
-            <p className='index-inround-contents'>東北大学YMCA渓水寮から東北大学まではバス・地下鉄で20分、原付で10分かかります。寮の近く(5軒以内)には、ドラッグストアやコンビニ・病院など生活に必要な施設がすべてそろっています。</p>
-            <Link href='/location/' className='index-inround-link'><span className="material-symbols-rounded index-link-icon">
-              arrow_forward_ios
-            </span>立地について</Link>
-          </div>
-        </div>
-        <div className='cr-box cr-flex index-fees'>
-          <div className='ifee-b1'>
-            <h4 className='index-inround-upper'>Monthly Fees</h4>
-            <h3 className='index-inround-title'>寮費</h3>
-            <p className='index-fee-fee'>53,000円/月</p>
-            <p className='index-fee-sub'>理事会費（管理費・維持費相当）25,000円<br />経常費（光熱費・食費など相当）28,000円<br />YMCAの支援により、家賃はかかりません</p>
-          </div>
-          <p className='cr-desc ifee-b2'>月額53,000円です。内訳は理事会費（管理費・維持費相当）25,000円、経常費（光熱費・食費など相当）28,000円です。YMCAの支援により、家賃はかかりません。</p>
+        </section>
 
-        </div>
-        <div className='smsg-wrapper smsg-voices'>
-          <div className='smsg-tbox'>
-            <h4 className='index-inround-upper voice-up'>Voice</h4>
-            <h3 className='box-title voice-title'>寮生の声</h3>
+        <section className="ks-section ks-about" id="about" aria-labelledby="ks-about-title">
+          <div className="ks-section-inner ks-split ks-about-grid">
+            <div>
+              <p className="ks-kicker">01 ／ 渓水寮について</p>
+              <h2 id="ks-about-title">東北地区YMCA（仮称）<br />渓水寮</h2>
+            </div>
+            <div className="ks-copy">
+              <p>渓水寮は、東北大学YMCAのもとで運営されてきた学生寮です。東北大学YMCAは2026年度をもって解散し、2027年4月からは新しい運営体制で始まります。</p>
+              <p>13人の寮生が、それぞれの生活を大切にしながら共同生活を送っています。理事の支援を受け、寮生が自分たちの暮らしを運営する自治寮です。</p>
+              <Link className="ks-text-link" href="/about/">運営体制・寮の概要を読む <span aria-hidden="true">↗</span></Link>
+            </div>
           </div>
-          <p className='smsg-box'>寮での暮らしを、寮生の言葉で紹介します。食事や人間関係、生活の中で感じたことなど、よいところも気になるところも率直に綴っています。</p>
-          <Link href='/messages/' className='index-inround-link smsg-btn'>寮生の声を読む</Link>
-        </div>
-        <div className='smsg-wrapper smsg-faq'>
-          <div className='smsg-tbox'>
-            <h4 className='index-inround-upper voice-up'>FAQ</h4>
-            <h3 className='box-title voice-title'>よくある質問</h3>
+        </section>
+
+        <section className="ks-section ks-people" id="people" aria-labelledby="ks-people-title">
+          <div className="ks-section-inner">
+            <p className="ks-kicker">02 ／ 暮らす人たち</p>
+            <div className="ks-section-heading">
+              <h2 id="ks-people-title">暮らす人たち</h2>
+              <p>共同生活や日々の活動を、<br />寮生それぞれの言葉で紹介します。</p>
+            </div>
+            <figure className="ks-feature-photo ks-people-photo">
+              <img src="/meals/meal_pic.webp" alt="食堂で一緒に食事をする寮生" loading="lazy" />
+              <figcaption>食卓を囲む、いつもの時間。</figcaption>
+            </figure>
+            <div className="ks-photo-links">
+              <Link className="ks-text-link" href="/messages/">寮生の声を読む <span aria-hidden="true">↗</span></Link>
+              <Link className="ks-text-link" href="/life/">寮生活について <span aria-hidden="true">↗</span></Link>
+            </div>
           </div>
-          <div className='smsg-box'>
-            <p className='smsg-q'>東北大学YMCA渓水寮に門限はありますか？</p>
-            <p className='smsg-a'>ありません。ただし、安全のため寮生に合鍵を配布したのち夜間は施錠しています。また、寮生の個室には鍵がついています。
-            </p>
+        </section>
+
+        <section className="ks-section ks-life" id="life" aria-labelledby="ks-life-title">
+          <div className="ks-section-inner ks-split ks-life-grid">
+            <div className="ks-life-copy">
+              <p className="ks-kicker">03 ／ 寮の一日</p>
+              <h2 id="ks-life-title">食卓に集まり、<br />日々を重ねる。</h2>
+              <p>授業日の朝と晩には、寮母さんの手作りの食事があります。食卓を囲む時間も、寮での暮らしのひとつです。</p>
+              <Link className="ks-text-link" href="/meals/">食事と献立を見る <span aria-hidden="true">↗</span></Link>
+            </div>
+            <figure className="ks-feature-photo ks-meal-photo">
+              <img src="/meals/meals.webp" alt="渓水寮で提供される食事の一例" loading="lazy" />
+              <figcaption>授業日の朝夕に用意される食事。</figcaption>
+            </figure>
           </div>
-          <div className='smsg-box'>
-            <p className='smsg-q'>上下関係は厳しいですか？<br />飲酒の強制はありますか？</p>
-            <p className='smsg-a'>先輩後輩の上下関係はなく、学年に関わらず交流できます。また、飲酒の強制は一切ありません。</p>
+        </section>
+
+        <section className="ks-section ks-information" id="information" aria-labelledby="ks-information-title">
+          <div className="ks-section-inner">
+            <p className="ks-kicker">04 ／ 施設・寮費・通学</p>
+            <div className="ks-section-heading ks-info-heading">
+              <h2 id="ks-information-title">暮らしの条件を、<br />ひとつずつ。</h2>
+              <p>住まい、費用、通学。<br />入寮を考えるときに知りたいことをまとめました。</p>
+            </div>
+
+            <article className="ks-info-row ks-facilities-row">
+              <figure className="ks-feature-photo ks-room-photo">
+                <img src="/facilities/room.webp" alt="渓水寮の個室" loading="lazy" />
+                <figcaption>一人ひとりに個室があります。</figcaption>
+              </figure>
+              <div className="ks-info-copy">
+                <p className="ks-kicker">FACILITIES</p>
+                <h3>自分の部屋、<br />みんなの場所。</h3>
+                <p>寮生それぞれに個室があり、ホールや客間などの共用施設もあります。トイレと浴室は改修されています。</p>
+                <Link className="ks-text-link" href="/facilities/">施設について <span aria-hidden="true">↗</span></Link>
+              </div>
+            </article>
+
+            <div className="ks-info-bottom">
+              <section className="ks-cost" aria-labelledby="ks-cost-title">
+                <p className="ks-kicker">MONTHLY FEES</p>
+                <h3 id="ks-cost-title">寮費</h3>
+                <p className="ks-cost-total">53,000<span>円／月</span></p>
+                <dl className="ks-cost-list">
+                  <div><dt>理事会費</dt><dd>25,000円</dd></div>
+                  <div><dt>経常費</dt><dd>28,000円</dd></div>
+                </dl>
+                <p className="ks-cost-note">管理・維持費、光熱費、食費などを含みます。YMCAの支援により家賃はかかりません。</p>
+                <Link className="ks-text-link" href="/compare/">住まいと生活費を比較する <span aria-hidden="true">↗</span></Link>
+              </section>
+              <section className="ks-access" aria-labelledby="ks-access-title">
+                <figure className="ks-feature-photo ks-map-photo">
+                  <img src="/map.webp" alt="渓水寮、東北大学、仙台市内の位置関係を示す地図" loading="lazy" />
+                </figure>
+                <div>
+                  <p className="ks-kicker">LOCATION</p>
+                  <h3 id="ks-access-title">大学や街へのアクセス</h3>
+                  <p>東北大学まではバス・地下鉄で約20分、原付で約10分です。寮の近くにはドラッグストア、コンビニ、病院などがあります。</p>
+                  <Link className="ks-text-link" href="/location/">通学・周辺施設を見る <span aria-hidden="true">↗</span></Link>
+                </div>
+              </section>
+            </div>
           </div>
-          {/*<div className='smsg-box'>
-            <p className='smsg-q'>大学院・中途年度編入からでも寮に入れますか？</p>
-            <p className='smsg-a'>今年度は院生の募集は行っておりません（来年度以降は未定です）。大学新入生が一人だけにならないようにするためです。詳しくは募集要項をご覧ください。
-            </p>
-          </div>*/}
-          <Link href='/faq/' className='index-inround-link smsg-btn'>よくある質問を見る</Link>
-        </div>
-        <div className='cr-box cr-flex iapply-box'>
-          <div>
-            <h4 className='box-title iapply-title'>入寮方法</h4>
-            <p className='box-desc iapply-desc'>2027年4月入寮生を募集します。大学生・大学院生・研究生・通信制の学校に在籍する学生などが対象です。現在は東北大学の学生が多く暮らしています。詳しくは募集要項をご覧ください。</p>
+        </section>
+
+        <section className="ks-section ks-ymca" aria-labelledby="ks-ymca-title">
+          <div className="ks-section-inner ks-split">
+            <div>
+              <p className="ks-kicker">05 ／ YMCA</p>
+              <h2 id="ks-ymca-title">渓水寮とYMCA。</h2>
+            </div>
+            <div className="ks-copy">
+              <p>渓水寮の寮生には東北大学の学生が多くいますが、寮は東北大学とは別の運営です。東北大学が運営する住まいについては、大学公式サイトをご覧ください。</p>
+              <div className="ks-university-links">
+                <a className="ks-text-link" href="https://www.tohoku.ac.jp/japanese/studentinfo/studentlife/05/studentlife0501/" target="_blank" rel="noopener noreferrer">ユニバーシティ・ハウス <span aria-hidden="true">↗</span></a>
+                <a className="ks-text-link" href="https://www.tohoku.ac.jp/japanese/studentinfo/studentlife/05/studentlife0502/" target="_blank" rel="noopener noreferrer">学寮 <span aria-hidden="true">↗</span></a>
+              </div>
+              <Link className="ks-text-link" href="/about/">渓水寮の運営体制・沿革 <span aria-hidden="true">↗</span></Link>
+            </div>
           </div>
-          <div>
-            <Link href='/apply/' className='index-inround-link iapply-btn'><span className="material-symbols-rounded index-link-icon">
-              arrow_forward_ios
-            </span>募集要項</Link>
+        </section>
+
+        <section className="ks-section ks-wiki" aria-labelledby="ks-wiki-title">
+          <div className="ks-section-inner">
+            <p className="ks-kicker">06 ／ 渓水寮Wiki</p>
+            <div className="ks-section-heading">
+              <h2 id="ks-wiki-title">もっと知りたい方へ。</h2>
+              <p>理念や暮らしの詳しい記事を、<br />テーマごとに読むことができます。</p>
+            </div>
+            <div className="ks-wiki-grid">
+              {wikiCategories.map((category, index) => (
+                <article className="ks-wiki-card" key={category.order}>
+                  <span className="ks-wiki-number">0{index + 1}</span>
+                  <h3>{category.title}</h3>
+                  <ul>
+                    {category.articles.map(article => (
+                      <li key={article.id}><Link href={article.route}>{article.title} <span aria-hidden="true">↗</span></Link></li>
+                    ))}
+                  </ul>
+                  <Link className="ks-wiki-more" href={`/wiki/#wiki-category-${category.order}`}>この分類の記事を見る <span aria-hidden="true">→</span></Link>
+                </article>
+              ))}
+            </div>
+            <Link className="ks-text-link ks-all-wiki" href="/wiki/">渓水寮Wikiの目次へ <span aria-hidden="true">↗</span></Link>
           </div>
-        </div>
-        <div className='cr-box iuniv-box'>
-          <h4 className='box-title iuniv-title'>東北大学との関係</h4>
-          <p className='box-desc iuniv-desc'>渓水寮の寮生の多くは東北大学生であるが、東北大学とは関係ありません。
-            東北大学の運営するユニバーシティハウス（学生寄宿舎）や寮については、東北大学の公式サイトよりご覧ください。</p>
-          <Link
-            href='https://www.tohoku.ac.jp/japanese/studentinfo/studentlife/05/studentlife0501/'
-            className='index-inround-link'><span className="material-symbols-rounded index-link-icon">
-              arrow_forward_ios
-            </span>ユニバーシティ・ハウス</Link><br />
-          <Link
-            href='https://www.tohoku.ac.jp/japanese/studentinfo/studentlife/05/studentlife0502/'
-            className='index-inround-link'><span className="material-symbols-rounded index-link-icon">
-              arrow_forward_ios
-            </span>学寮</Link>
-          <p className='box-desc iuniv-desc'>※いずれも東北大学公式サイトです。</p>
-        </div>
-        <section className="home-visit" aria-labelledby="home-visit-title">
+        </section>
+
+        <section className="ks-section ks-news" aria-labelledby="ks-news-title">
+          <div className="ks-section-inner">
+            <p className="ks-kicker">07 ／ お知らせ</p>
+            <div className="ks-section-heading">
+              <h2 id="ks-news-title">寮からのお知らせ</h2>
+              <p>東北大学基督教青年会からの<br />お知らせを掲載しています。</p>
+            </div>
+            <details className="ks-news-details">
+              <summary>2026年度のお知らせを読む <span aria-hidden="true">＋</span></summary>
+              <div className="ks-news-content">
+                <article>
+                  <p className="ks-news-date">2026年9月25日</p>
+                  <h3>解散の集いへのご出席ありがとうございました</h3>
+                  <p>東北大学基督教青年会「解散の集い」は、9月25日に終えることができました。会場41名（寮生10名）、オンライン6名の方にご参加いただきました。詳細は会報62号に掲載予定です。</p>
+                </article>
+                <article>
+                  <p className="ks-news-date">2026年12月12日</p>
+                  <h3>クリスマス会のお知らせ</h3>
+                  <p>12月12日（土）16時30分から渓水寮で開催予定です。講師は齋藤篤先生（日本キリスト教団仙台宮城野教会牧師）、会費はお一人1,000円程度（当日払い）です。参加フォームの回答期限は11月12日で、受付は終了しています。会員以外からの直接申込はできません。</p>
+                </article>
+                <article>
+                  <p className="ks-news-date">会報62号</p>
+                  <h3>会報原稿の募集</h3>
+                  <p>解散の集いに参加した感想や、寮を出てからの歩みなど、内容自由で原稿を募集していました。締切は11月8日で、受付は終了しています。編集子（理事長）宛の送付先は <a href="mailto:hatakey@nifty.com">hatakey@nifty.com</a> です。</p>
+                </article>
+                <p className="ks-news-contact">2027年4月以降、同窓会機能は当面引き継がれ、『青年会寮史』の刊行を目指す予定です。<br />クリスマス会に関する連絡先：<a href="mailto:keisuiryo@gmail.com">keisuiryo@gmail.com</a></p>
+              </div>
+            </details>
+          </div>
+        </section>
+
+        <section className="home-visit" id="visit" aria-labelledby="home-visit-title">
           <div className="home-visit-inner">
             <p className="home-visit-eyebrow">COME &amp; SEE</p>
             <h2 id="home-visit-title">まずは、<br />訪ねてみませんか。</h2>
@@ -245,5 +233,5 @@ export default function Home() {
         <a className="home-back-to-top" href="#home-top">ページトップへ ↑</a>
       </div>
     </Wrapper>
-  );
+  )
 }

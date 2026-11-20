@@ -13,7 +13,7 @@ export default function WikiHome({ categories }) {
           <p>渓水寮の理念や暮らしについて、記事を紹介します。</p>
         </header>
         {categories.map(category => (
-          <section className="wiki-index-section" key={category.title}>
+          <section className="wiki-index-section" id={`wiki-category-${category.order}`} key={category.title}>
             <h2>{category.title}</h2>
             <ul>
               {category.indexEntries.map(article => (

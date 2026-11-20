@@ -14,6 +14,7 @@ import '../src/site/components/header/header.css'
 import '../styles/apply.css'
 import '../styles/life.css'
 import '../styles/design-migration.css'
+import '../styles/home-reconstruction.css'
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
