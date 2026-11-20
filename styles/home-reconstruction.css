@@ -1,5 +1,9 @@
 .ks-home {
-  padding: 0;
+  background: var(--ks-paper);
+  margin: 0;
+  max-width: none;
+  padding: 0 0 2rem;
+  width: 100%;
 }
 
 .ks-sr-only {
@@ -17,328 +21,267 @@
 }
 
 .ks-home .ks-section {
-  padding: clamp(4.5rem, 9vw, 8rem) 0;
+  padding: clamp(4.5rem, 8vw, 7.5rem) 0;
   scroll-margin-top: 1rem;
 }
 
 .ks-home .ks-section-inner,
-.ks-recruitment-inner {
+.home-visit-inner {
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 72rem;
   width: 86%;
 }
 
-.ks-home .ks-kicker {
-  align-items: center;
-  color: var(--ks-vermilion);
-  display: flex;
+.ks-home p,
+.home-visit p {
+  color: var(--ks-ink);
   font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
-  font-size: .72rem;
-  letter-spacing: .12em !important;
-  line-height: 1.5;
-  margin: 0 0 1.4rem;
-}
-
-.ks-home .ks-kicker::before {
-  background: var(--ks-vermilion);
-  content: "";
-  display: inline-block;
-  height: 1px;
-  margin-right: .75rem;
-  width: 1.4rem;
+  font-size: .95rem;
+  line-height: 2;
 }
 
 .ks-home h2,
 .ks-home h3 {
-  border: 0;
   color: var(--ks-ink);
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", serif;
   font-weight: 400;
   margin: 0;
-  padding: 0;
-}
-
-.ks-home h2 {
-  font-size: clamp(2rem, 4vw, 3.3rem);
-  line-height: 1.55;
-}
-
-.ks-home h3 {
-  font-size: clamp(1.4rem, 2.5vw, 2rem);
-  line-height: 1.55;
-}
-
-.ks-home p {
-  color: var(--ks-ink);
-  font-size: .95rem;
-  line-height: 2.05;
-}
-
-.ks-home .ks-copy > p + p {
-  margin-top: 1rem;
-}
-
-.ks-home .ks-text-link {
-  border-bottom: 1px solid var(--ks-vermilion);
-  color: var(--ks-ink);
-  display: inline-flex;
-  font-size: .9rem;
-  gap: .8rem;
-  margin-top: 1.4rem;
-  padding-bottom: .25rem;
-  text-decoration: none;
-}
-
-.ks-home .ks-text-link:hover,
-.ks-home .ks-wiki-card a:hover {
-  color: var(--ks-vermilion);
-}
-
-.ks-home .ks-split {
-  align-items: start;
-  display: grid;
-  gap: clamp(2rem, 8vw, 7rem);
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-}
-
-.ks-home .ks-about {
-  background: var(--ks-line);
-}
-
-.ks-home .ks-about-grid {
-  align-items: center;
-}
-
-.ks-recruitment {
-  background: var(--ks-paper);
-  border-bottom: 1px solid var(--ks-line);
-  padding: clamp(2.2rem, 5vw, 4.3rem) 0;
-}
-
-.ks-recruitment-inner {
-  align-items: center;
-  display: flex;
-  gap: 2rem;
-  justify-content: space-between;
-}
-
-.ks-recruitment .ks-kicker {
-  margin-bottom: .65rem;
-}
-
-.ks-recruitment h2 {
-  color: var(--ks-ink);
-  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
-  font-size: clamp(1.5rem, 3vw, 2.25rem);
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0 0 .6rem;
-}
-
-.ks-recruitment p:not(.ks-kicker) {
-  color: var(--ks-ink);
-  font-size: .88rem;
-  line-height: 1.9;
-  margin: 0;
-  max-width: 52rem;
-}
-
-.ks-action {
-  align-items: center;
-  background: var(--ks-vermilion);
-  color: var(--ks-paper);
-  display: inline-flex;
-  flex: 0 0 auto;
-  font-size: .85rem;
-  gap: 1.5rem;
-  justify-content: space-between;
-  min-width: 12rem;
-  padding: 1rem 1.15rem;
-  text-decoration: none;
-}
-
-.ks-action:hover {
-  background: var(--ks-ink);
-  color: var(--ks-paper);
 }
 
 .ks-section-heading {
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.ks-section-heading-split {
   align-items: flex-end;
   display: flex;
   gap: 2rem;
   justify-content: space-between;
-  margin-bottom: 2.5rem;
 }
 
-.ks-section-heading > p {
-  flex: 0 0 auto;
-  font-size: .95rem;
-  margin: 0 0 .45rem;
+.ks-section-index {
+  color: var(--ks-vermilion) !important;
+  font-size: .72rem !important;
+  letter-spacing: .14em;
+  margin: 0 0 .85rem;
 }
 
-.ks-feature-photo {
-  margin: 0;
-  min-width: 0;
+.ks-section-title {
+  border-left: 2px solid var(--ks-vermilion) !important;
+  font-size: clamp(2rem, 4vw, 3.3rem);
+  line-height: 1.45;
+  padding: .05em 0 .05em .8rem !important;
 }
 
-.ks-feature-photo img {
-  background: var(--ks-line);
+.ks-section-lead {
+  font-size: .9rem !important;
+  margin: 0 0 .35rem;
+  max-width: 25rem;
+}
+
+.ks-subtitle {
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+  line-height: 1.55;
+  padding-top: .6rem;
+}
+
+.ks-subtitle::before {
+  background: var(--ks-vermilion);
+  content: "";
   display: block;
-  height: 100%;
-  object-fit: cover;
+  height: 1px;
+  margin: 0 0 .7rem;
+  width: 2rem;
+}
+
+.ks-home .ks-text-link {
+  align-items: baseline;
+  border-bottom: 1px solid var(--ks-vermilion);
+  color: var(--ks-ink);
+  display: inline-flex;
+  font-size: .86rem;
+  gap: .85rem;
+  margin-top: 1.15rem;
+  padding: 0 0 .25rem;
+  text-decoration: none;
+}
+
+.ks-home .ks-text-link:hover,
+.ks-wiki-card a:hover {
+  color: var(--ks-vermilion);
+}
+
+.ks-photo-frame {
+  aspect-ratio: 4 / 3;
+  background: transparent;
+  border: 1px solid var(--ks-line);
   width: 100%;
 }
 
-.ks-feature-photo figcaption {
-  color: #625b53;
-  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
-  font-size: .72rem;
-  line-height: 1.7;
-  padding-top: .55rem;
-}
-
-.ks-people {
-  background: var(--ks-paper);
-}
-
-.ks-people-photo img {
-  aspect-ratio: 2.25 / 1;
-}
-
-.ks-photo-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  margin-top: 1.1rem;
-}
-
-.ks-photo-links .ks-text-link {
-  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
-  font-size: 1.1rem;
-  margin-top: 0;
-}
-
-.ks-life {
+.ks-about {
   background: var(--ks-line);
 }
 
-.ks-life-heading {
-  margin-bottom: clamp(2rem, 4vw, 3.5rem);
+.ks-about .ks-photo-frame {
+  border-color: var(--ks-paper);
 }
 
-.ks-life-story {
-  align-items: center;
-  border-top: 1px solid rgba(36, 34, 31, .18);
-  display: grid;
-  gap: clamp(2rem, 7vw, 6rem);
-  grid-template-areas: "photo copy";
-  grid-template-columns: minmax(0, 1.2fr) minmax(17rem, .8fr);
-  padding: clamp(2.2rem, 5.5vw, 4.5rem) 0;
-}
-
-.ks-life-story:last-child {
-  border-bottom: 1px solid rgba(36, 34, 31, .18);
-}
-
-.ks-life-story .ks-feature-photo {
-  grid-area: photo;
-}
-
-.ks-life-story .ks-feature-photo img {
-  aspect-ratio: 1.55 / 1;
-}
-
-.ks-life-story-copy {
-  grid-area: copy;
-  max-width: 30rem;
-}
-
-.ks-life-story-copy h3 {
-  font-size: clamp(1.4rem, 2.4vw, 2rem);
-}
-
-.ks-life-story-copy > p:not(.ks-kicker) {
-  margin: .9rem 0 0;
-}
-
-.ks-life-story-copy .ks-text-link {
-  margin-top: 1rem;
-}
-
-.ks-life-meal {
-  grid-template-columns: minmax(0, 1.4fr) minmax(16rem, .6fr);
-}
-
-.ks-life-meal .ks-feature-photo img {
-  aspect-ratio: 1.9 / 1;
-}
-
-.ks-life-hall {
-  grid-template-areas: "copy photo";
-  grid-template-columns: minmax(17rem, .8fr) minmax(0, 1.2fr);
-}
-
-.ks-information {
-  background: var(--ks-paper);
-}
-
-.ks-info-heading {
-  margin-bottom: clamp(2.5rem, 6vw, 5rem);
-}
-
-.ks-info-row {
+.ks-about-grid {
   align-items: center;
   display: grid;
   gap: clamp(2rem, 8vw, 7rem);
-  grid-template-columns: minmax(0, 1.1fr) minmax(17rem, .9fr);
-}
-
-.ks-room-photo img {
-  aspect-ratio: 1.5 / 1;
-}
-
-.ks-info-copy > p:not(.ks-kicker) {
-  margin-top: 1rem;
-}
-
-.ks-info-bottom {
-  border-top: 1px solid var(--ks-line);
-  display: grid;
-  gap: clamp(2.5rem, 7vw, 6rem);
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  margin-top: clamp(3.5rem, 8vw, 7rem);
-  padding-top: clamp(2.5rem, 6vw, 5rem);
 }
 
-.ks-cost {
-  align-self: start;
-  max-width: 34rem;
+.ks-about-copy {
+  max-width: 38rem;
 }
 
-.ks-cost-total {
+.ks-about-slogan {
+  font-size: clamp(1.8rem, 3.2vw, 2.7rem) !important;
+  margin-bottom: 1.4rem !important;
+}
+
+.ks-about-copy > p {
+  margin: .8rem 0 0;
+}
+
+.ks-about-frame {
+  aspect-ratio: 1 / 1;
+}
+
+.ks-life {
+  background: var(--ks-paper);
+}
+
+.ks-daily-grid {
+  display: grid;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.ks-daily-item {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.ks-daily-photo {
+  aspect-ratio: 1.25 / 1;
+  margin-bottom: 1.5rem;
+}
+
+.ks-daily-copy {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.ks-daily-copy > p {
+  font-size: .87rem !important;
+  margin: .9rem 0 0;
+}
+
+.ks-daily-copy .ks-text-link {
+  align-self: flex-start;
+  margin-top: auto;
+  padding-top: 1.2rem;
+}
+
+.ks-voices-link {
+  align-items: center;
+  border-bottom: 1px solid var(--ks-line);
+  border-top: 1px solid var(--ks-line);
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  margin-top: clamp(3rem, 6vw, 5rem);
+  padding: 1.6rem 0;
+}
+
+.ks-voices-link .ks-subtitle {
+  display: inline-block;
+  margin: 0 .8rem 0 0;
+  vertical-align: middle;
+}
+
+.ks-voices-link .ks-subtitle::before {
+  display: inline-block;
+  margin: 0 .65rem .25rem 0;
+  vertical-align: middle;
+}
+
+.ks-voices-link p {
+  display: inline;
+  font-size: .82rem !important;
+}
+
+.ks-voices-link .ks-text-link {
+  flex: 0 0 auto;
+  margin: 0;
+}
+
+.ks-conditions {
+  background: var(--ks-line);
+}
+
+.ks-conditions-grid {
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.ks-condition-item {
+  border-top: 1px solid var(--ks-paper);
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding-top: 1.2rem;
+}
+
+.ks-condition-item > p:not(.ks-cost-total) {
+  font-size: .85rem !important;
+  margin: 1rem 0 0;
+}
+
+.ks-condition-photo {
+  aspect-ratio: 1.4 / 1;
+  border-color: var(--ks-paper);
+  margin-top: 1.3rem;
+}
+
+.ks-condition-item .ks-text-link {
+  align-self: flex-start;
+  margin-top: auto;
+  padding-top: 1.2rem;
+}
+
+.ks-fee-item .ks-cost-total {
   font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
-  font-size: clamp(2.5rem, 5vw, 4.25rem) !important;
+  font-size: clamp(2.2rem, 3vw, 3.2rem) !important;
   line-height: 1.25 !important;
-  margin: .7rem 0 1.2rem;
+  margin: 1.6rem 0 1.2rem;
+  white-space: nowrap;
 }
 
 .ks-cost-total span {
-  font-size: .95rem;
-  margin-left: .55rem;
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  font-size: .85rem;
+  margin-left: .4rem;
 }
 
 .ks-cost-list {
-  border-top: 1px solid var(--ks-line);
+  border-top: 1px solid var(--ks-paper);
   margin: 0;
 }
 
 .ks-cost-list > div {
-  border-bottom: 1px solid var(--ks-line);
+  border-bottom: 1px solid var(--ks-paper);
   display: flex;
   font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
-  font-size: .88rem;
+  font-size: .82rem;
   justify-content: space-between;
-  padding: .7rem 0;
+  padding: .6rem 0;
 }
 
 .ks-cost-list dt,
@@ -346,48 +289,8 @@
   margin: 0;
 }
 
-.ks-cost-note {
-  font-size: .8rem !important;
-  margin-top: 1rem;
-}
-
-.ks-access {
-  align-items: center;
-  display: grid;
-  gap: 1.8rem;
-  grid-template-columns: minmax(8rem, .8fr) minmax(0, 1.2fr);
-}
-
-.ks-map-photo img {
-  aspect-ratio: 1 / 1;
-}
-
-.ks-access h3 {
-  font-size: clamp(1.25rem, 2vw, 1.6rem);
-}
-
-.ks-access div > p:not(.ks-kicker) {
-  font-size: .82rem;
-  margin-top: .7rem;
-}
-
-.ks-access .ks-text-link {
-  font-size: .8rem;
-  margin-top: .9rem;
-}
-
-.ks-ymca {
-  background: var(--ks-line);
-}
-
-.ks-university-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .5rem 1.5rem;
-}
-
-.ks-university-links .ks-text-link {
-  margin-top: 1rem;
+.ks-condition-note {
+  font-size: .78rem !important;
 }
 
 .ks-wiki {
@@ -396,38 +299,38 @@
 
 .ks-wiki-grid {
   display: grid;
-  gap: 1rem;
+  gap: clamp(1.2rem, 3vw, 2.3rem);
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .ks-wiki-card {
-  border-top: 1px solid var(--ks-vermilion);
+  border-top: 1px solid var(--ks-line);
   display: flex;
   flex-direction: column;
-  min-height: 16rem;
-  padding: 1.2rem 1rem 1rem 0;
+  min-width: 0;
+  padding: 1rem 0 0;
 }
 
 .ks-wiki-number {
   color: var(--ks-vermilion);
   font-family: sans-serif;
-  font-size: .72rem;
-  letter-spacing: .1em;
+  font-size: .7rem;
+  letter-spacing: .12em;
 }
 
-.ks-wiki-card h3 {
-  font-size: 1.25rem;
-  margin-top: .5rem;
+.ks-wiki-card .ks-subtitle {
+  font-size: 1.1rem;
+  margin-top: .55rem;
 }
 
 .ks-wiki-card ul {
   list-style: none;
-  margin: .8rem 0 1.2rem;
+  margin: .9rem 0 1.2rem;
   padding: 0;
 }
 
 .ks-wiki-card li + li {
-  margin-top: .35rem;
+  margin-top: .4rem;
 }
 
 .ks-wiki-card li a {
@@ -438,111 +341,58 @@
 
 .ks-wiki-more {
   border-top: 1px solid var(--ks-line);
-  color: var(--ks-vermilion);
+  color: var(--ks-ink);
   font-size: .78rem;
   margin-top: auto;
-  padding-top: .7rem;
+  padding-top: .65rem;
   text-decoration: none;
 }
 
 .ks-all-wiki {
-  margin-top: 2.5rem !important;
+  margin-top: 2rem !important;
 }
 
-.ks-news {
-  background: var(--ks-line);
-}
-
-.ks-news-details {
-  border-bottom: 1px solid #c9beb1;
-  border-top: 1px solid #c9beb1;
-}
-
-.ks-news-details summary {
-  align-items: center;
-  color: var(--ks-ink);
-  cursor: pointer;
-  display: flex;
-  font-size: .9rem;
-  justify-content: space-between;
-  list-style: none;
-  padding: 1rem 0;
-}
-
-.ks-news-details summary::-webkit-details-marker {
-  display: none;
-}
-
-.ks-news-details summary span {
-  color: var(--ks-vermilion);
-  font-size: 1.2rem;
-}
-
-.ks-news-details[open] summary span {
-  transform: rotate(45deg);
-}
-
-.ks-news-content {
-  border-top: 1px solid #c9beb1;
-  display: grid;
-  gap: 1.5rem 3rem;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  padding: 1.5rem 0 2rem;
-}
-
-.ks-news-content article {
-  border-bottom: 1px solid #c9beb1;
-  padding-bottom: 1.2rem;
-}
-
-.ks-news-content .ks-news-date {
-  color: #625b53;
-  font-size: .72rem;
-  margin: 0 0 .3rem;
-}
-
-.ks-news-content h3 {
-  font-size: 1.15rem;
-}
-
-.ks-news-content article > p:last-child,
-.ks-news-contact {
-  font-size: .82rem !important;
-  margin: .5rem 0 0;
-}
-
-.ks-news-content a {
-  color: var(--ks-ink);
+.ks-page-top {
+  display: block;
+  margin: 0 auto;
+  max-width: 72rem;
+  text-align: right;
+  width: 86%;
 }
 
 .home-visit {
+  background: var(--ks-vermilion);
+  color: var(--ks-paper);
   scroll-margin-top: 1rem;
   text-align: left;
 }
 
-.subpage-container:has(.home-hero) > .nav-wrapper .fab-apply {
-  display: none;
-}
-
 .home-visit-inner {
-  margin-left: max(7vw, calc((100vw - 1200px) / 2));
+  margin-left: max(7vw, calc((100vw - 72rem) / 2));
   margin-right: auto;
-  max-width: 58rem;
 }
 
 .home-visit-eyebrow {
-  font-family: sans-serif;
-  font-size: .72rem;
+  color: var(--ks-paper) !important;
+  font-family: sans-serif !important;
+  font-size: .72rem !important;
   letter-spacing: .16em;
+  margin-bottom: 1.1rem;
 }
 
 .home-visit h2 {
+  border-left: 2px solid var(--ks-paper);
+  color: var(--ks-paper);
   font-size: clamp(2.3rem, 4.4vw, 3.8rem);
-  margin-left: 0;
+  line-height: 1.45;
+  margin: 0 0 1.2rem;
+  padding-left: .8rem;
 }
 
-.home-visit-copy {
-  font-size: .82rem;
+.home-visit-copy,
+.home-visit-email {
+  color: var(--ks-paper) !important;
+  font-size: .85rem !important;
 }
 
 .home-visit-actions {
@@ -551,99 +401,109 @@
 }
 
 .home-visit-actions a {
-  font-size: .85rem;
-  min-width: 13rem;
+  font-size: .86rem;
+  min-width: 14rem;
 }
 
-.home-visit-email {
-  font-size: .78rem;
+.home-visit-actions a:hover {
+  background: var(--ks-ink);
+  color: var(--ks-paper);
+}
+
+.home-visit-email a {
+  color: var(--ks-paper);
+  text-underline-offset: .2em;
+}
+
+.subpage-container:has(.home-hero) > .nav-wrapper .fab-apply {
+  display: none;
 }
 
 @media (max-width: 900px) {
-  .ks-wiki-grid {
+  .ks-conditions-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .ks-info-bottom {
-    grid-template-columns: 1fr;
-  }
-
-  .ks-access {
-    grid-template-columns: minmax(9rem, .65fr) minmax(0, 1.35fr);
+  .ks-wiki-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 700px) {
   .ks-home .ks-section {
-    padding: 4.2rem 0;
+    padding: 4.25rem 0;
   }
 
   .ks-home .ks-section-inner,
-  .ks-recruitment-inner {
+  .home-visit-inner,
+  .ks-page-top {
     width: 86%;
   }
 
-  .ks-home .ks-split,
-  .ks-info-row,
-  .ks-info-bottom {
+  .ks-section-heading-split {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: .9rem;
+  }
+
+  .ks-section-lead {
+    font-size: .85rem !important;
+  }
+
+  .ks-about-grid,
+  .ks-daily-grid,
+  .ks-conditions-grid {
     grid-template-columns: 1fr;
   }
 
-  .ks-life-story,
-  .ks-life-meal,
-  .ks-life-hall {
-    gap: 1.2rem;
-    grid-template-areas: "photo" "copy";
-    grid-template-columns: 1fr;
+  .ks-about-grid {
+    gap: 2rem;
   }
 
-  .ks-life-story .ks-feature-photo img,
-  .ks-life-meal .ks-feature-photo img {
-    aspect-ratio: 1.3 / 1;
+  .ks-about-frame {
+    aspect-ratio: 1.35 / 1;
   }
 
-  .ks-recruitment-inner {
+  .ks-daily-grid {
+    gap: 2.5rem;
+  }
+
+  .ks-daily-photo {
+    aspect-ratio: 1.35 / 1;
+    margin-bottom: 1.1rem;
+  }
+
+  .ks-daily-copy .ks-text-link,
+  .ks-condition-item .ks-text-link {
+    margin-top: 1rem;
+  }
+
+  .ks-voices-link {
     align-items: flex-start;
     flex-direction: column;
-    gap: 1.3rem;
+    gap: .4rem;
   }
 
-  .ks-action {
-    width: 100%;
+  .ks-voices-link .ks-subtitle {
+    display: block;
+    margin-bottom: .4rem;
   }
 
-  .ks-section-heading {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: .8rem;
-    margin-bottom: 1.7rem;
+  .ks-voices-link .ks-subtitle::before {
+    display: block;
+    margin: 0 0 .7rem;
   }
 
-  .ks-section-heading > p {
-    font-size: .85rem;
+  .ks-condition-item + .ks-condition-item {
+    margin-top: .6rem;
   }
 
-  .ks-people-photo img {
-    aspect-ratio: 1.2 / 1;
+  .ks-condition-photo {
+    aspect-ratio: 1.35 / 1;
   }
 
-  .ks-photo-links {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: .7rem;
-  }
-
-  .ks-room-photo img {
-    aspect-ratio: 1.25 / 1;
-  }
-
-  .ks-access {
-    align-items: start;
-    grid-template-columns: 1fr;
-  }
-
-  .ks-map-photo {
-    max-width: 23rem;
+  .ks-fee-item .ks-cost-total {
+    font-size: 2.6rem !important;
   }
 
   .ks-wiki-grid {
@@ -651,17 +511,26 @@
   }
 
   .ks-wiki-card {
-    min-height: 0;
-    padding-right: 0;
+    padding-bottom: .8rem;
   }
 
-  .ks-news-content {
-    grid-template-columns: 1fr;
+  .ks-page-top {
+    padding: .8rem 0 1.6rem;
   }
 
   .home-visit-inner {
     margin-left: auto;
     margin-right: auto;
-    width: 86%;
+  }
+
+  .home-visit-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .home-visit-actions a {
+    max-width: none;
+    min-width: 0;
+    width: 100%;
   }
 }
