@@ -12,12 +12,18 @@ const navGroups = [
     },
     {
         id: 'daily-life',
-        title: '寮の一日',
+        title: '寮生活',
         items: [
             { href: '/life/', text: '寮生活・自治', icon: 'diversity_3' },
             { href: '/meals/', text: '食卓と食事', icon: 'set_meal' },
-            { href: '/events/', text: '行事', icon: 'event' },
             { href: '/messages/', text: '寮生の声', icon: 'forum' }
+        ]
+    },
+    {
+        id: 'events',
+        title: '行事',
+        items: [
+            { href: '/events/', text: '行事の紹介', icon: 'event' }
         ]
     },
     {

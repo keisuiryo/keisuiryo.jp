@@ -7,7 +7,7 @@ export const config = {
 
 export default function Home({ wikiCategories = [] }) {
   return (
-    <Wrapper noheader desc="東北地区YMCA（仮称）渓水寮は、大学生などが共同生活を送る定員13名の学生寮です。寮の暮らし、施設、寮費、アクセス、2027年4月入寮生の募集についてご案内します。">
+    <Wrapper noheader desc="東北地区YMCA（仮称）渓水寮は、大学生などが共同生活を送る定員13名の学生寮です。寮生活や行事、施設、寮費、アクセス、2027年4月入寮生の募集についてご案内します。">
       <section className="home-hero" id="home-top" aria-label="渓水寮">
         <img className="top-bg-mobile" src="/design/keisui-watercolor.jpg" alt="木々に囲まれた渓水寮を描いた水彩画" fetchPriority="high" />
         <img className="top-bg-pc" src="/design/keisui-watercolor.jpg" alt="" fetchPriority="high" />
@@ -23,7 +23,8 @@ export default function Home({ wikiCategories = [] }) {
           </Link>
           <nav className="home-hero-nav" aria-label="メインナビゲーション">
             <a href="#about">渓水寮について</a>
-            <a href="#life">寮の一日</a>
+            <a href="#life">寮生活</a>
+            <a href="#events">行事</a>
             <a href="#conditions">施設・条件</a>
             <a href="#visit">見学・お問い合わせ</a>
             <Link href="/apply/" className="home-hero-nav-apply">募集要項 <span aria-hidden="true">↗</span></Link>
@@ -62,10 +63,10 @@ export default function Home({ wikiCategories = [] }) {
           <div className="ks-section-inner">
             <header className="ks-section-heading ks-section-heading-split">
               <div>
-                <p className="ks-section-index">02 ／ DAILY LIFE</p>
-                <h2 className="ks-section-title" id="ks-life-title">寮の一日</h2>
+                <p className="ks-section-index">02 ／ LIFE</p>
+                <h2 className="ks-section-title" id="ks-life-title">寮生活</h2>
               </div>
-              <p className="ks-section-lead">一緒に過ごす時間も、自分の時間も。<br />食卓、個室、ホールから寮の日常を紹介します。</p>
+              <p className="ks-section-lead">一人ひとりの時間を大切にしながら、<br />食卓やホールで顔を合わせ、話し合って暮らしをつくります。</p>
             </header>
 
             <div className="ks-daily-grid">
@@ -91,12 +92,22 @@ export default function Home({ wikiCategories = [] }) {
               </article>
               <article className="ks-daily-item">
                 <figure className="ks-photo-frame ks-daily-photo">
-                  <img className="ks-photo-frame-image" src="/events/meeting.webp" alt="ホールで話し合う寮生" loading="lazy" />
+                  <img className="ks-photo-frame-image" src="/facilities/hall.webp" alt="食事や行事に使う渓水寮のホール" loading="lazy" />
                 </figure>
                 <div className="ks-daily-copy">
                   <h3 className="ks-subtitle">ホール</h3>
-                  <p>食事や朝拝、寮生総会などに使う共有の場所です。月に一度の総会では、行事や建物など暮らしのことを話し合います。</p>
+                  <p>食事や朝拝などで寮生が顔を合わせる、みんなの共有スペースです。</p>
                   <Link className="ks-text-link" href="/facilities/">ホール・共用設備について <span aria-hidden="true">↗</span></Link>
+                </div>
+              </article>
+              <article className="ks-daily-item">
+                <figure className="ks-photo-frame ks-daily-photo">
+                  <img className="ks-photo-frame-image" src="/events/meeting.webp" alt="寮生総会で話し合う寮生" loading="lazy" />
+                </figure>
+                <div className="ks-daily-copy">
+                  <h3 className="ks-subtitle">話し合い</h3>
+                  <p>月に一度の寮生総会では、行事や建物、寮費など、暮らしに関わることを寮生で話し合います。</p>
+                  <Link className="ks-text-link" href="/life/#gov">寮生活と自治について <span aria-hidden="true">↗</span></Link>
                 </div>
               </article>
             </div>
@@ -111,11 +122,65 @@ export default function Home({ wikiCategories = [] }) {
           </div>
         </section>
 
+        <section className="ks-section ks-events" id="events" aria-labelledby="ks-events-title">
+          <div className="ks-section-inner">
+            <header className="ks-section-heading ks-section-heading-split">
+              <div>
+                <p className="ks-section-index">03 ／ EVENTS</p>
+                <h2 className="ks-section-title" id="ks-events-title">行事</h2>
+              </div>
+              <p className="ks-section-lead">季節の集まりや学び、交流の機会があります。<br />ここでは、これまでの行事例を紹介します。</p>
+            </header>
+
+            <div className="ks-events-grid">
+              <article className="ks-daily-item ks-event-item">
+                <figure className="ks-photo-frame ks-event-photo">
+                  <img className="ks-photo-frame-image" src="/events/nyuuryousiki.webp" alt="渓水寮の入寮式の様子" loading="lazy" />
+                </figure>
+                <div className="ks-daily-copy">
+                  <h3 className="ks-subtitle">仲間を迎え、送り出す</h3>
+                  <p>入寮式では新しい寮生を迎え、卒寮式では寮を巣立つ寮生を送り出します。</p>
+                </div>
+              </article>
+              <article className="ks-daily-item ks-event-item">
+                <figure className="ks-photo-frame ks-event-photo">
+                  <img className="ks-photo-frame-image" src="/events/hanami.webp" alt="桜の下で花見をする寮生" loading="lazy" />
+                </figure>
+                <div className="ks-daily-copy">
+                  <h3 className="ks-subtitle">季節を楽しむ</h3>
+                  <p>花見や芋煮会、クリスマス会など、季節に合わせて集まる行事があります。</p>
+                </div>
+              </article>
+              <article className="ks-daily-item ks-event-item">
+                <figure className="ks-photo-frame ks-event-photo">
+                  <img className="ks-photo-frame-image" src="/events/kendou.webp" alt="献堂記念式で講師の話を聞く参加者" loading="lazy" />
+                </figure>
+                <div className="ks-daily-copy">
+                  <h3 className="ks-subtitle">学びを深める</h3>
+                  <p>献堂記念式や聖書研究を通して、話を聞いたり、聖書や日常について考えたりします。</p>
+                </div>
+              </article>
+              <article className="ks-daily-item ks-event-item">
+                <figure className="ks-photo-frame ks-event-photo">
+                  <img className="ks-photo-frame-image" src="/events/ns.webp" alt="学生YMCAの交流行事の様子" loading="lazy" />
+                </figure>
+                <div className="ks-daily-copy">
+                  <h3 className="ks-subtitle">寮を越えて交流する</h3>
+                  <p>学生YMCAのゼミや他寮との交流に参加する機会もあります。</p>
+                </div>
+              </article>
+            </div>
+            <div className="ks-events-more">
+              <Link className="ks-text-link" href="/events/">行事を詳しく見る <span aria-hidden="true">↗</span></Link>
+            </div>
+          </div>
+        </section>
+
         <section className="ks-section ks-conditions" id="conditions" aria-labelledby="ks-conditions-title">
           <div className="ks-section-inner">
             <header className="ks-section-heading ks-section-heading-split">
               <div>
-                <p className="ks-section-index">03 ／ LIVING</p>
+                <p className="ks-section-index">04 ／ LIVING</p>
                 <h2 className="ks-section-title" id="ks-conditions-title">施設・条件</h2>
               </div>
               <p className="ks-section-lead">住まい、費用、通学。<br />入寮を考えるときに知りたいことをまとめました。</p>
@@ -169,7 +234,7 @@ export default function Home({ wikiCategories = [] }) {
           <div className="ks-section-inner">
             <header className="ks-section-heading ks-section-heading-split">
               <div>
-                <p className="ks-section-index">04 ／ WIKI</p>
+                <p className="ks-section-index">05 ／ WIKI</p>
                 <h2 className="ks-section-title" id="ks-wiki-title">より詳しく</h2>
               </div>
               <p className="ks-section-lead">理念や暮らしの詳しい記事を、<br />テーマごとに読むことができます。</p>

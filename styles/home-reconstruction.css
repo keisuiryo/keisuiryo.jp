@@ -174,7 +174,13 @@
 .ks-daily-grid {
   display: grid;
   gap: clamp(1.25rem, 3vw, 2.5rem);
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.ks-events-grid {
+  display: grid;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .ks-daily-item {
@@ -183,8 +189,9 @@
   min-width: 0;
 }
 
-.ks-daily-photo {
-  aspect-ratio: 1.25 / 1;
+.ks-daily-photo,
+.ks-event-photo {
+  aspect-ratio: 1.55 / 1;
   margin-bottom: 1.5rem;
 }
 
@@ -232,8 +239,22 @@
   margin: 0;
 }
 
-.ks-conditions {
+.ks-events {
   background: var(--ks-line);
+}
+
+.ks-events .ks-photo-frame {
+  border-color: var(--ks-paper);
+}
+
+.ks-events-more {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+.ks-conditions {
+  background: var(--ks-paper);
 }
 
 .ks-conditions-grid {
@@ -243,7 +264,7 @@
 }
 
 .ks-condition-item {
-  border-top: 1px solid var(--ks-paper);
+  border-top: 1px solid var(--ks-line);
   display: flex;
   flex-direction: column;
   min-width: 0;
@@ -257,7 +278,7 @@
 
 .ks-condition-photo {
   aspect-ratio: 1.4 / 1;
-  border-color: var(--ks-paper);
+  border-color: var(--ks-line);
   margin-top: 1.3rem;
 }
 
@@ -282,12 +303,12 @@
 }
 
 .ks-cost-list {
-  border-top: 1px solid var(--ks-paper);
+  border-top: 1px solid var(--ks-line);
   margin: 0;
 }
 
 .ks-cost-list > div {
-  border-bottom: 1px solid var(--ks-paper);
+  border-bottom: 1px solid var(--ks-line);
   display: flex;
   font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
   font-size: .82rem;
@@ -463,6 +484,7 @@
 
   .ks-about-grid,
   .ks-daily-grid,
+  .ks-events-grid,
   .ks-conditions-grid {
     grid-template-columns: 1fr;
   }
@@ -479,9 +501,14 @@
     gap: 2.5rem;
   }
 
-  .ks-daily-photo {
+  .ks-daily-photo,
+  .ks-event-photo {
     aspect-ratio: 1.35 / 1;
     margin-bottom: 1.1rem;
+  }
+
+  .ks-events-more {
+    justify-content: flex-start;
   }
 
   .ks-daily-copy .ks-text-link,
