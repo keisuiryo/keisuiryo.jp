@@ -75,6 +75,7 @@ a:hover { color: var(--ks-ink); }
   max-width: calc(100% - 6.5rem);
   position: absolute;
   top: clamp(1rem, 3.5vh, 2.25rem);
+  text-decoration: none;
   z-index: 2;
 }
 .home-hero-logo {
@@ -264,12 +265,46 @@ a:hover { color: var(--ks-ink); }
 }
 .nav-link { color: var(--ks-ink); font-size: 1rem; }
 .nav-link[selected], .nav-link:hover { color: var(--ks-vermilion); }
+.nav-groups { display: grid; gap: 1.1rem; }
+.nav-group-title {
+  border-bottom: 1px solid var(--ks-line);
+  color: var(--ks-vermilion);
+  font-size: .76rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  margin: 0 0 .4rem;
+  padding: 0 0 .45rem;
+}
+.nav-group-links { list-style: none; margin: 0; padding: 0; }
+.nav-group-links li { margin: 0; }
+.nav-group .nav-link {
+  align-items: flex-start;
+  display: flex;
+  gap: .5rem;
+  line-height: 1.55;
+  padding: .42rem 0;
+  text-decoration: none;
+}
+.nav-group .nav-icon {
+  flex: 0 0 1.45rem;
+  font-size: 1.2rem;
+  margin: 0;
+  transform: none;
+}
+.nav-link-text { flex: 1; }
+.nav-group .nav-apply {
+  box-sizing: border-box;
+  margin: .55rem 0;
+  padding: .65rem .8rem;
+  width: 100%;
+}
 .nav-apply, .fab-apply {
   background: var(--ks-vermilion);
   border: 1px solid var(--ks-vermilion);
   color: var(--ks-paper);
   padding: .6rem 1rem;
 }
+.nav-group .nav-apply[selected] { color: var(--ks-paper); }
 .nav-apply:hover, .fab-apply:hover { background: var(--ks-ink); border-color: var(--ks-ink); }
 .menu-toggle {
   align-items: center;
