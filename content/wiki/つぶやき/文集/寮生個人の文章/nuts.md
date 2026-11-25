@@ -1,23 +1,17 @@
 ---
-{
-  "id": "message-nuts",
-  "title": "渓水寮に一年半住んだ女子によるレポート",
-  "route": "/messages/nuts/",
-  "description": "渓水寮に一年半住んだ寮生によるレポートです。",
-  "author": "Nuts",
-  "affiliation": "工学部・2年女子",
-  "related": [
-    {
-      "href": "/messages/",
-      "title": "寮生の声一覧"
-    }
-  ],
-  "metaTitle": "寮生の声 Nuts",
-  "listDescription": "立地の不便さから、寮の仲間・食事・費用まで。1年半の暮らしを振り返ります。",
-  "listOrder": 40,
-  "categoryOrder": 40,
-  "listInIndex": false
-}
+id: message-nuts
+title: 渓水寮に一年半住んだ女子によるレポート
+route: /messages/nuts/
+description: 立地の不便さから、寮の仲間・食事・費用まで。1年半の暮らしを振り返ります。
+author: Nuts
+affiliation: 工学部・2年女子
+related:
+  - href: /messages/
+    title: 寮生の声一覧
+metaTitle: 寮生の声 Nuts
+navigation:
+  show: false
+  order: 40
 ---
 
 皆さんこんにちは！おそらくこれを見ている皆さんは仙台の大学に入ろうとしている受験生の方が多いと思われます。合格して大学生活を送るときどこに住むべきだろう、そんな迷いを持ちながらこのサイトを見ているのではないのでしょうか？そこで今回、渓水寮に入寮して一年半の女子大学生である私から見た、渓水寮について書いていきたいと思います。

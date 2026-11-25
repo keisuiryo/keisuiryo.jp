@@ -1,5 +1,5 @@
 import React from 'react'
-import VoiceCards from './VoiceCards'
+import ArticleCards from './ArticleCards'
 
 function renderInline(text, keyPrefix) {
   const tokens = text.split(/(\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\))/g).filter(Boolean)
@@ -28,10 +28,10 @@ function isTableDivider(line) {
 
 function isBlockStart(lines, index) {
   const line = lines[index]
-  return /^#{1,4}\s/.test(line) || /^\{\{voice-(collection|personal)\}\}$/.test(line.trim()) || /^!\[[^\]]*\]\([^)]+\)$/.test(line.trim()) || /^\s*[-*]\s+/.test(line) || /^\s*\d+\.\s+/.test(line) || /^\|/.test(line) || /^---+$/.test(line)
+  return /^#{1,4}\s/.test(line) || /^\{\{article-list:[^}]+\}\}$/.test(line.trim()) || /^!\[[^\]]*\]\([^)]+\)$/.test(line.trim()) || /^\s*[-*]\s+/.test(line) || /^\s*\d+\.\s+/.test(line) || /^\|/.test(line) || /^---+$/.test(line)
 }
 
-export default function MarkdownArticle({ content, voices = [] }) {
+export default function MarkdownArticle({ content, articleLists = {} }) {
   const markdown = content.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, '').trim()
   const lines = markdown.split(/\r?\n/)
   const elements = []
@@ -43,10 +43,9 @@ export default function MarkdownArticle({ content, voices = [] }) {
     const line = lines[index].trim()
     if (!line) { index += 1; continue }
 
-    const voiceGroup = line.match(/^\{\{voice-(collection|personal)\}\}$/)
-    if (voiceGroup) {
-      const selected = voices.filter(voice => (voice.collection === 'dorm-life') === (voiceGroup[1] === 'collection'))
-      elements.push(<VoiceCards key={`voices-${index}`} voices={selected} />)
+    const articleList = line.match(/^\{\{article-list:([^}]+)\}\}$/)
+    if (articleList) {
+      elements.push(<ArticleCards key={`article-list-${index}`} articles={articleLists[articleList[1]] || []} />)
       index += 1
       continue
     }

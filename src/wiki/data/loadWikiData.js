@@ -32,6 +32,14 @@ function parseArticle(file, category) {
   }
 }
 
+function markdownFiles(directory) {
+  return fs.readdirSync(directory, { withFileTypes: true }).flatMap(entry => {
+    const file = path.join(directory, entry.name)
+    if (entry.isDirectory()) return markdownFiles(file)
+    return entry.isFile() && entry.name.endsWith('.md') ? [file] : []
+  })
+}
+
 function getWikiData() {
   const categories = fs.readdirSync(wikiRoot, { withFileTypes: true })
     .filter(entry => entry.isDirectory())
@@ -40,19 +48,18 @@ function getWikiData() {
       const definition = JSON.parse(fs.readFileSync(path.join(directory, '_category.json'), 'utf8'))
       const pagesPath = path.join(directory, 'pages.json')
       const pages = fs.existsSync(pagesPath) ? JSON.parse(fs.readFileSync(pagesPath, 'utf8')) : []
-      const articles = fs.readdirSync(directory, { withFileTypes: true })
-        .filter(file => file.isFile() && file.name.endsWith('.md'))
-        .map(file => parseArticle(path.join(directory, file.name), definition.title))
+      const articles = markdownFiles(directory)
+        .map(file => parseArticle(file, definition.title))
       // Keep the folder as the source of truth: Markdown entries override
       // any stale copy of the same route in pages.json.
       const entriesByRoute = new Map(pages.map(page => [page.route, page]))
       for (const article of articles) entriesByRoute.set(article.route, article)
       const entries = [...entriesByRoute.values()]
-        .sort((a, b) => (a.categoryOrder || 0) - (b.categoryOrder || 0))
+        .sort((a, b) => (a.navigation?.order || 0) - (b.navigation?.order || 0) || (a.source || a.route).localeCompare(b.source || b.route))
       return {
         ...definition,
         entries,
-        indexEntries: entries.filter(entry => entry.listInIndex !== false)
+        indexEntries: entries.filter(entry => entry.navigation?.show !== false)
       }
     })
     .sort((a, b) => a.order - b.order)

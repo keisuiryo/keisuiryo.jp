@@ -1,23 +1,17 @@
 ---
-{
-  "id": "message-supika",
-  "title": "渓水寮の雰囲気を分析してみる",
-  "route": "/messages/supika/",
-  "description": "少人数の渓水寮で暮らす寮生が、人間関係や寮の雰囲気について綴った文章です。",
-  "author": "すぴか",
-  "affiliation": "工学部・2年男子",
-  "related": [
-    {
-      "href": "/messages/",
-      "title": "寮生の声一覧"
-    }
-  ],
-  "metaTitle": "寮生の声 すぴか",
-  "listDescription": "少人数の寮で保たれる、互いの個を尊重する関係について。",
-  "listOrder": 60,
-  "categoryOrder": 60,
-  "listInIndex": false
-}
+id: message-supika
+title: 渓水寮の雰囲気を分析してみる
+route: /messages/supika/
+description: 少人数の寮で保たれる、互いの個を尊重する関係について。
+author: すぴか
+affiliation: 工学部・2年男子
+related:
+  - href: /messages/
+    title: 寮生の声一覧
+metaTitle: 寮生の声 すぴか
+navigation:
+  show: false
+  order: 60
 ---
 
 さて、この渓水寮は最大受け入れ人数13人の少人数寮だ。少人数が良いとか悪いとかの話ではなく、そのところが、他の寮と差別化するポイントになることがある。少人数寮は、一般的な、最も多くの人が暮らす寮とどのような点が違うのかと思ったこともあった。

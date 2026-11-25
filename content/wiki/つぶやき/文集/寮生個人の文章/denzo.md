@@ -1,23 +1,17 @@
 ---
-{
-  "id": "message-denzo",
-  "title": "渓水寮の構成員",
-  "route": "/messages/denzo/",
-  "description": "寮生による、渓水寮の構成員についての文章です。",
-  "author": "DENZO",
-  "affiliation": "工学部・3年男子",
-  "related": [
-    {
-      "href": "/messages/",
-      "title": "寮生の声一覧"
-    }
-  ],
-  "metaTitle": "寮生の声 DENZO",
-  "listDescription": "寮生・寮母・理事・卒寮生。それぞれの関わりから寮の運営を見つめます。",
-  "listOrder": 50,
-  "categoryOrder": 50,
-  "listInIndex": false
-}
+id: message-denzo
+title: 渓水寮の構成員
+route: /messages/denzo/
+description: 寮生・寮母・理事・卒寮生。それぞれの関わりから寮の運営を見つめます。
+author: DENZO
+affiliation: 工学部・3年男子
+related:
+  - href: /messages/
+    title: 寮生の声一覧
+metaTitle: 寮生の声 DENZO
+navigation:
+  show: false
+  order: 50
 ---
 
 渓水寮は、寮生と寮母さん、理事の先生方、そしてOBによって運営されています。寮生は東北大学生に限らず、仙台の大学生を広く受け付けており、寮生に多様性を持たせるシステムになっていると感じています。

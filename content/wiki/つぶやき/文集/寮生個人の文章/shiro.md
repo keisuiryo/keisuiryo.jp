@@ -1,23 +1,17 @@
 ---
-{
-  "id": "message-shiro",
-  "title": "人間が住む場所",
-  "route": "/messages/shiro/",
-  "description": "白による「人間が住む場所」です。",
-  "author": "白",
-  "affiliation": "東北大学文学部",
-  "related": [
-    {
-      "href": "/messages/",
-      "title": "寮生の声一覧"
-    }
-  ],
-  "metaTitle": "寮生の声 白",
-  "listDescription": "寮生活の負担や人間関係、YMCAとの関わりを含めて綴る暮らしの実感。",
-  "listOrder": 30,
-  "categoryOrder": 30,
-  "listInIndex": false
-}
+id: message-shiro
+title: 人間が住む場所
+route: /messages/shiro/
+description: 寮生活の負担や人間関係、YMCAとの関わりを含めて綴る暮らしの実感。
+author: 白
+affiliation: 東北大学文学部
+related:
+  - href: /messages/
+    title: 寮生の声一覧
+metaTitle: 寮生の声 白
+navigation:
+  show: false
+  order: 30
 ---
 
 渓水寮に住んで早2年。この間、本当にいろいろなことがあった。渓水寮には、自治寮なりの厳しさがある。係仕事をきちんとこなす、寮生総会や公式行事には必ず参加するなど、一人暮らしの学生より、寮のために割くべき時間が増える。つまり、自分が自由に使える時間が減るということでもある。「一人暮らしだったらもっと楽だったのに」と一度も思わなかったと言ったら、ウソになるだろう。

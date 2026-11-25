@@ -1,23 +1,17 @@
 ---
-{
-  "id": "message-yamaguchi",
-  "title": "寮生活の醍醐味",
-  "route": "/messages/yamaguchi/",
-  "description": "山口による「寮生活の醍醐味」です。",
-  "author": "山口",
-  "affiliation": "東北大学文学部",
-  "related": [
-    {
-      "href": "/messages/",
-      "title": "寮生の声一覧"
-    }
-  ],
-  "metaTitle": "寮生の声 山口",
-  "listDescription": "共同生活ならではの意外な出会いと、趣味の共通点から広がる交流について。",
-  "listOrder": 10,
-  "categoryOrder": 10,
-  "listInIndex": false
-}
+id: message-yamaguchi
+title: 寮生活の醍醐味
+route: /messages/yamaguchi/
+description: 共同生活ならではの意外な出会いと、趣味の共通点から広がる交流について。
+author: 山口
+affiliation: 東北大学文学部
+related:
+  - href: /messages/
+    title: 寮生の声一覧
+metaTitle: 寮生の声 山口
+navigation:
+  show: false
+  order: 10
 ---
 
 寮生活の醍醐味といえば未知との遭遇だと思う。当たり前が（同じ日本人というはずなのに）異なる人間と生活スペースを共有するのだから「えっ！？」となるようなことは多数ある。意外な趣味、意外な調理、意外な習慣等々。驚くべきことがたくさんある。

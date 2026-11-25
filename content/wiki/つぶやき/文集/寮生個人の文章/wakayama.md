@@ -1,23 +1,17 @@
 ---
-{
-  "id": "message-wakayama",
-  "title": "私が考える渓水寮",
-  "route": "/messages/wakayama/",
-  "description": "若山による「私が考える渓水寮」です。",
-  "author": "若山",
-  "affiliation": "東北大学工学部",
-  "related": [
-    {
-      "href": "/messages/",
-      "title": "寮生の声一覧"
-    }
-  ],
-  "metaTitle": "寮生の声 若山",
-  "listDescription": "自治寮での役割や人との関わりを通じて感じた、渓水寮の魅力。",
-  "listOrder": 20,
-  "categoryOrder": 20,
-  "listInIndex": false
-}
+id: message-wakayama
+title: 私が考える渓水寮
+route: /messages/wakayama/
+description: 自治寮での役割や人との関わりを通じて感じた、渓水寮の魅力。
+author: 若山
+affiliation: 東北大学工学部
+related:
+  - href: /messages/
+    title: 寮生の声一覧
+metaTitle: 寮生の声 若山
+navigation:
+  show: false
+  order: 20
 ---
 
 渓水寮に入ることはどういうことだろうか。渓水寮は他の寮とは違って少人数だし、自治寮である。そのため、一人一人に与えられる役割の比重が高い。渓水寮は一年間でさまざまな行事があり、大変なことはいくつもあるが、それだけかけがえのないものがたくさんつまっていると思う。
