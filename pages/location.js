@@ -1,1 +1,1 @@
-export { default } from '../src/site/pages/location'
+export { default } from '../src/site/existing-pages/location'

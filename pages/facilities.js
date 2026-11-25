@@ -1,1 +1,1 @@
-export { default } from '../src/site/pages/facilities'
+export { default } from '../src/site/existing-pages/facilities'

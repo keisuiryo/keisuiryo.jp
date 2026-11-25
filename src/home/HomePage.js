@@ -28,7 +28,7 @@ export default function Home({ wikiCategories = [] }) {
             <a href="#conditions">施設・条件</a>
             <a href="#visit">見学・お問い合わせ</a>
             <Link href="/apply/" className="home-hero-nav-apply">募集要項 <span aria-hidden="true">↗</span></Link>
-            <Link href="/wiki/">より詳しく</Link>
+            <Link href="/wiki/" className="home-hero-nav-wiki">より詳しく <span aria-hidden="true">↗</span></Link>
           </nav>
         </header>
         <h1 className="ks-sr-only">共につくり、共に造られる。渓水寮。</h1>
@@ -42,7 +42,7 @@ export default function Home({ wikiCategories = [] }) {
         <section className="ks-section ks-about" id="about" aria-labelledby="ks-about-title">
           <div className="ks-section-inner">
             <header className="ks-section-heading">
-              <p className="ks-section-index">01 ／ ABOUT</p>
+              <p className="ks-section-index">01 — ABOUT</p>
               <h2 className="ks-section-title" id="ks-about-title">渓水寮について</h2>
             </header>
             <div className="ks-about-grid">
@@ -63,7 +63,7 @@ export default function Home({ wikiCategories = [] }) {
           <div className="ks-section-inner">
             <header className="ks-section-heading ks-section-heading-split">
               <div>
-                <p className="ks-section-index">02 ／ LIFE</p>
+                <p className="ks-section-index">02 — LIFE</p>
                 <h2 className="ks-section-title" id="ks-life-title">寮生活</h2>
               </div>
               <p className="ks-section-lead">一人ひとりの時間を大切にしながら、<br />食卓やホールで顔を合わせ、話し合って暮らしをつくります。</p>
@@ -87,7 +87,7 @@ export default function Home({ wikiCategories = [] }) {
                 <div className="ks-daily-copy">
                   <h3 className="ks-subtitle">食卓</h3>
                   <p>授業日の朝と晩には、寮母さんの手作りの食事があります。食卓を囲む時間も、寮での暮らしのひとつです。</p>
-                  <Link className="ks-text-link" href="/meals/">食事と献立を見る <span aria-hidden="true">↗</span></Link>
+                  <Link className="ks-text-link" href="/meals/">食事と寮母さんについて <span aria-hidden="true">↗</span></Link>
                 </div>
               </article>
               <article className="ks-daily-item">
@@ -126,7 +126,7 @@ export default function Home({ wikiCategories = [] }) {
           <div className="ks-section-inner">
             <header className="ks-section-heading ks-section-heading-split">
               <div>
-                <p className="ks-section-index">03 ／ EVENTS</p>
+                <p className="ks-section-index">03 — EVENTS</p>
                 <h2 className="ks-section-title" id="ks-events-title">行事</h2>
               </div>
               <p className="ks-section-lead">季節の集まりや学び、交流の機会があります。<br />ここでは、これまでの行事例を紹介します。</p>
@@ -180,7 +180,7 @@ export default function Home({ wikiCategories = [] }) {
           <div className="ks-section-inner">
             <header className="ks-section-heading ks-section-heading-split">
               <div>
-                <p className="ks-section-index">04 ／ LIVING</p>
+                <p className="ks-section-index">04 — LIVING</p>
                 <h2 className="ks-section-title" id="ks-conditions-title">施設・条件</h2>
               </div>
               <p className="ks-section-lead">住まい、費用、通学。<br />入寮を考えるときに知りたいことをまとめました。</p>
@@ -203,7 +203,7 @@ export default function Home({ wikiCategories = [] }) {
                   <div><dt>経常費</dt><dd>28,000円</dd></div>
                 </dl>
                 <p className="ks-condition-note">管理・維持費、光熱費、食費などを含みます。YMCAの支援により家賃はかかりません。</p>
-                <Link className="ks-text-link" href="/compare/">住まいと生活費を比較する <span aria-hidden="true">↗</span></Link>
+                <Link className="ks-text-link" href="/living-cost-comparison/">住まいと生活費を比較する <span aria-hidden="true">↗</span></Link>
               </article>
               <article className="ks-condition-item">
                 <h3 className="ks-subtitle">アクセス</h3>
@@ -234,7 +234,7 @@ export default function Home({ wikiCategories = [] }) {
           <div className="ks-section-inner">
             <header className="ks-section-heading ks-section-heading-split">
               <div>
-                <p className="ks-section-index">05 ／ WIKI</p>
+                <p className="ks-section-index">05 — WIKI</p>
                 <h2 className="ks-section-title" id="ks-wiki-title">より詳しく</h2>
               </div>
               <p className="ks-section-lead">理念や暮らしの詳しい記事を、<br />テーマごとに読むことができます。</p>

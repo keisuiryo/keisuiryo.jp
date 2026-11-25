@@ -144,6 +144,25 @@ a:hover { color: var(--ks-ink); }
   text-shadow: none;
 }
 .home-hero-nav .home-hero-nav-apply:hover { background: var(--ks-ink); color: var(--ks-paper); }
+.home-hero-nav .home-hero-nav-wiki {
+  align-items: center;
+  background: color-mix(in srgb, var(--ks-ink) 28%, transparent);
+  border: 1px solid color-mix(in srgb, var(--ks-paper) 82%, transparent);
+  display: inline-flex;
+  gap: .5rem;
+  padding: .52rem .75rem;
+  text-shadow: none;
+  transition: background-color .2s ease, border-color .2s ease, color .2s ease;
+}
+.home-hero-nav .home-hero-nav-wiki:hover {
+  background: var(--ks-paper);
+  border-color: var(--ks-paper);
+  color: var(--ks-ink);
+}
+.home-hero-nav .home-hero-nav-wiki:focus-visible {
+  outline: 2px solid var(--ks-paper);
+  outline-offset: 3px;
+}
 .home-hero-handwriting {
   filter: brightness(0) invert(1);
   height: auto;
@@ -338,6 +357,8 @@ a:hover { color: var(--ks-ink); }
   background: var(--ks-paper) !important;
   border-left: 1px solid var(--ks-line);
   bottom: 0;
+  display: flex;
+  flex-direction: column;
   height: 100dvh;
   margin: 0;
   max-width: min(22rem, calc(100vw - 2rem));
@@ -353,9 +374,31 @@ a:hover { color: var(--ks-ink); }
   z-index: 99;
 }
 .nav-wrapper.nav-open .nav { transform: translateX(0); visibility: visible; }
-.nav-wrapper .nav-idt { display: flex; align-items: center; }
+.nav-wrapper .nav-idt { display: flex; align-items: center; gap: .65rem; }
 .nav-wrapper .idt-logo { flex: 0 0 auto; }
-.nav-wrapper .idt-text { margin: 0; }
+.nav-wrapper .idt-text {
+  display: flex;
+  flex-direction: column;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  line-height: 1.35;
+  margin: 0;
+}
+.nav-wrapper .idt-org {
+  color: var(--ks-ink);
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  font-weight: 600;
+  letter-spacing: .04em;
+  white-space: nowrap;
+}
+.nav-wrapper .idt-dorm {
+  color: var(--ks-ink);
+  font-size: clamp(.78rem, .95vw, .82rem);
+  letter-spacing: .16em;
+  line-height: 1.5;
+  margin-top: .1rem;
+}
+
 .fab-apply {
   align-items: center;
   border-radius: 50% !important;
@@ -410,7 +453,7 @@ a:hover { color: var(--ks-ink); }
   box-shadow: none;
 }
 .messages-archive-card:hover, .messages-archive-card:focus-visible { box-shadow: none; transform: none; }
-.messages-archive-card h3, .messages-archive-card { color: var(--ks-ink); }
+.messages-archive-card h3, .messages-archive-card h4, .messages-archive-card { color: var(--ks-ink); }
 .messages-archive-card span { color: var(--ks-vermilion); }
 .message-archive-note { background: transparent; border-left-color: var(--ks-vermilion); color: var(--ks-ink); }
 .life-voices-link { background: var(--ks-vermilion); border-radius: 0; color: var(--ks-paper); }
@@ -457,6 +500,99 @@ a:hover { color: var(--ks-ink); }
 .faq-card[open] { border-bottom: 1px solid var(--ks-line); }
 .apply-contents-title { border-left: 3px solid var(--ks-vermilion); padding-left: .8rem; }
 .important { border: 1px solid var(--ks-vermilion) !important; padding: 1rem 1.25rem; }
+.compare-archive {
+  margin: 0 auto;
+  max-width: var(--ks-content);
+  padding: clamp(2rem, 6vw, 4rem);
+}
+.compare-archive-panel {
+  background: color-mix(in srgb, var(--ks-line) 24%, var(--ks-paper));
+  border-left: 3px solid var(--ks-vermilion);
+  padding: clamp(1.5rem, 4vw, 3rem);
+}
+.compare-archive-kicker {
+  color: var(--ks-vermilion) !important;
+  font-family: sans-serif !important;
+  font-size: .75rem !important;
+  letter-spacing: .14em;
+}
+.compare-archive-panel h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin: 0 0 1rem; }
+.compare-archive-panel p { line-height: 1.9; }
+.compare-archive-link {
+  align-items: center;
+  background: var(--ks-vermilion);
+  color: var(--ks-paper);
+  display: inline-flex;
+  gap: 1.5rem;
+  margin-top: .75rem;
+  padding: .8rem 1rem;
+  text-decoration: none;
+}
+.compare-archive-link:hover { background: var(--ks-ink); color: var(--ks-paper); }
+.apply-main-container.apply-page {
+  margin: 0 auto;
+  max-width: 66rem;
+  padding: clamp(1.5rem, 4vw, 3.5rem);
+  text-align: left;
+  width: 100%;
+}
+.apply-kicker {
+  color: var(--ks-vermilion);
+  font-family: sans-serif;
+  font-size: .72rem;
+  letter-spacing: .14em;
+  margin: 0 0 .75rem;
+}
+.apply-page-title {
+  border-left: 3px solid var(--ks-vermilion);
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  line-height: 1.45;
+  margin: 0 0 1rem;
+  padding-left: .85rem;
+}
+.apply-intro { font-size: 1.1rem; line-height: 1.9; margin: 0 0 1.5rem; }
+.apply-periods { display: grid; gap: 1rem; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 0; }
+.apply-periods > div { border: 1px solid var(--ks-line); padding: 1rem 1.2rem; }
+.apply-periods dt { color: var(--ks-vermilion); font-size: .85rem; font-weight: 600; margin-bottom: .35rem; }
+.apply-periods dd { font-size: 1.1rem; line-height: 1.6; margin: 0; }
+.apply-period-note { font-size: .9rem; line-height: 1.75; margin: .75rem 0 2.5rem; }
+.apply-contact-actions { display: grid; gap: .55rem; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 1rem; }
+.apply-contact-actions a {
+  align-items: center;
+  background: var(--ks-paper);
+  border: 1px solid var(--ks-paper);
+  color: var(--ks-ink);
+  display: flex;
+  justify-content: space-between;
+  min-height: 2.8rem;
+  padding: .6rem .85rem;
+  text-decoration: none;
+}
+.apply-contact-actions a:hover { background: var(--ks-ink); border-color: var(--ks-ink); color: var(--ks-paper); }
+.apply-contact-actions .apply-contact-primary { background: var(--ks-vermilion); border-color: var(--ks-vermilion); color: var(--ks-paper); grid-column: 1 / -1; }
+.apply-contact-actions .apply-contact-primary:hover { background: var(--ks-ink); border-color: var(--ks-ink); }
+.apply-steps { border-top: 1px solid var(--ks-line); list-style: none; margin: 0; padding: 0; }
+.apply-step {
+  border-bottom: 1px solid var(--ks-line);
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 3.25rem minmax(0, 1fr);
+  padding: 1.6rem 0;
+}
+.apply-step-number { color: var(--ks-vermilion); font-family: sans-serif; font-size: .85rem; letter-spacing: .1em; padding-top: .2rem; }
+.apply-step-content h3 { font-size: 1.25rem; margin: 0 0 .55rem; }
+.apply-step-content p { line-height: 1.85; margin: 0; }
+.apply-files { justify-content: flex-start; margin: 1rem 0 0; gap: .6rem; }
+.apply-files .file-link {
+  border: 1px solid var(--ks-line);
+  color: var(--ks-vermilion);
+  display: inline-flex;
+  gap: 1.2rem;
+  padding: .7rem .85rem;
+  text-decoration: none;
+}
+.apply-files .file-link:hover { background: var(--ks-ink); border-color: var(--ks-ink); color: var(--ks-paper); }
+.apply-process { margin: 0; }
 .index-header, .contents-title, .box-title {
   border-left: 3px solid var(--ks-vermilion);
   padding-left: .8rem;
@@ -602,28 +738,70 @@ a:hover { color: var(--ks-ink); }
   text-decoration: none;
 }
 .home-back-to-top:hover { background: var(--ks-ink); color: var(--ks-paper) !important; }
-.nav-wiki-menu {
+.nav-home-link {
+  align-items: center;
   border-bottom: 1px solid var(--ks-line);
-  border-top: 1px solid var(--ks-line);
-  margin: .75rem 0;
-  padding: .55rem 0;
-}
-.nav-wiki-menu summary {
   color: var(--ks-ink);
-  cursor: pointer;
+  display: flex;
   font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
-  font-size: .98rem;
-  font-weight: 600;
-  list-style: none;
+  font-size: .96rem;
+  justify-content: space-between;
+  min-height: 3.25rem;
+  padding: .5rem .25rem;
+  text-decoration: none;
 }
-.nav-wiki-menu summary::-webkit-details-marker { display: none; }
-.nav-wiki-menu summary::after { content: "＋"; float: right; color: var(--ks-vermilion); }
-.nav-wiki-menu[open] summary::after { content: "−"; }
-.nav-wiki-links { display: grid; gap: .15rem; padding: .55rem 0 0 2rem; }
-.nav-wiki-links a { color: var(--ks-ink); font-size: .9rem; text-decoration: none; }
-.nav-wiki-links a:hover { color: var(--ks-vermilion); }
+.nav-home-link span { color: var(--ks-vermilion); }
+.nav-home-link:hover,
+.nav-home-link[aria-current="page"] { color: var(--ks-vermilion); }
+.nav-wiki-menu { display: flex; flex: 1; flex-direction: column; }
+.nav-wiki-label {
+  align-items: center;
+  color: var(--ks-vermilion);
+  display: flex;
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  font-size: .76rem;
+  font-weight: 600;
+  justify-content: space-between;
+  letter-spacing: .12em;
+  margin: 1.2rem 0 .3rem;
+  text-decoration: none;
+}
+.nav-wiki-label span { color: var(--ks-vermilion); }
+.nav-wiki-label:hover { color: var(--ks-ink); }
+.nav-wiki-links { border-top: 1px solid var(--ks-line); display: grid; gap: 0; list-style: none; margin: 0; padding: 0; }
+.nav-wiki-links li { border-bottom: 1px solid var(--ks-line); margin: 0; }
+.nav-wiki-links a {
+  align-items: center;
+  color: var(--ks-ink);
+  display: flex;
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  font-size: .96rem;
+  gap: .75rem;
+  min-height: 3.25rem;
+  padding: .5rem .25rem;
+  text-decoration: none;
+}
+.nav-wiki-links a::after { color: var(--ks-vermilion); content: "↗"; margin-left: auto; }
+.nav-wiki-links a:hover,
+.nav-wiki-links a[aria-current="location"] { color: var(--ks-vermilion); }
+.nav-wiki-number { color: var(--ks-vermilion); font-family: sans-serif; font-size: .7rem; letter-spacing: .12em; }
+.nav-wiki-actions { display: grid; gap: .65rem; margin-top: auto; padding-top: 1.5rem; }
+.nav-wiki-action {
+  align-items: center;
+  border: 1px solid var(--ks-vermilion);
+  color: var(--ks-vermilion);
+  display: flex;
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  font-size: .92rem;
+  justify-content: space-between;
+  min-height: 3.1rem;
+  padding: .65rem .9rem;
+  text-decoration: none;
+}
+.nav-wiki-action:hover { background: var(--ks-ink); border-color: var(--ks-ink); color: var(--ks-paper); }
+.nav-wiki-action-apply { background: var(--ks-vermilion); color: var(--ks-paper); }
+.fab-apply { display: none !important; }
 .wiki-article { margin: 0 auto; max-width: var(--ks-content); padding: clamp(1.5rem, 4vw, 3rem); }
-.nav-wiki-label { color: var(--ks-ink); font-size: .85rem; font-weight: 600; margin: 1.4rem 0 .2rem; }
 .wiki-index-section { background: color-mix(in srgb, var(--ks-line) 24%, var(--ks-paper)); border-left: 3px solid var(--ks-vermilion); margin: 2rem 0; padding: clamp(1.1rem, 3vw, 1.75rem); }
 .wiki-index-section h2 { border: 0; font-size: 1.4rem; margin: 0 0 .75rem; padding: 0; }
 .wiki-index-section ul { list-style: none; margin: 0; padding: 0; }
@@ -638,7 +816,10 @@ a:hover { color: var(--ks-ink); }
 .wiki-article-heading h1 { border-left: 3px solid var(--ks-vermilion); font-size: clamp(2rem, 4vw, 3.25rem); margin: 0 0 .75rem; padding-left: .8rem; }
 .wiki-article-heading > p:not(.wiki-article-label) { margin: .5rem 0 0; }
 .wiki-article-author { color: var(--ks-ink); font-size: .9rem; }
+.wiki-article-note { background: var(--ks-paper-deep); border-left: 3px solid var(--ks-vermilion); margin: 1rem 0 2rem; padding: .9rem 1.1rem; }
 .wiki-markdown { color: var(--ks-ink); }
+.wiki-image { margin: 1.5rem 0; }
+.wiki-image img { display: block; width: auto; max-width: min(100%, 20rem); height: auto; }
 .wiki-markdown-body > h2 { border-left: 3px solid var(--ks-vermilion); font-size: clamp(1.4rem, 2.6vw, 2rem); margin: 3rem 0 1rem; padding-left: .8rem; }
 .wiki-markdown-body > h3 { font-size: 1.35rem; margin: 2rem 0 .75rem; }
 .wiki-markdown-body > h4 { font-size: 1.1rem; margin: 1.5rem 0 .5rem; }
@@ -704,6 +885,7 @@ hr, .brush-rule { border-color: var(--ks-line); }
   .menu-toggle, .nav-backdrop { display: none; }
   .subpage-container:has(.home-hero) { display: block; }
   .subpage-container:has(.home-hero) > .nav-wrapper { display: none; }
+  .header-container .title-logo { display: none; }
   .home-hero-header .home-hero-nav { display: flex; }
   .home-hero-header {
     align-items: center;
@@ -722,7 +904,8 @@ hr, .brush-rule { border-color: var(--ks-line); }
     border-left: 0;
     bottom: auto;
     height: auto;
-    max-width: calc(100% - 2rem);
+    margin-left: 1.5rem;
+    max-width: none;
     overflow: visible;
     padding: 0 0 1rem;
     position: sticky;
@@ -731,9 +914,10 @@ hr, .brush-rule { border-color: var(--ks-line); }
     transform: none;
     transition: none;
     visibility: visible;
-    width: 15rem;
+    width: calc(100% - 3rem);
   }
   .nav-wrapper .nav-idt { display: flex; }
+  .nav-wrapper .nav { min-height: calc(100svh - 4rem); }
 }
 
 @media (min-width: 1150px) {
@@ -742,11 +926,19 @@ hr, .brush-rule { border-color: var(--ks-line); }
 }
 
 @media (max-width: 767px) {
+  .apply-main-container.apply-page { padding: 1.5rem; }
+  .apply-periods { grid-template-columns: minmax(0, 1fr); }
+  .apply-contact-actions { grid-template-columns: minmax(0, 1fr); }
+  .apply-step { gap: .75rem; grid-template-columns: 2.25rem minmax(0, 1fr); }
+  .apply-files { align-items: stretch; flex-direction: column; }
+  .apply-files .file-link { justify-content: space-between; }
   .home-hero { height: min(92svh, 58rem); min-height: 34rem; }
   .home-hero-brand { gap: .6rem; }
   .home-hero-logo { height: 2.45rem; width: 2.45rem; }
   .home-hero-org { font-size: clamp(.92rem, 4vw, 1.25rem); }
   .home-hero-dorm { font-size: .75rem; }
+  .nav-wrapper .idt-org { font-size: clamp(.92rem, 4vw, 1.25rem); }
+  .nav-wrapper .idt-dorm { font-size: .75rem; }
   .home-hero-handwriting { top: 54%; width: 88vw; }
   .index-round-box:not(.index-r-about) .index-image-frame {
     margin: .5rem auto 1.5rem;

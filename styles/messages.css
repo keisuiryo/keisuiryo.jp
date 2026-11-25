@@ -28,6 +28,11 @@
     padding: 1.5rem;
 }
 
+.messages-section-title {
+    margin: 3rem 0 0;
+    font-size: 1.35rem;
+}
+
 .messages-archive-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -55,7 +60,7 @@
     box-shadow: 0 8px 24px rgb(70 40 15 / 12%);
 }
 
-.messages-archive-card h3 {
+.messages-archive-card h3, .messages-archive-card h4 {
     margin: 0;
     font-size: 1.15rem;
 }

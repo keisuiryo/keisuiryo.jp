@@ -8,25 +8,26 @@ Next.jsで構築した渓水寮ウェブサイトです。`pages/` はURLの入�
 pages/                         URLルート入口
 ├── index.js                   トップページ /
 ├── wiki.js                    Wikiホーム /wiki/
-├── [...slug].js               Markdown記事の表示ルート
+├── [...slug].js               Wiki・寮生の声などMarkdown記事の表示ルート
 ├── about.js・life.js・...      既存ページのURL
-└── messages/                  寮生の声のURL
+└── messages.js                寮生の声一覧 /messages/
 
 src/
 ├── home/                      トップページの表示
 ├── site/
 │   ├── components/            共通ナビ・ヘッダー・フッターなど
-│   └── pages/                 既存ページの本文・表示実装
+│   └── existing-pages/        既存ページの本文・表示実装
 └── wiki/
-    ├── components/            Wiki記事の表示部品
-    ├── WikiHomePage.js        Wikiホームの表示
-    └── loadWikiData.js        分類と記事の読み込み
+    ├── navigation/            Wikiナビページの構成
+    │   └── WikiHomePage.js
+    ├── articles/               Wiki記事の表示部品
+    └── data/                   分類と記事の読み込み
+        └── loadWikiData.js
 
 content/
-├── wiki/                      Wiki分類とMarkdown記事
-└── legacy-voices.json         寮生の声の既存データ
+└── wiki/                      Wiki分類とMarkdown記事
 
-docs/wiki/                     Wiki台帳・参考資料
+docs/                          SEO移行マニュアルなどの運用資料
 public/                        画像・配布文書などの公開素材
 styles/                        サイト全体・ページ別のスタイル
 ```
@@ -47,7 +48,8 @@ content/wiki/
 │   └── なぜ渓水寮か.md
 ├── 暮らし/
 │   ├── _category.json
-│   └── pages.json
+│   ├── pages.json
+│   └── 寮生の声記事.md など
 ├── 費用・入寮/
 │   ├── _category.json
 │   ├── pages.json
@@ -58,7 +60,9 @@ content/wiki/
     └── 新寮の想い.md
 ```
 
-分類は `_category.json` の `title` と `order` で定義します。フォルダ内のMarkdown記事は自動で読み込まれ、Wikiホームの分類一覧と静的記事ページに反映されます。分類フォルダを追加するときは `_category.json` が必要です。Markdown記事だけの分類には `pages.json` は要りません。
+寮生の声の個別記事も `暮らし/` にMarkdownで置き、既存の `/messages/名前/` のURLで表示します。
+
+分類は `_category.json` の `title` と `order` で定義します。フォルダ内のMarkdown記事は自動で読み込まれ、Wikiホームの分類一覧と静的記事ページに反映されます。分類フォルダを追加するときは `_category.json`　 が必要です。Markdown記事だけの分類には `pages.json` は要りません。
 
 ## Markdown記事を追加する
 
@@ -126,7 +130,7 @@ Wiki側の掲載情報を追加しても、既存ページそのものやURLは�
 
 ## 新しい既存形式ページを追加する
 
-Reactで作る新しい通常ページは、本文実装を `src/site/pages/` に置き、`pages/` にURLルート入口を追加します。静的サイト出力に含めるため `next.config.js` の `exportPathMap` にもルートを登録してください。Wikiホームにも載せる場合は、分類の `pages.json` にそのURLを加えます。公開URLを変更する場合は、公開前にリダイレクトと検索影響を別途確認してください。
+Reactで作る新しい通常ページは、本文実装を `src/site/existing-pages/` に置き、`pages/` にURLルート入口を追加します。静的サイト出力に含めるため `next.config.js` の `exportPathMap` にもルートを登録してください。Wikiホームにも載せる場合は、分類の `pages.json` にそのURLを加えます。公開URLを変更する場合は、公開前にリダイレクトと検索影響を別途確認してください。
 
 ## 主なコマンド
 
@@ -135,4 +139,4 @@ npm run dev -- --port 3001  # ローカルプレビュー
 npm run build               # 静的サイトを生成
 ```
 
-Wiki全体の運用方針、現行分類、記事確認事項は [`docs/wiki/台帳.md`](docs/wiki/台帳.md) を参照してください。
+SEOやURL移行の方針は [`docs/SEO移行マニュアル.md`](docs/SEO移行マニュアル.md) を参照してください。

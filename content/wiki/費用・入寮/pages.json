@@ -3,15 +3,5 @@
     "id": "apply",
     "title": "募集要項",
     "route": "/apply/"
-  },
-  {
-    "id": "compare",
-    "title": "UH・学寮などとの比較",
-    "route": "/compare/"
-  },
-  {
-    "id": "faq",
-    "title": "よくある質問",
-    "route": "/faq/"
   }
 ]

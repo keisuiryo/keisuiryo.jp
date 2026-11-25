@@ -1,15 +1,5 @@
 [
   {
-    "id": "life",
-    "title": "寮生活",
-    "route": "/life/"
-  },
-  {
-    "id": "meals",
-    "title": "食事",
-    "route": "/meals/"
-  },
-  {
     "id": "facilities",
     "title": "設備",
     "route": "/facilities/"
@@ -18,15 +8,5 @@
     "id": "location",
     "title": "通学・周辺施設",
     "route": "/location/"
-  },
-  {
-    "id": "events",
-    "title": "行事",
-    "route": "/events/"
-  },
-  {
-    "id": "messages",
-    "title": "寮生の声",
-    "route": "/messages/"
   }
 ]

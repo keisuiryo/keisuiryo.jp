@@ -2,56 +2,30 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import Footer from '../footer/footer-pc'
 
-const navGroups = [
-    {
-        id: 'about',
-        title: '渓水寮について',
-        items: [
-            { href: '/about/', text: '寮の概要', icon: 'info' }
-        ]
-    },
-    {
-        id: 'daily-life',
-        title: '寮生活',
-        items: [
-            { href: '/life/', text: '寮生活・自治', icon: 'diversity_3' },
-            { href: '/meals/', text: '食卓と食事', icon: 'set_meal' },
-            { href: '/messages/', text: '寮生の声', icon: 'forum' }
-        ]
-    },
-    {
-        id: 'events',
-        title: '行事',
-        items: [
-            { href: '/events/', text: '行事の紹介', icon: 'event' }
-        ]
-    },
-    {
-        id: 'conditions',
-        title: '施設・条件',
-        items: [
-            { href: '/facilities/', text: '施設・個室', icon: 'door_open' },
-            { href: '/compare/', text: '住まいと生活費の比較', icon: 'payments' },
-            { href: '/location/', text: '通学・周辺施設', icon: 'store' }
-        ]
-    },
-    {
-        id: 'visit',
-        title: '訪ねてみませんか',
-        items: [
-            { href: 'https://lin.ee/6XMmw9l', text: '見学・お問い合わせ', icon: 'mail', external: true },
-            { href: '/apply/', text: '募集要項', icon: 'campaign', prominent: true },
-            { href: '/faq/', text: 'よくある質問', icon: 'help' }
-        ]
-    },
-    {
-        id: 'more',
-        title: 'より詳しく',
-        items: [
-            { href: '/wiki/', text: '渓水寮Wiki', icon: 'menu_book' }
-        ]
-    }
+const wikiCategories = [
+    { order: 10, title: '理念・背景' },
+    { order: 20, title: '暮らし' },
+    { order: 30, title: '費用・入寮' },
+    { order: 40, title: 'つぶやき' }
 ]
+
+const pageCategory = {
+    about: '理念・背景',
+    'why-keisui': '理念・背景',
+    'keisui-philosophy': '理念・背景',
+    'dormitory-spirit': '理念・背景',
+    life: '暮らし',
+    meals: '暮らし',
+    facilities: '暮らし',
+    location: '暮らし',
+    events: '暮らし',
+    messages: '暮らし',
+    apply: '費用・入寮',
+    compare: '費用・入寮',
+    'living-cost-comparison': '費用・入寮',
+    faq: '費用・入寮',
+    'new-dorm-thought': 'つぶやき'
+}
 
 export default function Navigation(props) {
     const [menuOpen, setMenuOpen] = useState(false)
@@ -78,52 +52,54 @@ export default function Navigation(props) {
         setMenuOpen(false)
     }
 
-    function renderNavLink(item) {
-        const pageId = item.href.startsWith('/') ? item.href.replace(/^\/+|\/+$/g, '') : ''
-        const selected = Boolean(pageId && pageId === props.id)
-        const className = `nav-link${item.prominent ? ' nav-apply' : ''}`
-        const content = <>
-            <span className="material-symbols-rounded nav-icon" aria-hidden="true">{item.icon}</span>
-            <span className="nav-link-text">{item.text}</span>
-        </>
+    const currentCategory = props.wikiCategory || pageCategory[props.id]
 
-        return <li key={item.href}>
-            {item.external
-                ? <a href={item.href} className={className} target="_blank" rel="noopener noreferrer" onClick={closeMenu}>{content}</a>
-                : <Link href={item.href} className={className} selected={selected} onClick={closeMenu}>{content}</Link>}
-        </li>
-    }
     return (
         <div className={`nav-wrapper${menuOpen ? ' nav-open' : ''}`}>
             <button type="button" className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? 'メニューを閉じる' : 'メニューを開く'} aria-expanded={menuOpen} aria-controls="nav-container">
                 <span></span><span></span><span></span>
             </button>
             {menuOpen && <button type="button" className="nav-backdrop" onClick={closeMenu} aria-label="メニューを閉じる" />}
-            <Link href="/apply/" className="nav-link fab-apply" onClick={closeMenu}><span className="material-symbols-rounded nav-icon">
-                            campaign
-                        </span>募集要項</Link>
-            <nav id="nav-container" className="nav" aria-label="サイトナビゲーション">
+            <nav id="nav-container" className="nav" aria-label="渓水寮サイトナビゲーション">
                 <Link href="/" className="nav-idt icon-text" onClick={closeMenu}>
 
                     <svg className="idt-logo" width="40" height="32">
                         <use href="#ymca-logo" />
                     </svg>
-                    <h2 className="idt-text">渓水寮</h2>
+                    <h2 className="idt-text">
+                        <span className="idt-org">東北地区学生YMCA</span>
+                        <span className="idt-dorm">渓水寮</span>
+                    </h2>
 
                 </Link>
-                <div className="nav-groups">
-                    {navGroups.map(group => (
-                        <section className="nav-group" aria-labelledby={`nav-group-${group.id}`} key={group.id}>
-                            <h3 className="nav-group-title" id={`nav-group-${group.id}`}>{group.title}</h3>
-                            <ul className="nav-group-links">
-                                {group.items.map(renderNavLink)}
-                            </ul>
-                        </section>
-                    ))}
-                    <div className="nav-sns-box">
-                        <Link href="https://lin.ee/6XMmw9l" onClick={closeMenu}><img className="nav-sns" src="/line.png" alt="LINE"></img></Link>
-                        <Link href="https://twitter.com/keisuiryo" onClick={closeMenu}><img className="nav-sns" src="/twitter.png" alt="Twitter"></img></Link>
-                        <Link href="https://instagram.com/keisuiryo" onClick={closeMenu}><img className="nav-sns" src="/instagram.png" alt="Instagram"></img></Link>
+                <Link href="/" className="nav-home-link" aria-current={!props.id ? 'page' : undefined} onClick={closeMenu}>
+                    トップページ <span aria-hidden="true">↗</span>
+                </Link>
+                <div className="nav-wiki-menu">
+                    <Link className="nav-wiki-label" href="/wiki/" onClick={closeMenu}>
+                        渓水寮Wiki <span aria-hidden="true">↗</span>
+                    </Link>
+                    <ul className="nav-wiki-links" aria-label="Wikiの分類">
+                        {wikiCategories.map((category, index) => (
+                            <li key={category.order}>
+                                <Link
+                                    href={`/wiki/#wiki-category-${category.order}`}
+                                    aria-current={currentCategory === category.title ? 'location' : undefined}
+                                    onClick={closeMenu}
+                                >
+                                    <span className="nav-wiki-number">0{index + 1}</span>
+                                    <span>{category.title}</span>
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                    <div className="nav-wiki-actions">
+                        <a className="nav-wiki-action nav-wiki-action-contact" href="https://lin.ee/6XMmw9l" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
+                            お問い合わせ <span aria-hidden="true">↗</span>
+                        </a>
+                        <Link className="nav-wiki-action nav-wiki-action-apply" href="/apply/" onClick={closeMenu}>
+                            募集要項 <span aria-hidden="true">↗</span>
+                        </Link>
                     </div>
                 </div>
             </nav>

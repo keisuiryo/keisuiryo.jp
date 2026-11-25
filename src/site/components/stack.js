@@ -18,8 +18,8 @@ export default function Card(props) {
 
     return (
         <div className="stack-box">
-            <img loading="lazy" width="400" height="300" className="image stack-image" src={props.imageSrc}
-                alt={props.imageAlt}/>
+            {props.imageSrc && <img loading="lazy" width="400" height="300" className="image stack-image" src={props.imageSrc}
+                alt={props.imageAlt} />}
                 <p className="contents-title-small">{props.title}</p>
                 {props.children}
         </div>

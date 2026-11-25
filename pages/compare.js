@@ -1,1 +1,1 @@
-export { default } from '../src/site/pages/compare'
+export { default } from '../src/site/existing-pages/compare'

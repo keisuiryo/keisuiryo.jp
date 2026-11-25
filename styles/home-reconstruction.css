@@ -21,8 +21,32 @@
 }
 
 .ks-home .ks-section {
+  border-top: 0;
   padding: clamp(4.5rem, 8vw, 7.5rem) 0;
+  position: relative;
   scroll-margin-top: 1rem;
+}
+
+/* A quiet rule with a vermilion lead mark separates the editorial sections. */
+.ks-home .ks-section::before,
+.ks-home .ks-section::after {
+  content: "";
+  left: max(7%, calc((100% - 72rem) / 2));
+  position: absolute;
+  top: 0;
+}
+
+.ks-home .ks-section::before {
+  background: var(--ks-vermilion);
+  height: 4px;
+  width: clamp(4.5rem, 10vw, 11rem);
+  z-index: 1;
+}
+
+.ks-home .ks-section::after {
+  background: var(--ks-line);
+  height: 1px;
+  right: max(7%, calc((100% - 72rem) / 2));
 }
 
 .ks-home .ks-section-inner,
@@ -60,14 +84,17 @@
 }
 
 .ks-section-index {
-  color: var(--ks-vermilion) !important;
+  background: var(--ks-vermilion);
+  color: var(--ks-paper) !important;
+  display: table;
   font-size: .72rem !important;
-  letter-spacing: .14em;
-  margin: 0 0 .85rem;
+  letter-spacing: .16em;
+  margin: 0 0 1.4rem;
+  padding: .55rem .9rem;
 }
 
 .ks-section-title {
-  border-left: 2px solid var(--ks-vermilion) !important;
+  border-left: 3px solid var(--ks-vermilion) !important;
   font-size: clamp(2rem, 4vw, 3.3rem);
   line-height: 1.45;
   padding: .05em 0 .05em .8rem !important;
@@ -88,11 +115,15 @@
   padding: 0;
 }
 
+.ks-daily-copy > .ks-subtitle {
+  font-size: 1.4375rem;
+}
+
 .ks-subtitle::before {
   background: var(--ks-vermilion);
   content: "";
   display: block;
-  flex: 0 0 1px;
+  flex: 0 0 3px;
   margin: .2em 0;
 }
 
@@ -181,6 +212,15 @@
   display: grid;
   gap: clamp(1.25rem, 3vw, 2.5rem);
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* Stagger the photo stories like a small editorial spread. */
+.ks-daily-item:nth-child(even) {
+  margin-top: clamp(2.5rem, 6vw, 5rem);
+}
+
+.ks-daily-item:nth-child(4n + 3) {
+  margin-top: clamp(1rem, 3vw, 2.5rem);
 }
 
 .ks-daily-item {
@@ -451,6 +491,41 @@
   display: none;
 }
 
+@media (min-width: 1150px) {
+  .home-visit {
+    align-items: center;
+    display: flex;
+    min-height: 100svh;
+    padding: clamp(4rem, 8vh, 7rem) 0;
+  }
+
+  .ks-daily-copy > .ks-subtitle {
+    font-size: 1.875rem;
+  }
+
+  .ks-home p:not(.ks-section-index):not(.ks-condition-note),
+  .home-visit p:not(.home-visit-eyebrow) {
+    font-size: 1.2rem;
+  }
+
+  .ks-home .ks-section-lead,
+  .ks-home .ks-daily-copy > p,
+  .ks-home .ks-voices-link p,
+  .ks-home .ks-condition-item > p:not(.ks-cost-total),
+  .home-visit .home-visit-copy,
+  .home-visit .home-visit-email {
+    font-size: 1.2rem !important;
+  }
+
+  .ks-home .ks-condition-note { font-size: .92rem !important; }
+  .ks-home .ks-text-link,
+  .ks-home .ks-wiki-card li a { font-size: 1.05rem; }
+  .ks-home .ks-wiki-more { font-size: 1rem; }
+  .ks-home .ks-cost-list { font-size: 1rem; }
+  .ks-home .ks-cost-total span { font-size: 1rem; }
+  .home-visit-actions a { font-size: 1.05rem; }
+}
+
 @media (max-width: 900px) {
   .ks-conditions-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -464,6 +539,17 @@
 @media (max-width: 700px) {
   .ks-home .ks-section {
     padding: 4.25rem 0;
+  }
+
+  .ks-home .ks-section::before,
+  .ks-home .ks-section::after {
+    left: 7%;
+    right: 7%;
+  }
+
+  .ks-home .ks-section::before {
+    right: auto;
+    width: 4.5rem;
   }
 
   .ks-home .ks-section-inner,
@@ -499,6 +585,11 @@
 
   .ks-daily-grid {
     gap: 2.5rem;
+  }
+
+  .ks-daily-item:nth-child(even),
+  .ks-daily-item:nth-child(4n + 3) {
+    margin-top: 0;
   }
 
   .ks-daily-photo,

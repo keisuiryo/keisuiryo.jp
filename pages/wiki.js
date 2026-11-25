@@ -1,5 +1,5 @@
-import { getWikiData } from '../src/wiki/loadWikiData'
-export { default } from '../src/wiki/WikiHomePage'
+import { getWikiData } from '../src/wiki/data/loadWikiData'
+export { default } from '../src/wiki/navigation/WikiHomePage'
 
 export async function getStaticProps() {
   const { categories } = getWikiData()

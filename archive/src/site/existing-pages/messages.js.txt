@@ -1,0 +1,30 @@
+import Link from 'next/link'
+import Wrapper from '../components/wrapper'
+
+export default function Messages({ voices = [] }) {
+    const collection = voices.filter((voice) => voice.collection === 'dorm-life')
+    const personalVoices = voices.filter((voice) => voice.collection !== 'dorm-life')
+    const renderCards = (items) => (
+        <div className="messages-archive-grid">
+            {items.map((voice) => (
+                <Link href={voice.route} className="messages-archive-card" key={voice.id}>
+                    <h4>{voice.title}</h4>
+                    {(voice.author || voice.affiliation) && <p>{[voice.author, voice.affiliation].filter(Boolean).join('・')}</p>}
+                    <p className="messages-archive-excerpt">{voice.listDescription}</p>
+                    <span>記事を読む →</span>
+                </Link>
+            ))}
+        </div>
+    )
+    return (
+        <Wrapper title="寮生の声" id="messages" desc="渓水寮での暮らしを、寮生それぞれの視点から綴った文章です。">
+            <section className="messages-archive" aria-labelledby="messages-archive-title">
+                <h2 id="messages-archive-title" className="contents-title">寮生の声</h2>
+                <h3 className="messages-section-title">寮生文集：寮の場所と活動</h3>
+                {renderCards(collection)}
+                <h3 className="messages-section-title">寮生それぞれの体験・考え</h3>
+                {renderCards(personalVoices)}
+            </section>
+        </Wrapper>
+    )
+}

@@ -1,0 +1,17 @@
+import { getWikiData } from '../src/wiki/data/loadWikiData'
+import Messages from '../src/site/existing-pages/messages'
+
+export default Messages
+
+export async function getStaticProps() {
+  const { articles } = getWikiData()
+  const voices = articles
+    .filter(article => article.route.startsWith('/messages/'))
+    .sort((a, b) => a.listOrder - b.listOrder)
+    .map(({ id, title, route, author, affiliation, listDescription, collection }) => ({
+      id, title, route, author: author || null, affiliation: affiliation || null,
+      listDescription: listDescription || null, collection: collection || null
+    }))
+
+  return { props: { voices } }
+}
