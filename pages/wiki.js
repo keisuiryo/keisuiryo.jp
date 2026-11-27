@@ -1,20 +1,19 @@
 import { getWikiData } from '../src/wiki/data/loadWikiData'
+import { buildArticleCollections } from '../src/wiki/data/articleCollections'
 export { default } from '../src/wiki/navigation/WikiHomePage'
 
 export async function getStaticProps() {
-  const { categories } = getWikiData()
+  const { home, entries, categories } = getWikiData()
+  if (!home) throw new Error('Missing Wiki homepage: content/wiki/homepage.md')
   return {
     props: {
-      categories: categories.map(({ title, order, indexEntries }) => ({
-        title,
-        order,
-        indexEntries: indexEntries.map(({ id, title, route, description }) => ({
-          id,
-          title,
-          route,
-          ...(description ? { description } : {})
-        }))
-      }))
+      home: {
+        title: home.title,
+        description: home.description || '',
+        content: home.content
+      },
+      categoryAnchors: Object.fromEntries(categories.map(({ title, order }) => [title, `wiki-category-${order}`])),
+      articleLists: buildArticleCollections(home.content, home.sourceDirectory, home.source, entries, { respectNavigationVisibility: true })
     }
   }
 }

@@ -809,6 +809,14 @@ a:hover { color: var(--ks-ink); }
 .wiki-index-section li a { color: var(--ks-ink); font-size: 1.2rem; font-weight: 600; text-underline-offset: .2em; }
 .wiki-index-section li a:hover { color: var(--ks-vermilion); }
 .wiki-index-section li p { line-height: 1.8; margin: .4rem 0 0; }
+.wiki-article-list { list-style: none; margin: 0 0 1.5rem; padding: 0; }
+.wiki-article-list li { border-bottom: 1px solid var(--ks-line); padding: 1rem 0; }
+.wiki-article-list li:first-child { border-top: 1px solid var(--ks-line); }
+.wiki-article-list li a { color: var(--ks-ink); font-size: 1.08rem; font-weight: 600; text-underline-offset: .2em; }
+.wiki-article-list li a:hover { color: var(--ks-vermilion); }
+.wiki-article-list li p { line-height: 1.7; margin: .35rem 0 0; }
+.wiki-collection-toggle { background: transparent; border: 1px solid var(--ks-vermilion); color: var(--ks-vermilion); cursor: pointer; font: inherit; margin: 1rem 0 2rem; padding: .65rem 1rem; }
+.wiki-collection-toggle:hover, .wiki-collection-toggle:focus-visible { background: var(--ks-vermilion); color: var(--ks-paper); }
 .wiki-breadcrumb { align-items: center; color: var(--ks-ink); display: flex; flex-wrap: wrap; font-size: .82rem; gap: .45rem; margin: 0 0 2.5rem; }
 .wiki-breadcrumb a { color: var(--ks-ink); text-decoration-color: var(--ks-line); text-underline-offset: .2em; }
 .wiki-article-heading { border-bottom: 1px solid var(--ks-line); margin-bottom: 2rem; padding-bottom: 1.5rem; }

@@ -1,5 +1,5 @@
 import React from 'react'
-import ArticleCards from './ArticleCards'
+import ArticleCollection from './ArticleCollection'
 
 function renderInline(text, keyPrefix) {
   const tokens = text.split(/(\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\))/g).filter(Boolean)
@@ -28,10 +28,10 @@ function isTableDivider(line) {
 
 function isBlockStart(lines, index) {
   const line = lines[index]
-  return /^#{1,4}\s/.test(line) || /^\{\{article-list:[^}]+\}\}$/.test(line.trim()) || /^!\[[^\]]*\]\([^)]+\)$/.test(line.trim()) || /^\s*[-*]\s+/.test(line) || /^\s*\d+\.\s+/.test(line) || /^\|/.test(line) || /^---+$/.test(line)
+  return /^#{1,4}\s/.test(line) || /^\{\{(?:list|article-list):[^}]+\}\}$/.test(line.trim()) || /^!\[[^\]]*\]\([^)]+\)$/.test(line.trim()) || /^\s*[-*]\s+/.test(line) || /^\s*\d+\.\s+/.test(line) || /^\|/.test(line) || /^---+$/.test(line)
 }
 
-export default function MarkdownArticle({ content, articleLists = {} }) {
+export default function MarkdownArticle({ content, articleLists = {}, categoryAnchors = {} }) {
   const markdown = content.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, '').trim()
   const lines = markdown.split(/\r?\n/)
   const elements = []
@@ -43,9 +43,9 @@ export default function MarkdownArticle({ content, articleLists = {} }) {
     const line = lines[index].trim()
     if (!line) { index += 1; continue }
 
-    const articleList = line.match(/^\{\{article-list:([^}]+)\}\}$/)
+    const articleList = line.match(/^\{\{(?:list|article-list):[^}]+\}\}$/)
     if (articleList) {
-      elements.push(<ArticleCards key={`article-list-${index}`} articles={articleLists[articleList[1]] || []} />)
+      elements.push(<ArticleCollection key={`article-list-${index}`} collection={articleLists[articleList[0]] || {}} />)
       index += 1
       continue
     }
@@ -62,7 +62,7 @@ export default function MarkdownArticle({ content, articleLists = {} }) {
       const level = Math.min(heading[1].length + 1, 4)
       const explicitId = heading[2].match(/\s+\{#([A-Za-z][A-Za-z0-9_-]*)\}$/)
       const label = explicitId ? heading[2].slice(0, explicitId.index) : heading[2]
-      const id = explicitId ? explicitId[1] : `wiki-section-${sectionNumber + 1}`
+      const id = explicitId ? explicitId[1] : categoryAnchors[label] || `wiki-section-${sectionNumber + 1}`
       sectionNumber += 1
       const children = renderInline(label, id)
       const Tag = `h${level}`

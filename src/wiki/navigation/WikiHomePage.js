@@ -1,32 +1,21 @@
 import Link from 'next/link'
 import Wrapper from '../../site/components/wrapper'
+import MarkdownArticle from '../articles/MarkdownArticle'
 
-export default function WikiHome({ categories }) {
+export default function WikiHome({ home, articleLists, categoryAnchors }) {
   return (
-    <Wrapper noheader id="wiki" title="渓水寮Wiki" desc="渓水寮の理念や暮らしについての記事を紹介します。">
-      <div className="wiki-article wiki-index">
+    <Wrapper noheader id="wiki" title={home.title} desc={home.description}>
+      <article className="wiki-article wiki-index" id="wiki-article-top">
         <nav className="wiki-breadcrumb" aria-label="パンくずリスト">
           <Link href="/">トップ</Link><span aria-hidden="true">›</span><span aria-current="page">渓水寮Wiki</span>
         </nav>
         <header className="wiki-article-heading">
-          <h1>渓水寮Wiki</h1>
-          <p>渓水寮の理念や暮らしについて、記事を紹介します。</p>
+          <h1>{home.title}</h1>
+          {home.description && <p>{home.description}</p>}
         </header>
-        {categories.map(category => (
-          <section className="wiki-index-section" id={`wiki-category-${category.order}`} key={category.title}>
-            <h2>{category.title}</h2>
-            <ul>
-              {category.indexEntries.map(article => (
-                <li key={article.id}>
-                  <Link href={article.route}>{article.title} <span aria-hidden="true">→</span></Link>
-                  {article.description && <p>{article.description}</p>}
-                </li>
-              ))}
-            </ul>
-          </section>
-        ))}
+        <MarkdownArticle content={home.content} articleLists={articleLists} categoryAnchors={categoryAnchors} />
         <p className="wiki-back-to-top"><Link href="/">トップページへ</Link></p>
-      </div>
+      </article>
     </Wrapper>
   )
 }
