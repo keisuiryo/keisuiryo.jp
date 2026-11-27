@@ -4,7 +4,7 @@ import Wrapper from '../components/wrapper'
 
 export default function Home() {
     return (
-        <Wrapper id="facilities" title="設備" desc="渓水寮では一人一部屋6畳の個室があり、プライベートは守られます。ホールや台所といった共用スペースもあります。トイレと風呂は共同ですが最近新しくなりました。">
+        <Wrapper id="facilities" title="設備" desc="渓水寮の6畳の個室や、ホール・台所・浴室など、寮生が使う設備と共同生活での使い方を紹介します。">
             <div className="card-container">
                 <Card title="個室" imageSrc="/facilities/room.webp" imageAlt="渓水寮の個室は鍵やベット、机などが付いています。">
                     <p className="contents-desc">6畳のフローリングです。エアコンとベッド・机・椅子が設置してあり、Wifiと光有線LANに繋げます。</p>
