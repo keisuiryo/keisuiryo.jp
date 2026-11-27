@@ -60,6 +60,10 @@ export default function Home() {
                             <span className="apply-step-number" aria-hidden="true">04</span>
                             <div className="apply-step-content">
                                 <h3>入寮</h3>
+                                <p>大学在籍が確定した後、新入寮確認書を提出してください。確認書の提出をもって、入寮意思の確認とします。</p>
+                                <div className="apply-contact-actions">
+                                    <Link href="/new-resident-confirmation/">新入寮確認書を確認する <span aria-hidden="true">↗</span></Link>
+                                </div>
                                 <p>春から一緒に生活できるのを楽しみにしています。</p>
                             </div>
                         </li>

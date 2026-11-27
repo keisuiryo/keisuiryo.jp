@@ -11,7 +11,8 @@ function renderInline(text, keyPrefix) {
     const link = token.match(/^\[([^\]]+)\]\(([^)]+)\)$/)
     if (link) {
       const external = /^https?:\/\//.test(link[2])
-      return <a key={key} href={link[2]} target={external ? '_blank' : undefined} rel={external ? 'noopener noreferrer' : undefined}>{link[1]}</a>
+      const download = !external && /\.pdf(?:$|[?#])/i.test(link[2])
+      return <a key={key} href={link[2]} target={external ? '_blank' : undefined} rel={external ? 'noopener noreferrer' : undefined} download={download ? true : undefined}>{link[1]}</a>
     }
     return token
   })
