@@ -826,6 +826,7 @@ a:hover { color: var(--ks-ink); }
 .wiki-article-author { color: var(--ks-ink); font-size: .9rem; }
 .wiki-article-note { background: var(--ks-paper-deep); border-left: 3px solid var(--ks-vermilion); margin: 1rem 0 2rem; padding: .9rem 1.1rem; }
 .wiki-markdown { color: var(--ks-ink); }
+.wiki-markdown-body { max-width: 48rem; }
 .wiki-image { margin: 1.5rem 0; }
 .wiki-image img { display: block; width: auto; max-width: min(100%, 20rem); height: auto; }
 .wiki-markdown-body > h2 { border-left: 3px solid var(--ks-vermilion); font-size: clamp(1.4rem, 2.6vw, 2rem); margin: 3rem 0 1rem; padding-left: .8rem; }
