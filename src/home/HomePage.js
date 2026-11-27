@@ -49,7 +49,7 @@ export default function Home({ wikiCategories = [] }) {
               <div className="ks-about-copy">
                 <h3 className="ks-subtitle ks-about-slogan">共につくり、<br />共に造られる。</h3>
                 <p>渓水寮は、東北大学YMCAのもとで運営されてきた学生寮です。2027年4月からは、日本YMCA同盟の支援のもと、東北地区学生YMCAが運営します。</p>
-                <p>13人の寮生が、理事の支援を受けながら、自分たちの暮らしを一緒に運営しています。寮生には東北大学の学生が多くいますが、寮は大学とは別の運営です。</p>
+                <p>13人の寮生が、協力者の支援を受けながら、自分たちの暮らしを一緒に運営しています。寮生には東北大学の学生が多くいますが、寮は大学とは別の運営です。</p>
                 <Link className="ks-text-link" href="/about/">運営体制・寮の概要を読む <span aria-hidden="true">↗</span></Link>
               </div>
               <figure className="ks-photo-frame ks-about-frame">
