@@ -125,11 +125,15 @@ Google公式：[URL対応表と転送](https://developers.google.com/search/docs
 
 [Rich Results Test](https://search.google.com/test/rich-results) と [Schema Markup Validator](https://validator.schema.org/) を併用する。Googleのテストが対応しない型は、リッチリザルトが検出されないことだけで構文不正と判断しない。
 
+2026年11月28日のSearch Console URL検査では、トップ・募集要項・比較ページで「解析不能な構造化データ」が報告され、エラーは「`}` またはオブジェクト メンバーの名前がありません」だった。共通メタ情報をJavaScriptオブジェクトからJSON化する形に修正し、ビルド後の32ページ分のJSON-LDをJSONパーサーで確認した。再公開後、Search Consoleの公開URLテストでこの指摘が解消したか確認する。
+
 ### 4.2 サイトマップと画像
 
 2026年11月28日にサイトマップを現行の公開ページURLに合わせて整理した。現在のサイトマップはページURLのみを掲載し、画像URLや配布ファイルURLは含めない。画像URLを追加する場合は、公開ページで使用している素材と`public/`内の実ファイルを照合する。
 
 サイトマップは手動管理である。新しいページURLを追加するときは、`content/wiki/`のメタデータと`pages/`のルート設定を確認し、公開する正規URLを追加する。404、転送ページ、`noindex`の案内ページ、検索対象にしない原稿、配布ファイルを混ぜない。掲載するURLは実際に生成・公開されるURLと照合する。`priority`の数値は検索順位を指定しないため、現行サイトマップでは指定しない。
+
+2026年11月28日に `https://keisuiryo.jp/sitemap.xml` をSearch Consoleへ再送信し、成功・26ページ検出を確認した。旧 `https://www.keisuiryo.jp/sitemap.xml` の登録も残っているため、今後はGoogleの処理状況を確認してから整理する。
 
 この整理では画像サイトマップを使わず、画像は各ページ本文から検索エンジンが発見できる構成とした。サイトマップから画像を外すことは、画像ファイル自体の削除や検索除外を意味しない。
 

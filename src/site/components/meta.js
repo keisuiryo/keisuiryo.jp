@@ -11,66 +11,34 @@ export default function Meta(props) {
     const _url = props.canonicalUrl || (props.id
         ? `https://keisuiryo.jp/${String(props.id).replace(/^\/+|\/+$/g, '')}/`
         : "https://keisuiryo.jp/");
-    const _top = `
-        [
+    const publisher = {
+        "@type": "Organization",
+        "name": "東北地区学生YMCA",
+        "url": "https://keisuiryo.jp/",
+        "logo": "https://keisuiryo.jp/ymca-logo.webp",
+        "address": {
+            "@type": "PostalAddress",
+            "postalCode": "982-0027",
+            "addressRegion": "宮城県",
+            "addressLocality": "仙台市太白区",
+            "streetAddress": "大塒町8-1"
+        },
+        "telephone": "+81-22-249-3564",
+        "sameAs": [
+            "https://twitter.com/keisuiryo",
+            "https://ja-jp.facebook.com/keisuiryo/",
+            "https://www.instagram.com/keisuiryo/"
+        ]
+    }
+    const jsonLd = props.id
+        ? [
             {
                 "@context": "https://schema.org",
-                "@type": "Apartment",
-                "name": "渓水寮",
-                "url": "https://keisuiryo.jp/",
-                "publisher": {
-                    "@type": "Organization",
-                    "name": "東北地区学生YMCA",
-                    "url": "https://keisuiryo.jp/",
-                    "logo": {
-                        "@type": "ImageObject",
-                        "url": "https://keisuiryo.jp/assets/ymca-logo.webp",
-                        "width": 420,
-                        "height": 340
-                    },
-                    "address": {
-                        "@type": "PostalAddress",
-                        "postalCode": "982-0027",
-                        "addressRegion": "宮城県",
-                        "addressLocality": "仙台市太白区",
-                        "streetAddress": "大塒町8-1"
-                    }
-                },
-                "image": {
-                    "@type": "ImageObject",
-                    "url": "https://keisuiryo.jp/assets/main.webp",
-                    "width": 640,
-
-                    "height": 480
-                },
-                "description": "東北地区学生YMCAが運営する渓水寮は、東北大学などの学生が暮らす定員13名の学生寮です。寮母さん手作りの食事と、寮生が自治を担う共同生活が特徴です。",
-                "telephone": "+81-022-249-3564",
-                "openingHoursSpecification": {
-                    "@type": "OpeningHoursSpecification",
-                    "dayOfWeek": [
-                        "Monday",
-                        "Tuesday",
-                        "Wednesday",
-                        "Thursday",
-                        "Friday",
-                        "Saturday",
-                        "Sunday"
-                    ],
-                    "opens": "00:00",
-                    "closes": "23:59"
-                },
-                "founder": "石原謙",
-                "geo": {
-                    "@type": "GeoCoordinates",
-                    "latitude": 38.236063,
-                    "longitude": 140.859312
-                },
-                "logo": "https://keisuiryo.jp/assets/ymca-logo.webp",
-                "sameAs": [
-                    "https://twitter.com/keisuiryo",
-                    "https://ja-jp.facebook.com/keisuiryo/",
-                    "http://instagram.com/keisuiryo/"
-                ]
+                "@type": "WebPage",
+                "name": _title,
+                "description": props.desc,
+                "url": _url,
+                "publisher": publisher
             },
             {
                 "@context": "https://schema.org",
@@ -79,64 +47,35 @@ export default function Meta(props) {
                     {
                         "@type": "ListItem",
                         "position": 1,
-                        "name": "渓水寮",
+                        "name": "トップ",
                         "item": "https://keisuiryo.jp/"
                     },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": props.title || _title,
+                        "item": _url
+                    }
                 ]
-            },
-        ]`
-    const _sub = `
-        [{
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            "name": "${_title}",
-            "url": "${_url}",
-            "publisher": {
+            }
+        ]
+        : [
+            {
+                "@context": "https://schema.org",
                 "@type": "Organization",
-                "name": "東北地区学生YMCA",
-                "url": "https://keisuiryo.jp/",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://keisuiryo.jp/ymca-logo.webp",
-                    "width": 420,
-                    "height": 340
-                },
-                "address": {
-                    "@type": "PostalAddress",
-                    "postalCode": "982-0027",
-                    "addressRegion": "宮城県",
-                    "addressLocality": "仙台市太白区",
-                    "streetAddress": "大塒町8-1"
-                },
+                ...publisher
             },
-            "image": {
-                "@type": "ImageObject",
-                "url": "https://keisuiryo.jp/main.webp",
-                "width": 640,
-                "height": 480
-            },
-            "description": "",
-            "logo": "https://keisuiryo.jp/ymca-logo.webp"
-        },
-        {
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "渓水寮",
-                "item": "https://keisuiryo.jp/"
-              },{
-                  "@type": "ListItem",
-                "position": 2,
-                "name": "${props.title}",
-                "item": "${_url}"
-              },
-            ]
-        },
-        ]`
-    const _jsonld = { __html: props.id ? _sub : _top }
+            {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "name": "東北地区学生YMCA 渓水寮",
+                "url": _url,
+                "publisher": publisher
+            }
+        ]
+    const _jsonld = {
+        __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c")
+    }
     return (
         <>
             <Head>
