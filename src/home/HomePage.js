@@ -1,11 +1,12 @@
 import Link from 'next/link'
 import Wrapper from '../site/components/wrapper'
+import navigation from '../../content/site/navigation.json'
 
 export const config = {
   unstable_runtimeJS: true
 }
 
-export default function Home({ wikiCategories = [] }) {
+export default function Home({ sections = [] }) {
   return (
     <Wrapper noheader desc="東北地区学生YMCAが運営する渓水寮は、大学生などが共同生活を送る定員13名の学生寮です。寮生活や行事、施設、寮費、アクセス、2027年4月入寮生の募集についてご案内します。">
       <section className="home-hero" id="home-top" aria-label="渓水寮">
@@ -28,7 +29,7 @@ export default function Home({ wikiCategories = [] }) {
             <a href="#conditions">施設・条件</a>
             <a href="#visit">見学・お問い合わせ</a>
             <Link href="/apply/" className="home-hero-nav-apply">募集要項 <span aria-hidden="true">↗</span></Link>
-            <Link href="/wiki/" className="home-hero-nav-wiki">より詳しく <span aria-hidden="true">↗</span></Link>
+            <Link href={navigation.label.href} className="home-hero-nav-wiki">より詳しく <span aria-hidden="true">↗</span></Link>
           </nav>
         </header>
         <h1 className="ks-sr-only">共につくり、共に造られる。渓水寮。</h1>
@@ -240,8 +241,8 @@ export default function Home({ wikiCategories = [] }) {
               <p className="ks-section-lead">理念や暮らしの詳しい記事を、<br />テーマごとに読むことができます。</p>
             </header>
             <div className="ks-wiki-grid">
-              {wikiCategories.map((category, index) => (
-                <article className="ks-wiki-card" key={category.order}>
+              {sections.map((category, index) => (
+                <article className="ks-wiki-card" key={category.href}>
                   <span className="ks-wiki-number">0{index + 1}</span>
                   <h3 className="ks-subtitle">{category.title}</h3>
                   <ul>
@@ -249,11 +250,11 @@ export default function Home({ wikiCategories = [] }) {
                       <li key={article.id}><Link href={article.route}>{article.title} <span aria-hidden="true">↗</span></Link></li>
                     ))}
                   </ul>
-                  <Link className="ks-wiki-more" href={`/wiki/#wiki-category-${category.order}`}>この分類の記事を見る <span aria-hidden="true">→</span></Link>
+                  <Link className="ks-wiki-more" href={category.href}>この分類の記事を見る <span aria-hidden="true">→</span></Link>
                 </article>
               ))}
             </div>
-            <Link className="ks-text-link ks-all-wiki" href="/wiki/">渓水寮Wikiの目次へ <span aria-hidden="true">↗</span></Link>
+            <Link className="ks-text-link ks-all-wiki" href={navigation.label.href}>渓水寮Wikiの目次へ <span aria-hidden="true">↗</span></Link>
           </div>
         </section>
 

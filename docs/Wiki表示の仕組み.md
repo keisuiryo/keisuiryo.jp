@@ -1,99 +1,55 @@
 # Wiki表示の仕組み
 
-## フォルダとファイル
+## 記事とページ生成
 
-```text
-content/wiki/
-├── homepage.md                 # Wikiホーム。分類ごとの一覧をMarkdownで指定
-├── 理念・背景/
-│   ├── _category.json          # 分類名・分類順
-│   ├── pages.json               # Reactで作った既存ページへのリンク（任意）
-│   └── 記事.md
-├── 暮らし/
-│   ├── _category.json
-│   ├── まとめ.md                # 必要に応じて作る通常の記事
-│   └── 活動/                    # 記事を整理するフォルダ。別分類ではない
-│       └── 記事.md
-└── つぶやき/
-    ├── _category.json
-    ├── 寮生の声・文集.md         # 記事一覧をカード形式で表示
-    └── 文集/
-        └── 場所と活動/
-            └── ホール.md
-```
+`content/wiki/`以下のMarkdownは、直下かサブフォルダかにかかわらず、同じ記事として読み込みます。各記事はYAMLメタデータの`id`、`title`、`route`で識別します。`content/wiki/homepage.md`もこの規則に従い、`route: /wiki/`の記事として生成します。
 
-`content/wiki/`直下の既存4フォルダが分類です。各分類の`_category.json`は`title`で表示名を、`order`で分類順を指定します。分類フォルダより下のサブフォルダは記事整理用で、分類は親のままです。今回は新しい分類は追加していません。
+記事一覧へ既存のReactページを掲載するには、任意のフォルダに`pages.json`を置き、`id`、`title`、`route`を登録します。Markdownと既存ページ登録は、一覧データとして同じ処理に入ります。
 
-`homepage.md`が`/wiki/`の原稿です。分類の見出しと記事一覧をMarkdownに書きます。各記事の`.md`はサブフォルダも含めて読み込まれ、記事の`route`から個別URLが作られます。記事本文は各ファイルのメタデータより後に書きます。
+## 本文の記法
 
-Wikiホームの見出しが`_category.json`の分類名と一致すると、分類の`order`から見出しIDを自動設定します。ナビゲーションも同じIDへリンクするため、`{#...}`をMarkdownに書く必要はありません。
+本文は一般的なMarkdownすべてではなく、サイト独自の変換処理が対応する記法を使います。
 
-## 読み込みと表示の流れ
-
-```mermaid
-flowchart TD
-    A["content/wiki/homepage.md"] --> C["loadWikiData.js"]
-    B["分類フォルダの _category.json・pages.json・記事.md"] --> C
-    C --> D["分類・記事データを作成<br/>サブフォルダも再帰読み込み"]
-    D --> E["homepage.md の {{list}} を解決"]
-    E --> F["WikiHomePage.js と MarkdownArticle.js"]
-    D --> G["記事 route ごとに個別ページを作成"]
-    G --> H["WikiArticlePage.js と MarkdownArticle.js"]
-    F --> I["Next.js が静的ページを出力"]
-    H --> I
-```
-
-`loadWikiData.js`は、まず`content/wiki/`直下の既存分類フォルダを読みます。各フォルダの`_category.json`から分類設定を、`pages.json`がある場合は既存Reactページの一覧情報を取得します。その後、分類フォルダ以下の`.md`をサブフォルダまで再帰的に読み、メタデータと本文を分けて記事データにします。
-
-Wikiホームと記事本文の`{{list}}`は、指定したフォルダの**直下にある記事**を一覧にします。サブフォルダの記事は、親の一覧へ自動で混ぜず、必要なMarkdownからそのサブフォルダを指定します。すべての記事ページは、一覧に載せるかどうかにかかわらずビルド対象です。
-
-## `{{list}}`の書き方
-
-一覧記法は単独行に置きます。フォルダ指定は、そのMarkdownファイルがある場所からの相対パスです。`.`は同じフォルダを表し、表示中の記事自身は一覧から除きます。
-
-```text
-{{list:暮らし;view=list}}
-{{list:文集/場所と活動;view=cards;limit=4;expand=button}}
-```
-
-| 属性 | 意味 |
+| 記法 | 表示 |
 |---|---|
-| `view=list` | 記事名と説明を並べる |
-| `view=cards` | 記事カードとして並べる |
-| `limit=4` | 最初に表示する件数 |
-| `limit=all` | 件数制限なし。省略時も全件表示 |
-| `expand=button` | 件数を制限し、残りがある場合に展開ボタンを表示 |
+| `# 見出し`〜`#### 見出し` | 見出し。HTML上のレベルは本文の階層に応じて表示 |
+| `{#section-id}` | 見出し末尾に付ける任意の手動ID。省略時は見出しからIDを自動生成 |
+| `{{list:場所と活動;view=cards}}` | 指定フォルダ直下の記事を一覧表示 |
+| `{{article-list:場所と活動}}` | カード一覧の互換記法 |
+| `**強調**` | 太字 |
+| `[リンク名](/route/)` | リンク |
+| `![説明](/image.webp)` | 画像（単独行） |
+| `- 項目`、`1. 項目` | リスト |
+| `| 見出し | 内容 |` | 表 |
+| `---` | 区切り線 |
 
-たとえば`content/wiki/homepage.md`の`{{list:暮らし;view=list}}`は、`content/wiki/暮らし/`直下の記事と`pages.json`の項目を一覧にします。`content/wiki/つぶやき/寮生の声・文集.md`の`{{list:文集/場所と活動;view=cards;limit=4;expand=button}}`は、指定フォルダ直下の文集記事をカードにし、4件を超える場合は展開ボタンを出します。
+見出しIDは記事ごとに重複しないよう生成します。手動IDは自動IDより優先し、同一記事内での重複はビルドエラーになります。
 
-従来の`{{article-list:...}}`もカード形式の互換記法として使えます。新しい原稿では`{{list:...;view=list|cards}}`を使います。
+リストのフォルダ指定は、そのMarkdown記事が置かれた場所からの相対パスです。`navigation.show: false`の記事はすべてのリストから除外されます。表示順は`navigation.order`、同じ値の場合はファイルパス順です。
 
-## 記事のメタデータ
+## 親とパンくず
 
-Markdown記事の冒頭にYAML形式で`id`、`title`、`route`を指定します。`route`が公開URLです。ファイル名やフォルダ名だけではURLは決まりません。
+記事のメタデータに直接の親を`title`と`href`で指定します。親記事にも親があれば、共通処理が順にたどります。
 
 ```yaml
----
-id: example
-title: 記事タイトル
-route: /example/
-description: 一覧に表示する説明
-navigation:
-  order: 10
----
+parent:
+  title: 文集・場所と活動
+  href: /messages/#places
 ```
 
-`navigation.order`は同じ一覧内の記事順に使います。`navigation.show: false`の記事はWikiホームの分類一覧から除外しますが、個別ページは作られます。記事本文内の`{{list}}`では、指定したフォルダの記事を表示します。
+見出しを親にする場合、`href`のフラグメントはその見出しIDを指定します。親のURLを変えた場合は、子記事に記載した`href`も更新します。存在しない親ページ、存在しないMarkdown見出し、親関係の循環は生成時に検出します。
 
-画像は`public/`以下に置き、`![説明](/画像パス)`で参照します。例：`/events/bookclub.webp`は`public/events/bookclub.webp`です。
+## ナビゲーションとトップページ
 
-## 記事の追加・更新
+ナビゲーションに表示する項目と順序は`content/site/navigation.json`で手動管理します。リンク先は記事URLまたは本文見出しのURLです。見出しIDの存在はビルド時に検証します。
 
-1. 既存分類のフォルダか、その下の整理用フォルダにMarkdownを置きます。
-2. メタデータの`id`、`title`、`route`を設定します。URLの重複を避けます。
-3. 必要なら既存のまとめ記事または`homepage.md`に`{{list}}`を追加し、対象フォルダと表示形式を指定します。
-4. 既存ReactページをWikiホームに載せる場合は、分類の`pages.json`に`id`、`title`、`route`を登録します。記事本文は移動しません。
-5. 新しいURLを追加した場合は`public/sitemap.xml`にもURLを登録します。
-6. ローカルプレビューでWikiホーム、記事、リンク、画像、リスト／カード表示を確認し、`npm run build`で静的出力を確認します。
+トップページに紹介する記事群の取得元は`content/site/home.json`で指定します。指定記事にある「見出しの直後にリスト記法がある箇所」を共通処理で取得し、リストの先頭2件を表示します。この処理は任意の記事を対象にできます。ナビゲーションへの掲載とは独立しています。
 
-`loadWikiData.js`は現在、`navigation.show`と`navigation.order`を一覧用に扱います。Wikiホームの分類見出しと並び順は`homepage.md`の記述順に従います。
+## 運用
+
+1. `content/wiki/`の任意の場所にMarkdown記事を作成し、メタデータを記入します。
+2. 必要なら本文に見出し、リスト、関連記事、親を追加します。
+3. ナビゲーションに載せる場合は`content/site/navigation.json`を更新します。
+4. トップページの紹介元を変更する場合は`content/site/home.json`を更新します。
+5. 新しいURLを追加した場合は`public/sitemap.xml`も更新します。
+6. `npm run build`で静的出力を確認します。

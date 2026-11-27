@@ -2,6 +2,9 @@
 id: message-supika
 title: 渓水寮の雰囲気を分析してみる
 route: /messages/supika/
+parent:
+  title: 寮生それぞれの体験・考え
+  href: /messages/#experiences
 description: 少人数の寮で保たれる、互いの個を尊重する関係について。
 author: すぴか
 affiliation: 工学部・2年男子
@@ -10,7 +13,6 @@ related:
     title: 寮生の声一覧
 metaTitle: 寮生の声 すぴか
 navigation:
-  show: false
   order: 60
 ---
 

@@ -2,6 +2,9 @@
 id: message-denzo
 title: 渓水寮の構成員
 route: /messages/denzo/
+parent:
+  title: 寮生それぞれの体験・考え
+  href: /messages/#experiences
 description: 寮生・寮母・理事・卒寮生。それぞれの関わりから寮の運営を見つめます。
 author: DENZO
 affiliation: 工学部・3年男子
@@ -10,7 +13,6 @@ related:
     title: 寮生の声一覧
 metaTitle: 寮生の声 DENZO
 navigation:
-  show: false
   order: 50
 ---
 

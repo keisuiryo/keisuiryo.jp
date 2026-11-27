@@ -9,7 +9,6 @@ module.exports = {
     
     return {
         '/': { page: '/' },
-        '/wiki': { page: '/wiki' },
         '/facilities': { page: '/facilities'},
         '/location': { page: '/location' },
         '/apply': { page: '/apply' },

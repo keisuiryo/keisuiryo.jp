@@ -1,6 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 const yaml = require('js-yaml')
+const { buildBreadcrumbs } = require('./breadcrumbs')
 
 const contentRoot = path.join(process.cwd(), 'content')
 const wikiRoot = path.join(contentRoot, 'wiki')
@@ -9,7 +10,7 @@ function sourceDirectory(file) {
   return path.relative(wikiRoot, path.dirname(file)).split(path.sep).join('/') || '.'
 }
 
-function parseArticle(file, category) {
+function parseArticle(file) {
   const raw = fs.readFileSync(file, 'utf8')
   const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n/)
   if (!match) throw new Error(`Missing JSON or YAML front matter: ${file}`)
@@ -30,65 +31,52 @@ function parseArticle(file, category) {
 
   return {
     ...metadata,
-    category,
     source: path.relative(contentRoot, file),
     sourceDirectory: sourceDirectory(file),
     content: raw.slice(match[0].length)
   }
 }
 
-function markdownFiles(directory) {
-  return fs.readdirSync(directory, { withFileTypes: true }).flatMap(entry => {
+// Markdown and page registrations are collected with identical rules at every depth.
+function collectContent(directory, articles, pages) {
+  for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
     const file = path.join(directory, entry.name)
-    if (entry.isDirectory()) return markdownFiles(file)
-    return entry.isFile() && entry.name.endsWith('.md') ? [file] : []
-  })
+    if (entry.isDirectory()) {
+      collectContent(file, articles, pages)
+    } else if (entry.isFile() && entry.name.endsWith('.md')) {
+      articles.push(parseArticle(file))
+    } else if (entry.isFile() && entry.name === 'pages.json') {
+      const definitions = JSON.parse(fs.readFileSync(file, 'utf8'))
+      if (!Array.isArray(definitions)) throw new Error(`Page registrations must be an array: ${file}`)
+      pages.push(...definitions.map(page => ({ ...page, sourceDirectory: sourceDirectory(file) })))
+    }
+  }
 }
 
 function getWikiData() {
-  const categories = fs.readdirSync(wikiRoot, { withFileTypes: true })
-    .filter(entry => entry.isDirectory())
-    .map(entry => {
-      const directory = path.join(wikiRoot, entry.name)
-      const definition = JSON.parse(fs.readFileSync(path.join(directory, '_category.json'), 'utf8'))
-      const pagesPath = path.join(directory, 'pages.json')
-      const pages = fs.existsSync(pagesPath)
-        ? JSON.parse(fs.readFileSync(pagesPath, 'utf8')).map(page => ({
-          ...page,
-          sourceDirectory: path.relative(wikiRoot, directory).split(path.sep).join('/')
-        }))
-        : []
-      const articles = markdownFiles(directory)
-        .map(file => parseArticle(file, definition.title))
-      // Keep the folder as the source of truth: Markdown entries override
-      // any stale copy of the same route in pages.json.
-      const entriesByRoute = new Map(pages.map(page => [page.route, page]))
-      for (const article of articles) entriesByRoute.set(article.route, article)
-      const entries = [...entriesByRoute.values()]
-        .sort((a, b) => (a.navigation?.order || 0) - (b.navigation?.order || 0) || (a.source || a.route).localeCompare(b.source || b.route))
-      return {
-        ...definition,
-        entries,
-        indexEntries: entries.filter(entry => entry.navigation?.show !== false)
-      }
-    })
-    .sort((a, b) => a.order - b.order)
+  const articles = []
+  const pages = []
+  collectContent(wikiRoot, articles, pages)
+  const entriesByRoute = new Map()
+  for (const page of pages) {
+    if (!page.id || !page.title || !page.route) throw new Error(`Incomplete Wiki entry: ${page.title || 'pages.json entry'}`)
+    if (entriesByRoute.has(page.route)) throw new Error(`Duplicate Wiki route: ${page.route}`)
+    entriesByRoute.set(page.route, page)
+  }
+  const articleRoutes = new Set()
+  for (const article of articles) {
+    if (!article.id || !article.title || !article.route) throw new Error(`Incomplete Wiki entry: ${article.source}`)
+    if (articleRoutes.has(article.route)) throw new Error(`Duplicate Wiki route: ${article.route}`)
+    articleRoutes.add(article.route)
+    // A Markdown article takes precedence over an outdated pages.json registration.
+    entriesByRoute.set(article.route, article)
+  }
+  const entries = [...entriesByRoute.values()]
+    .sort((a, b) => (a.navigation?.order || 0) - (b.navigation?.order || 0) || (a.source || a.route).localeCompare(b.source || b.route))
 
-  const entries = categories.flatMap(category => category.entries)
-  const homePath = path.join(wikiRoot, 'homepage.md')
-  const home = fs.existsSync(homePath) ? parseArticle(homePath, null) : null
-  const routes = new Set()
-  for (const entry of entries) {
-    if (!entry.id || !entry.title || !entry.route) throw new Error(`Incomplete Wiki entry: ${entry.source || entry.title || 'pages.json entry'}`)
-    if (routes.has(entry.route)) throw new Error(`Duplicate Wiki route: ${entry.route}`)
-    routes.add(entry.route)
-  }
-  const articles = entries.filter(entry => entry.source)
-  if (home && (!home.id || !home.title || home.route !== '/wiki/')) {
-    throw new Error('Wiki homepage requires id, title, and route: /wiki/: content/wiki/homepage.md')
-  }
-  if (home && routes.has(home.route)) throw new Error(`Wiki homepage route is already used: ${home.route}`)
-  return { categories, articles, entries, home }
+  // Validate each parent chain, including parents of registered non-Markdown pages.
+  for (const entry of entries) buildBreadcrumbs(entry, entries)
+  return { entries, articles }
 }
 
 module.exports = { getWikiData }

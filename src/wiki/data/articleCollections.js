@@ -36,7 +36,7 @@ function getListRequests(content) {
   return [...content.matchAll(directivePattern)].map(match => parseDirective(match[0]))
 }
 
-function buildArticleCollections(content, baseDirectory, currentSource, entries, { respectNavigationVisibility = false } = {}) {
+function buildArticleCollections(content, baseDirectory, currentSource, entries) {
   const collections = {}
   const base = baseDirectory || '.'
 
@@ -48,7 +48,7 @@ function buildArticleCollections(content, baseDirectory, currentSource, entries,
 
     const items = entries
       .filter(entry => entry.sourceDirectory === targetDirectory && entry.source !== currentSource)
-      .filter(entry => !respectNavigationVisibility || entry.navigation?.show !== false)
+      .filter(entry => entry.navigation?.show !== false)
       .sort((a, b) => (a.navigation?.order || 0) - (b.navigation?.order || 0) || (a.source || a.route).localeCompare(b.source || b.route))
       .map(({ id, title, route, author, affiliation, description }) => ({
         id, title, route, author: author || null, affiliation: affiliation || null,

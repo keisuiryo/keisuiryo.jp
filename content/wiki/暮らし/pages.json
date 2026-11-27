@@ -2,11 +2,19 @@
   {
     "id": "facilities",
     "title": "設備",
-    "route": "/facilities/"
+    "route": "/facilities/",
+    "parent": {
+      "title": "暮らし",
+      "href": "/wiki/#暮らし"
+    }
   },
   {
     "id": "location",
     "title": "通学・周辺施設",
-    "route": "/location/"
+    "route": "/location/",
+    "parent": {
+      "title": "暮らし",
+      "href": "/wiki/#暮らし"
+    }
   }
 ]

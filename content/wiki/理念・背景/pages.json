@@ -2,6 +2,10 @@
   {
     "id": "about",
     "title": "東北地区学生YMCAと渓水寮",
-    "route": "/about/"
+    "route": "/about/",
+    "parent": {
+      "title": "理念・背景",
+      "href": "/wiki/#理念背景"
+    }
   }
 ]

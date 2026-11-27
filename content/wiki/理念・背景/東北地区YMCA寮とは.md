@@ -2,6 +2,9 @@
 id: about
 title: 東北地区学生YMCAと渓水寮
 route: /about/
+parent:
+  title: 理念・背景
+  href: /wiki/#理念背景
 description: 東北地区学生YMCAと渓水寮の運営体制、YMCA、建物の歴史、寮の概要を紹介します。
 ---
 

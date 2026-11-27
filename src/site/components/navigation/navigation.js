@@ -1,31 +1,11 @@
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import Footer from '../footer/footer-pc'
+import navigation from '../../../../content/site/navigation.json'
 
-const wikiCategories = [
-    { order: 10, title: '理念・背景' },
-    { order: 20, title: '暮らし' },
-    { order: 30, title: '費用・入寮' },
-    { order: 40, title: 'つぶやき' }
-]
-
-const pageCategory = {
-    about: '理念・背景',
-    'why-keisui': '理念・背景',
-    'keisui-philosophy': '理念・背景',
-    'dormitory-spirit': '理念・背景',
-    life: '暮らし',
-    meals: '暮らし',
-    facilities: '暮らし',
-    location: '暮らし',
-    events: '暮らし',
-    messages: '暮らし',
-    apply: '費用・入寮',
-    compare: '費用・入寮',
-    'living-cost-comparison': '費用・入寮',
-    faq: '費用・入寮',
-    'new-dorm-thought': 'つぶやき'
-}
+// Existing pages carry their parent link in their page registrations.
+const registrations = require.context('../../../../content/wiki', true, /pages\.json$/)
+const registeredPages = registrations.keys().flatMap(key => registrations(key))
 
 export default function Navigation(props) {
     const [menuOpen, setMenuOpen] = useState(false)
@@ -52,7 +32,18 @@ export default function Navigation(props) {
         setMenuOpen(false)
     }
 
-    const currentCategory = props.wikiCategory || pageCategory[props.id]
+    const ancestors = new Set((props.breadcrumbs || []).map(item => item.href))
+    const currentRoute = props.id ? `/${props.id.replace(/^\/+|\/+$/g, '')}/` : '/'
+    if (!props.breadcrumbs) {
+        let page = registeredPages.find(item => item.route === currentRoute)
+        const visited = new Set()
+        while (page?.parent && !visited.has(page.route)) {
+            visited.add(page.route)
+            ancestors.add(page.parent.href)
+            const parentRoute = page.parent.href.split('#')[0].replace(/\/$/, '') + '/'
+            page = registeredPages.find(item => item.route === parentRoute)
+        }
+    }
 
     return (
         <div className={`nav-wrapper${menuOpen ? ' nav-open' : ''}`}>
@@ -76,15 +67,15 @@ export default function Navigation(props) {
                     トップページ <span aria-hidden="true">↗</span>
                 </Link>
                 <div className="nav-wiki-menu">
-                    <Link className="nav-wiki-label" href="/wiki/" onClick={closeMenu}>
-                        渓水寮Wiki <span aria-hidden="true">↗</span>
+                    <Link className="nav-wiki-label" href={navigation.label.href} onClick={closeMenu}>
+                        {navigation.label.title} <span aria-hidden="true">↗</span>
                     </Link>
                     <ul className="nav-wiki-links" aria-label="Wikiの分類">
-                        {wikiCategories.map((category, index) => (
-                            <li key={category.order}>
+                        {navigation.items.map((category, index) => (
+                            <li key={category.href}>
                                 <Link
-                                    href={`/wiki/#wiki-category-${category.order}`}
-                                    aria-current={currentCategory === category.title ? 'location' : undefined}
+                                    href={category.href}
+                                    aria-current={ancestors.has(category.href) ? 'location' : undefined}
                                     onClick={closeMenu}
                                 >
                                     <span className="nav-wiki-number">0{index + 1}</span>

@@ -1,5 +1,6 @@
 import React from 'react'
 import ArticleCollection from './ArticleCollection'
+import { getHeadings, getMarkdownLines } from '../data/headings'
 
 function renderInline(text, keyPrefix) {
   const tokens = text.split(/(\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\))/g).filter(Boolean)
@@ -28,17 +29,16 @@ function isTableDivider(line) {
 }
 
 function isBlockStart(lines, index) {
-  const line = lines[index]
+  const line = lines[index].trim()
   return /^#{1,4}\s/.test(line) || /^\{\{(?:list|article-list):[^}]+\}\}$/.test(line.trim()) || /^!\[[^\]]*\]\([^)]+\)$/.test(line.trim()) || /^\s*[-*]\s+/.test(line) || /^\s*\d+\.\s+/.test(line) || /^\|/.test(line) || /^---+$/.test(line)
 }
 
-export default function MarkdownArticle({ content, articleLists = {}, categoryAnchors = {} }) {
-  const markdown = content.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, '').trim()
-  const lines = markdown.split(/\r?\n/)
+export default function MarkdownArticle({ content, articleLists = {} }) {
+  const lines = getMarkdownLines(content)
+  const headingsByLine = new Map(getHeadings(content).map(heading => [heading.index, heading]))
   const elements = []
   const headings = []
   let index = 0
-  let sectionNumber = 0
 
   while (index < lines.length) {
     const line = lines[index].trim()
@@ -58,17 +58,13 @@ export default function MarkdownArticle({ content, articleLists = {}, categoryAn
       continue
     }
 
-    const heading = line.match(/^(#{1,4})\s+(.*)$/)
+    const heading = headingsByLine.get(index)
     if (heading) {
-      const level = Math.min(heading[1].length + 1, 4)
-      const explicitId = heading[2].match(/\s+\{#([A-Za-z][A-Za-z0-9_-]*)\}$/)
-      const label = explicitId ? heading[2].slice(0, explicitId.index) : heading[2]
-      const id = explicitId ? explicitId[1] : categoryAnchors[label] || `wiki-section-${sectionNumber + 1}`
-      sectionNumber += 1
+      const { level, label, id } = heading
       const children = renderInline(label, id)
       const Tag = `h${level}`
       elements.push(<Tag id={id} key={id}>{children}</Tag>)
-      if (level <= 3) headings.push({ id, label: label.replace(/\*\*/g, ''), level })
+      if (level <= 3) headings.push({ id, label: heading.text, level })
       index += 1
       continue
     }

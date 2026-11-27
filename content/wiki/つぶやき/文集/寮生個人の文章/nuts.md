@@ -2,6 +2,9 @@
 id: message-nuts
 title: 渓水寮に一年半住んだ女子によるレポート
 route: /messages/nuts/
+parent:
+  title: 寮生それぞれの体験・考え
+  href: /messages/#experiences
 description: 立地の不便さから、寮の仲間・食事・費用まで。1年半の暮らしを振り返ります。
 author: Nuts
 affiliation: 工学部・2年女子
@@ -10,7 +13,6 @@ related:
     title: 寮生の声一覧
 metaTitle: 寮生の声 Nuts
 navigation:
-  show: false
   order: 40
 ---
 

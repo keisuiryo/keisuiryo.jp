@@ -2,6 +2,9 @@
 id: message-wakayama
 title: 私が考える渓水寮
 route: /messages/wakayama/
+parent:
+  title: 寮生それぞれの体験・考え
+  href: /messages/#experiences
 description: 自治寮での役割や人との関わりを通じて感じた、渓水寮の魅力。
 author: 若山
 affiliation: 東北大学工学部
@@ -10,7 +13,6 @@ related:
     title: 寮生の声一覧
 metaTitle: 寮生の声 若山
 navigation:
-  show: false
   order: 20
 ---
 

@@ -2,6 +2,9 @@
 id: message-shiro
 title: 人間が住む場所
 route: /messages/shiro/
+parent:
+  title: 寮生それぞれの体験・考え
+  href: /messages/#experiences
 description: 寮生活の負担や人間関係、YMCAとの関わりを含めて綴る暮らしの実感。
 author: 白
 affiliation: 東北大学文学部
@@ -10,7 +13,6 @@ related:
     title: 寮生の声一覧
 metaTitle: 寮生の声 白
 navigation:
-  show: false
   order: 30
 ---
 

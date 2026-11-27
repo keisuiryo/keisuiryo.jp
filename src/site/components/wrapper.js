@@ -21,7 +21,7 @@ export default function Wrappr(props) {
                 </main>
                 <div className='pc white'><Footer /></div>
             </div>
-            <Navigation id={props.id} wikiCategory={props.wikiCategory} />
+            <Navigation id={props.id} breadcrumbs={props.breadcrumbs || []} />
         </div>
         </>
     )

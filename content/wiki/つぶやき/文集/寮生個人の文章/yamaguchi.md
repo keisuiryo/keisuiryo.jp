@@ -2,6 +2,9 @@
 id: message-yamaguchi
 title: 寮生活の醍醐味
 route: /messages/yamaguchi/
+parent:
+  title: 寮生それぞれの体験・考え
+  href: /messages/#experiences
 description: 共同生活ならではの意外な出会いと、趣味の共通点から広がる交流について。
 author: 山口
 affiliation: 東北大学文学部
@@ -10,7 +13,6 @@ related:
     title: 寮生の声一覧
 metaTitle: 寮生の声 山口
 navigation:
-  show: false
   order: 10
 ---
 
