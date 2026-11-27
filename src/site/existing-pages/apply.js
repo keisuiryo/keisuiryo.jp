@@ -42,11 +42,7 @@ export default function Home() {
                             <span className="apply-step-number" aria-hidden="true">02</span>
                             <div className="apply-step-content">
                                 <h3>入寮申し込み</h3>
-                                <p>応募用紙と面接用事前質問シートは、上記の窓口・郵送・見学時の手渡しで提出できます。</p>
-                                <div className="files-box apply-files">
-                                    <a href="/apply/渓水寮応募用紙.docx" className="file-link" download="渓水寮応募用紙.docx">応募用紙をダウンロード <span aria-hidden="true">↓</span></a>
-                                    <a href="/apply/渓水寮質問シート.docx" className="file-link" download="渓水寮質問シート.docx">面接用事前質問シートをダウンロード <span aria-hidden="true">↓</span></a>
-                                </div>
+                                <p>見学時に入寮を申し込むことができます。</p>
                             </div>
                         </li>
                         <li className="apply-step">
