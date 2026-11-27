@@ -14,7 +14,7 @@ export default function Custom404() {
                 <div className="box404">
                     <h1>ページが見つかりません</h1>
                     <Link href="/" className="nav-link-fab btn">渓水寮概要 →</Link>
-                    <p>東北大学YMCA渓水寮</p>
+                    <p>東北地区学生YMCA 渓水寮</p>
                 </div>
             </div>
         </div>

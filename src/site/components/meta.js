@@ -4,9 +4,9 @@ import Script from 'next/script'
 export default function Meta(props) {
     let _title = ""
     if (!props.title) {
-        _title = "東北大学YMCA渓水寮 | 食事付きの学生寮"
+        _title = "東北地区学生YMCA 渓水寮 | 食事付きの学生寮"
     } else {
-        _title = props.title + " | 東北大学YMCA渓水寮"
+        _title = props.title + " | 東北地区学生YMCA 渓水寮"
     }
     let _url = "https://keisuiryo.jp/" + props.id;
     const _top = `
@@ -14,11 +14,11 @@ export default function Meta(props) {
             {
                 "@context": "https://schema.org",
                 "@type": "Apartment",
-                "name": "東北大学YMCA渓水寮",
+                "name": "渓水寮",
                 "url": "https://keisuiryo.jp/",
                 "publisher": {
                     "@type": "Organization",
-                    "name": "東北大学YMCA渓水寮",
+                    "name": "東北地区学生YMCA",
                     "url": "https://keisuiryo.jp/",
                     "logo": {
                         "@type": "ImageObject",
@@ -41,7 +41,7 @@ export default function Meta(props) {
 
                     "height": 480
                 },
-                "description": "東北大学YMCA渓水寮は東北大学の学生などが暮らす学生寮です。寮に住み込みの寮母さん手作りの食事、13名のアットホームな寮の雰囲気、安い寮費が魅力の寮です。",
+                "description": "東北地区学生YMCAが運営する渓水寮は、東北大学などの学生が暮らす定員13名の学生寮です。寮母さん手作りの食事と、寮生が自治を担う共同生活が特徴です。",
                 "telephone": "+81-022-249-3564",
                 "openingHoursSpecification": {
                     "@type": "OpeningHoursSpecification",
@@ -91,7 +91,7 @@ export default function Meta(props) {
             "url": "${_url}",
             "publisher": {
                 "@type": "Organization",
-                "name": "東北大学YMCA渓水寮",
+                "name": "東北地区学生YMCA",
                 "url": "https://keisuiryo.jp/",
                 "logo": {
                     "@type": "ImageObject",

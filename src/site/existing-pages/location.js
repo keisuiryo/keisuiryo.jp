@@ -14,7 +14,7 @@ export default function Home() {
             </div>);
     }
     return (
-        <Wrapper id="location" title="立地・周辺施設" desc="東北大学YMCA渓水寮は東北大学から4kmほど距離があるため、バスや地下鉄、原付で登校する寮生が多いです。バス停やコンビニ、ドラッグストア、スーパーなど必要なお店は全て徒歩圏内にあります。">
+        <Wrapper id="location" title="立地・周辺施設" desc="渓水寮は東北大学から4kmほど距離があるため、バスや地下鉄、原付で登校する寮生が多いです。バス停やコンビニ、ドラッグストア、スーパーなど必要なお店は全て徒歩圏内にあります。">
             <section>
                 <h2 className="contents-title">通学</h2>
                 <div className="commute-box">
@@ -73,7 +73,7 @@ export default function Home() {
                 <Stack title="ローソン" imageSrc="/location/lawson.webp" imageAlt="渓水寮の隣にあるローソン">
                     {distance("寮のとなり", "30秒")}
                 </Stack>
-                <Stack title="ツルハドラッグ" imageSrc="/location/turuha.webp" imageAlt="東北大学YMCA渓水寮の斜め前にあるドラッグストア">
+                <Stack title="ツルハドラッグ" imageSrc="/location/turuha.webp" imageAlt="渓水寮の斜め前にあるドラッグストア">
                     {distance("寮の斜め前", "90秒")}
                     <p className="contents-desc">野菜やお肉などの生鮮食品も置いてあります。</p>
                 </Stack>

@@ -160,7 +160,7 @@ navigation:
 [
   {
     "id": "about",
-    "title": "東北地区YMCA寮とは",
+    "title": "東北地区学生YMCAと渓水寮",
     "route": "/about/"
   }
 ]

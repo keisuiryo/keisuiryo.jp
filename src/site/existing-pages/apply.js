@@ -5,7 +5,7 @@ const applicationForm = 'https://docs.google.com/forms/d/e/1FAIpQLSdWS2WnwcJzYkV
 
 export default function Home() {
     return (
-        <Wrapper id="apply" title="募集要項" desc="東北地区YMCA（仮称）渓水寮は2027年4月入寮生を募集します。大学生・大学院生・研究生・通信制の学校に在籍する学生などが対象です。月額費用は53,000円です。">
+        <Wrapper id="apply" title="募集要項" desc="東北地区学生YMCA 渓水寮は2027年4月入寮生を募集します。大学生・大学院生・研究生・通信制の学校に在籍する学生などが対象です。月額費用は53,000円です。">
             <div className="apply-main-container apply-page">
                 <section className="apply-process" aria-labelledby="apply-process-title">
                     <p className="apply-kicker">2027 ENTRY</p>

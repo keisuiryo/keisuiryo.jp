@@ -7,7 +7,7 @@ export const config = {
 
 export default function Home({ wikiCategories = [] }) {
   return (
-    <Wrapper noheader desc="東北地区YMCA（仮称）渓水寮は、大学生などが共同生活を送る定員13名の学生寮です。寮生活や行事、施設、寮費、アクセス、2027年4月入寮生の募集についてご案内します。">
+    <Wrapper noheader desc="東北地区学生YMCAが運営する渓水寮は、大学生などが共同生活を送る定員13名の学生寮です。寮生活や行事、施設、寮費、アクセス、2027年4月入寮生の募集についてご案内します。">
       <section className="home-hero" id="home-top" aria-label="渓水寮">
         <img className="top-bg-mobile" src="/design/keisui-watercolor.jpg" alt="木々に囲まれた渓水寮を描いた水彩画" fetchPriority="high" />
         <img className="top-bg-pc" src="/design/keisui-watercolor.jpg" alt="" fetchPriority="high" />
@@ -48,7 +48,7 @@ export default function Home({ wikiCategories = [] }) {
             <div className="ks-about-grid">
               <div className="ks-about-copy">
                 <h3 className="ks-subtitle ks-about-slogan">共につくり、<br />共に造られる。</h3>
-                <p>渓水寮は、東北大学YMCAのもとで運営されてきた学生寮です。2027年4月からは「東北地区YMCA（仮称）渓水寮」として、新しい運営体制で始まります。</p>
+                <p>渓水寮は、東北大学YMCAのもとで運営されてきた学生寮です。2027年4月からは、日本YMCA同盟の支援のもと、東北地区学生YMCAが運営します。</p>
                 <p>13人の寮生が、理事の支援を受けながら、自分たちの暮らしを一緒に運営しています。寮生には東北大学の学生が多くいますが、寮は大学とは別の運営です。</p>
                 <Link className="ks-text-link" href="/about/">運営体制・寮の概要を読む <span aria-hidden="true">↗</span></Link>
               </div>
