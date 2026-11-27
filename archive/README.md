@@ -38,8 +38,8 @@
 
 ## UH・学寮などとの比較
 
-- 公開終了日: 2026-11-21
-- 旧ページ本文: `pages/compare.js.txt`
-- 専用スタイル: `styles/compare.css`
-- 公開URL `/compare/` は非公開を知らせる案内ページに置き換え、検索対象外にしています。
-- 現行の比較情報は `/living-cost-comparison/` に案内します。
+- 旧ページ本文: `archive/pages/compare.js.txt`
+- 旧専用スタイル: `archive/styles/compare.css`
+- 旧比較ページのURL `/compare/` は現行の住まいと生活費の比較記事に使用しています。
+- 現在の比較記事は `/compare/`、以前の `/living-cost-comparison/` は `/compare/` への案内ページです。
+- この節は旧ページの記録であり、現在の公開URLを示すものではありません。

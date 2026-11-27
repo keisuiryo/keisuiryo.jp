@@ -4,7 +4,7 @@ import MarkdownArticle from './MarkdownArticle'
 
 export default function WikiArticlePage({ route, title, metaTitle, description, content, author, affiliation, date, recordNote, related = [], articleLists = {}, breadcrumbs = [] }) {
   return (
-    <Wrapper noheader id={route.replace(/^\/+|\/+$/g, '')} title={metaTitle || title} desc={description} breadcrumbs={breadcrumbs}>
+    <Wrapper noheader id={route.replace(/^\/+|\/+$/g, '')} canonicalUrl={`https://keisuiryo.jp${route}`} title={metaTitle || title} desc={description} breadcrumbs={breadcrumbs}>
       <article className="wiki-article" id="wiki-article-top">
         <nav className="wiki-breadcrumb" aria-label="パンくずリスト">
           <Link href="/">トップ</Link><span aria-hidden="true">›</span>

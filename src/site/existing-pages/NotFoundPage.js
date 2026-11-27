@@ -7,7 +7,7 @@ export const config= {
 export default function Custom404() {
     return (
         <div className='subpage-container'>
-            <Meta title="404 | ページが見つかりません" desc="お探しのページは見つかりません" />
+            <Meta title="404 | ページが見つかりません" desc="お探しのページは見つかりません" noindex />
             <SVG />
             <div className="view-container">
                 <img src="/main.webp" className="bg404" />

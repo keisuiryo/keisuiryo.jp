@@ -11,7 +11,7 @@ export default function Wrappr(props) {
     }
     return (
         <>
-        <Meta title={props.title} desc={props.desc} id={props.id}/>
+        <Meta title={props.title} desc={props.desc} id={props.id} canonicalUrl={props.canonicalUrl}/>
         <div className='subpage-container'>
             <SVG />
             <div className="view-container">

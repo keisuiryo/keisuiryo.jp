@@ -12,7 +12,6 @@ module.exports = {
         '/facilities': { page: '/facilities'},
         '/location': { page: '/location' },
         '/apply': { page: '/apply' },
-        '/compare': { page: '/compare' },
         ...articles.reduce((routes, article) => {
           const route = article.route.replace(/\/$/, '')
           routes[route] = {

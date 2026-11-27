@@ -500,35 +500,6 @@ a:hover { color: var(--ks-ink); }
 .faq-card[open] { border-bottom: 1px solid var(--ks-line); }
 .apply-contents-title { border-left: 3px solid var(--ks-vermilion); padding-left: .8rem; }
 .important { border: 1px solid var(--ks-vermilion) !important; padding: 1rem 1.25rem; }
-.compare-archive {
-  margin: 0 auto;
-  max-width: var(--ks-content);
-  padding: clamp(2rem, 6vw, 4rem);
-}
-.compare-archive-panel {
-  background: color-mix(in srgb, var(--ks-line) 24%, var(--ks-paper));
-  border-left: 3px solid var(--ks-vermilion);
-  padding: clamp(1.5rem, 4vw, 3rem);
-}
-.compare-archive-kicker {
-  color: var(--ks-vermilion) !important;
-  font-family: sans-serif !important;
-  font-size: .75rem !important;
-  letter-spacing: .14em;
-}
-.compare-archive-panel h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin: 0 0 1rem; }
-.compare-archive-panel p { line-height: 1.9; }
-.compare-archive-link {
-  align-items: center;
-  background: var(--ks-vermilion);
-  color: var(--ks-paper);
-  display: inline-flex;
-  gap: 1.5rem;
-  margin-top: .75rem;
-  padding: .8rem 1rem;
-  text-decoration: none;
-}
-.compare-archive-link:hover { background: var(--ks-ink); color: var(--ks-paper); }
 .apply-main-container.apply-page {
   margin: 0 auto;
   max-width: 66rem;

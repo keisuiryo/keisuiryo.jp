@@ -204,7 +204,7 @@ export default function Home({ sections = [] }) {
                   <div><dt>経常費</dt><dd>28,000円</dd></div>
                 </dl>
                 <p className="ks-condition-note">管理・維持費、光熱費、食費などを含みます。YMCAの支援により家賃はかかりません。</p>
-                <Link className="ks-text-link" href="/living-cost-comparison/">住まいと生活費を比較する <span aria-hidden="true">↗</span></Link>
+                <Link className="ks-text-link" href="/compare/">住まいと生活費を比較する <span aria-hidden="true">↗</span></Link>
               </article>
               <article className="ks-condition-item">
                 <h3 className="ks-subtitle">アクセス</h3>

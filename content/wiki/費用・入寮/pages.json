@@ -7,17 +7,5 @@
       "title": "費用・入寮",
       "href": "/wiki/#費用入寮"
     }
-  },
-  {
-    "id": "compare",
-    "title": "住まいの比較",
-    "route": "/compare/",
-    "navigation": {
-      "show": false
-    },
-    "parent": {
-      "title": "費用・入寮",
-      "href": "/wiki/#費用入寮"
-    }
   }
 ]

@@ -8,7 +8,9 @@ export default function Meta(props) {
     } else {
         _title = props.title + " | 東北地区学生YMCA 渓水寮"
     }
-    let _url = "https://keisuiryo.jp/" + props.id;
+    const _url = props.canonicalUrl || (props.id
+        ? `https://keisuiryo.jp/${String(props.id).replace(/^\/+|\/+$/g, '')}/`
+        : "https://keisuiryo.jp/");
     const _top = `
         [
             {
@@ -142,6 +144,8 @@ export default function Meta(props) {
                 {/*<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />*/}
                 <title>{_title}</title>
                 <meta name="description" content={props.desc} />
+                {!props.noindex && <link rel="canonical" href={_url} />}
+                {props.noindex && <meta name="robots" content="noindex,follow" />}
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:site" content="@keisuiryo" />
                 <meta name="twitter:creator" content="@keisuiryo" />
